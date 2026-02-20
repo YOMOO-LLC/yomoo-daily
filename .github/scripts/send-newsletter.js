@@ -18,6 +18,13 @@ if (!fs.existsSync(emailPath)) {
 }
 const emailTemplate = fs.readFileSync(emailPath, "utf-8");
 
+function maskEmail(email) {
+  const [local, domain] = email.split("@");
+  if (!domain) return "***";
+  const maskedLocal = local.length <= 2 ? "*".repeat(local.length) : local[0] + "*".repeat(local.length - 2) + local[local.length - 1];
+  return maskedLocal + "@" + domain;
+}
+
 function fetchJson(url, options = {}) {
   return new Promise((resolve, reject) => {
     const mod = url.startsWith("https") ? https : http;
@@ -41,7 +48,7 @@ function hmacToken(email, secret) {
 
 async function main() {
   const workerUrl = WORKER_URL.replace(/\/$/, "");
-  console.log("Fetching subscribers from", workerUrl);
+  console.log("Fetching subscribers...");
 
   const subResp = await fetchJson(workerUrl + "/subscribers", {
     method: "GET",
@@ -49,7 +56,7 @@ async function main() {
   });
 
   if (subResp.status !== 200) {
-    console.error("Failed to fetch subscribers:", subResp.status, subResp.data);
+    console.error("Failed to fetch subscribers:", subResp.status);
     process.exit(1);
   }
 
@@ -65,6 +72,7 @@ async function main() {
 
   for (const sub of subscribers) {
     const email = sub.email;
+    const masked = maskEmail(email);
     const token = hmacToken(email, WORKER_SECRET);
     const unsubUrl = workerUrl + "/unsubscribe?email=" + encodeURIComponent(email) + "&token=" + token;
     const html = emailTemplate.replace(/{{UNSUBSCRIBE_URL}}/g, unsubUrl);
@@ -86,14 +94,14 @@ async function main() {
 
       if (resp.status >= 200 && resp.status < 300) {
         sent++;
-        console.log("  Sent to", email);
+        console.log("  Sent to", masked);
       } else {
         failed++;
-        console.error("  Failed for", email, ":", resp.status, JSON.stringify(resp.data));
+        console.error("  Failed for", masked, ":", resp.status);
       }
     } catch (err) {
       failed++;
-      console.error("  Error for", email, ":", err.message);
+      console.error("  Error for", masked, ":", err.message);
     }
 
     // Rate limit: 100ms between sends
@@ -105,4 +113,3 @@ async function main() {
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
-
