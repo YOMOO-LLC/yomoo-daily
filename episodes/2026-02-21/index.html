@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-02-21</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-02-21</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-02-21/yomoo-2026-02-21.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-02-21/yomoo-2026-02-21.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日简报 | 2026年2月21日</h1>
+<hr>
+<h2>执行摘要</h2>
+<p>AI行业继续在技术突破与商业泡沫之间剧烈摇摆——硬件初创公司Taalas实现17,000 tokens/秒的惊人推理速度，Anthropic发布Sonnet 4.6，但深度批评文章揭示了AI公司烧钱速度远超营收的残酷现实。与此同时，一篇关于开源项目&quot;鲸落&quot;生态的长文引发广泛讨论，揭示了技术生态系统中被忽视的演化规律。制造业方面，中国电动车的垂直整合优势被详细拆解，美国芯片制造投资持续扩大。</p>
+<hr>
+<h2>主要报道</h2>
+<h3>AI军备竞赛：速度、成本与泡沫的三重奏</h3>
+<p><strong>推理速度进入万级时代</strong></p>
+<p>加拿大硬件初创公司Taalas发布了其首款产品——基于定制硬件的Llama 3.1 8B实现，达到了<strong>17,000 tokens/秒</strong>的惊人速度。该公司采用&quot;激进量化&quot;策略，结合3位和6位参数。与此同时，OpenAI宣布GPT-5.3-Codex-Spark速度提升30%，达到1,200 tokens/秒。两相对比，专用硬件在小模型推理上的优势令人瞩目。</p>
+<p><strong>为什么重要：</strong> 推理速度的竞争正在从纯软件优化转向软硬件协同，这可能催生一个全新的AI芯片创业生态。</p>
+<blockquote>
+<p>来源：<a href="https://simonwillison.net/2026/Feb/20/taalas/#atom-everything">Taalas</a> / <a href="https://simonwillison.net/2026/Feb/21/thibault-sottiaux/#atom-everything">OpenAI Codex</a></p>
+</blockquote>
+<p><strong>Anthropic: 光环与阴影</strong></p>
+<p>Anthropic本周发布Claude Sonnet 4.6，声称性能接近此前的Opus 4.5，但价格仅为其三分之一（$3/$15 vs $5/$25 每百万tokens）。SWE-bench最新独立评测显示，Claude Opus 4.5仍居榜首，紧随其后的是Gemini 3 Flash和中国的MiniMax M2.5。</p>
+<p>然而，Ed Zitron的深度批评文章对Anthropic进行了迄今最系统的拆解：</p>
+<ul>
+<li>2025年营收45亿美元，亏损52亿美元</li>
+<li>推理成本占营收59%（27.9亿美元）</li>
+<li>CEO Dario Amodei被指控通过模糊时间线（&quot;2-3年&quot;、&quot;2025或2026或2027&quot;）系统性操纵媒体与投资者</li>
+<li>Amodei提出的&quot;单模型盈利&quot;概念被批评为类似WeWork的&quot;社区调整EBITDA&quot;——用创造性会计掩盖亏损</li>
+<li>Claude Code被估计每产生1美元收入需烧掉3-20美元</li>
+</ul>
+<p><strong>为什么重要：</strong> AI行业正处于一个微妙的转折点——技术确实在进步，但商业模式的可持续性仍是巨大问号。Anthropic未来四年计划投入1000亿美元用于训练，同时已签署数百亿美元的云计算承诺。</p>
+<blockquote>
+<p>来源：<a href="https://simonwillison.net/2026/Feb/17/claude-sonnet-46/#atom-everything">Sonnet 4.6发布</a> / <a href="https://simonwillison.net/2026/Feb/19/swe-bench/#atom-everything">SWE-bench评测</a> / <a href="https://www.wheresyoured.at/premium-the-haters-guide-to-anthropic/">Anthropic批评</a></p>
+</blockquote>
+<hr>
+<h3>&quot;鲸落&quot;：开源生态的生死循环</h3>
+<p>Andrew Nesbitt的长文以一个绝妙的隐喻——&quot;鲸落&quot;（whale fall）——描绘了大型开源项目消亡后的生态演替：</p>
+<ol>
+<li><strong>食腐阶段</strong>：项目停止维护后，分叉迅速出现（OpenOffice→LibreOffice，MySQL→MariaDB）</li>
+<li><strong>富集阶段</strong>：较小的项目开始提取特定模块或构建兼容工具</li>
+<li><strong>化能合成阶段</strong>：协议、文件格式和API契约持续支撑专业社区数十年（Docker的OCI规范、Atom的Tree-sitter）</li>
+</ol>
+<p>文章特别指出了<strong>许可证变更</strong>引发的快速食腐现象（Redis→Valkey，Terraform→OpenTofu），以及<strong>逐代再殖民</strong>的危险模式——Rust的tar-rs库中的安全漏洞通过层层分叉传播到20多个项目。</p>
+<p>最发人深省的观察：当云厂商收购或维护所有大型项目时，&quot;鲸落率&quot;降低，小型专业生态将失去进化机会。</p>
+<p><strong>为什么重要：</strong> 这篇文章提供了理解技术生态系统演化的全新框架，对技术选型、安全审计和开源治理都有深远启示。</p>
+<blockquote>
+<p>来源：<a href="https://nesbitt.io/2026/02/21/whale-fall.html">Whale Fall</a></p>
+</blockquote>
+<hr>
+<h3>制造业与供应链重构</h3>
+<p><strong>中国电动车的真正优势：垂直整合</strong></p>
+<p>Rhodium Group的分析揭示了一个违反直觉的结论——中国电动车的价格优势<strong>既不来自低劳动力成本（实际劳动生产率低于西方），也不主要来自补贴</strong>，而是来自极致的垂直整合。比亚迪和零跑是这方面的异类，这解释了为何它们能在2024-2025年持续引领降价。</p>
+<p>同时，围绕中国汽车的博弈仍在继续——福特与特朗普政府讨论通过合资方式在美国设立中国汽车工厂。</p>
+<p><strong>AI对芯片供应链的吞噬效应</strong></p>
+<p>三条相互关联的消息勾勒出一幅令人震撼的图景：</p>
+<ul>
+<li>美国从台湾的进口额已<strong>超过中国</strong>，主要由数据中心芯片驱动</li>
+<li>Micron在美国投资超过<strong>1500亿美元</strong>建设内存工厂（博伊西500亿+锡拉丘兹1000亿）</li>
+<li>TSMC计划在亚利桑那再建4座工厂，投资<strong>1000亿美元</strong></li>
+<li>如果NVIDIA Vera Rubin芯片出货数千万颗，每颗需要20TB+ SSD，将消耗去年<strong>全球NAND产能的20%</strong></li>
+</ul>
+<p><strong>为什么重要：</strong> AI正在从根本上重塑全球半导体供应链。一位评论者用Bostrom的&quot;回形针最大化器&quot;类比——AI对NAND的需求可能&quot;永远不会停止&quot;。</p>
+<blockquote>
+<p>来源：<a href="https://www.construction-physics.com/p/reading-list-022126">Construction Physics</a> / <a href="https://shkspr.mobi/blog/2026/02/ai-is-a-nand-maximiser/">AI is a NAND Maximiser</a></p>
+</blockquote>
+<hr>
+<h3>Markdown的意外崛起</h3>
+<p>Cloudflare、Vercel、Laravel Cloud在短短数周内相继宣布&quot;Markdown for Agents&quot;支持。核心逻辑很简单：一篇典型博客文章的HTML/CSS/JS约500KB，转为Markdown仅2KB——<strong>减少99.6%</strong>。</p>
+<p>这不仅仅是为AI服务。这实际上是帮助网站所有者避免被AI爬虫DDoS的防御措施。Tedium的分析进一步指出，Markdown可能成为&quot;新的RSS&quot;——通过AT Protocol（Bluesky使用的协议），长文内容发现问题可能得到解决。</p>
+<p>WordPress创始人Matt Mullenweg也在推动将此功能加入WordPress.org。</p>
+<p><strong>为什么重要：</strong> AI驱动的流量正在摧毁许多网站的服务器，Markdown作为轻量级替代层的出现，可能深刻改变网络内容的分发方式。</p>
+<blockquote>
+<p>来源：<a href="https://feed.tedium.co/link/15204/17278321/markdown-growing-influence-cloudflare-ai">Markdown&#39;s Moment</a></p>
+</blockquote>
+<hr>
+<h2>快讯</h2>
+<ul>
+<li><p><strong>ggml.ai加入Hugging Face</strong>，两大本地AI基础设施团队合并，承诺实现llama.cpp与Transformers库的&quot;一键集成&quot;。这对本地模型生态是重大利好。<a href="https://simonwillison.net/2026/Feb/20/ggmlai-joins-hugging-face/#atom-everything">来源</a></p>
+</li>
+<li><p><strong>Gemini 3.1 Pro发布</strong>，价格不到Claude Opus 4.6的一半，基准测试成绩相近。SVG生成能力显著提升。但发布当天推理极慢，简单&quot;hi&quot;需要104秒响应。<a href="https://simonwillison.net/2026/Feb/19/gemini-31-pro/#atom-everything">来源</a></p>
+</li>
+<li><p><strong>Ladybird浏览器放弃Swift</strong>，2024年8月宣布采用Swift作为内存安全语言，现在承认&quot;长期没有进展&quot;并从代码库中移除。<a href="https://simonwillison.net/2026/Feb/19/ladybird/#atom-everything">来源</a></p>
+</li>
+<li><p><strong>Pebble智能手表复活进展</strong>：Pebble Time 2将于3月9日开始量产，首批预计4月到达用户手腕；Index 01智能戒指也在PVT阶段。防水等级达3ATM。<a href="https://repebble.com/blog/february-pebble-production-and-software-updates">来源</a></p>
+</li>
+<li><p><strong>美国疫苗制造商陷入困境</strong>：受RFK反疫苗政策影响，疫苗销售下降，裁员增加，新疫苗投资被削减。更大的担忧是特朗普政府可能取消疫苗制造商的特殊责任保护。<a href="https://www.construction-physics.com/p/reading-list-022126">来源</a></p>
+</li>
+<li><p><strong>美国EV投资出现首次净减少</strong>：超过200亿美元此前宣布的EV和电池设施投资在去年被核销。Stellantis以100美元出售其在加拿大电池工厂的股份。<a href="https://www.construction-physics.com/p/reading-list-022126">来源</a></p>
+</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<h3>&quot;Claw&quot;成为AI新范式术语</h3>
+<p>Andrej Karpathy使用&quot;Claw&quot;来描述一个新兴的AI系统层级——运行在个人硬件上、通过消息协议通信、可以直接执行指令和调度任务的AI代理系统。OpenClaw的出现催生了NanoClaw、zeroclaw、ironclaw、picoclaw等一系列项目。Karpathy认为&quot;Claw&quot;是继&quot;vibe coding&quot;和&quot;agentic engineering&quot;之后的又一个即将广泛传播的术语。<a href="https://simonwillison.net/2026/Feb/21/claws/#atom-everything">来源</a></p>
+<h3>AI功能过载的&quot;Cruft临界点&quot;</h3>
+<p>JA Westenberg提出了一个精准概念：<strong>Cruft Threshold</strong>——当管理、评估和忽略新工具的成本超过任何单个工具带来的收益时的临界点。&quot;我们大概在第14个应用添加&#39;AI总结&#39;按钮时就已经跨过了这个门槛。&quot;每个公司都有增长团队，没有公司有&quot;减法团队&quot;。<a href="https://www.joanwestenberg.com/the-unbearable-weight-of-cruft/">来源</a></p>
+<h3>巴西的&quot;穿孔公司面纱&quot;</h3>
+<p>Cory Doctorow介绍了巴西自1937年以来实行的有限责任限制制度——母公司需对子公司的义务承担连带责任。这一制度已运行近一个世纪，并未损害资本形成，反而孕育了多家全球性企业。葡萄牙、委内瑞拉、智利等国已采纳类似制度。这对&quot;资本主义现实主义&quot;——即认为当前经济安排不可替代的信条——构成了有力挑战。<a href="https://pluralistic.net/2026/02/20/karioca-konzernrecht/">来源</a></p>
+<h3>开源的中世纪行会化</h3>
+<p>面对AI生成的垃圾PR泛滥，JA Westenberg提出开源社区需要类似中世纪行会的信任机制——现有可信贡献者为新人担保，担保的权重与自身声望成正比，如果所担保的人是垃圾制造者，担保人也将付出代价。类似Debian的Web of Trust模型已经证明了这种方法的可行性。<a href="https://www.joanwestenberg.com/the-case-for-gatekeeping-or-why-medieval-guilds-had-it-figured-out/">来源</a></p>
+<h3>&quot;AWS for Everything&quot;——柔性自动化的规模化未来</h3>
+<p>Construction Physics探讨了一个引人入胜的趋势：随着AI和自动化技术的进步，高度灵活的大规模生产设施可能出现——像AWS之于计算那样，为制造业提供按需、多品种、小批量的&quot;云工厂&quot;服务。SendCutSend（年收入突破1亿美元）就是这种模式的早期范例。<a href="https://www.construction-physics.com/p/is-the-future-aws-for-everything">来源</a></p>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年2月21日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天这期内容信息量巨大，我们要聊的东西从AI芯片一路聊到鲸鱼尸体，你没听错，鲸鱼尸体。但我们先从一个让人瞠目结舌的数字开始。</p>
+<p>一万七千。一秒钟，一万七千个tokens。加拿大一家叫Taalas的硬件创业公司，用定制芯片跑Llama 3.1 8B模型，直接把推理速度拉到了17000 tokens每秒。什么概念呢？OpenAI前两天刚发布的GPT-5.3 Codex Spark，号称速度提升了30%，达到了1200 tokens每秒。一千二对一万七，差了十几倍。当然，人家跑的模型大小不一样，不能简单横向比，但这个数字本身说明一件事——专用硬件在特定场景下的威力，远超我们的想象。推理速度的军备竞赛，已经从软件优化进入到了软硬件协同的新阶段。</p>
+<p>说到军备竞赛，就不得不提Anthropic了。这周他们发布了Claude Sonnet 4.6，声称性能接近之前的Opus 4.5，但价格只有三分之一。听起来不错对吧？SWE-bench最新的独立评测也显示，Claude Opus 4.5还是稳坐榜首，后面跟着Gemini 3 Flash和中国的MiniMax M2.5。技术层面确实在进步。</p>
+<p>但是，注意这个但是。</p>
+<p>Ed Zitron写了一篇迄今为止对Anthropic最系统的批评文章，里面的数字简直让人倒吸凉气。2025年，Anthropic营收45亿美元，亏损52亿美元。你看清楚了，赚45亿，亏52亿，光是推理成本就花掉了将近28亿，占营收的59%。更狠的是，他估算Claude Code每产生1美元收入，背后要烧掉3到20美元。你想想看，这就好比你开了一家奶茶店，每卖出一杯8块钱的奶茶，你的成本是24到160块。这谁受得了？</p>
+<p>文章还特别点了Anthropic CEO Dario Amodei，说他反复用&quot;2到3年&quot;&quot;2025或2026或2027&quot;这种模糊时间线来安抚投资者和媒体。而他提出的所谓&quot;单模型盈利&quot;概念，被比作当年WeWork搞的那个&quot;社区调整EBITDA&quot;——本质上就是用创造性的会计手法来掩盖亏损。与此同时，Anthropic未来四年计划砸一千亿美元用于训练，还签了数百亿美元的云计算合同。这到底是在建设未来，还是在豪赌？老实说，我觉得这个问题现在谁也回答不了。AI行业就处在这么一个微妙的转折点上——技术确实在飞速进步，但商业模式到底能不能跑通，依然是一个巨大的问号。</p>
+<p>顺便说一句，Gemini 3.1 Pro也发布了，价格不到Claude Opus 4.6的一半，基准测试成绩还差不多。不过发布当天闹了个笑话，你跟它说一句&quot;hi&quot;，它要104秒才能回你。一分多钟回一个hi，这体验确实有点感人。</p>
+<p>好，咱们换个完全不同的话题。接下来要聊的东西特别有意思，是一篇关于开源项目生态的长文，作者Andrew Nesbitt用了一个绝妙的比喻——鲸落。</p>
+<p>什么是鲸落？就是深海里，当一头巨鲸死亡沉入海底，它的尸体会成为一个完整的生态系统，养活周围的生物长达数十年。开源世界里也有一模一样的现象。当一个大型开源项目停止维护或者&quot;死掉&quot;之后，围绕它会发生三个阶段的生态演替。</p>
+<p>第一阶段叫食腐阶段。项目一停止维护，分叉马上就出现了。OpenOffice死了，LibreOffice接盘；MySQL被收购了，MariaDB冒出来。第二阶段叫富集阶段，更小的项目开始从尸体上提取特定的模块，或者围绕它构建兼容工具。第三阶段最有意思，叫化能合成阶段——就像深海热泉口的微生物一样，那些协议、文件格式、API规范，能持续支撑专业社区存活几十年。Docker的OCI规范、Atom编辑器留下的Tree-sitter，都是典型案例。</p>
+<p>但这篇文章最发人深省的一个观察是什么呢？当云厂商把所有大型项目都收购或接管维护之后，&quot;鲸落率&quot;降低了，小型专业生态就失去了进化的机会。这就好比说，如果深海里所有的鲸鱼都被圈养起来永远不会死，那海底那套靠鲸落维持的生态系统就会彻底崩溃。这个思路太精彩了，它给我们理解技术生态系统的演化提供了一个全新的框架。</p>
+<p>说到生态系统，还有一个跟开源相关的有趣讨论。因为AI生成的垃圾Pull Request越来越多，有人提出开源社区需要建立类似中世纪行会的信任机制——老贡献者给新人做担保，担保人的权重跟自身声望成正比，如果你担保的人是来捣乱的，你自己的声望也要受损。其实Debian的Web of Trust模型早就证明了这套东西是可行的。AI时代，信任反而变得更值钱了。</p>
+<p>好，咱们说回硬件和制造业。今天有一组数据特别值得关注。</p>
+<p>先说中国电动车。Rhodium Group的分析揭示了一个违反直觉的结论——中国电动车的价格优势，既不是来自低劳动力成本，也不主要来自补贴，而是来自极致的垂直整合。比亚迪和零跑是这方面的代表，从电池到电机到整车，能自己做的全部自己做。这也解释了为什么它们能在过去两年持续引领降价。</p>
+<p>再看芯片这边，三条消息放在一起看特别震撼。美国从台湾的进口额已经超过了中国，主要就是数据中心芯片在拉动。Micron宣布在美国投资超过1500亿美元建内存工厂，台积电计划在亚利桑那再建4座工厂，投资1000亿美元。而如果英伟达的Vera Rubin芯片出货几千万颗，每颗需要20TB以上的SSD，光这一个芯片就要消耗去年全球NAND产能的20%。有评论者引用了哲学家Bostrom那个著名的&quot;回形针最大化器&quot;思想实验来形容这个趋势——AI对存储的需求，可能永远不会停止。</p>
+<p>最后再快速聊两个我觉得特别值得关注的趋势。</p>
+<p>第一个是Markdown的意外崛起。Cloudflare、Vercel、Laravel Cloud在短短几周内相继宣布支持&quot;Markdown for Agents&quot;。逻辑其实很简单，一篇普通博客的HTML加CSS加JavaScript大概500KB，转成Markdown只有2KB，体积减少99.6%。这不光是为了方便AI读取，更是帮网站主防御AI爬虫带来的流量冲击。有分析认为，Markdown可能会成为&quot;新的RSS&quot;，通过AT Protocol这种协议重新解决内容发现的问题。WordPress创始人也在推动把这个功能加进去。</p>
+<p>第二个是Andrej Karpathy提出的&quot;Claw&quot;概念。它描述的是一种新兴的AI系统层级——跑在个人硬件上、通过消息协议通信、能直接执行指令和调度任务的AI代理系统。围绕这个概念已经冒出了NanoClaw、zeroclaw、ironclaw等一系列项目。Karpathy认为这将是继&quot;vibe coding&quot;和&quot;agentic engineering&quot;之后又一个即将爆发的术语。</p>
+<p>还有一个概念我觉得说得特别精准，叫Cruft Threshold——功能过载的临界点。就是说当你管理、评估和忽略新工具的成本超过任何单个工具带来的收益时，你就过了这个临界点。原文说得特别好，&quot;我们大概在第14个应用添加AI总结按钮的时候就已经跨过了这条线。&quot;每家公司都有增长团队，但没有一家公司有&quot;减法团队&quot;。这句话值得所有做产品的人反复品味。</p>
+<p>所以你看，今天的信息拉通来看，AI行业正处在一个非常有意思的阶段。技术在狂飙突进，硬件推理速度突破万级，模型能力不断刷新，但与此同时，烧钱的速度也在狂飙，商业模式的可持续性远没有被证明。而在这场洪流之下，从开源生态的鲸落演替，到制造业供应链的重构，到内容分发方式的变革，整个技术世界都在经历一场深层的结构性调整。谁能在这场调整中找到可持续的位置，谁就是下一个十年的赢家。</p>
+<p>好了，今天就到这里，我们明天见。</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
