@@ -50,30 +50,28 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
-async function sendWithRetry(email, html, maxRetries = 3) {
+const BATCH_SIZE = 50;
+const FROM = RESEND_FROM || "YOMOO 每日AI快送 <daily@yomoo.net>";
+const SUBJECT = "YOMOO 每日AI快送 — " + EPISODE_DATE;
+
+async function sendBatch(emails, maxRetries = 3) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    const resp = await fetchJson("https://api.resend.com/emails", {
+    const resp = await fetchJson("https://api.resend.com/emails/batch", {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + RESEND_API_KEY,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        from: RESEND_FROM || "YOMOO 每日AI快送 <daily@yomoo.net>",
-        to: email,
-        subject: "YOMOO 每日AI快送 — " + EPISODE_DATE,
-        html: html,
-      }),
+      body: JSON.stringify(emails),
     });
 
     if (resp.status >= 200 && resp.status < 300) {
-      return { success: true };
+      return { success: true, data: resp.data };
     }
 
     if (resp.status === 429 && attempt < maxRetries) {
-      // Rate limited — back off and retry
-      const backoff = attempt * 2000;
-      console.log("    Rate limited, retrying in", backoff, "ms...");
+      const backoff = attempt * 3000;
+      console.log("  Rate limited, retrying batch in", backoff, "ms...");
       await sleep(backoff);
       continue;
     }
@@ -105,27 +103,47 @@ async function main() {
     return;
   }
 
-  let sent = 0, failed = 0;
-
-  for (const sub of subscribers) {
-    const email = sub.email;
-    const masked = maskEmail(email);
-    const token = hmacToken(email, WORKER_SECRET);
-    const unsubUrl = workerUrl + "/unsubscribe?email=" + encodeURIComponent(email) + "&token=" + token;
+  // Build individual email payloads (each has unique unsubscribe URL)
+  const allEmails = subscribers.map(sub => {
+    const token = hmacToken(sub.email, WORKER_SECRET);
+    const unsubUrl = workerUrl + "/unsubscribe?email=" + encodeURIComponent(sub.email) + "&token=" + token;
     const html = emailTemplate.replace(/{{UNSUBSCRIBE_URL}}/g, unsubUrl);
+    return {
+      from: FROM,
+      to: sub.email,
+      subject: SUBJECT,
+      html: html,
+    };
+  });
 
-    const result = await sendWithRetry(email, html);
+  // Send in batches of BATCH_SIZE
+  let sent = 0, failed = 0;
+  for (let i = 0; i < allEmails.length; i += BATCH_SIZE) {
+    const batch = allEmails.slice(i, i + BATCH_SIZE);
+    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+    const totalBatches = Math.ceil(allEmails.length / BATCH_SIZE);
+    console.log(`Sending batch ${batchNum}/${totalBatches} (${batch.length} emails)...`);
+
+    const result = await sendBatch(batch);
 
     if (result.success) {
-      sent++;
-      console.log("  Sent to", masked);
+      const data = Array.isArray(result.data) ? result.data : (result.data?.data || []);
+      sent += batch.length;
+      for (let j = 0; j < batch.length; j++) {
+        console.log("  Sent to", maskEmail(batch[j].to));
+      }
     } else {
-      failed++;
-      console.error("  Failed for", masked, ":", result.status);
+      failed += batch.length;
+      console.error("  Batch failed:", result.status, JSON.stringify(result.data).slice(0, 200));
+      for (let j = 0; j < batch.length; j++) {
+        console.error("  Failed for", maskEmail(batch[j].to));
+      }
     }
 
-    // Resend free tier: 2 emails/second — wait 600ms between sends
-    await sleep(600);
+    // Wait between batches
+    if (i + BATCH_SIZE < allEmails.length) {
+      await sleep(1000);
+    }
   }
 
   console.log("Done:", sent, "sent,", failed, "failed, out of", subscribers.length);
