@@ -25,6 +25,10 @@ function maskEmail(email) {
   return maskedLocal + "@" + domain;
 }
 
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 function fetchJson(url, options = {}) {
   return new Promise((resolve, reject) => {
     const mod = url.startsWith("https") ? https : http;
@@ -81,6 +85,44 @@ async function sendBatch(emails, maxRetries = 3) {
   return { success: false, status: 429, data: "Max retries exceeded" };
 }
 
+async function sendSingle(email, maxRetries = 3) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    const resp = await fetchJson("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + RESEND_API_KEY,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(email),
+    });
+
+    if (resp.status >= 200 && resp.status < 300) {
+      return { success: true };
+    }
+
+    if (resp.status === 429 && attempt < maxRetries) {
+      const backoff = attempt * 2000;
+      await sleep(backoff);
+      continue;
+    }
+
+    return { success: false, status: resp.status };
+  }
+  return { success: false, status: 429 };
+}
+
+function buildEmailPayload(sub, workerUrl) {
+  const token = hmacToken(sub.email, WORKER_SECRET);
+  const unsubUrl = workerUrl + "/unsubscribe?email=" + encodeURIComponent(sub.email) + "&token=" + token;
+  const html = emailTemplate.replace(/{{UNSUBSCRIBE_URL}}/g, unsubUrl);
+  return {
+    from: FROM,
+    to: sub.email,
+    subject: SUBJECT,
+    html: html,
+  };
+}
+
 async function main() {
   const workerUrl = WORKER_URL.replace(/\/$/, "");
   console.log("Fetching subscribers...");
@@ -95,29 +137,27 @@ async function main() {
     process.exit(1);
   }
 
-  const subscribers = subResp.data;
-  console.log("Found", subscribers.length, "subscriber(s)");
+  const allSubscribers = subResp.data;
+  console.log("Found", allSubscribers.length, "subscriber(s)");
 
-  if (subscribers.length === 0) {
-    console.log("No subscribers, done");
+  // Filter out invalid emails
+  const valid = allSubscribers.filter(s => isValidEmail(s.email));
+  const invalid = allSubscribers.filter(s => !isValidEmail(s.email));
+  if (invalid.length > 0) {
+    console.log("Skipping", invalid.length, "invalid email(s):", invalid.map(s => maskEmail(s.email)).join(", "));
+  }
+
+  if (valid.length === 0) {
+    console.log("No valid subscribers, done");
     return;
   }
 
-  // Build individual email payloads (each has unique unsubscribe URL)
-  const allEmails = subscribers.map(sub => {
-    const token = hmacToken(sub.email, WORKER_SECRET);
-    const unsubUrl = workerUrl + "/unsubscribe?email=" + encodeURIComponent(sub.email) + "&token=" + token;
-    const html = emailTemplate.replace(/{{UNSUBSCRIBE_URL}}/g, unsubUrl);
-    return {
-      from: FROM,
-      to: sub.email,
-      subject: SUBJECT,
-      html: html,
-    };
-  });
+  // Build payloads
+  const allEmails = valid.map(sub => buildEmailPayload(sub, workerUrl));
 
-  // Send in batches of BATCH_SIZE
   let sent = 0, failed = 0;
+
+  // Try batch first
   for (let i = 0; i < allEmails.length; i += BATCH_SIZE) {
     const batch = allEmails.slice(i, i + BATCH_SIZE);
     const batchNum = Math.floor(i / BATCH_SIZE) + 1;
@@ -127,26 +167,32 @@ async function main() {
     const result = await sendBatch(batch);
 
     if (result.success) {
-      const data = Array.isArray(result.data) ? result.data : (result.data?.data || []);
       sent += batch.length;
-      for (let j = 0; j < batch.length; j++) {
-        console.log("  Sent to", maskEmail(batch[j].to));
+      for (const e of batch) {
+        console.log("  Sent to", maskEmail(e.to));
       }
     } else {
-      failed += batch.length;
-      console.error("  Batch failed:", result.status, JSON.stringify(result.data).slice(0, 200));
-      for (let j = 0; j < batch.length; j++) {
-        console.error("  Failed for", maskEmail(batch[j].to));
+      // Batch failed — fall back to sending one by one
+      console.log("  Batch failed (" + result.status + "), falling back to individual sends...");
+      for (const e of batch) {
+        const r = await sendSingle(e);
+        if (r.success) {
+          sent++;
+          console.log("  Sent to", maskEmail(e.to));
+        } else {
+          failed++;
+          console.error("  Failed for", maskEmail(e.to), ":", r.status);
+        }
+        await sleep(600);
       }
     }
 
-    // Wait between batches
     if (i + BATCH_SIZE < allEmails.length) {
       await sleep(1000);
     }
   }
 
-  console.log("Done:", sent, "sent,", failed, "failed, out of", subscribers.length);
+  console.log("Done:", sent, "sent,", failed, "failed, out of", valid.length);
   if (failed > 0) process.exit(1);
 }
 
