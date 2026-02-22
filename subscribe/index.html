@@ -55,7 +55,7 @@
       var email=document.getElementById('email').value.trim();
       var msg=document.getElementById('msg');
       var btn=document.getElementById('btn');
-      if(!email||!email.includes('@')){msg.className='message error';msg.textContent='Please enter a valid email';return}
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='message error';msg.textContent='Please enter a valid email (e.g. name@example.com)';return}
       btn.disabled=true;btn.textContent='...';msg.textContent='';
       try{
         var resp=await fetch('https://yomoo-subscribe-worker.yomoo-llc.workers.dev/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});
