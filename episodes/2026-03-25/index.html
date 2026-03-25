@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-03-25</title>
+  <meta name="description" content="Anthropic Claude登陆Mac桌面直接操控电脑，抢在苹果AI助手跳票一年后率先交付代理AI；苹果macOS启用RDMA技术，多台Mac组成1.5TB统一内存池，以4万美元成本运行大模型；OpenAI计划将ChatGPT、Codex和浏览器合并为桌面&quot;超级应用&quot;，引发争议。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-03-25/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-03-25">
+  <meta property="og:description" content="Anthropic Claude登陆Mac桌面直接操控电脑，抢在苹果AI助手跳票一年后率先交付代理AI；苹果macOS启用RDMA技术，多台Mac组成1.5TB统一内存池，以4万美元成本运行大模型；OpenAI计划将ChatGPT、Codex和浏览器合并为桌面&quot;超级应用&quot;，引发争议。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-03-25/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-03-25T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-03-25">
+  <meta name="twitter:description" content="Anthropic Claude登陆Mac桌面直接操控电脑，抢在苹果AI助手跳票一年后率先交付代理AI；苹果macOS启用RDMA技术，多台Mac组成1.5TB统一内存池，以4万美元成本运行大模型；OpenAI计划将ChatGPT、Codex和浏览器合并为桌面&quot;超级应用&quot;，引发争议。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-03-25",
+    "description": "Anthropic Claude登陆Mac桌面直接操控电脑，抢在苹果AI助手跳票一年后率先交付代理AI；苹果macOS启用RDMA技术，多台Mac组成1.5TB统一内存池，以4万美元成本运行大模型；OpenAI计划将ChatGPT、Codex和浏览器合并为桌面\"超级应用\"，引发争议。",
+    "datePublished": "2026-03-25T08:00:00+08:00",
+    "dateModified": "2026-03-25T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-03-25/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-25/yomoo-2026-03-25.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-03-25</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-25/yomoo-2026-03-25.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-25/yomoo-2026-03-25.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>科技早报 · 2026年3月25日</h1>
+<h2>执行摘要</h2>
+<p>Anthropic的Claude正式登陆Mac桌面，能直接操控用户电脑完成任务，在苹果自家AI助手持续跳票一年后抢先交出答卷。与此同时，苹果在macOS 26.2中悄然上线RDMA（远程直接内存访问）技术，让多台Mac Studio组成1.5TB统一内存池，以约4万美元的成本运行此前需要数十万美元数据中心GPU才能跑的大模型。一边是AI代理入侵桌面，一边是本地推理基础设施的飞跃——桌面计算正在被重新定义。</p>
+<hr>
+<h2>主题一：AI代理占领你的桌面——Claude接管Mac的野心与争议</h2>
+<p><strong>这是今天最值得深挖的故事。</strong></p>
+<p>Anthropic宣布Claude现在可以直接控制Mac电脑——点击、打字、打开应用、浏览网页——作为一个完全自主的代理（Agent，指能独立执行任务的AI系统）运行在用户的操作系统上。这不是沙箱演示，而是AI在字面意义上&quot;驾驶&quot;你的桌面，目前已向Pro和Max订阅用户开放研究预览。</p>
+<p>技术路径值得关注：Claude没有依赖与每个应用的深度API集成，而是通过计算机视觉理解屏幕内容，再通过标准UI控件进行交互，这让它从第一天起就能操作任何应用。配合新功能Dispatch，用户甚至可以从手机上给Mac分配任务——想象一下：你在地铁上用手机告诉AI&quot;帮我整理这份报告&quot;，回到办公室时工作已经完成。</p>
+<p>Daring Fireball的John Gruber一如既往地犀利：他承认Anthropic在苹果自己的地盘上抢先交付了代理AI——苹果承诺的设备端智能功能已经跳票整整一年——但同时毫不留情地吐槽Claude的Mac客户端&quot;仍然是一个可耻的Electron垃圾&quot;。他的反问很尖锐：如果Claude Code真那么强，为什么不用它来做一个哪怕及格水平的原生Mac应用？</p>
+<p>华尔街日报专栏作家Christopher Mims则代表了另一极的声音：&quot;我真心觉得&#39;把AI完全控制你的电脑、从而控制你整个生活&#39;这件事，回头看会显得极其愚蠢，就像当年Jimmy Fallon举着他的无聊猿NFT一样。&quot;</p>
+<p><strong>为什么这很重要：</strong> 此前我们多次报道过编程代理（[3月17日]子代理架构、[3月18日]AI隐藏决策），但那些都局限在代码编辑器里。Claude接管整个操作系统，标志着代理能力从&quot;辅助编程&quot;跃迁到&quot;辅助一切&quot;。安全隐患是巨大的——一个能操控你电脑的AI，理论上也能读取你的邮件、访问你的银行账户。但生产力前景同样惊人。Anthropic选择在苹果的AI战略（[3月18日曾报道]Apple以低投入策略静观其变）持续空转时出手，时机耐人寻味。</p>
+<p>与此同时，Simon Willison对Claude Code新推出的auto mode（自动权限模式）进行了深度安全分析。该模式用Sonnet 4.6作为分类器来审查每个操作是否安全，但Willison指出这种基于提示的防护本质上是非确定性的——他仍然更信任基于文件访问和网络连接限制的确定性沙箱。值得注意的是，auto mode的默认允许列表包含<code>pip install -r requirements.txt</code>，这意味着它无法防御未固定依赖的供应链攻击。</p>
+<blockquote>
+<p>来源：<a href="https://claude.com/blog/dispatch-and-computer-use">Daring Fireball</a> · <a href="https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/">Simon Willison</a></p>
+</blockquote>
+<hr>
+<h2>主题二：1.5TB统一内存——Mac Studio集群与本地AI推理的未来</h2>
+<p>苹果在macOS 26.2中启用了RDMA over Thunderbolt 5，允许多台Mac通过雷电接口将统一内存池化为一个连贯的地址空间。Jeff Geerling的测试集群用多台Mac Studio堆出了1.5TB统一内存，配合开源集群工具Exo 1.0，总成本约4万美元。</p>
+<p>RDMA的关键在于绕过CPU和操作系统直接读取对方内存，延迟远低于传统网络方案。对比等效的NVIDIA HGX系统动辄数十万美元的价格，这个方案在成本上具有碾压性优势。此前我们报道过AI推理成本趋近于零的趋势（[3月18日]），苹果这一步让本地私有化推理在大模型规模上变得可行——数据不出办公室，不经过任何云服务。</p>
+<blockquote>
+<p>来源：<a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5/">Jeff Geerling</a></p>
+</blockquote>
+<hr>
+<h2>主题三：OpenAI的&quot;超级应用&quot;豪赌</h2>
+<p>据华尔街日报报道，OpenAI计划将ChatGPT、编程平台Codex和浏览器Atlas合并为一个桌面&quot;超级应用&quot;。Gruber的评价毫不客气：这就像苹果把Safari、Messages和Xcode合并成一个应用一样荒谬。他特别点名负责此事的应用主管Fidji Simo（来自Shopify和Instacart），认为她把OpenAI现有的产品优先文化视为问题而非优势，这个计划&quot;将摧毁ChatGPT和Codex迄今为止所有好的东西&quot;。</p>
+<blockquote>
+<p>来源：<a href="https://www.wsj.com/tech/openai-plans-launch-of-desktop-superapp-to-refocus-simplify-user-experience-9e19931d">Daring Fireball</a></p>
+</blockquote>
+<hr>
+<h2>快讯</h2>
+<ul>
+<li><strong>供应链安全持续升温：</strong> Andrew Nesbitt详细梳理了各大包管理器的&quot;依赖冷却期&quot;（安装前等待新版本在野外验证数日）机制现状——pnpm、Yarn、Bun、Deno、uv、pip、npm均已支持。这与我们此前多次报道的供应链攻击主题（[3月24日]LiteLLM投毒、[3月23日]TeamPCP攻击、[3月17日]Go冷却期提案）形成完整拼图。</li>
+<li><strong>macOS Tahoe菜单图标之争：</strong> Gruber用3000字详尽记录了macOS 26 Tahoe在菜单项中塞满图标的灾难性设计，以及一个隐藏偏好设置的部分补救方案。此前[3月5日]我们曾报道macOS质量问题，这次的UI争议进一步发酵。</li>
+<li><strong>AI生成图像的艺术退化：</strong> Fernando Borretti将2022年Midjourney v2的输出与最新模型对比，发现新模型&quot;精确得多但艺术性无限倒退&quot;——旧模型的粗糙和不完美反而留下了想象空间。</li>
+<li><strong>AI计算6倍浪潮：</strong> Martin Alderson基于TSMC CoWoS晶圆分配数据指出，全球AI芯片算力将在2024到2026年间增长约6倍，而当前最强模型（如Opus 4.5）实际上只是2024年&quot;涓流&quot;算力的产物。</li>
+<li><strong>Meta正式放弃VR版Horizon Worlds：</strong> 6月15日起VR端将完全下线，仅保留网页和手机版。元宇宙叙事的又一块墓碑。</li>
+<li><strong>Samsung Galaxy S26支持AirDrop：</strong> 继Google Pixel之后，三星也通过逆向工程实现了AirDrop互传。苹果至今未做任何评论。</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<ul>
+<li><strong>欧洲云主权僵局：</strong> Bert Hubert的年度盘点揭示一个尴尬现实——欧洲政府和企业被美国云深度绑定，即便政策共识已经形成，IT采购部门仍在照旧购买AWS和Azure。最讽刺的一句话来自匿名企业高管：&quot;如果全欧洲都依赖美国云，出事时大家一起倒，没有人会被单独追责。&quot;</li>
+<li><strong>Bell Labs首个诺贝尔奖的启示：</strong> Construction Physics详细还原了Davisson发现电子衍射的曲折历程——偶然的实验事故、跨大西洋的学术交流、长达17年才获奖的漫长等待。在当下企业争相追求&quot;快速产出&quot;的氛围中，这个故事提醒我们基础研究的价值往往无法预测。</li>
+<li><strong>城市监控的静默扩张：</strong> computers are bad的长文详细记录了Flock Safety如何用硅谷销售模式将车牌识别系统推向全美，以及执法机构如何系统性地绕过公开审查。在AI面部识别尚未普及之前，车牌识别已经悄然构建起覆盖全美的监控网络。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年3月25日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天这期内容你一定要认真听，因为发生了一件事，可能会彻底改变你使用电脑的方式。Anthropic的Claude，现在可以直接控制你的Mac电脑了。注意，不是在一个小窗口里跟你聊天，而是真的接管你的鼠标、你的键盘，帮你点击、打字、打开应用、浏览网页。而与此同时呢，苹果悄悄搞了一个大动作，让几台Mac Studio拼在一起，组成一个1.5TB的超级内存池，花4万美元就能跑以前要几十万美元才能跑的大模型。一边是AI代理入侵你的桌面，一边是本地推理能力的飞跃。今天咱们就来好好聊聊，桌面计算这个东西，正在被怎样重新定义。</p>
+<p>先说第一个，也是今天最炸裂的消息。Claude登陆Mac桌面，而且不是那种&quot;我帮你查个天气&quot;的小助手级别，是真正意义上的全自主代理。它通过计算机视觉理解你屏幕上的内容，然后用标准的UI控件来操作，这意味着什么呢？意味着它从第一天起就能操作你电脑上的任何应用，不需要每个软件单独做适配。你想想看，这个思路其实非常聪明，它不走API集成那条路，而是像一个真人一样&quot;看&quot;屏幕、&quot;用&quot;鼠标。</p>
+<p>更厉害的是，它还配了一个叫Dispatch的功能。你在地铁上掏出手机，跟Claude说&quot;帮我把那份报告整理一下&quot;，等你到了办公室，打开电脑一看，活儿已经干完了。这个画面是不是有点科幻？但它现在已经对Pro和Max订阅用户开放了。</p>
+<p>不过呢，这件事的争议也非常大。Daring Fireball的John Gruber，科技圈著名的毒舌评论家，他说了一句特别扎心的话。他承认Anthropic确实在苹果自己的地盘上抢先交付了代理AI，要知道苹果承诺的设备端智能功能已经跳票整整一年了，但是呢，Gruber转头就吐槽Claude的Mac客户端&quot;仍然是一个可耻的Electron垃圾&quot;。他的反问特别尖锐：如果你们的Claude Code真那么强，为什么不用它给自己做一个哪怕及格水平的原生Mac应用？这个问题确实挺打脸的。</p>
+<p>而华尔街日报的专栏作家Christopher Mims代表了另一个极端的声音，他说：&quot;我真心觉得把AI完全控制你的电脑、从而控制你整个生活这件事，回头看会显得极其愚蠢，就像当年Jimmy Fallon举着他的无聊猿NFT一样。&quot;这个比喻太损了，但你不得不承认，他说的安全隐患是真实存在的。一个能操控你电脑的AI，理论上也能读取你的邮件、访问你的银行账户，这谁不害怕？</p>
+<p>说到安全，Simon Willison对Claude Code新推出的自动权限模式做了深度分析。这个模式用另一个AI模型来审查每个操作是否安全，听起来挺靠谱对吧？但Willison指出，这种基于提示词的防护本质上是不确定的，你没法百分百保证它每次都判断正确。更关键的是，它的默认允许列表里包含了pip install这样的命令，这意味着它根本防不住供应链攻击。所以Willison说他还是更信任那种硬性的沙箱限制，比如直接限制文件访问和网络连接。这个观点我觉得非常值得重视。</p>
+<p>好，咱们说第二个大事。苹果在macOS 26.2里悄悄上线了一个叫RDMA over Thunderbolt 5的技术。这个名字听起来很拗口，但它做的事情非常简单粗暴：让多台Mac通过雷电线连在一起，把所有的内存合并成一个巨大的内存池。Jeff Geerling实测，用几台Mac Studio堆出了1.5TB的统一内存，配合一个叫Exo的开源工具，总成本大约4万美元。</p>
+<p>4万美元是什么概念？同等性能的英伟达HGX系统，动辄几十万美元起步。这个价格差距是碾压级的。而RDMA的关键在于绕过CPU和操作系统，直接读取对方的内存，延迟远低于传统网络方案。你想，以前要跑一个几百亿参数的大模型，你得去租云服务器，数据要上传到别人的机房里。现在呢，几台Mac往桌上一摆，线一插，数据不出办公室，不经过任何云服务，隐私和安全问题一下子就解决了大半。这对于那些对数据敏感的企业来说，简直是天大的好消息。</p>
+<p>接下来说说OpenAI。据华尔街日报报道，OpenAI打算把ChatGPT、编程平台Codex和浏览器Atlas合并成一个桌面超级应用。Gruber对这个计划的评价毫不客气，他说这就像苹果把Safari、Messages和Xcode合并成一个应用一样荒谬。他特别点名了负责这件事的应用主管Fidji Simo，说她把OpenAI现有的产品优先文化视为问题而非优势，这个超级应用计划&quot;将摧毁ChatGPT和Codex迄今为止所有好的东西&quot;。说实话，历史上把什么都往一个应用里塞的尝试，成功的案例屈指可数，微信算一个，但那是在移动端特殊生态下的产物。桌面端搞超级应用？我持保留态度。</p>
+<p>好，快讯时间，几条重要消息快速过一下。</p>
+<p>供应链安全这个话题最近是越来越热了。Andrew Nesbitt梳理了各大包管理器的依赖冷却期机制，就是安装新版本之前先等几天，让社区验证一下安全性。现在pnpm、Yarn、Bun、Deno、uv、pip、npm全都支持了。结合我们之前报道的LiteLLM投毒事件和TeamPCP攻击，供应链安全的防线正在一块一块拼起来。</p>
+<p>macOS Tahoe的菜单图标设计被Gruber用三千字痛批了一顿，说菜单项里塞满图标简直是灾难。苹果藏了一个隐藏偏好设置可以部分补救，但这种需要用户自己去挖隐藏选项的做法，本身就说明设计出了问题。</p>
+<p>还有一条特别有意思的，有人把2022年Midjourney v2的AI生成图像和最新模型做了对比，发现新模型精确得多，但艺术性反而大幅倒退。老模型那种粗糙的、不完美的输出，反而留下了更多想象空间。这个观察挺深刻的，技术进步不一定等于审美进步。</p>
+<p>另外，TSMC的数据显示，全球AI芯片算力将在2024到2026年间增长大约6倍。而我们现在用的最强模型，比如Opus 4.5，实际上只是2024年那点算力的产物。换句话说，真正的算力海啸还没到，现在只是前浪。</p>
+<p>Meta正式宣布6月15号关闭VR版的Horizon Worlds，只保留网页和手机版。元宇宙这个概念，又少了一块拼图。还记得当年扎克伯格把公司名字都改了吗？现在回头看，确实有点尴尬。</p>
+<p>最后说几个值得持续关注的事情。欧洲的云主权问题陷入了一个很讽刺的僵局，政策上大家都同意要摆脱对美国云的依赖，但采购部门还是照买AWS和Azure。最扎心的一句话来自一位匿名企业高管，他说：&quot;如果全欧洲都依赖美国云，出事时大家一起倒，没有人会被单独追责。&quot;你看，这就是典型的集体行动困境。</p>
+<p>还有一个特别值得一提的故事，Construction Physics还原了Bell Labs第一个诺贝尔奖的曲折历程。Davisson发现电子衍射，靠的是一次偶然的实验事故，中间还经历了跨大西洋的学术交流，从发现到获奖等了整整17年。在今天所有人都在追求快速产出的氛围下，这个故事提醒我们，基础研究的价值往往是无法预测、也无法加速的。</p>
+<p>最后一个，Flock Safety这家公司正在用硅谷式的销售模式，把车牌识别系统推向全美。很多人关注AI面部识别的隐私问题，但其实在面部识别还没普及之前，车牌识别已经悄悄构建起了覆盖全美的监控网络。而执法机构在部署这些系统时，系统性地绕过了公开审查。这个事情值得所有关心隐私权的人持续关注。</p>
+<p>所以你看，今天的信息量非常大，但如果要我提炼一个核心主题，那就是：桌面计算正在经历一场静悄悄的革命。AI代理开始接管你的操作系统，本地推理能力在硬件层面实现突破，而围绕这一切的安全和隐私争论才刚刚开始。未来你的电脑到底是你在用，还是AI在用，这个问题可能比我们想象的更快需要回答。</p>
+<p>如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友，也欢迎直接回复邮件给我们提建议。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
