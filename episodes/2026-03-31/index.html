@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-03-31</title>
+  <meta name="description" content="AI能力飙升但经济价值趋零，George Hotz揭示能力与价值脱钩的核心悖论；Reddit、YouTube等平台正悄然消除语言壁垒，打造&quot;单语互联网&quot;幻觉；LLM仅需22分钟即可破解复杂代码保护方案，攻防平衡被彻底颠覆。另有AI替换数学库引发长达一年灾难的真实案例，为AI辅助编程敲响警钟。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-03-31/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-03-31">
+  <meta property="og:description" content="AI能力飙升但经济价值趋零，George Hotz揭示能力与价值脱钩的核心悖论；Reddit、YouTube等平台正悄然消除语言壁垒，打造&quot;单语互联网&quot;幻觉；LLM仅需22分钟即可破解复杂代码保护方案，攻防平衡被彻底颠覆。另有AI替换数学库引发长达一年灾难的真实案例，为AI辅助编程敲响警钟。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-03-31/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-03-31T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-03-31">
+  <meta name="twitter:description" content="AI能力飙升但经济价值趋零，George Hotz揭示能力与价值脱钩的核心悖论；Reddit、YouTube等平台正悄然消除语言壁垒，打造&quot;单语互联网&quot;幻觉；LLM仅需22分钟即可破解复杂代码保护方案，攻防平衡被彻底颠覆。另有AI替换数学库引发长达一年灾难的真实案例，为AI辅助编程敲响警钟。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-03-31",
+    "description": "AI能力飙升但经济价值趋零，George Hotz揭示能力与价值脱钩的核心悖论；Reddit、YouTube等平台正悄然消除语言壁垒，打造\"单语互联网\"幻觉；LLM仅需22分钟即可破解复杂代码保护方案，攻防平衡被彻底颠覆。另有AI替换数学库引发长达一年灾难的真实案例，为AI辅助编程敲响警钟。",
+    "datePublished": "2026-03-31T08:00:00+08:00",
+    "dateModified": "2026-03-31T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-03-31/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-31/yomoo-2026-03-31.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-03-31</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-31/yomoo-2026-03-31.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-03-31/yomoo-2026-03-31.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日技术简报 | 2026年3月31日</h1>
+<h2>要点概览</h2>
+<p>今天的信息流围绕几个引人深思的命题展开：AI能力与经济价值正在脱钩，平台正在悄无声息地消灭语言壁垒，而LLM正在彻底改变代码保护的攻防平衡。与此同时，一篇堪称&quot;程序员恐怖故事&quot;的CHANGELOG记录了用AI替换一个数学库后长达一年的灾难历程，为AI辅助编程敲响了警钟。</p>
+<hr>
+<h2>主要报道</h2>
+<h3>AI的两个世界：能力飙升，价值归零？</h3>
+<p>这或许是今天最值得深思的话题。独立开发者George Hotz（geohot）在其博客中提出了一个精妙的思想实验：如果你带着智能手机穿越回1850年，你可以靠卖照片成为百万富翁；但今天，同样的工具在街头连5美元都赚不到。</p>
+<p>这个比喻直指AI行业的核心悖论——Claude Mythos可能确实比Opus 4.6&quot;显著更好&quot;，但这种进步的经济意义可能远不如我们想象。正如Hotz所写：&quot;AI不会替代程序员或艺术家，它提高了门槛。用AI，你确实可以构建任何东西——但其他所有人也可以。&quot;</p>
+<p>这一论点的杀伤力在于其推论：<strong>如果市场总量不增长，而AI公司却在扩张，那它们只能通过从其他人那里攫取价值来实现增长。</strong> Hotz预测AI将成为2028年美国大选的核心议题，因为人们有充分理由追问：&quot;我们到底在为谁构建这些东西？&quot;</p>
+<p>与此呼应，Hotz在另一篇文章中将闭源AI比作&quot;新封建主义&quot;（Neofeudalism）——少数实验室绑定云服务商和国家利益，决定谁可以构建什么系统、使用什么能力、嵌入什么价值观。他呼吁建立&quot;自由技术秩序&quot;：多元模型谱系、开放审计、本地推理、廉价算力，以及真正的检查、微调和拒绝的权利。此前我们报道过AI算力扩张的瓶颈（[2026-03-14]）和欧洲云主权困境（[2026-03-25]），Hotz的论述为这些现象提供了更深层的政治经济学框架。</p>
+<blockquote>
+<p><strong>为什么重要：</strong> 这不是又一篇&quot;AI要取代人类&quot;或&quot;AI是泡沫&quot;的文章。它同时承认AI的惊人能力和其经济价值的内在矛盾——能力与价值的脱钩可能是这个时代最被低估的趋势。</p>
+</blockquote>
+<p><em>来源：<a href="https://geohot.github.io//blog/jekyll/update/2026/03/30/two-worlds.html">Two Worlds</a> / <a href="https://geohot.github.io//blog/jekyll/update/2026/03/31/free-intelligence.html">Closed Source AI = Neofeudalism</a></em></p>
+<hr>
+<h3>平台正在让人类语言变得&quot;无关紧要&quot;</h3>
+<p>Rakhim在博客中描述了一个正在静悄悄发生的巨变：Reddit可以通过一个URL参数（如<code>?tl=fi</code>）将任何帖子翻译成芬兰语，这些动态页面被Google索引后，芬兰用户看到的搜索结果就是芬兰语的Reddit——而原帖根本不是芬兰语写的。YouTube有时会自动启用AI配音而不告知用户。在多人游戏中，玩家已经开始默认对方能听懂自己的母语。</p>
+<p>最令人震惊的不是技术本身，而是<strong>没有人注意到这一切正在发生</strong>。这些翻译在后台静默运行，为每个用户创造出一个&quot;定制的单语互联网&quot;的幻觉。Rakhim将其比作道格拉斯·亚当斯《银河系漫游指南》中的巴别鱼——一种让所有语言即时可理解的虚构装置，而现实版本正在成为大多数用户从未察觉的基础设施层。</p>
+<blockquote>
+<p><strong>为什么重要：</strong> 语言壁垒的消失是革命性的——全球知识获取真正民主化了。但代价是：当人们不再接触外语时，驱动文化好奇心的那种&quot;摩擦力&quot;也随之消失。</p>
+</blockquote>
+<p><em>来源：<a href="https://rakhim.exotext.com/making-human-languages-irrelevant">Making human languages irrelevant</a></em></p>
+<hr>
+<h3>LLM正在摧毁代码保护的防线</h3>
+<p>开发者Pixelmelt分享了一个令人不安的发现：他花大量时间构建的JavaScript代码保护方案，Claude在22分钟内就能从零知识开始破解。更具冲击力的是他的观察——商业级反机器人方案和电子书平台的DRM保护同样不堪一击。</p>
+<p>此前我们报道过AI视觉幻觉（[2026-03-30]）和AI代理安全挑战（[2026-03-06]），但这篇文章揭示了一个更基本的不对称：<strong>进攻（逆向工程）天然比防御更容易自动化</strong>，因为逆向只需要分类已有复杂性，而防御需要生成新的复杂性。LLM甚至可以从混淆、打包的代码中&quot;重新生成&quot;源码映射（source map），等于为任何网站还原出完整的源代码。</p>
+<p><em>来源：<a href="https://blog.pixelmelt.dev/the-webs-digital-locks/">The Web&#39;s Digital Locks</a></em></p>
+<hr>
+<h2>快讯</h2>
+<ul>
+<li><p><strong>HIBP重大更新：</strong> Troy Hunt的Have I Been Pwned推出Passkey登录、k-匿名搜索API（无需向服务器发送完整邮箱）、异步速率限制检查使响应速度提升近40%。<a href="https://www.troyhunt.com/passkeys-k-anonymity-searches-massive-speed-enhancements-bulk-domain-verification-api/">详情</a></p>
+</li>
+<li><p><strong>维多利亚时代AI：</strong> Simon Willison报道了一个完全用19世纪英国图书馆文本训练的3.4亿参数模型&quot;Mr. Chatterbox&quot;——效果很糟糕，但它证明了纯公共领域数据训练的可行性方向。<a href="https://simonwillison.net/2026/Mar/30/mr-chatterbox/">详情</a></p>
+</li>
+<li><p><strong>本地模型的隐性困境：</strong> llama.cpp作者Georgi Gerganov指出，本地模型的真正问题不是模型本身，而是从输入到输出的整个工具链——聊天模板、提示构造、推理bug——&quot;你当前观察到的结果极有可能在链条的某个环节以微妙的方式出了错。&quot;</p>
+</li>
+<li><p><strong>持续、持续、持续：</strong> Jim Nielsen引用Jason Gorman的观点——如果用一个词概括代码工艺的精髓，那就是&quot;continuous&quot;。软件开发的各阶段（设计、编码、测试、集成、发布）不应是线性流程，而是以小时为周期的微反馈循环。</p>
+</li>
+<li><p><strong>硬件囤积时代：</strong> 多伦多大学系统管理员记录了一个信号——由于DDR5内存和SSD价格飙升，他们开始保留本应淘汰的旧服务器，甚至接收其他部门的废旧设备。&quot;我们已经不能再假设有稳定的新硬件供应了。&quot;</p>
+</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<ul>
+<li><p><strong>AI辅助编程的&quot;数学库噩梦&quot;：</strong> Andrew Nesbitt的讽刺CHANGELOG记录了一个团队用AI替换mathjs后的灾难——从<code>$Infinity</code>发票到<code>[object Object]</code>账单，从<code>parseInt(0.0000001)</code>返回1到<code>NaN === NaN</code>为false，历经四次AI重写、六个major版本，最终回到了mathjs。这不是虚构——每一个bug都是JavaScript的真实陷阱。这篇文章应该被列为AI辅助编程的必读警示录。</p>
+</li>
+<li><p><strong>&quot;CEO说了个事儿！&quot;</strong> Gary Marcus推荐了科技记者Karl Bode对懒惰科技报道的辛辣批评——太多报道沦为CEO声明的复读机，不做任何背景核实，制造出&quot;一种看起来像新闻但对真相毫无兴趣的模拟现实&quot;。</p>
+</li>
+<li><p><strong>科斯定理的反转：</strong> Joan Westenberg提出了&quot;一致性溢价&quot;理论——当AI让交易成本趋近于零时，大型组织存在的经济学理由正在瓦解。独立运营者的真正优势不是速度，而是<strong>一致性</strong>——所有产出源自同一个心智模型，这是多人组织结构性无法实现的。</p>
+</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年3月31日的YOMOO每日AI快送。</p>
+<p>你有没有想过这样一个场景：你带着一部智能手机穿越回1850年，随手拍张照片，就能卖出天价，一夜暴富。但如果你今天站在街头拿手机拍照，别说百万了，五美元都赚不到。为什么？因为人人都有手机，人人都会拍照。这个思想实验来自独立开发者George Hotz，也就是大名鼎鼎的geohot，他用这个比喻揭示了AI行业一个极其深刻的悖论：AI的能力在飙升，但它创造的经济价值，可能正在归零。</p>
+<p>你想想看，最新的AI模型确实比上一代强很多，这没人否认。但问题是，当所有人都能用AI构建任何东西的时候，你构建的那个东西还值钱吗？这就好比照相机刚发明的时候，会拍照的人是稀缺资源，但等人手一台相机了，拍照这件事本身就不值钱了。Hotz说得很直接：AI不会替代程序员或艺术家，它提高了门槛。但注意，它同时也拉低了稀缺性。</p>
+<p>这里面最狠的一个推论是什么呢？如果整个市场的蛋糕没有变大，而AI公司还在疯狂扩张，那它们的增长从哪儿来？答案只有一个：从别人碗里抢。Hotz甚至预测，AI将成为2028年美国大选的核心议题，因为越来越多的人会追问一个根本性的问题——我们到底在为谁构建这些东西？</p>
+<p>不仅如此，Hotz在另一篇文章里把闭源AI比作新封建主义。几家头部实验室绑定云服务商和国家利益，由他们来决定谁可以构建什么系统、使用什么能力、嵌入什么价值观。这话听着有点极端，但你仔细想想，这不就是数字时代的领主和佃农吗？他呼吁建立一个自由技术秩序，包括多元模型、开放审计、本地推理，以及用户真正拥有检查、微调和拒绝的权利。</p>
+<p>好，咱们说回另一个正在悄悄发生的大事。</p>
+<p>你可能没注意到，但互联网上的语言壁垒正在被消灭，而且是以一种几乎没人察觉的方式。博主Rakhim描述了这样一个现象：Reddit现在只要在URL后面加一个参数，就能把任何帖子翻译成芬兰语、日语、中文，随便什么语言。这些翻译后的页面被Google索引了，芬兰用户搜索出来的结果就是芬兰语的Reddit，但原帖根本不是芬兰语写的。YouTube有时候会自动开启AI配音，连招呼都不打。在多人游戏里，玩家已经开始默认对方能听懂自己的母语了。</p>
+<p>最令人震惊的不是技术本身。技术我们都知道，机器翻译嘛，不是什么新鲜事。真正震惊的是没有人注意到这一切正在发生。这些翻译在后台静默运行，给每个用户创造出一个定制的单语互联网的幻觉。Rakhim把这比作道格拉斯·亚当斯写的银河系漫游指南里的巴别鱼，一种能让所有语言即时互通的虚构生物。但现在，这条鱼已经变成了现实，变成了大多数人从未察觉的基础设施层。</p>
+<p>这当然是革命性的进步。全球知识获取真正民主化了，一个巴西学生可以无障碍阅读日本开发者写的技术博客。但代价呢？当人们不再接触外语的时候，驱动文化好奇心的那种摩擦力也消失了。你不再会因为看不懂一段法语而好奇法国人在想什么。语言的多样性还在，但你感知到的世界变窄了。</p>
+<p>接下来这个话题，搞技术的朋友一定要注意听。</p>
+<p>一个叫Pixelmelt的开发者分享了一个让人后背发凉的发现。他花了大量时间精心构建的JavaScript代码保护方案，各种混淆、加密、打包，自认为固若金汤。结果呢？Claude用了22分钟，从零知识开始，就把它给破解了。22分钟。更可怕的是，他测试了商业级的反机器人方案和电子书DRM保护，同样不堪一击。</p>
+<p>这里面有一个非常本质的不对称。逆向工程这件事，天然就比防御更容易自动化。为什么？因为逆向只需要分类和理解已有的复杂性，而防御需要生成全新的复杂性。LLM甚至可以从混淆打包的代码中重新生成source map，等于给任何网站还原出完整的源代码。你辛辛苦苦搭建的护城河，AI几十分钟就给你填平了。这意味着整个客户端代码保护的思路可能需要从根本上重新思考。</p>
+<p>再给大家说几条快讯。</p>
+<p>Have I Been Pwned这个查密码泄露的老牌网站做了一次重大升级，支持了Passkey登录，还推出了k-匿名搜索API。什么意思呢？就是你查自己的邮箱有没有泄露，不需要把完整邮箱地址发给服务器了，隐私保护又进了一步，同时响应速度还提升了将近40%。</p>
+<p>Simon Willison报道了一个很有意思的项目，有人用19世纪英国图书馆的纯公共领域文本训练了一个3.4亿参数的模型，叫Mr. Chatterbox。效果嘛，说实话挺糟糕的，但它证明了一个方向：完全不碰版权材料，只用公共领域数据来训练模型，是有可能走通的。</p>
+<p>还有一个硬件领域的信号值得关注。多伦多大学的系统管理员发现，由于DDR5内存和SSD价格飙升，他们开始保留本应淘汰的旧服务器，甚至到处接收其他部门不要的废旧设备。用他的原话说：我们已经不能再假设有稳定的新硬件供应了。这和我们之前聊过的算力瓶颈是一脉相承的。</p>
+<p>最后说一个值得持续关注的事。</p>
+<p>Andrew Nesbitt写了一篇堪称程序员恐怖故事的讽刺CHANGELOG，记录了一个团队用AI替换掉mathjs这个数学库之后长达一年的灾难。从系统开出金额为无穷大的发票，到账单上显示object Object，从parseInt小数点后七个零的1居然返回1，到NaN不等于NaN导致的各种诡异bug，他们经历了四次AI重写、六个大版本升级，最后灰头土脸地回到了mathjs。最可怕的是什么呢？这里面每一个bug都是JavaScript真实存在的陷阱。这篇文章应该列为所有用AI辅助编程的人的必读警示录。AI能帮你快速生成代码，但如果你不理解底层的细节和陷阱，快速生成的可能是快速的灾难。</p>
+<p>所以你看，今天的主线其实是一个主题：AI的能力正在以惊人的速度渗透到每一个角落，从翻译到逆向工程再到编程。但能力的提升并不自动等于价值的提升，甚至可能带来新的风险和新的不对等。我们每个人都需要思考的不是AI能做什么，而是在一个人人都有超能力的世界里，什么才是真正稀缺的。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
