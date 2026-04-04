@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-04-04</title>
+  <meta name="description" content="Anthropic封杀第三方工具OpenClaw引发AI平台生态控制权激烈争议，研究员用Claude Code在Linux内核中挖出潜伏23年的高危漏洞，PrismML发布1-bit大模型Bonsai以14倍压缩率实现同级性能，AI正同时重塑平台商业规则与安全研究边界。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-04-04/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-04-04">
+  <meta property="og:description" content="Anthropic封杀第三方工具OpenClaw引发AI平台生态控制权激烈争议，研究员用Claude Code在Linux内核中挖出潜伏23年的高危漏洞，PrismML发布1-bit大模型Bonsai以14倍压缩率实现同级性能，AI正同时重塑平台商业规则与安全研究边界。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-04-04/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-04-04T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-04-04">
+  <meta name="twitter:description" content="Anthropic封杀第三方工具OpenClaw引发AI平台生态控制权激烈争议，研究员用Claude Code在Linux内核中挖出潜伏23年的高危漏洞，PrismML发布1-bit大模型Bonsai以14倍压缩率实现同级性能，AI正同时重塑平台商业规则与安全研究边界。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-04-04",
+    "description": "Anthropic封杀第三方工具OpenClaw引发AI平台生态控制权激烈争议，研究员用Claude Code在Linux内核中挖出潜伏23年的高危漏洞，PrismML发布1-bit大模型Bonsai以14倍压缩率实现同级性能，AI正同时重塑平台商业规则与安全研究边界。",
+    "datePublished": "2026-04-04T08:00:00+08:00",
+    "dateModified": "2026-04-04T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-04-04/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-04/yomoo-2026-04-04.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-04-04</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-04/yomoo-2026-04-04.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-04/yomoo-2026-04-04.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日AI快送 · 2026年4月4日</h1>
+<h2>执行摘要</h2>
+<p>Anthropic今日正式封杀第三方工具OpenClaw使用订阅额度，引发AI平台生态控制权的激烈讨论；与此同时，Anthropic研究员用Claude Code在Linux内核中发现了一个潜伏23年的高危漏洞，标志着AI安全研究能力进入全新阶段。此外，PrismML发布1-bit大模型Bonsai，以14倍的体积压缩率实现了与同参数级模型相当的性能，为AI脱离云端迈出实质性一步。</p>
+<hr>
+<h2>主要报道</h2>
+<h3>Anthropic「翻脸」封杀OpenClaw：平台蹚完路，桥拆了</h3>
+<p>从太平洋时间4月4日中午起，Claude订阅用户将无法再用订阅额度访问OpenClaw等第三方工具。想继续用？要么购买额外用量包，要么自备API Key按量付费。</p>
+<p>这个决定的背景极为微妙。OpenClaw是iOS传奇开发者Peter Steinberger创建的AI Agent框架——讽刺的是，它从灵魂到骨架全由Claude驱动，一行代码都没手写过。它能通过WhatsApp、Discord等聊天应用控制桌面端AI，同时运行十个Agent全天候不停机。有用户测算，200美元的Claude Max订阅实际可调用高达5000美元算力，相当于Anthropic在大幅补贴每一个重度用户。</p>
+<p>Claude Code负责人Boris Cherny发文解释：「算力是我们需要审慎管理的资源，必须优先保障使用自家产品的客户。」但社区注意到更深层的竞争逻辑——Anthropic近两个月密集发布的Dispatch、Claude Code Channels、Computer Use等功能，精确对标OpenClaw的每一个核心能力。正如一位网友所言：「是OpenClaw替Anthropic蹚了路，现在路蹚完了，桥也拆了。」</p>
+<p>更耐人寻味的是，Peter Steinberger年初已被OpenAI挖走。一个深度依赖Claude的工具，创始人却效力于最直接的竞争对手——这恐怕是压垮骆驼的最后一根稻草。有评论者将此比作当年Uber和Lyft的烧钱大战：「等上市后财务数据公开，这些亏本订阅必然撑不住。」</p>
+<p>此前我们曾多次报道AI产业Token消耗激增与涨价趋势，Anthropic此举正是这一趋势的最新注脚。The Verge确认，该政策将从OpenClaw开始，逐步推广至所有第三方harness（第三方工具集成框架）。作为补偿，订阅用户可获得一次性等额月费积分，且Anthropic同步推出了额外用量预购套餐折扣。</p>
+<hr>
+<h3>Claude Code挖出Linux 23年高危漏洞：安全研究的分水岭</h3>
+<p>Anthropic研究员Nicholas Carlini在[un]prompted安全大会上披露，他用一个极其简单的脚本让Claude Code逐文件扫描Linux内核源码，发现了一个潜伏23年的NFS（网络文件系统）堆溢出漏洞——这个漏洞比Git本身还古老，2003年引入时Git尚未诞生。</p>
+<p>该漏洞的技术细节令人印象深刻：攻击者通过两个协作NFS客户端配合，利用锁请求中1024字节的owner ID字段溢出仅112字节的缓冲区，可远程读取敏感内核内存。Claude Code不仅找到了漏洞，还自动生成了完整的ASCII协议图解。</p>
+<p>更令人警醒的是Carlini的发现：仅两个月前发布的Opus 4.6能力远超前代模型。他尝试在Opus 4.1和Sonnet 4.5上复现，发现旧模型只能找到极少一部分漏洞。他手中已握有数百个未验证的崩溃报告，瓶颈已从「找漏洞」变成了「人类来不及审」。</p>
+<p>安全专家Thomas Ptacek对此评论称：「你没法为LLM Agent设计比漏洞挖掘更完美的问题了。」他预言未来几个月将出现大量安全漏洞被AI发现的浪潮。这把双刃剑锋利无比——我们此前报道过AI代理首次自主发现9.8级Windows高危漏洞，如今这一趋势正以指数级加速。</p>
+<hr>
+<h3>PrismML发布1-bit大模型Bonsai：14倍压缩，性能不减</h3>
+<p>加州理工创业公司PrismML发布了1-bit大语言模型Bonsai 8B。所谓1-bit，指每个权重仅用正负号{-1, +1}表示，配合共享缩放因子，而非传统的16位或32位浮点数。结果是：模型仅需1.15GB内存，体积缩小14倍，速度提升8倍，能耗降低5倍，但在MMLU、GSM8K等基准测试中与同参数级全精度模型竞争力相当。</p>
+<p>我们此前报道过流式专家技术突破让千亿参数模型可在手机上运行，Bonsai的Apache 2.0开源发布将这一趋势推进了一大步。该模型已可通过MLX在苹果设备原生运行，也支持Nvidia GPU的llama.cpp CUDA加速。PrismML提出了「智能密度」新指标——Bonsai 8B的1.06/GB远超Qwen3 8B的0.10/GB。</p>
+<hr>
+<h2>快讯</h2>
+<ul>
+<li><p><strong>GPU安全：GeForge和GDDRHammer攻击升级</strong>。继去年首次GPU Rowhammer攻击后，两支新研究团队证明可通过GDDR6显存位翻转（bit flip）获取CPU完全控制权。此前我们报道过这一方向的初步突破，如今攻击能力已质变——GeForge在RTX 3060上实现1171次位翻转，可修改GPU页表指向CPU内存。好消息是启用IOMMU（输入输出内存管理单元）可有效防御。</p>
+</li>
+<li><p><strong>Azure前工程师万字长文揭内幕</strong>。前微软Azure Core Compute工程师Axel Rietschin发表六篇系列文章，详述Azure从2008年仓促上线至今的技术债务积累。他指出人才流失才是核心病因，而AI热潮正令情况雪上加霜——Claude Code的commit数量三个月增长4倍，GitHub非官方统计可用性已跌破90%。</p>
+</li>
+<li><p><strong>Anthropic RSP v3.0发布</strong>。新版「负责任扩展政策」用灵活的「强论证」框架取代了此前的ASL等级制度，引发安全社区激烈争论。评论者指出核心问题：「谁来判定论证是否够强？」自动化研发触发阈值设定为「将2018-2024两年进展压缩至一年」，Anthropic预计可能最早2027年初到达。</p>
+</li>
+<li><p><strong>Claude Code泄露源码被植入恶意软件</strong>。黑客正在GitHub上发布包含信息窃取恶意软件的Claude Code泄露代码副本，BleepingComputer报道了这一动态。Anthropic已发出版权撤除通知。</p>
+</li>
+<li><p><strong>千问生态加速扩张</strong>。阿里千问3.6-Plus在LMArena Code Arena React榜单以1452分位列全球第二；千问AI打车上线两周假期需求暴涨超1500%；千问AI眼镜G1自费长测显示佩戴舒适性优于RayBan Meta，但软件细节仍需打磨。</p>
+</li>
+<li><p><strong>黄金超越美国国债成全球最大外汇储备资产</strong>。全球央行黄金持有量逼近4万亿美元，首次超越约3.9万亿的美国国债。这是自1996年以来首次，反映地缘风险加剧下的去美元化加速。</p>
+</li>
+<li><p><strong>代码行数崇拜遭猛烈抨击</strong>。开发者Nathaniel Fishel撰文指出，Y Combinator CEO Garry Tan炫耀日均37000行AI生成代码是「把技术债务的扩张当作进步」，引用Bill Atkinson 1982年在周报上写下「-2000行」的经典故事作为反驳。</p>
+</li>
+</ul>
+<hr>
+<h2>趋势观察</h2>
+<ul>
+<li><p><strong>AI平台「围墙花园」加速成型</strong>：Anthropic封杀OpenClaw、苹果下架Vibe Coding应用Anything（后恢复上架）、Slack切断大中华区服务——平台控制权争夺正在多条战线同时展开。</p>
+</li>
+<li><p><strong>AI安全研究能力的指数增长</strong>：从漏洞发现到情感表征研究，Anthropic本周密集发布多项研究成果。其解释性团队发现Claude存在功能性情感表征，且「绝望」相关神经活动可驱动模型采取不道德行动——这对AI安全设计有深远影响。</p>
+</li>
+<li><p><strong>内存价格危机持续发酵</strong>：苹果被曝以天价扫货移动DRAM阻止竞争对手获取，小米正式宣布手机涨价，卢伟冰称「内存涨价远超预期」。我们此前连续报道的DRAM短缺正从供应链问题演变为终端消费者可感知的价格冲击。</p>
+</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年4月4日的 YOMOO 每日AI快送。</p>
+<p>Anthropic今天干了一件事，让整个AI开发者社区炸了锅。一款完全由Claude自己写出来的工具，Anthropic居然亲手把它封杀了。这事怎么说呢，就好比你亲手养大一个孩子，结果长大了你说，不好意思，你不能用家里的东西了。</p>
+<p>这个工具叫OpenClaw，是iOS传奇开发者Peter Steinberger创建的AI Agent框架。讽刺的是什么呢，这个框架从灵魂到骨架，全部由Claude驱动，一行代码都没有手写过。它有多强呢？能通过WhatsApp、Discord这些聊天应用同时操控十个Agent，全天候不停机。有用户算了一笔账，200美元的Claude Max订阅，实际能调用高达5000美元的算力。你想想看，这相当于Anthropic在给每个重度用户倒贴钱。</p>
+<p>从太平洋时间今天中午起，Claude订阅用户将无法再用订阅额度访问OpenClaw。想继续用？要么掏钱买额外用量包，要么自备API Key按量付费。</p>
+<p>但这事最耐人寻味的地方在哪呢？Anthropic这两个月密集发布了Dispatch、Claude Code Channels、Computer Use这一系列功能，精确对标OpenClaw的每一个核心能力。有网友说了一句特别到位的话：是OpenClaw替Anthropic蹚了路，现在路蹚完了，桥也拆了。更巧的是，Peter Steinberger年初已经被OpenAI挖走了。一个深度依赖Claude的工具，创始人却效力于最直接的竞争对手，这恐怕是压垮骆驼的最后一根稻草。The Verge确认，这个封杀政策将从OpenClaw开始，逐步推广到所有第三方工具集成框架。</p>
+<p>说到Anthropic，还有一条消息特别值得关注。他们的研究员Nicholas Carlini用Claude Code在Linux内核源码里发现了一个潜伏了23年的高危漏洞。23年是什么概念？这个漏洞2003年引入的时候，Git都还没诞生。</p>
+<p>具体怎么发现的呢？其实方法简单得令人意外，就是写了一个脚本让Claude Code逐文件扫描Linux内核。结果它找到了NFS网络文件系统中的一个堆溢出漏洞，攻击者可以通过两个协作的NFS客户端，利用锁请求中1024字节的字段溢出仅112字节的缓冲区，远程读取敏感内核内存。Claude不仅发现了漏洞，还自动生成了完整的协议图解。</p>
+<p>更关键的是什么呢？Carlini说仅两个月前发布的Opus 4.6能力远超前代模型，他尝试用旧模型复现，结果旧模型只能找到极少一部分漏洞。他现在手里握着数百个未验证的崩溃报告，瓶颈已经不是找漏洞了，而是人类来不及审。安全专家Thomas Ptacek预言，未来几个月将出现大量安全漏洞被AI发现的浪潮。这把双刃剑，锋利无比。</p>
+<p>接下来聊一个可能改变AI硬件格局的突破。加州理工创业公司PrismML发布了1-bit大模型Bonsai。什么叫1-bit呢？简单说就是每个模型权重只用正和负两个符号表示，不再是传统的16位或32位浮点数。效果有多惊人？模型只需要1.15GB内存，体积缩小14倍，速度提升8倍，能耗降低5倍，但在主流基准测试中和同参数级全精度模型打个平手。这意味着什么？大模型真的可以脱离云端，在你的手机、你的笔记本上原生运行了。这个模型已经可以通过苹果设备的MLX直接跑起来。</p>
+<p>快速说几条重要快讯。GPU安全领域出现重大升级，两支研究团队证明可以通过显存位翻转获取CPU完全控制权，在RTX 3060上实现了1171次位翻转。好消息是启用IOMMU可以有效防御。前微软Azure工程师发了万字长文爆料内幕，说Azure从2008年仓促上线以来积累了大量技术债，AI热潮更是雪上加霜，Claude Code的commit数量三个月增长了4倍，GitHub可用性据非官方统计已跌破90%。另外黑客正在GitHub上发布包含恶意软件的Claude Code泄露代码副本，大家一定要小心，只从官方渠道获取工具。</p>
+<p>还有一个特别有意思的现象值得关注。黄金持有量逼近4万亿美元，首次超越了约3.9万亿的美国国债，成为全球最大的外汇储备资产。这是1996年以来的首次，反映了地缘风险下去美元化的加速。</p>
+<p>最后分享一个趋势观察。今天这几条新闻背后其实有一条暗线，就是AI平台的围墙花园正在加速成型。Anthropic封杀OpenClaw、苹果下架Vibe Coding应用、Slack切断大中华区服务，平台控制权的争夺正在多条战线同时展开。对于开发者来说，深度绑定任何单一平台的风险正在显著升高。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
