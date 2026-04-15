@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yomoo 每日AI快送 — 2026-04-15</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #fffbf5;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #fffbf5;">
+    <tr>
+      <td align="center" style="padding: 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #ffffff;">
+          <!-- Amber gradient bar -->
+          <tr>
+            <td style="height: 3px; background: linear-gradient(90deg, #C4561A, #E8722A, #D4A053); font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid #e8e2d9;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td style="width: 28px; height: 28px; background: linear-gradient(135deg, #E8722A, #D4A053); border-radius: 7px; text-align: center; vertical-align: middle; font-family: Georgia, serif; font-weight: 900; font-size: 15px; color: #ffffff;">Y</td>
+                  <td style="padding-left: 8px; font-family: Georgia, serif; font-size: 17px; font-weight: 800; color: #1a1410;">Yomoo</td>
+                </tr>
+              </table>
+              <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 900; color: #1a1410; margin: 16px 0 8px; line-height: 1.2;">每日AI快送</h1>
+              <p style="font-size: 13px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.08em; margin: 0;">2026-04-15</p>
+            </td>
+          </tr>
+          <tr>
+        <td style="padding: 16px 32px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background-color: #fff8ef; border: 1px solid rgba(232,114,42,0.25); border-radius: 8px; width: 100%;">
+            <tr>
+              <td style="padding: 14px 16px; text-align: center;">
+                <a href="https://daily.yomoo.net/episodes/2026-04-15/index.html" style="color: #E8722A; text-decoration: none; font-size: 14px; font-weight: 600;">&#9654; 在线收听播客</a>
+                <span style="color: #8a7e6e; margin: 0 8px;">|</span>
+                <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-15/yomoo-2026-04-15.mp3" style="color: #6b5e4f; text-decoration: none; font-size: 14px;">下载 MP3</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+          <!-- Report content -->
+          <tr>
+            <td style="padding: 24px 32px 40px;">
+              <h1 style="font-size: 24px; font-weight: 800; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">YOMOO 每日AI快送 — 2026年4月15日</h1>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">今日概览</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">AI安全攻防格局正经历根本性重塑：Claude Code发现Linux内核潜伏23年的远程可利用漏洞，能力跃迁速度令人震撼；与此同时，三大AI代理平台被研究者通过prompt注入劫持窃取凭证，厂商却选择沉默。网络安全领域同样不平静——17年前的Excel漏洞重新被武器化，银行KYC验证正被Telegram上的工具包批量绕过。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主题一：AI安全的&quot;斯普特尼克时刻&quot;——攻防天平被彻底改写</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这是近期最值得深挖的科技安全事件。我们此前报道过Claude Code在Linux内核中发现NFS驱动高危漏洞，现在InfoQ发布了完整技术复盘，细节令人倒吸凉气。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">Anthropic研究员Nicholas Carlini用一个简单的bash脚本驱动Claude Code逐文件扫描内核源码，发现了NFS驱动中一个2003年的远程堆溢出。攻击原理精妙：两个NFS客户端协作，客户端A用1024字节的锁owner ID（合法但异常长）获取文件锁，当客户端B请求同一锁被拒绝时，服务器生成包含该ID的拒绝响应——但响应缓冲区只有112字节，1056字节直接撑爆内核内存。这个bug比git版本控制系统本身还老。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">更关键的是能力跃迁曲线：8个月前的Opus 4.1只能找到极少数漏洞，而Opus 4.6的发现量呈数量级增长。内核维护者Greg Kroah-Hartman证实，安全报告从每周2-3份暴增至每天5-10份，&quot;且大多数正确&quot;。安全研究员Thomas Ptacek一针见血：LLM代理是模糊测试（Fuzzing，一种通过随机输入发现漏洞的技术）和静态分析的超集——既能生成假设，又能自主验证。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">硬币的另一面同样触目惊心。约翰斯·霍普金斯大学研究者发现，只需在GitHub PR标题中注入恶意指令，就能劫持Claude、Gemini和Copilot三大AI代理，窃取API密钥和访问令牌。GitHub Copilot的三层运行时防护——环境过滤、密钥扫描、网络防火墙——全部被绕过。研究者称之为&quot;comment-and-control&quot;攻击，无需任何外部基础设施，整个攻击链在GitHub内部闭环完成。最令人不安的是：三家厂商均未发布公开安全通告或分配CVE编号，大量用户仍锁定在有漏洞的版本上。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>：双刃剑已经出鞘。AI既能在数小时内发现人类审计23年未发现的漏洞，也能被简单的prompt注入劫持为攻击工具。攻防格局正被根本性重塑。</p>
+<blockquote style="margin: 16px 0; padding: 12px 16px; border-left: 3px solid #E8722A; background-color: rgba(232,114,42,0.06); font-style: italic; color: #3d3529;">
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源：<a style="color: #E8722A; text-decoration: underline;" href="https://www.infoq.com/news/2026/04/claude-code-linux-vulnerability/">InfoQ</a>、The Register</p>
+</blockquote>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主题二：网络安全多线告急</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">17年老漏洞&quot;复活&quot;</strong>：CISA将2009年首次披露的Excel远程代码执行漏洞（CVE-2009-0238）加入已知被利用漏洞目录。攻击者诱导受害者打开特制Excel文档即可完全控制系统。同日，微软Patch Tuesday修复168个新漏洞，其中SharePoint零日漏洞已被在野利用。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">银行KYC验证被批量绕过</strong>：MIT Technology Review调查发现，Telegram上至少22个频道公开销售绕过银行和加密交易所&quot;了解你的客户&quot;（KYC）人脸验证的工具包。骗子使用虚拟摄像头替换真实视频流，配合深度伪造或被盗生物特征数据，可在90秒内突破活体检测。Chainalysis估计2025年加密诈骗金额达170亿美元。</p>
+<blockquote style="margin: 16px 0; padding: 12px 16px; border-left: 3px solid #E8722A; background-color: rgba(232,114,42,0.06); font-style: italic; color: #3d3529;">
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源：The Register、<a style="color: #E8722A; text-decoration: underline;" href="https://www.technologyreview.com/2026/04/15/1135898/cyberscammers-bypassing-bank-telegram/">MIT Technology Review</a></p>
+</blockquote>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">快讯</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Snap裁员16%</strong>：约1000名全职员工受影响，CEO Spiegel称AI将帮助团队&quot;减少重复工作&quot;。又一家科技公司以AI为名大幅裁员。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Claude Code桌面版重构</strong>：新增多会话侧边栏、集成终端、内置文件编辑器和diff查看器，同步推出&quot;Routines&quot;功能支持无人值守自动化。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">智能手机市场转折</strong>：IDC数据显示Q1全球出货量同比下降4.1%，结束连续2.5年增长。苹果选择牺牲利润率维持价格不变，出货量逆势增长3.3%——此前我们报道的内存涨价影响正在全面显现。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">英国数字主权警报</strong>：Open Rights Group报告警告，英国公共部门对美国科技巨头的依赖已构成国安风险。此前我们报道了法国弃用Windows转向Linux的数字主权运动，英国正面临类似压力。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Raspberry Pi OS安全升级</strong>：新安装默认要求sudo输入密码，告别多年的免密策略。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Amazon 108亿美元收购Globalstar</strong>：扩展Leo卫星互联网网络，正面挑战SpaceX Starlink，同时与苹果合作支持iPhone卫星连接。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AI Slop研究</strong>：斯坦福与帝国理工新研究发现约35%新网站为AI生成，且AI内容&quot;正面情绪&quot;高出人类内容107%——AI正让互联网变得虚假乐观。</li>
+</ul>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">值得关注</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">学校深度伪造裸照危机正在全球蔓延。WIRED统计显示自2023年以来，至少28个国家的约90所学校发生此类事件，联合国儿童基金会估计去年有120万儿童被制作性深度伪造图像。&quot;Nudify&quot;应用几乎零门槛，而学校和执法机构的应对能力严重不足。这不再是技术问题，而是系统性的儿童保护危机。</p>
+
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 32px; text-align: center; border-top: 1px solid #e8e2d9; background-color: #fffbf5;">
+              <p style="font-size: 12px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.06em; margin: 0 0 4px;">Yomoo 每日AI快送</p>
+              <p style="font-size: 11px; color: #6b5e4f; letter-spacing: 0.08em; margin: 0 0 12px;">Powered by Yomoo LLC</p>
+              <p style="font-size: 11px; color: #6b5e4f; margin: 0;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b5e4f; text-decoration: underline;">退订邮件</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
