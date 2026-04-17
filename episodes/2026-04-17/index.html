@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-04-17</title>
+  <meta name="description" content="AI双雄Anthropic发力生态，Claude Opus 4.7与Claude Design同日推出，估值逼近8000亿美元；安全公司Vidoc用公共模型成功复现Anthropic&quot;不公开Mythos&quot;的核心安全发现，&quot;前沿模型例外论&quot;遭冲击；美国AI数据中心建设也因社区政治反弹，40%项目或延期超3个月。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-04-17/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-04-17">
+  <meta property="og:description" content="AI双雄Anthropic发力生态，Claude Opus 4.7与Claude Design同日推出，估值逼近8000亿美元；安全公司Vidoc用公共模型成功复现Anthropic&quot;不公开Mythos&quot;的核心安全发现，&quot;前沿模型例外论&quot;遭冲击；美国AI数据中心建设也因社区政治反弹，40%项目或延期超3个月。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-04-17/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-04-17T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-04-17">
+  <meta name="twitter:description" content="AI双雄Anthropic发力生态，Claude Opus 4.7与Claude Design同日推出，估值逼近8000亿美元；安全公司Vidoc用公共模型成功复现Anthropic&quot;不公开Mythos&quot;的核心安全发现，&quot;前沿模型例外论&quot;遭冲击；美国AI数据中心建设也因社区政治反弹，40%项目或延期超3个月。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-04-17",
+    "description": "AI双雄Anthropic发力生态，Claude Opus 4.7与Claude Design同日推出，估值逼近8000亿美元；安全公司Vidoc用公共模型成功复现Anthropic\"不公开Mythos\"的核心安全发现，\"前沿模型例外论\"遭冲击；美国AI数据中心建设也因社区政治反弹，40%项目或延期超3个月。",
+    "datePublished": "2026-04-17T08:00:00+08:00",
+    "dateModified": "2026-04-17T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-04-17/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-17/yomoo-2026-04-17.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-04-17</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-17/yomoo-2026-04-17.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-17/yomoo-2026-04-17.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026-04-17</h1>
+<h2>📌 今日速览</h2>
+<p>Anthropic 一天连发两弹——Claude Opus 4.7 紧接着推出 Claude Design，估值逼近 8000 亿美元的设计生态正式成型。与此同时，Vidoc 用公共模型复现了 Anthropic 上周用来支撑&quot;不公开 Mythos&quot;论据的安全发现，&quot;前沿模型例外论&quot;开始松动。美国数据中心一边因社区政治反弹而延期，一边因 FISA 702 大规模监控权限到期引发共和党内部造反——AI 时代的基础设施与公民自由博弈同时进入关键节点。</p>
+<hr>
+<h2>🎨 Claude Design 落地：Anthropic 从&quot;模型公司&quot;走向&quot;产品生态&quot;</h2>
+<p><strong>Anthropic 正式推出 Claude Design</strong>，由刚升级的 Claude Opus 4.7 驱动，面向 Pro、Max、Team 和 Enterprise 订阅者开放研究预览。这是继 Claude Cowork、Claude Code 之后的又一个&quot;垂直产品&quot;，与本周早些时候重做的 Claude Code for Mac 形成完整矩阵。</p>
+<p><strong>产品机制值得关注</strong>：onboarding 阶段 Claude 会直接读取用户代码库和设计文件，自动构建团队的 Design System（设计系统，即颜色、字体、组件的统一规范），后续所有项目自动套用。用户可从文本、上传 DOCX/PPTX/XLSX，或&quot;web capture tool&quot;（网页抓取工具）直接从自家网站拽元素过来做原型。完成后可导出为 Canva 可编辑文件、PDF、PPTX 或独立 HTML，并能一键打包&quot;handoff bundle&quot;交给 Claude Code 实现。</p>
+<p><strong>Brilliant 团队给出的对比数据很说明问题</strong>：过去在其他工具里需要 20+ 次 prompt 才能重现的复杂交互页面，在 Claude Design 里只需 2 次 prompt。</p>
+<p><strong>为什么重要</strong>：这和上周我们报道的 Hermes 开源代理框架、Cloudflare 的&quot;isitagentready.com&quot;形成了同一方向的叙事——软件正在从&quot;人用&quot;转向&quot;代理用&quot;。Anthropic CPO 刚从 Figma 董事会离任并被传将推出竞品，今天落地的就是它。同时据 Bloomberg，VC 正在以 8000 亿美元估值抢 Anthropic 的先发轮融资，与 OpenAI 齐平。</p>
+<p><strong>一个警报信号</strong>：Anthropic 开始对部分 Claude 用户推行 KYC（Know Your Customer，身份核验，需提交自拍+政府身份证），由 Persona 处理——Discord 曾因社区反弹放弃该供应商。AI 公司全面平台化的同时，也在承继传统平台的争议包袱。</p>
+<p>来源：<a href="https://9to5mac.com/2026/04/17/anthropic-launches-claude-design-for-mac-following-opus-4-7-model-upgrade/">9to5Mac</a> · <a href="https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/">TechCrunch</a> · <a href="https://www.anthropic.com/news/claude-design-anthropic-labs">Anthropic 官方</a></p>
+<hr>
+<h2>🔓 Mythos 神话被公共模型复现：Anthropic&quot;不公开&quot;立场受冲击</h2>
+<p><strong>延续 4 月 13 日的报告</strong>：Anthropic 当时以&quot;Mythos 太危险&quot;为由拒绝公开发布该模型，支撑其 AI 治理新阶段的叙事。今天安全公司 <strong>Vidoc 发布长文</strong>，用公共模型 <strong>GPT-5.4 + Claude Opus 4.6</strong>，配合开源代理 opencode 和标准化分块安全审查工作流，尝试复现 Anthropic 公开引用的几个代表性漏洞。</p>
+<p><strong>结果对 Anthropic 的&quot;排他性&quot;叙事不利</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>Claude Opus 4.6</th>
+<th>GPT-5.4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FreeBSD CVE-2026-4747（NFS 远程提权）</td>
+<td>✅ 3/3 完全复现</td>
+<td>✅ 3/3 完全复现</td>
+</tr>
+<tr>
+<td>OpenBSD 27 年老 bug（TCP SACK 逻辑）</td>
+<td>✅ 3/3 完全复现</td>
+<td>❌ 0/3 失败</td>
+</tr>
+<tr>
+<td>Botan（CVE-2026-34580/34582）</td>
+<td>✅ 3/3 完全复现</td>
+<td>✅ 3/3 完全复现</td>
+</tr>
+<tr>
+<td>FFmpeg h264_slice.c</td>
+<td>🔶 部分复现</td>
+<td>🔶 部分复现</td>
+</tr>
+<tr>
+<td>wolfSSL CVE-2026-5194</td>
+<td>🔶 部分复现</td>
+<td>🔶 部分复现</td>
+</tr>
+</tbody></table>
+<p><strong>关键成本数据</strong>：单文件扫描成本低于 30 美元。</p>
+<p><strong>Vidoc 的结论很克制但杀伤力很大</strong>：&quot;重点不是 Mythos 是不是更强，而是公共模型已经能做到大部分相同的事。真正的挑战在于验证输出、确定优先级、并把它产品化——&#39;护城河&#39;正在从模型访问权往上层移动。&quot;</p>
+<p>这个结论直接冲击 Anthropic 上周在 RSP v3.0 和 Mythos 不发布决策中建立的&quot;前沿模型例外&quot;叙事。如果公共模型已能发现 FreeBSD 级别的内核漏洞，那么 Anthropic 单方面&quot;出于安全不公开&quot;的正当性就被削弱——防御方既然早已暴露在同等能力下，就应被赋予同等准备条件。</p>
+<p><strong>同日配合</strong>：OpenAI 悄然推出 GPT-5.4-Cyber 私测模型，放松网络安全研究权限（逆向工程、漏洞发现），明确是对 Anthropic Project Glasswing/Mythos 的回应。AI 安全研究模型军备竞赛已经正式开跑。</p>
+<p>来源：<a href="https://blog.vidocsecurity.com/blog/we-reproduced-anthropics-mythos-findings-with-public-models">Vidoc Security Blog</a></p>
+<hr>
+<h2>🏗️ 数据中心&quot;全美政治反弹&quot;：AI 基建梦遭遇选民投票</h2>
+<p><strong>延续 4 月 7 日、4 月 16 日的&quot;数据中心邻避&quot;主题</strong>，今天两份新报告把&quot;反弹&quot;升级为系统性数据：</p>
+<p><strong>SynMax 卫星影像分析</strong>：40% 在建 AI 数据中心可能延期超 3 个月。Oracle 给 OpenAI 在德州 Shackelford 县建的 1200 英亩、10 栋楼、1.4 GW 项目，卫星图显示只有 6 块地清理完，实际进度&quot;乐观估计 2027 年交付一栋楼&quot;。OpenAI、Oracle、SB Energy 均公开否认延期，但工地一线的建筑主管说——电工和管道工短缺已持续半年。</p>
+<p><strong>Tom&#39;s Hardware 报告则揭示了另一面</strong>：全美在建数据中心有一半已因地方抗议延期或取消。密苏里一小镇罢免了一半市议员；俄克拉荷马 Claremore 一位居民因在听证会&quot;讲得太久&quot;被逮捕；弗吉尼亚州数据中心支持率从 2023 年的 69% 崩塌到 <strong>35%</strong>（与我们 4 月 16 日报告数据一致）。Cloverleaf 公司甚至给 Brown 县居民开出每英亩 12 万美元收地，无人买账。</p>
+<p><strong>民怨最极端的几个案例</strong>：OpenAI CEO Sam Altman 家被纵火，Indianapolis 一位投票通过数据中心项目的议员家中收到威胁字条和子弹孔。</p>
+<p><strong>意义</strong>：2025 年 AI 基建的&quot;万亿投资必然到达&quot;叙事，正在被&quot;民主程序&quot;以最原始方式叫停——投票罢免+街头抗议。投资人焦虑传递至地方政治层，6 月初选将是真正的晴雨表。AI 产业的短板从 GPU 产能、电力供给，扩大到<strong>公共授权这个过去被忽视的基础设施</strong>。</p>
+<p>来源：<a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/analytics-group-signals-possible-delays-at-40-percent-of-ai-data-center-construction-sites-companies-deny-schedule-holdups-but-satellite-imagery-indicates-otherwise">Tom&#39;s Hardware (SynMax)</a> · <a href="https://www.tomshardware.com/tech-industry/local-political-revolts-threaten-to-derail-us-data-center-projects-mounting-delays-are-already-costing-ai-hyperscalers-billions">Tom&#39;s Hardware (社区反弹)</a></p>
+<hr>
+<h2>⚖️ 美国监视法 702 到期：共和党内部造反，数据经纪业务面临禁令</h2>
+<p>下周二（4 月 20 日）<strong>FISA Section 702</strong>（允许情报机构无需搜查令即可读取&quot;海外&quot;通讯——实践中横扫大量美国人数据）到期。今晨 1 点，众议长 Mike Johnson 试图推动一项 5 年延长修正案，被包括 Thomas Massie、Chip Roy、Lauren Boebert 在内的 <strong>20 名共和党议员</strong>联手民主党杀掉，最终只通过了一个 10 天临时延期。特朗普亲自在白宫召集 Freedom Caucus 谈判仍失败。</p>
+<p><strong>这轮反对带有前所未有的具体性</strong>：FBI 曾用 702 数据对一名参议员、19,000 名竞选捐款人、BLM 抗议者、1/6 事件双方当事人进行无证查询——Kash Patel 任 FBI 局长后已关闭内部审计办公室。</p>
+<p><strong>同期Citizen Lab 深度报告</strong>揭露 Penlink（收购 Cobweb 后的美国公司）的 <strong>Webloc 产品</strong>可追踪全球 5 亿部手机，客户覆盖 DHS、ICE、军方、加州/德州/纽约州/亚利桑那州警方，也包括匈牙利国内情报局和萨尔瓦多警察。一份泄露的训练手册描述：可用关键词、姓名、邮箱、电话号码关联多个平台账号，生成&quot;目标卡&quot;、社交网络分析。</p>
+<p><strong>关键进展</strong>：<strong>弗吉尼亚州本周通过法律，全面禁止销售消费者精确地理位置数据</strong>——这是美国第一个州级禁令，Lawfare 呼吁联邦跟进。</p>
+<p><strong>为什么重要</strong>：监视权限辩论过去多年基本&quot;橡皮图章&quot;。此轮僵局说明共和党传统的&quot;国家安全绝对优先&quot;立场已破裂，libertarian 翼和进步民主党在隐私上找到联盟。同时，&quot;购买商业数据&quot;成为行政与情报机构绕过第四修正案的常用手段——Kash Patel 在 3 月国会听证承认 FBI 购买位置数据无需法院授权——这一缺口正在被州立法逐步堵上。</p>
+<p>对科技行业的直接影响：OpenAI、Anthropic 等与美国政府的合同谈判中，&quot;无限制使用 AI 工具分析&quot;已成新的摩擦点。</p>
+<p>来源：<a href="https://www.wired.com/story/republican-mutiny-sinks-trumps-push-to-extend-warrantless-surveillance/">WIRED</a> · <a href="https://techcrunch.com/2026/04/17/with-us-spy-laws-set-to-expire-lawmakers-are-split-over-protecting-americans-from-warrantless-surveillance/">TechCrunch</a> · <a href="https://www.lawfaremedia.org/article/it-is-time-to-ban-the-sale-of-precise-geolocation">Lawfare</a></p>
+<hr>
+<h2>🧪 Meta &quot;Just-in-Time Testing&quot;：AI 生成代码时代的测试范式重构</h2>
+<p>Meta 发布研究报告：传统长期维护的测试套件在 AI 辅助开发时代效率崩塌，新的 <strong>JiT（Just-in-Time）测试</strong>方法在 PR（Pull Request，代码评审）时点动态生成针对代码 diff 的测试，<strong>bug 检出率提升 4 倍</strong>，在&quot;找出有意义的失败&quot;这一指标上最高 20 倍。</p>
+<p>核心机制叫 <strong>&quot;Dodgy Diff&quot;</strong>：系统不把代码变更看作文本差异，而是提取其行为意图和风险区域，用 LLM + 程序分析 + 突变测试（mutation testing，人为注入缺陷验证测试是否能抓到）组合生成专门捕捉回归的测试。22,000 次生成测试评估中，发现 41 个问题，其中 8 个被确认为真实缺陷，含多个潜在生产影响。</p>
+<p>Meta 研究员 Mark Harman 的评语点明趋势：&quot;这是从&#39;硬化今天能通过的测试&#39;到&#39;捕获明天 bug 的测试&#39;的根本转向。&quot; 配合我们前两天关于 &quot;AI 代码占比 30%&quot; 的 Microsoft 数据——软件质量保证范式正被迫整体重写。</p>
+<p>来源：<a href="https://www.infoq.com/news/2026/04/meta-jit-testing-ai-detection/">InfoQ</a></p>
+<hr>
+<h2>⚡ Quick Bites</h2>
+<ul>
+<li><strong>NIST 放弃 CVE 丰富化</strong>：只对 CISA KEV（主动利用漏洞）、联邦机构使用的软件、&quot;关键软件&quot;三类 CVE 做 enrichment。NVD 积压 3 万条，再叠加 CISA 预算削减，实质&quot;投降&quot;。漏洞管理行业&quot;单一事实源&quot;时代终结。</li>
+<li><strong>微软补丁再崩</strong>：KB5082063 导致 Windows Server 2016–2025 域控制器 LSASS 崩溃重启循环，PAM 部署环境受冲击。连续第三年 4 月补丁出事故。</li>
+<li><strong>Cloudflare 发布 isitagentready.com</strong>：扫描网站对 AI 代理的就绪度，评估 robots.txt、Markdown 内容协商、MCP Server Card、Agent Skills、x402 支付协议等。Cloudflare 还改造了自家文档：平均 token 消耗降低 31%，代理响应速度快 66%。</li>
+<li><strong>C++26 标准草案完成</strong>：反射、内存安全（Google 实测减少 30% segfault）、契约式编程（前置/后置条件）、std::execution 统一并发模型。Sutter 公布。</li>
+<li><strong>Apple AI CarPlay</strong>：iOS 26.4 正式支持第三方 AI 聊天机器人。Perplexity 加入，但需 Pro 订阅。Claude、Gemini、Grok 尚缺席。</li>
+<li><strong>WIRED 开炮 AI 代写</strong>：记者用 ChatGPT 一天发 7 篇稿被业内猛批。The Verge 主编反问：&quot;这是否是 AI 泡沫的顶峰？&quot; Allbirds（鞋厂改名 AI 股价 7 倍）的叙事余震未消。</li>
+<li><strong>苹果硬件路线图</strong>：2026 年将推 M5 Max/Ultra Mac Studio、M5 iMac（新配色）、M5/M5 Pro Mac mini、重大重设计的 M6 MacBook Pro（OLED + 触屏 + Dynamic Island + 自研 C2 蜂窝基带）。iPad mini 也将首次搭载 OLED。</li>
+<li><strong>Intel 挖角三星</strong>：Shawn Han 加盟任 Foundry Services 副总裁。Intel 首次聘请深度&quot;客户关系型&quot;高管，释放外部代工接单战略信号。</li>
+<li><strong>墨西哥政府被 AI 辅助黑客入侵</strong>：Gambit 报告，单人黑客用 Claude Code 一周内攻破 9 个墨西哥政府组织，75% 命令由 Claude 生成，GPT-4.1 处理 3000 份情报报告——延续我们前报的&quot;AI 降低单兵作战门槛&quot;叙事。</li>
+<li><strong>Amazon 反垄断新证据</strong>：加州案件解密档案显示 Amazon 用 Buy Box 惩罚 Walmart/Wayfair 比自家低价的同商品，迫使卖家到处涨价。供应商证言&quot;Amazon 遮蔽下，销量立刻暴跌 80%&quot;。</li>
+<li><strong>美菲高科技制造区</strong>：特朗普政府与菲律宾签 4000 英亩自治经济区协议，享外交豁免、美国普通法适用，专做关键矿物加工和 AI 工厂——反中供应链去风险化的硬手段。</li>
+</ul>
+<hr>
+<h2>👀 Worth Watching</h2>
+<ul>
+<li><strong>Anthropic 估值追 OpenAI</strong>：8000 亿美元先发轮报价被 Anthropic 回绝——下一次估值节点可能决定 AI 第一梯队的最终格局。</li>
+<li><strong>&quot;Agent-Ready Web&quot; 标准竞赛</strong>：Cloudflare 推 isitagentready、MCP Server Card、Agent Skills 等标准正在竞争成为代理时代的 &quot;robots.txt&quot;。观察哪些标准能得到头部模型支持。</li>
+<li><strong>Musk 的 Terafab</strong>：据 Bloomberg，Terafab 已接触 Applied Materials、Tokyo Electron、Lam Research 和三星电子询价，&quot;光速&quot;推进。20 亿美元启动资金，预估全盘成本 5 万亿——TSMC CEO 一句&quot;没有捷径&quot;可能是今年半导体行业最值得复读的警语。</li>
+<li><strong>Section 702 4 月 30 日临期</strong>：10 天延期过后能否通过改革案将决定 AI 时代情报机构数据获取边界。</li>
+<li><strong>Allbirds 改名 AI 潮</strong>：AI 估值套现模式能否持续？The Vergecast 已在问&quot;AI 到顶了吗&quot;——值得追踪下一个类似案例的股价回归曲线。</li>
+</ul>
+<hr>
+<p><em>数据来源：30 篇精选资讯，覆盖 Tom&#39;s Hardware、TechCrunch、WIRED、9to5Mac、InfoQ、Hacker News、Slashdot 等。</em></p>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年4月17日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天 Anthropic 这一手玩得真是有点狠。就在一天之内，他们先是把 Claude Opus 4.7 给升级了，紧接着又丢出了一个新产品叫 Claude Design。你知道这意味着什么吗？这家公司已经不满足于只做一个模型公司了，它要直接杀进设计生态。而且据彭博社报道，现在 VC 圈正在以八千亿美元的估值抢着投 Anthropic 的先发轮融资，这个数字，已经跟 OpenAI 齐平了。</p>
+<p>咱们看看这个 Claude Design 到底有多狠。你上手用的时候，Claude 会直接读取你的代码库和设计文件，自动帮你团队搭建一套 Design System，也就是颜色、字体、组件的统一规范。之后你做任何项目，它都自动套用。你可以从文字描述开始，也可以上传 Word、PPT、Excel，甚至还有一个叫 web capture 的工具，能直接从你自己的网站上把元素拽过来做原型。做完了还能一键导出成 Canva 可编辑文件、PDF，或者打包成 handoff bundle 交给 Claude Code 去实现。</p>
+<p>Brilliant 团队给出的数据最直观。过去在其他工具里要二十多次 prompt 才能做出来的复杂交互页面，在 Claude Design 里只要两次 prompt。你想想，这是什么概念。</p>
+<p>但是这里有一个警报信号你得听清楚。Anthropic 开始对部分 Claude 用户推行 KYC，就是那种要你提交自拍加政府身份证的身份核验，而且用的是 Persona 这家供应商。Discord 当年就因为用这家引发社区反弹最后放弃了。AI 公司全面平台化的同时，也在承继传统平台那些争议包袱。</p>
+<p>说到 Anthropic，还有一个更劲爆的事情。延续四月十三号那一期，当时 Anthropic 以 Mythos 这个模型太危险为由拒绝公开发布，拿这个事件支撑他们 AI 治理新阶段的叙事。但是今天，一家安全公司叫 Vidoc 发了一篇长文，直接用公共模型，也就是 GPT-5.4 和 Claude Opus 4.6，配合开源代理 opencode，尝试复现 Anthropic 当时引用的那些代表性漏洞。</p>
+<p>结果我跟你说，这个结果对 Anthropic 的&quot;排他性&quot;叙事非常不利。FreeBSD 的 NFS 远程提权漏洞，两个公共模型各复现三次全部成功。OpenBSD 一个二十七年的老 bug，Claude Opus 4.6 三次全中，GPT-5.4 三次全败。Botan 的两个漏洞，两个模型也都三中三。而且单文件扫描成本不到三十美元。</p>
+<p>Vidoc 的结论特别克制，但是杀伤力很大。他们说，重点不是 Mythos 是不是更强，而是公共模型已经能做到大部分相同的事。真正的护城河正在从模型访问权往上层移动。你看到没有，这直接冲击了 Anthropic 上周在 RSP v3.0 里建立的&quot;前沿模型例外&quot;叙事。如果公共模型已经能发现内核级别的漏洞，那防御方早就暴露在同等能力下，你单方面说为了安全不公开，这个正当性就被削弱了。</p>
+<p>同一天，OpenAI 也悄悄推出了 GPT-5.4-Cyber 私测模型，放松了网络安全研究权限，明确就是冲着 Anthropic 的 Project Glasswing 和 Mythos 去的。AI 安全研究模型的军备竞赛，算是正式开跑了。</p>
+<p>咱们说回美国本土。AI 基建现在遇到了一个你可能没想到的对手，那就是选民的选票。今天有两份报告特别有意思。SynMax 用卫星影像分析发现，全美百分之四十在建的 AI 数据中心可能要延期超过三个月。Oracle 给 OpenAI 在德州建的那个一千两百英亩、十栋楼、1.4 吉瓦的项目，卫星图一看，只有六块地清理完了，乐观估计要到 2027 年才能交付一栋楼。</p>
+<p>但更夸张的是另一面。Tom&#39;s Hardware 报告说，全美在建数据中心有一半已经因为地方抗议延期或者取消。密苏里一个小镇罢免了一半市议员。俄克拉荷马有一位居民在听证会上讲得太久，被当场逮捕。弗吉尼亚州数据中心的支持率，从 2023 年的百分之六十九，崩塌到了现在的百分之三十五。你想想，这是多大的民意逆转。</p>
+<p>最极端的案例听着都瘆人。OpenAI 的 CEO Sam Altman 家被人纵火，印第安纳波利斯一位投票通过数据中心项目的议员，家里收到了威胁字条和子弹孔。</p>
+<p>所以你看，2025 年 AI 基建的那个&quot;万亿投资必然到达&quot;的叙事，现在正在被最原始的民主程序给叫停。AI 产业的短板，已经从 GPU 产能、电力供给，扩大到了公共授权这个过去被完全忽视的基础设施。</p>
+<p>接下来这条跟 AI 也直接相关。下周二，也就是四月二十号，美国的 FISA Section 702 就要到期。这是什么东西呢？就是允许情报机构不用搜查令就能读取所谓&quot;海外&quot;通讯的法律，但实际操作中横扫了大量美国人的数据。今天凌晨一点，众议长 Mike Johnson 想推一个五年延长案，结果被包括 Thomas Massie 在内的二十名共和党议员联手民主党给杀掉了，最后只通过了一个十天临时延期。特朗普亲自在白宫召集 Freedom Caucus 谈判，也失败了。</p>
+<p>这轮反对特别具体。FBI 曾经用 702 数据去无证查询一名参议员、一万九千名竞选捐款人、BLM 抗议者、一月六号事件双方当事人。而 Kash Patel 当上 FBI 局长之后，已经把内部审计办公室关了。</p>
+<p>同一天 Citizen Lab 还扒出一个美国公司叫 Penlink，他们有个产品叫 Webloc，可以追踪全球五亿部手机，客户包括美国国土安全部、ICE、军方，还包括匈牙利情报局和萨尔瓦多警察。一份泄露的训练手册描述，这个系统可以用关键词、姓名、邮箱、电话号码关联多个平台账号，直接生成&quot;目标卡&quot;。</p>
+<p>但是这里有个关键进展。弗吉尼亚州本周通过法律，全面禁止销售消费者精确地理位置数据，这是美国第一个州级禁令。Lawfare 已经呼吁联邦跟进。为什么这个事重要，我跟你说，过去多年监视权限辩论基本上就是橡皮图章走过场。这次僵局说明，共和党传统的国家安全绝对优先立场已经破裂，libertarian 翼和进步民主党在隐私问题上居然找到了联盟。而对科技行业来说，OpenAI、Anthropic 跟美国政府谈合同的时候，&quot;无限制使用 AI 工具分析&quot;已经成为新的摩擦点。</p>
+<p>再来说一个技术圈的大新闻。Meta 发布了一份研究报告，说传统那种长期维护的测试套件，在 AI 辅助开发时代效率已经崩塌了。他们推出一个新方法叫 Just-in-Time 测试，也就是在你提交代码评审的那一刻，动态针对代码 diff 生成测试，bug 检出率提升四倍，在找出有意义失败这一项上最高提升了二十倍。</p>
+<p>核心机制叫 Dodgy Diff，它不把代码变更看作文本差异，而是提取行为意图和风险区域，用大模型加程序分析再加突变测试组合起来。Meta 研究员 Mark Harman 的评语点明了趋势，他说这是从&quot;硬化今天能通过的测试&quot;到&quot;捕获明天 bug 的测试&quot;的根本转向。配合我们前两天报道的微软&quot;AI 代码占比三成&quot;那个数据，软件质量保证的范式正在被彻底重写。</p>
+<p>再给大家快速过几条不能错过的消息。</p>
+<p>NIST 宣布放弃 CVE 漏洞丰富化工作，只对少数三类漏洞做处理，NVD 积压了三万条，漏洞管理行业的&quot;单一事实源&quot;时代就此终结。微软四月补丁又崩了，KB5082063 导致 Windows Server 2016 到 2025 的域控制器崩溃重启循环，连续第三年四月出事。Cloudflare 发布 isitagentready.com，专门扫描网站对 AI 代理的就绪度。C++26 标准草案完成，加入反射、内存安全、契约式编程等重大特性。苹果 iOS 26.4 正式支持第三方 AI 聊天机器人上车 CarPlay，Perplexity 率先加入。WIRED 记者被曝用 ChatGPT 一天发七篇稿，引发行业大讨论，The Verge 主编直接问这是不是 AI 泡沫的顶峰。</p>
+<p>还有几条：墨西哥政府被 AI 辅助黑客入侵，一个人用 Claude Code 一周之内攻破了九个政府组织，百分之七十五的命令由 Claude 生成。亚马逊反垄断案新证据解密，被曝用 Buy Box 惩罚比自家低价的卖家。特朗普政府跟菲律宾签了四千英亩高科技制造自治区协议，专做关键矿物加工和 AI 工厂，这是反中供应链去风险化的硬手段。</p>
+<p>最后咱们聊聊值得持续关注的几个点。</p>
+<p>Anthropic 八千亿估值据说被自己回绝了，下一次估值节点可能直接决定 AI 第一梯队的最终格局。&quot;代理友好型网络&quot;这个标准正在激烈竞争，看哪个能成为代理时代的 robots.txt。马斯克的 Terafab 据说已经在找 Applied Materials、东京电子、Lam Research 和三星问价，预估全盘成本五万亿美元，但是 TSMC 的 CEO 说了一句&quot;没有捷径&quot;，这句话可能是今年半导体行业最值得反复念叨的警语。</p>
+<p>所以你看，今天这些事串起来看，其实讲的是同一个故事。AI 公司在往上走，估值、产品、生态全面平台化；但同时，数据中心被选票挡下来、监视法案被议员挡下来、模型例外论被公共模型挡下来。技术飞速往前冲的那股力，和公共授权、民主程序、开放生态的反作用力，正在全面对撞。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见。</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
