@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-04-27</title>
+  <meta name="description" content="DeepSeek V4 凌晨开源 1.6 万亿参数 MoE 模型，价格仅为 GPT-5.5 七分之一，重塑前沿 AI 经济学；OpenAI 联手 MediaTek、立讯精密研发智能手机芯片，2028 年量产对标 iPhone；中国监管否决 Meta 20 亿美元 Manus 收购案，创始人被限制出境，跨境 AI 博弈进入新阶段。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-04-27/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-04-27">
+  <meta property="og:description" content="DeepSeek V4 凌晨开源 1.6 万亿参数 MoE 模型，价格仅为 GPT-5.5 七分之一，重塑前沿 AI 经济学；OpenAI 联手 MediaTek、立讯精密研发智能手机芯片，2028 年量产对标 iPhone；中国监管否决 Meta 20 亿美元 Manus 收购案，创始人被限制出境，跨境 AI 博弈进入新阶段。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-04-27/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-04-27T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-04-27">
+  <meta name="twitter:description" content="DeepSeek V4 凌晨开源 1.6 万亿参数 MoE 模型，价格仅为 GPT-5.5 七分之一，重塑前沿 AI 经济学；OpenAI 联手 MediaTek、立讯精密研发智能手机芯片，2028 年量产对标 iPhone；中国监管否决 Meta 20 亿美元 Manus 收购案，创始人被限制出境，跨境 AI 博弈进入新阶段。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-04-27",
+    "description": "DeepSeek V4 凌晨开源 1.6 万亿参数 MoE 模型，价格仅为 GPT-5.5 七分之一，重塑前沿 AI 经济学；OpenAI 联手 MediaTek、立讯精密研发智能手机芯片，2028 年量产对标 iPhone；中国监管否决 Meta 20 亿美元 Manus 收购案，创始人被限制出境，跨境 AI 博弈进入新阶段。",
+    "datePublished": "2026-04-27T08:00:00+08:00",
+    "dateModified": "2026-04-27T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-04-27/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-27/yomoo-2026-04-27.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-04-27</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-27/yomoo-2026-04-27.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-04-27/yomoo-2026-04-27.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日简报 · 2026-04-27</h1>
+<h2>核心摘要</h2>
+<p>DeepSeek V4 正式登场,1.6万亿参数开源 MoE 模型以 GPT-5.5 七分之一的价格逼近前沿水平,前沿 AI 经济学被迫重写。OpenAI 一改&quot;不做手机&quot;口风,2028 年量产计划浮出水面,直接对标 iPhone;同日苹果 Ternus 在内部表态服务业务&quot;还有大量机会&quot;。中国一纸否决终结 Meta 20 亿美元 Manus 收购案,数字主权与跨境 AI 博弈进入新阶段。</p>
+<hr>
+<h2>头条故事</h2>
+<h3>DeepSeek V4:把&quot;够聪明&quot;打进平民价位带</h3>
+<p>距 V3 发布 484 天,DeepSeek 在周日深夜把 V4 推上 Hugging Face——1.6 万亿参数的 MoE(Mixture-of-Experts,稀疏激活式专家混合架构,只激活部分参数处理每次请求,大幅压低推理成本)模型,继续沿用对开源最友好的 MIT 协议。研究员 Deli Chen 在 X 上称这是&quot;484 天的爱之劳作&quot;,并写下一句让整个开源社区刷屏的话:<strong>&quot;AGI 属于每个人。&quot;</strong></p>
+<p>价格才是真正的核弹。V4-Pro 每百万 token 输入加输出仅 <strong>5.22 美元</strong>,对面是 GPT-5.5 的 35 美元、Claude Opus 4.7 的 30 美元——<strong>七分之一,六分之一</strong>。性能上,GPT-5.5 与 Opus 4.7 仍在多数基准榜首微弱领先,但 V4 已经&quot;近到足以迫使企业重新计算 AI 部署的经济学&quot;,VentureBeat 用了一个精准的词:DeepSeek 正在&quot;把先进模型的经济学压进一个低得多的频段&quot;。</p>
+<p>这是<strong>继 2026 年 1 月 R1 时刻之后的&quot;第二次 DeepSeek 时刻&quot;</strong>。我们前两天报道过 V4 1.6 万亿参数的体量与登昇腾国产芯片的双重信号——今天补齐了第三个变量:<strong>钱</strong>。如果说 R1 击穿的是&quot;中国做不出前沿模型&quot;的迷思,V4 击穿的是&quot;前沿智能必须昂贵&quot;的默认假设。当近前沿性能跌入七分之一的价位带,下一波 AI 应用浪潮可能不再由&quot;谁最聪明&quot;定义,而是由&quot;谁最便宜地够聪明&quot;定义。</p>
+<p>值得对照的是另一条线索。AlphaGo 之父 David Silver 离开 Google DeepMind 创办 Ineffable Intelligence,已融资 11 亿美元,估值 51 亿。他公开宣称:<strong>LLM 这条路会失败</strong>——人类数据像化石燃料,是捷径但有尽头;他押注强化学习构建&quot;超学习者&quot;,让 AI 在仿真环境中自己发现新科学、新技术。在 V4 把 LLM 经济学撕碎的同一周,Silver 用 11 亿美金告诉行业:LLM 不是终点。两条叙事在同一个时间点撞在一起,值得玩味。</p>
+<p>来源:Slashdot / VentureBeat、WIRED</p>
+<hr>
+<h3>OpenAI 真要做手机了:对标 iPhone,2028 年量产</h3>
+<p>苹果分析师 Ming-Chi Kuo 周日抛出一份供应链报告:<strong>OpenAI 正与 MediaTek、Qualcomm 联合开发智能手机芯片,Luxshare(立讯精密)是独家协同设计与代工伙伴,2028 年量产</strong>。规格与供应商将在 2026 年底至 2027 年一季度敲定。</p>
+<p>这是对此前所有&quot;OpenAI 不做手机&quot;报道的彻底反转。Sam Altman 当天在 X 同步发文:&quot;是时候认真重新思考操作系统和用户界面该怎么设计了。&quot;</p>
+<p>Kuo 的逻辑链很清晰:智能手机是<strong>唯一能完整捕捉用户实时状态</strong>(位置、行为、通信、上下文)的设备,而上下文是 AI Agent 推理最重要的输入。<strong>应用将被 Agent 取代</strong>,任务完成不再靠打开一个个 App,而是靠持续、上下文感知的连续接口。要做这件事,必须同时控制操作系统和硬件——这是绕开苹果与谷歌应用管道限制的唯一路径。Luxshare 长期想摆脱对苹果的依赖,这次终于拿到入场券。</p>
+<p>来源:MacRumors、9to5Mac、TechCrunch</p>
+<hr>
+<h3>苹果 Ternus 时代:服务还要扩,Ultra 成新旗舰命名</h3>
+<p>Mark Gurman 披露苹果内部员工大会上 Ternus 的一段表态:他对苹果服务业务&quot;满怀敬意&quot;,从 Apple Music、Apple Pay 到 iCloud、Apple TV,&quot;我每天都在用,这是把硬件、软件、服务粘合起来的美妙之处——还有大量机会&quot;。这传递的信号是:即便 Ternus 出身硬件工程,<strong>Cook 时代构建的服务增长引擎不会刹车</strong>。</p>
+<p>同日另一条报道更具象——Macworld 援引内部消息,苹果首款折叠 iPhone 将命名为 <strong>iPhone Ultra</strong>,定位 iPhone 18 Pro Max 之上的全新旗舰,与 iPhone 18 系列分开发售,可能晚几周推出且供货稀缺。同步规划的还有 <strong>MacBook Ultra</strong>,OLED 触屏,价格&quot;显著高于&quot; MacBook Pro,因内存供应链紧张推迟数月。&quot;Ultra&quot;将成为苹果的高端品类标签——延续我们一直跟踪的折叠 iPhone 与&quot;六大新品类&quot;叙事。</p>
+<p>但同步出现的另一种声音是路由器博主 Tony Mattke 的长文《Tim Cook 走了,好事》——AirPods 连错设备、iMessage 跨设备六英寸都同步失败、HomeKit 反复忘记厨房灯泡、System Settings 三个版本仍然难用。文章引用乔布斯当年的批判:&quot;伟大公司的衰败,从销售人员开始管公司开始。&quot;作者承认硬件没问题,<strong>但软件体验在 Cook 时代系统性退化</strong>——这是 Ternus 必须正面回答的问题。</p>
+<p>来源:9to5Mac、MacRumors、RouterJockey</p>
+<hr>
+<h3>中国否决 Meta 20 亿美元 Manus 收购,跨境 AI 博弈升级</h3>
+<p>中国国家发改委周一裁定<strong>禁止 Meta 收购 Manus</strong>,要求双方解除交易。Manus 是中国工程师创办的 Agent AI 创业公司,2025 年中将总部从北京迁至新加坡,12 月被 Meta 以 20-30 亿美元收购,约 100 名员工已搬入 Meta 新加坡办公室,CEO 肖弘已直接向 Meta COO Javier Olivan 汇报。<strong>更微妙的是,肖弘和首席科学家季宜超目前被限制出境</strong>,无法离开中国大陆。</p>
+<p>Meta 表态&quot;交易完全合规,期待恰当解决&quot;。这件事的意义远超单一并购——它是中国第一次对跨境 AI Agent 公司采用强力工具,信号给硅谷与新加坡的所有&quot;中国背景出海 AI&quot;创业者:<strong>公司可以走,人不一定走得了</strong>。</p>
+<p>与此同时,欧洲在另一个方向松绑。法国宣布政府全面弃 Windows 转 Linux,卫生数据中枢从 Azure 迁移至本土云 Scaleway;欧盟委员会发出 1.8 亿欧元主权云招标,AWS European Sovereign Cloud 落选。但欧洲的&quot;反美科技&quot;路径并不平直——德国汉莎、法航选了 Starlink,法国国铁也可能跟进。AI 主权和数字主权的口号容易喊,真正的脱钩仍要看技术替代品是否成熟。</p>
+<p>来源:TechCrunch</p>
+<hr>
+<h2>简讯</h2>
+<ul>
+<li><strong>微软停止与 OpenAI 收益分成</strong>:进入合作&quot;下一阶段&quot;,双方关系结构性变化。(Bloomberg)</li>
+<li><strong>TSMC CoWoS 路线图</strong>:2029 年实现 14-reticle 封装(约 12000 mm²,接近一张小盘子),支持 24 颗 HBM5E,计算晶体管数量较 2024 高端 SiP 提升 48 倍,内存带宽提升 34 倍。封装而非光刻,正在成为半导体进步的真正引擎。</li>
+<li><strong>Kevin O&#39;Leary 的 9GW 犹他数据中心获批</strong>:Stratos 项目装机量超过整个犹他州当前用电量两倍,自建天然气发电不连电网。继续验证数据中心对能源系统的吞噬。</li>
+<li><strong>ADT 被 ShinyHunters 攻破</strong>:号称 1000 万条 Salesforce 客户记录,Have I Been Pwned 实测 550 万独立邮箱。家庭安防巨头自己被&quot;入室盗窃&quot;。</li>
+<li><strong>Itron 关键基础设施被黑</strong>:全球 1.1 亿户智能电表设备商,4 月中旬遭入侵。能源关键基础设施持续承压。</li>
+<li><strong>Canva 的 AI 工具把&quot;Palestine&quot;自动改成&quot;Ukraine&quot;</strong>:Magic Layers 功能被发现系统性篡改特定词汇,Canva 已道歉。AI 训练偏见从生成走向编辑环节。</li>
+<li><strong>三星 Galaxy 眼镜首曝渲染图</strong>:无显示屏设计,接近 Meta Ray-Ban,搭 Android XR + Gemini AI,7 月 Unpacked 与 Galaxy Z Fold 8 Wide 同台亮相。</li>
+<li><strong>Galaxy S24/S25 电池骤降</strong>:4 月安全补丁后大量用户反馈数小时即耗尽,与 Pixel 三月更新事件性质相似。</li>
+<li><strong>OpenAI 转向 Anthropic?Google 加注 400 亿美元</strong>:Anthropic 估值冲到 3500 亿美元,算力争夺白热化。</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<ul>
+<li><strong>AI 经济学拐点</strong>:V4 把&quot;够聪明&quot;压进平民价位带后,企业 AI 部署的成本-性能曲线被迫重画。下一个观察点是 OpenAI/Anthropic 是否被迫降价,以及国产模型是否触发新一轮卡位战。</li>
+<li><strong>OpenAI 的硬件全栈布局正在闭环</strong>:智能音箱(2026H2)→ 智能眼镜/灯/耳机 → 智能手机(2028)。这是与苹果生态正面对决的完整路线图——值得长期跟踪 Jony Ive 团队产品序列与 ChatGPT 终端形态融合的节奏。</li>
+<li><strong>跨境 AI 收购的政治化</strong>:Manus 案与去年 GoDaddy 域名转走、Cal.com 闭源争议放在一起看,科技公司正在成为大国博弈的新阵地——所有&quot;出海重组&quot;的剧本都需要重新评估退出路径风险。</li>
+<li><strong>AI Agent 与传统应用的交班</strong>:从 OpenAI 手机的&quot;Agent 取代 App&quot;,到京东 JoyInside 接入近 200 家硬件品牌、对话轮次提升 120%,操作系统层面&quot;Agent 原生&quot;的范式正在成型。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年4月27日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，昨天深夜，DeepSeek 干了一件足以重写整个前沿AI经济学的事。距离V3发布484天，他们把V4直接推上了Hugging Face，一万六千亿参数的MoE模型，继续用对开源最友好的MIT协议。研究员陈德力在X上说，这是484天的爱之劳作，然后他写了一句让整个开源社区瞬间刷屏的话——AGI属于每一个人。</p>
+<p>但真正的核弹，是价格。你看，V4-Pro每百万token输入加输出，只要5.22美元。对面是什么？GPT-5.5是35美元，Claude Opus 4.7是30美元。算一下，七分之一，六分之一。性能上，GPT-5.5和Opus 4.7在多数榜单上还微弱领先，但V4已经近到什么程度？VentureBeat用了一个非常精准的词，他们说DeepSeek正在把先进模型的经济学，硬生生压进一个低得多的频段。</p>
+<p>这其实是继2026年1月R1时刻之后的第二次DeepSeek时刻。咱们前两天就报道过V4一万六千亿参数的体量，还有它登上昇腾国产芯片的双重信号。今天等于是补齐了第三个关键变量，就是钱。你想，如果说R1当时击穿的是中国做不出前沿模型这个迷思，那V4击穿的是什么？是前沿智能必须昂贵这个默认假设。当近前沿性能跌进七分之一的价位带，下一波AI应用浪潮，可能就不再由谁最聪明定义，而是由谁最便宜地够聪明定义。</p>
+<p>其实吧，还有一条线索值得对照着看。AlphaGo之父David Silver离开了Google DeepMind，自己创办了一家叫Ineffable Intelligence的公司，已经融了11亿美元，估值51亿。他公开说什么？他说LLM这条路会失败。他认为人类数据就像化石燃料，是捷径，但有尽头。他押注的是强化学习，让AI在仿真环境里自己发现新科学新技术。你看这个时间点多有意思——就在V4把LLM经济学撕碎的同一周，Silver用11亿美金告诉行业，LLM不是终点。两条叙事在同一天撞在一起，太值得玩味了。</p>
+<p>咱们说回另一件大事。OpenAI真的要做手机了。苹果分析师郭明錤周日抛出一份供应链报告，OpenAI正在和联发科、高通联合开发智能手机芯片，立讯精密是独家协同设计与代工伙伴，2028年量产。规格和供应商在2026年底到2027年一季度敲定。注意，这是对此前所有OpenAI不做手机报道的彻底反转。Sam Altman当天在X同步发文，他说，是时候认真重新思考操作系统和用户界面该怎么设计了。</p>
+<p>郭明錤的逻辑链其实非常清晰。你想，智能手机是唯一能完整捕捉用户实时状态的设备——位置、行为、通信、上下文，全在里面。而上下文，恰恰是AI Agent推理最重要的输入。所以他的判断是什么？应用将被Agent取代。任务完成不再靠你打开一个个App，而是靠持续的、上下文感知的连续接口。要做这件事，你必须同时控制操作系统和硬件，这是绕开苹果和谷歌应用管道限制的唯一路径。立讯精密长期想摆脱对苹果的依赖，这次终于拿到了入场券。</p>
+<p>说到苹果，Mark Gurman披露了Ternus在内部员工大会上的一段表态。他对苹果服务业务满怀敬意，从Apple Music、Apple Pay到iCloud、Apple TV，他说我每天都在用，这是把硬件、软件、服务粘合起来的美妙之处，还有大量机会。这个信号很清楚——即便Ternus出身硬件工程，Cook时代构建的服务增长引擎不会刹车。</p>
+<p>同一天另一条报道更具象。Macworld说，苹果首款折叠iPhone将命名为iPhone Ultra，定位在iPhone 18 Pro Max之上，是一个全新旗舰，跟iPhone 18系列分开发售，可能晚几周推出，供货稀缺。同步规划的还有MacBook Ultra，OLED触屏，价格显著高于MacBook Pro，因为内存供应链紧张推迟数月。Ultra这个词，将成为苹果的高端品类标签。</p>
+<p>但是，同步出现了另一种声音。一位路由器博主Tony Mattke写了一篇长文，标题非常直接——Tim Cook走了，好事。他列了一堆细节，AirPods连错设备、iMessage跨设备同步失败、HomeKit反复忘记厨房灯泡、System Settings改了三个版本还是难用。他甚至搬出乔布斯当年的批判，伟大公司的衰败，从销售人员开始管公司开始。作者承认硬件没问题，但他认为软件体验在Cook时代系统性退化。这是Ternus必须正面回答的问题。</p>
+<p>接下来这条新闻，意义远超一桩并购。中国国家发改委周一裁定，禁止Meta收购Manus，要求双方解除交易。Manus是中国工程师创办的Agent AI创业公司，2025年中把总部从北京迁到新加坡，12月被Meta以20到30亿美元收购，大概100名员工已经搬进Meta的新加坡办公室，CEO肖弘已经直接向Meta的COO汇报。但是更微妙的是什么？肖弘和首席科学家季宜超目前被限制出境，无法离开中国大陆。</p>
+<p>Meta表态说交易完全合规，期待恰当解决。但你看，这件事的真正意义在哪里？这是中国第一次对跨境AI Agent公司动用这么强力的工具。它给硅谷、给新加坡、给所有中国背景出海AI创业者发出一个信号——公司可以走，但人不一定走得了。</p>
+<p>与此同时，欧洲在另一个方向松绑。法国宣布政府全面弃Windows转Linux，卫生数据中枢从Azure迁到本土云Scaleway；欧盟委员会发出1.8亿欧元主权云招标，AWS European Sovereign Cloud落选。但欧洲的反美科技路径其实并不平直——德国汉莎、法航选了Starlink，法国国铁也可能跟进。所以你看，AI主权和数字主权这个口号容易喊，真正的脱钩，还得看技术替代品成不成熟。</p>
+<p>再来几条快讯。微软停止与OpenAI的收益分成，双方进入合作下一阶段，关系结构性变化。台积电CoWoS路线图显示，2029年要做到14-reticle封装，大概12000平方毫米，接近一张小盘子，支持24颗HBM5E，计算晶体管数量比2024年高端SiP提升48倍，内存带宽提升34倍。封装而不是光刻，正在成为半导体进步的真正引擎。</p>
+<p>Kevin O&#39;Leary那个9GW的犹他数据中心获批了，装机量超过整个犹他州当前用电量的两倍，自建天然气发电不连电网。继续验证数据中心对能源系统的吞噬。家庭安防巨头ADT被ShinyHunters攻破，号称1000万条Salesforce客户记录，Have I Been Pwned实测550万独立邮箱。全球1.1亿户智能电表设备商Itron也在4月中旬被入侵，能源关键基础设施持续承压。</p>
+<p>还有一条挺让人意外的。Canva的Magic Layers功能被发现系统性篡改特定词汇，把Palestine自动改成Ukraine，Canva已经道歉。AI训练偏见，正在从生成环节走向编辑环节。三星Galaxy眼镜首次曝光渲染图，无显示屏设计，接近Meta Ray-Ban，搭Android XR加Gemini AI，7月Unpacked跟Galaxy Z Fold 8 Wide一起亮相。Galaxy S24和S25在4月安全补丁后出现电池骤降，几小时就耗尽，跟Pixel三月更新事件性质类似。还有OpenAI可能转向Anthropic，Google加注400亿美元，Anthropic估值冲到3500亿美元，算力争夺白热化。</p>
+<p>总之你看，今天最值得记住的是什么？是AI经济学的拐点。V4把够聪明压进平民价位带之后，企业AI部署的成本性能曲线被迫重画。下一个观察点，就是OpenAI、Anthropic会不会被迫降价，国产模型会不会触发新一轮卡位战。OpenAI的硬件全栈布局也正在闭环——智能音箱、智能眼镜、智能耳机、再到智能手机，这是跟苹果生态正面对决的完整路线图。而Manus案告诉我们，跨境AI收购正在被政治化，所有出海重组的剧本，都需要重新评估退出路径的风险。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
