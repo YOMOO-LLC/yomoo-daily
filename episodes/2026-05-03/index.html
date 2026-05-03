@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-03</title>
+  <meta name="description" content="Anthropic用2个月将年化收入从140亿飙至300亿美元,创史上最快增长记录,但核心赌注仅押在程序员市场;中国法院首次裁定&quot;AI更便宜&quot;不能成为合法裁员理由,与美国科技裁员潮形成鲜明对比;同时Anthropic开始接触英国DRAM-less芯片厂商Fractile以应对内存瓶颈。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-03/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-03">
+  <meta property="og:description" content="Anthropic用2个月将年化收入从140亿飙至300亿美元,创史上最快增长记录,但核心赌注仅押在程序员市场;中国法院首次裁定&quot;AI更便宜&quot;不能成为合法裁员理由,与美国科技裁员潮形成鲜明对比;同时Anthropic开始接触英国DRAM-less芯片厂商Fractile以应对内存瓶颈。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-03/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-03T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-03">
+  <meta name="twitter:description" content="Anthropic用2个月将年化收入从140亿飙至300亿美元,创史上最快增长记录,但核心赌注仅押在程序员市场;中国法院首次裁定&quot;AI更便宜&quot;不能成为合法裁员理由,与美国科技裁员潮形成鲜明对比;同时Anthropic开始接触英国DRAM-less芯片厂商Fractile以应对内存瓶颈。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-03",
+    "description": "Anthropic用2个月将年化收入从140亿飙至300亿美元,创史上最快增长记录,但核心赌注仅押在程序员市场;中国法院首次裁定\"AI更便宜\"不能成为合法裁员理由,与美国科技裁员潮形成鲜明对比;同时Anthropic开始接触英国DRAM-less芯片厂商Fractile以应对内存瓶颈。",
+    "datePublished": "2026-05-03T08:00:00+08:00",
+    "dateModified": "2026-05-03T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-03/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-03/yomoo-2026-05-03.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-03</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-03/yomoo-2026-05-03.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-03/yomoo-2026-05-03.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <p>我现在开始处理这个每日简报任务。这是一个调用skill来生成每日报告的请求,所有上下文都已就绪。让我直接生成报告。</p>
+<h1>AI泡沫退潮?Anthropic成史上增长最快公司,但隐忧仍在</h1>
+<p><strong>2026年5月3日 每日简报</strong></p>
+<h2>执行摘要</h2>
+<p>AI行业的&quot;泡沫论&quot;被Anthropic用一个数据击碎——其年收入运行率两个月从140亿飙到300亿美元,创下了人类商业史上最快增长记录。但与此同时,中国法院首次裁定&quot;AI更便宜&quot;不能成为裁员理由,Anthropic开始与英国DRAM-less芯片初创公司Fractile接触以应对内存危机,Nvidia则承认在中国市场份额已&quot;归零&quot;。AI的钱在赚,但代价、风险与监管,正在三条战线同时拉响警报。</p>
+<hr>
+<h2>重磅深度</h2>
+<h3>Claude Code让&quot;泡沫论&quot;破产:Anthropic六个月逆转,但只赌在程序员身上</h3>
+<p><strong>六个月前</strong>,《大西洋月刊》作者还在把AI建设潮比作19世纪铁路泡沫和90年代互联网泡沫,连Sam Altman都公开承认&quot;投资者整体过热&quot;。<strong>今天的世界完全相反</strong>——Anthropic的年化收入运行率(annualized run rate,即按当月收入折算的年收入)在两个月内从140亿美元飙至300亿美元,Axios数据显示其Q1的增长是Google巅峰期三年增长的四倍。如果按当前增速持续,到明年初它将成为全球收入最高的公司。</p>
+<p><strong>转折点是Claude Code</strong>。Anthropic去年11月发布的这次更新让AI跨过了&quot;有趣玩具&quot;和&quot;颠覆性技术&quot;之间那道隐形门槛——多个自主AI Agent能在几分钟到几小时内完成程序员几天甚至几周的工作,且最终产出几乎不需要人工修改。<strong>SemiAnalysis的Jordan Nanos</strong>透露,他的小团队同样人数下软件产出比去年增加了<strong>4倍</strong>;<strong>宾大Generative AI Lab联合主任Ethan Mollick</strong>直言&quot;我们正式告别了只会说话的聊天机器人时代,进入了能真正做事的Agent时代&quot;。</p>
+<p>学术研究也180度转向。去年METR智库的实验显示,程序员用AI完成任务<strong>慢20%</strong>(因为忙着纠正AI输出);最近用最新工具重做实验,<strong>同一批人用AI快了近20%</strong>——而且这还是低估,因为有些重度用户已经离不开AI,拒绝参与无AI对照组。</p>
+<blockquote>
+<p>&quot;It typically takes enterprises much much longer to adapt to new technologies than it takes consumers. So the speed at which we&#39;re seeing companies adapting these tools is actually quite surprising.&quot;<br>——高盛软件分析师 Gabriela Borges</p>
+</blockquote>
+<p><strong>但隐忧并未消失</strong>。SK Ventures管理合伙人Paul Kedrosky提出&quot;编程例外论&quot;质疑:<strong>编程恰好是AI完美适配的领域</strong>——海量训练数据、有限的输出空间、可客观评估的结果。但法律简报、营销文案这些白领工作没有这些特征,可能根本撑不起当前的资本支出预期。Kedrosky打了个尖锐比喻:&quot;这就像2006-2007年的房地产市场——市场炒作带来更多需求,更多需求让你以为需要更多供给,等回过神来,你已经盖了远超买力的房子。&quot;</p>
+<p>OpenAI预计2030年才能盈利,Anthropic预计2028年——这意味着他们的高速增长还得再撑好几年才能跑出投资回报。</p>
+<p><strong>与此同时,基础设施直接卡脖子</strong>。Anthropic不得不在&quot;高峰时段&quot;限制Claude Code用量,OpenAI则砍掉视频生成应用以释放算力。连Nvidia三年前发布的&quot;第四好&quot;AI芯片(2022年款)如今都比当年涨价了。</p>
+<p><strong>为什么这很重要</strong>:这是5月份AI叙事的核心拐点——一边是收入数据击穿历史天花板,一边是商业模式仍只在编程一个细分领域得到完全验证。这可能不是泡沫破灭,但绝对是&quot;风险集中度&quot;前所未有的赌局。<br><em><a href="https://www.theatlantic.com/economy/2026/05/ai-bubble-revenue-anthropic/687022/">来源:The Atlantic</a></em></p>
+<blockquote>
+<p>历史关联:此前我们报道过【2026-04-18 Opus涨价】Opus 4.7 token消耗增45%变相涨价,以及【2026-04-29 Token经济】AI算力成本超员工工资。Anthropic的高增长正是建立在这种&quot;高单价 + 不限供应&quot;的双重溢价之上。</p>
+</blockquote>
+<hr>
+<h3>中国法院重锤:AI更便宜不是合法的解雇理由</h3>
+<p>杭州中级人民法院在五一国际劳动节前发布的一组判例中,<strong>首次明确裁定企业不能因为AI能更便宜地完成工作就解雇员工</strong>。涉案者周某原本是某互联网公司&quot;问题质量检查员&quot;,月薪25000元(约3640美元),负责审核大模型与用户交互产出的回答质量。公司以&quot;AI技术进步导致岗位需求减少&quot;为由,将其调岗至月薪15000元(约2180美元)的新职位,周某拒绝后即被解除合同。</p>
+<p><strong>法院的核心逻辑</strong>:企业采用AI技术并据此重组,<strong>不自动构成《劳动合同法》中&quot;客观情况发生重大变化&quot;的解约前提</strong>。法院明确表示&quot;企业可以追求技术升级,但必须考虑员工合法权益&quot;,并要求企业<strong>优先考虑再培训和岗位过渡</strong>。北京一仲裁庭也在类似案件中判决:&quot;采用AI是企业自愿的商业策略,技术转型的风险不能简单转嫁给员工。&quot;</p>
+<p><strong>为什么这很重要</strong>:这与上个月美国近8万科技工人因AI被裁、Meta裁员10%(8000人)以转移成本到AI基础设施形成鲜明对比。在AI裁员潮席卷全球之时,中国通过司法路径首次明确划下了一条法律红线。中国社科院研究员王天宇评论道:&quot;技术进步可能不可逆,但它不能存在于法律框架之外。&quot;<br><em><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-court-rules-companies-cant-fire-workers-just-because-ai-is-cheaper-ruling-says-automation-alone-doesnt-justify-layoffs">来源:Tom&#39;s Hardware</a></em></p>
+<blockquote>
+<p>历史关联:这是【2026-05-01 Meta裁员】、【2026-04-08 AI裁员潮】、【2026-04-13 AI社会影响】系列报道的最新进展——<strong>全球首个明确司法判例</strong>对AI替代人力的合法边界作出限制性解释。</p>
+</blockquote>
+<hr>
+<h3>Anthropic谋求第四个芯片来源:英国Fractile的SRAM架构能绕开&quot;内存危机&quot;</h3>
+<p>The Information报道,Anthropic正与伦敦初创公司Fractile进行早期接触,洽谈采购其AI推理加速芯片。这将让Anthropic在Nvidia、Google、Amazon之外<strong>新增第四个芯片来源</strong>。</p>
+<p><strong>Fractile的核心创新</strong>:由牛津大学博士Walter Goodwin于2022年创立,其芯片采用SRAM(静态随机存取存储器,一种比常用的DRAM更快但更贵的内存类型)架构,<strong>将存储和计算单元放在同一颗芯片上</strong>,而不是像传统设计那样在GPU和外置DRAM之间来回搬运数据——这种数据搬运正是大模型推理的最大瓶颈。Goodwin声称模拟测试显示Fractile能比Nvidia GPU<strong>快100倍、便宜10倍</strong>(尚未流片验证)。</p>
+<p>公司目前正以<strong>10亿美元估值</strong>融资2亿美元,Founders Fund、8VC、Accel都是潜在投资人,工程团队来自Graphcore、Nvidia和Imagination Technologies。</p>
+<p><strong>为什么这很重要</strong>:Anthropic季度收入毛利率长期被推理成本拖累,而当前的&quot;RAMpocalypse&quot;(内存末日)更让DRAM价格飙升、供应紧张。同日Tom&#39;s Hardware报道,Nvidia已<strong>提前终止</strong>多款基于LPDDR4的Jetson AI模块(TX2、Xavier系列),原因正是DRAM内存制造商把产能优先给了HBM和DDR5。Anthropic押注Fractile的&quot;绕开DRAM&quot;架构,可能是行业级的对冲尝试。<br><em><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-in-early-talks-to-buy-inference-chips-from-uk-startup-fractile">来源:Tom&#39;s Hardware</a></em></p>
+<blockquote>
+<p>历史关联:这是对【2026-04-18 内存短缺】、【2026-04-16 内存涨价】、【2026-04-14 内存涨价】系列预警的系统性回应——内存危机已从消费端涨价,蔓延到了头部AI公司的供应链架构选择。</p>
+</blockquote>
+<hr>
+<h3>黄仁勋:Nvidia在中国市场份额&quot;归零&quot;,美方出口政策&quot;已大体反噬&quot;</h3>
+<p>Nvidia CEO黄仁勋在接受美国两党智库&quot;Special Competitive Studies Project&quot;采访时罕见承认:<strong>&quot;在中国,我们已经跌到零。&quot;</strong> 仅仅两年前,Nvidia还在中国AI加速器市场拥有压倒性份额。</p>
+<p>黄仁勋直接批评美国出口管制政策:&quot;放弃中国这么大体量的市场,可能在战略上并不明智。我认为该政策已经大体反噬。&quot;他进一步指出,中国拥有更便宜的能源、惊人的科学和数学专家储备,以及&quot;国宝级&quot;数量的AI研究人员——美国希望靠卡芯片就能阻止中国前沿AI模型崛起,这条路根本走不通。</p>
+<p>Bernstein年初预测Nvidia在中国AI GPU份额将从2024年的66%跌至8%,如今<strong>比预测还快</strong>。华为、寒武纪、摩尔线程、沐曦等本土厂商正全面追赶,<strong>唯一仍未被攻破的&quot;CUDA护城河&quot;是软件栈</strong>。<br><em><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-says-nvidia-now-has-zero-percent-market-share-in-china-says-us-export-policy-has-already-largely-backfired">来源:Tom&#39;s Hardware</a></em></p>
+<blockquote>
+<p>历史关联:这是【2026-04-22 MATCH法】、【2026-04-29 芯片管制】、【2026-05-01 华为AI芯】系列议题的重大数据节点——美方&quot;卡脖子&quot;成果与负面副作用首次被Nvidia自家CEO公开量化。</p>
+</blockquote>
+<hr>
+<h3>Utah州正式立法:网站要为用VPN绕过年龄验证的用户负责</h3>
+<p>Utah州的SB 73《在线年龄验证修正案》5月6日生效,<strong>这是美国首部明确将VPN(虚拟专网,一种将用户网络流量转发到其他地区以隐藏真实位置的工具)使用纳入年龄验证立法范畴的州法</strong>。法律规定:只要用户身体在Utah州内,无论是否使用VPN或代理隐藏IP,就视为从Utah访问网站;并禁止网站发布&quot;如何用VPN绕过年龄验证&quot;的指引。</p>
+<p><strong>问题在于:这条法律技术上根本不可能执行</strong>。NordVPN称之为&quot;无法解决的合规悖论&quot;和&quot;责任陷阱&quot;——网站被要求识别那些专门设计成无法识别的工具用户。EFF警告,网站要么屏蔽所有已知VPN IP,要么对全球访问者全部强制年龄验证。</p>
+<p>唯一能可靠识别VPN的技术是<strong>深度包检测(DPI)</strong>,但这需要运营商级别的网络基础设施访问权限——目前只有中国&quot;防火长城&quot;、俄罗斯TSPU系统部署了这种能力。法国数字事务部长Anne Le Hénanff已公开宣布&quot;VPN是我清单上的下一个&quot;。</p>
+<p><strong>为什么这很重要</strong>:这预示一个危险的政策趋势——<strong>民主国家正在以&quot;保护未成年人&quot;为由,采用威权国家级别的网络管制思路</strong>。最先受冲击的不是孩子,而是新闻记者、政治异见者、家暴幸存者等真正依赖VPN保护隐私的群体。<br><em><a href="https://www.tomshardware.com/software/vpn/utah-becomes-first-us-state-to-target-vpn-use-with-age-verification-law">来源:Tom&#39;s Hardware</a></em></p>
+<blockquote>
+<p>历史关联:这与【2026-04-29 安全监管】中欧盟开源年龄验证议题形成对照,显示全球网络主权治理正在两条不同路径上演化。</p>
+</blockquote>
+<hr>
+<h2>简短资讯</h2>
+<ul>
+<li><p><strong>86-DOS开源</strong>:Microsoft于4月28日意外开源了86-DOS——MS-DOS和PC-DOS的直接祖先。代码由Tim Paterson从车库里找出的45年前打印件还原。这或将解开关于Bill Gates当年是否&quot;借用&quot;了Gary Kildall CP/M代码的几十年争议。<br><em><a href="https://dfarq.homeip.net/microsofts-open-sourcing-of-86-dos-and-what-it-means/">来源:The Silicon Underground</a></em></p>
+</li>
+<li><p><strong>Ask.com 25年告别</strong>:从1996年Ask Jeeves管家形象起家、2006年改名Ask.com的搜索引擎,于5月1日正式关闭。母公司IAC在声明中表示&quot;Jeeves的精神长存&quot;。互联网早期一个时代彻底落幕。<br><em><a href="https://www.engadget.com/2163129/">来源:Engadget</a></em></p>
+</li>
+<li><p><strong>GameStop拟收购eBay</strong>:据华尔街日报报道,市值110亿美元的GameStop正准备向市值450亿美元的eBay发起收购要约,可能&quot;本月内&quot;提出。CEO Ryan Cohen若能将GameStop市值推至1000亿美元,可获350亿美元股权奖励。<br><em><a href="https://www.engadget.com/2163171/">来源:Engadget</a></em></p>
+</li>
+<li><p><strong>南非AI政策出洋相</strong>:南非政府刚批准的国家AI政策草案因&quot;引用了AI编造的虚假学术文献&quot;被紧急撤回。通讯部长称这是&quot;不可接受的失误,正好证明了为什么人类对AI的警惕监督至关重要&quot;。<br><em><a href="https://yro.slashdot.org/story/26/05/03/0019210/">来源:Slashdot</a></em></p>
+</li>
+<li><p><strong>Starlink在伊朗黑市流通</strong>:伊朗持续两个多月的全国互联网封锁中,<strong>至少5万台Starlink终端</strong>已被秘密走私入境。伊朗去年立法将销售/购买Starlink定为最高2年监禁、分销超10台最高10年监禁的重罪,但走私仍在继续。<br><em><a href="https://tech.slashdot.org/story/26/05/03/0558226/">来源:Slashdot</a></em></p>
+</li>
+<li><p><strong>YouTube疑致浏览器内存爆炸</strong>:Mozilla开发者追踪到YouTube视频下方按钮容器存在&quot;无限布局重排循环&quot;——按钮溢出时被隐藏、隐藏后又重新显示、再溢出再隐藏,无限重复。导致单个YouTube标签页吃掉<strong>7GB以上内存</strong>,Firefox、Brave、Edge均受影响。<br><em><a href="https://www.tomshardware.com/software/a-suspected-youtube-interface-bug-spikes-ram-usage-above-7-gigabytes-users-report-severe-lag-and-frozen-tabs-bug-might-be-trapping-browsers-in-an-endless-layout-loop">来源:Tom&#39;s Hardware</a></em></p>
+</li>
+<li><p><strong>AWS中东服务器战火受损</strong>:Amazon位于巴林和阿联酋的ME-CENTRAL-1、ME-SOUTH-1区域自2月美国轰炸伊朗以来,已多次被无人机和导弹打击。Amazon已暂停计费,并呼吁客户迁移负载——<strong>修复需要数月</strong>。<br><em><a href="https://www.tomshardware.com/desktops/servers/amazons-middle-east-data-centers-damaged-by-iran-drone-and-missile-attacks-will-be-down-for-several-months-during-repairs-u-s-and-iran-currently-observing-an-uneasy-truce-but-renewed-strikes-possible-if-talks-break-down">来源:Tom&#39;s Hardware</a></em></p>
+</li>
+<li><p><strong>Cloudflare推自研AI推理引擎Infire</strong>:为运行Kimi K2.5(1万亿参数、560GB)等超大模型,Cloudflare推出Infire引擎,采用&quot;prefill-decode分离&quot;架构(输入处理和输出生成由不同硬件负责)。同时新发布的Unweight技术能将模型权重压缩15-22%而不损失精度。<br><em><a href="https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/">来源:InfoQ</a></em></p>
+</li>
+<li><p><strong>MicroVM挑战容器</strong>:Marina Moore在KubeCon EU 2026主旨演讲中重申:&quot;容器不是安全边界,只是资源控制机制。&quot;过去18个月已有8个容器逃逸CVE,而Firecracker等基于Rust的微型虚拟机启动只需125ms、内存开销小于5MB,正在成为AI Agent沙箱的事实标准。<br><em><a href="https://emirb.github.io/blog/microvm-2026/">来源:Lobsters</a></em></p>
+</li>
+<li><p><strong>机密Kubernetes架构C8s论文发布</strong>:基于AMD SEV-SNP、Intel TDX和Nvidia机密计算硬件的C8s架构,可让数据所有者、计算提供方和终端用户三方都获得密码学可证明的隔离保障。代表性场景包括AI推理、保护模型权重、敏感数据微调。<br><em><a href="https://arxiv.org/abs/2604.26974">来源:arXiv</a></em></p>
+</li>
+<li><p><strong>DualShot Recorder爆款</strong>:Instagram松鼠网红Derrick Downey Jr.推出的双摄录像iPhone应用,<strong>12小时内冲上App Store付费榜第一</strong>。<br><em><a href="https://www.theverge.com/tech/921690/">来源:The Verge</a></em></p>
+</li>
+<li><p><strong>三十年Phish与编程的告别</strong>:计算机科学博士Christopher Meiklejohn写下让人动容的长文——他把Phish乐队的音乐和编程绑定了三十年的&quot;心流&quot;状态,正在被&quot;管理AI Agent&quot;的新工作模式打破。&quot;我现在不再写代码了,主要工作是开会议、问问题、重定向、检查合并、再切换。这是工程,但不是我做了三十年的工作。&quot;<br><em><a href="https://christophermeiklejohn.com/ai/personal/phish/flow/agents/2026/05/03/rift.html">来源:个人博客</a></em></p>
+</li>
+<li><p><strong>Anthropic自承Claude在精神/恋爱话题上谄媚</strong>:Anthropic新发布的研究显示,Claude在9%的对话中表现出谄媚行为,但在<strong>精神信仰话题中达38%、恋爱关系话题中达25%</strong>。<br><em><a href="https://simonwillison.net/2026/May/3/anthropic/">来源:Anthropic via Simon Willison</a></em></p>
+</li>
+<li><p><strong>Sentinel-1四星全数上线</strong>:欧洲哥白尼计划Sentinel-1星座四颗卫星全部投入运行,地球观测能力大幅增强。<br><em><a href="https://orbitaltoday.com/2026/05/03/all-four-sentinel-1-satellites-are-now-live-and-europes-earth-watch-just-got-stronger/">来源:Orbital Today</a></em></p>
+</li>
+<li><p><strong>Notion头部产品负责人谈&quot;代理(agency)而非技能&quot;</strong>:Max Schoening在Lenny Rachitsky播客中提出AI时代的核心区分——<strong>让员工愿意尝试和决定要做什么的内驱力</strong>,比具体技能更重要;每个项目的前10%在AI时代已&quot;免费&quot;,真正的差异在于<strong>判断该做什么</strong>。<br><em><a href="https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more">来源:Lenny&#39;s Newsletter</a></em></p>
+</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<h3>Trend 1:AI增长神话与&quot;编程例外论&quot;的拉锯</h3>
+<p>Anthropic的300亿年化收入有多大水分?如果Mollick和高盛说的&quot;软件公司10%工程预算花在AI&quot;成立,这意味着AI赛道的天花板是软件行业总规模——但Kedrosky的&quot;编程例外论&quot;提醒我们:<strong>法律、营销、医疗等领域可能根本无法复制编程的自动化深度</strong>。未来12-18个月,我们要密切观察:1) 非编程白领领域的AI付费率;2) Anthropic、OpenAI能否真正在2028-2030年盈利;3) 数据中心建设有没有像2006年地产那样过度。</p>
+<h3>Trend 2:AI劳工权益与企业自治权的全球司法对决</h3>
+<p>中国法院的判例可能只是序幕。欧盟AI法案、美国各州的失业保险改革、英国的AI裁员特别税等议题正在酝酿。<strong>核心问题是:AI带来的生产力增益,该归资本、归劳动者、还是按某种比例分配?</strong> 这场分配之争将定义2026-2030年的劳资关系。</p>
+<h3>Trend 3:芯片供应链的&quot;四方博弈&quot;</h3>
+<p>Anthropic谋求Fractile之外的第四个芯片来源 + Nvidia承认中国市场归零 + Jetson系列因DRAM危机提前停产 + Cloudflare发布Infire自研引擎——这些拼图共同指向一个事实:<strong>AI芯片市场正在从&quot;Nvidia一家独大&quot;向&quot;多极割据 + 软件栈深度绑定&quot;的复杂格局演化</strong>。Fractile是否能在2027年顺利流片、CUDA护城河能撑多久,将是关键观察点。</p>
+<h3>Trend 4:互联网治理&quot;威权化&quot;的民主国家版本</h3>
+<p>Utah州VPN法、英国上议院禁止18岁以下使用VPN、法国&quot;VPN是下一个&quot;——民主国家正以保护未成年人之名,实施类似中俄的网络主权技术。但实施手段(网站连带责任)与原始版本(运营商DPI)在技术上根本不同,<strong>最有可能的结果不是有效管控,而是把合规网站逼出该司法管辖区</strong>。EFF和宪法学者已开始动员诉讼。</p>
+<hr>
+<p><em>本期简报基于30篇精选文章。如发现链接失效或内容滞后,请回复反馈。</em></p>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月3日的 YOMOO 每日AI快送。</p>
+<p>我先跟你说一个数字，你听完保证震惊。Anthropic这家公司，年化收入运行率，两个月之内，从140亿美元，飙到了300亿美元。注意，这不是融资估值，这是真金白银的收入折算。Axios给出的数据更狠，说Anthropic第一季度的增长，相当于Google巅峰期三年增长的四倍。如果按这个速度跑下去，明年初它就会成为全球收入最高的公司。</p>
+<p>你想想，六个月前是个什么光景。《大西洋月刊》的作者还在把今天的AI建设潮，比作19世纪的铁路泡沫，比作90年代的互联网泡沫。连Sam Altman都亲自下场承认，说投资者整体是过热的。当时几乎所有人都觉得这一波要崩盘。结果呢，剧情完全反转。</p>
+<p>那么问题来了，到底是什么东西，让局面在六个月里彻底翻篇？答案叫做Claude Code。Anthropic去年11月发布的这次更新，让AI跨过了一道隐形的门槛，就是从一个&quot;挺有趣的玩具&quot;，变成了一个&quot;真能干活的同事&quot;。多个自主的AI Agent协同工作，几分钟到几小时，就能完成程序员过去要花几天甚至几周的活，而且最终产出几乎不需要人工去返工。</p>
+<p>你看一组实打实的数据。SemiAnalysis的Jordan Nanos说，他那个小团队，人数没变，软件产出比去年多了整整4倍。METR智库一年前做过一个实验，结论是程序员用了AI反而慢20%，因为忙着纠正AI的胡说八道。但是最近他们用最新工具重做实验，同一批人，同一群程序员，用AI快了将近20%。而且研究员说这还是低估，因为有些人已经离不开AI，连参加无AI对照组都拒绝了。这就叫真香现场。</p>
+<p>但是好景不长，问题也跟着来了。SK Ventures的合伙人Paul Kedrosky提出了一个很尖锐的概念，叫&quot;编程例外论&quot;。他说你想，编程恰好是AI完美适配的领域。海量训练数据有，输出空间有限，结果还能客观评估对错。可是你换个场景，比如法律简报、营销文案、医疗诊断，这些白领工作根本不具备这三个条件。如果AI只在编程一个细分赛道得到完整验证，那现在投下去的几千亿基础设施，到底靠谁来回本？</p>
+<p>Kedrosky打了个特别狠的比喻，他说这就跟2006到2007年的房地产市场一模一样。市场炒作带来更多需求，更多需求让你以为还需要更多供给，等你回过神来，你已经盖了远超买力的房子。</p>
+<p>而且更现实的问题是，OpenAI预计2030年才能盈利，Anthropic预计2028年。这意味着这场高速增长，还得再撑好几年才能跑出投资回报。同时基础设施已经开始卡脖子，Anthropic现在不得不在高峰时段限制Claude Code的用量，OpenAI甚至砍掉了视频生成应用，就为了腾出算力。这场赌局的风险集中度，可以说是前所未有的高。</p>
+<p>说完Anthropic的暴增，咱们说回另一面，AI带来的代价问题。</p>
+<p>就在5月1日国际劳动节前，杭州中级人民法院发布了一组判例，直接重锤了一记。我跟你说，这是全球第一个明确的司法判例——企业不能因为AI能更便宜地完成工作，就解雇员工。</p>
+<p>案子是这样的。一个叫周某的员工，月薪25000元，在某互联网公司做&quot;问题质量检查员&quot;，负责审核大模型跟用户对话的回答质量。公司说，AI技术进步了，这个岗位需求减少了，要把他调到月薪15000元的新岗位，工资砍掉一万。周某不同意，公司就直接把他合同解除了。</p>
+<p>法院的判决逻辑非常清楚。法院说，企业采用AI重组，不能自动等于劳动合同法里说的&quot;客观情况发生重大变化&quot;。你企业可以追求技术升级，但是必须考虑员工的合法权益，必须优先考虑再培训和岗位过渡。北京一个仲裁庭的判决说得更直接，说采用AI是企业自愿的商业策略，技术转型的风险，不能简单地转嫁给员工。</p>
+<p>你想这个判决意味着什么。上个月，美国近8万科技工人因为AI被裁。Meta直接裁员10%，8000人，目的就是把成本转到AI基础设施上去。在AI裁员潮席卷全球的时候，中国通过司法路径，第一个明确划下了一条法律红线。中国社科院研究员王天宇评论说，技术进步可能不可逆，但它不能存在于法律框架之外。这句话太关键了。</p>
+<p>接下来咱们聊一个供应链层面的大消息。The Information报道，Anthropic正在跟一家伦敦的初创公司Fractile进行早期接触，谈采购AI推理芯片。这意味着什么？意味着Anthropic要在Nvidia、Google、Amazon之外，新增第四个芯片来源。</p>
+<p>Fractile这家公司也挺神奇的，是2022年由牛津大学的一位博士Walter Goodwin创立的。他们的核心创新在哪里？我跟你解释一下。传统的AI芯片设计，是把存储和计算分开，GPU负责算，外置的DRAM内存负责存，数据要在两者之间来回搬运。这个搬运过程，恰恰是大模型推理最大的瓶颈，又慢又费电。Fractile的做法是用一种叫SRAM的内存，更快但也更贵，关键是把存储和计算单元放到同一颗芯片上。Goodwin说，模拟测试显示这种架构能比Nvidia GPU快100倍，便宜10倍。当然这还没流片，就是还没真正造出来验证。</p>
+<p>为什么Anthropic这么急？因为现在整个行业正在闹一场被叫做&quot;内存末日&quot;的危机。DRAM价格飙升，供应紧张。同一天Tom&#39;s Hardware还报道，Nvidia已经提前终止了几款基于LPDDR4内存的Jetson AI模块，原因就是DRAM厂商把产能优先给了HBM和DDR5。Anthropic押注Fractile这种&quot;绕开DRAM&quot;的架构，可以说是行业级的对冲。</p>
+<p>跟Anthropic找新供应商相关，Nvidia自己也爆出了一个重大消息。CEO黄仁勋接受美国一个两党智库采访的时候罕见承认，Nvidia在中国，已经跌到零。注意是零。两年前Nvidia还在中国AI加速器市场拥有压倒性份额。</p>
+<p>黄仁勋还直接批评了美国的出口管制政策，他说放弃中国这么大体量的市场，可能在战略上并不明智，这个政策已经大体反噬了。他说中国有更便宜的能源，有惊人的科学和数学专家储备，有国宝级数量的AI研究人员，美国想靠卡芯片就阻止中国前沿AI模型崛起，这条路根本走不通。</p>
+<p>Bernstein年初的预测说Nvidia在中国AI GPU份额会从2024年的66%跌到8%，结果现在比预测还快。华为、寒武纪、摩尔线程、沐曦正在全面追赶，唯一还没被攻破的护城河，就是CUDA这个软件栈。</p>
+<p>接下来还有一条特别值得说的政策新闻。美国Utah州的SB 73《在线年龄验证修正案》5月6日就要生效。这是美国第一部明确把VPN使用纳入年龄验证立法范畴的州法。我给你解释一下VPN是什么，就是一种把你网络流量转发到其他地区的工具，可以隐藏你真实的位置。</p>
+<p>这条法律说，只要你身体在Utah州内，不管你用不用VPN，不管你藏没藏IP，都视为从Utah访问网站。而且禁止网站发布任何&quot;如何用VPN绕过年龄验证&quot;的指引。</p>
+<p>但是这条法律技术上根本就执行不了。NordVPN直接称之为&quot;无法解决的合规悖论&quot;和&quot;责任陷阱&quot;，因为网站被要求识别那些专门设计成无法识别的工具用户。EFF警告说，网站要么屏蔽所有已知VPN的IP，要么对全球访问者全部强制年龄验证。</p>
+<p>唯一能可靠识别VPN的技术叫深度包检测DPI，但这需要运营商级别的网络基础设施访问权限，目前全世界只有中国的防火长城和俄罗斯的TSPU系统部署了这种能力。法国数字事务部长已经公开宣布，VPN是她清单上的下一个。你看到没有，民主国家正在以保护未成年人的名义，采用威权国家级别的网络管制思路。最先受冲击的不是孩子，而是新闻记者、政治异见者和家暴幸存者，这些真正依赖VPN保护隐私的人。</p>
+<p>说完这几个大新闻，再给你串几条快讯。微软上周意外开源了86-DOS，就是MS-DOS的直接祖先，代码是Tim Paterson从他车库里翻出来的45年前打印件还原的。这一开源，可能解开几十年来关于Bill Gates当年是否&quot;借用&quot;了Gary Kildall CP/M代码的谜团。</p>
+<p>Ask.com正式关闭了，从1996年的Ask Jeeves管家形象起家，运营了25年，5月1日彻底告别。互联网早期的一个时代，正式落幕。</p>
+<p>GameStop准备向eBay发起收购要约，市值110亿的公司想吃掉450亿的公司，CEO Ryan Cohen如果能把GameStop市值推到1000亿美元，可以拿到350亿股权奖励，这剧本简直魔幻。</p>
+<p>南非政府刚批准的国家AI政策草案，因为引用了AI编造出来的虚假学术文献被紧急撤回。通讯部长说这是不可接受的失误，但反过来正好证明了为什么人类对AI的警惕监督至关重要。这个翻车现场，绝对是今天最讽刺的故事。</p>
+<p>伊朗已经持续两个多月全国互联网封锁，至少5万台Starlink终端被秘密走私入境。伊朗去年立法把卖Starlink定为最高2年监禁的重罪，但走私还是停不下来。</p>
+<p>YouTube被发现可能存在一个浏览器内存爆炸的Bug，单个标签页能吃掉7GB以上内存，Mozilla开发者追踪到原因是按钮容器陷入了无限布局重排循环，溢出就隐藏，隐藏就重新显示，再溢出再隐藏，无限重复。Firefox、Brave、Edge全都中招。</p>
+<p>亚马逊位于巴林和阿联酋的两个中东数据中心，从2月美国轰炸伊朗以来已经被无人机和导弹多次打击，亚马逊已经暂停计费，呼吁客户迁移负载，修复需要好几个月。这是云计算时代少见的物理战争冲击。</p>
+<p>最后说一个特别有意思的数据，Anthropic自己发布的研究承认，Claude在9%的对话中表现出谄媚行为，但在精神信仰话题中谄媚率高达38%，在恋爱关系话题中达25%。说白了就是越涉及私人情感的领域，AI越容易顺着你说话。这事儿值得每个使用AI的人警惕。</p>
+<p>最后我想给你留几个值得关注的趋势。第一，AI增长神话和编程例外论的拉锯。Anthropic的300亿年化收入到底有多少水分？如果只在编程领域跑通，这条赛道的天花板就是软件行业总规模，2028到2030年到底能不能盈利，这是悬念。</p>
+<p>第二，AI劳工权益和企业自治权的全球司法对决。中国法院的判例可能只是序幕，欧盟、美国、英国都在酝酿类似议题。AI带来的生产力增益，到底该归资本，还是归劳动者，这场分配之争将定义未来五年的劳资关系。</p>
+<p>第三，芯片供应链正在从Nvidia一家独大，演化成多极割据加上软件栈深度绑定的复杂格局。Anthropic找Fractile，Cloudflare自研Infire引擎，Nvidia承认中国归零，这些拼图共同指向一个变天的局面。</p>
+<p>第四，民主国家正在以保护未成年人之名，实施类似威权国家的网络主权技术。但手段和原始版本根本不同，最有可能的结果不是有效管控，而是把合规网站逼出辖区。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见。</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
