@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-05</title>
+  <meta name="description" content="白宫罕见调头讨论对前沿AI模型实施&quot;发布前审查&quot;，Anthropic的Mythos成催化剂，AI监管迎来FDA式拐点；近全网级Linux内核漏洞CopyFail被CISA勒令两周内修补，影响2017年以来几乎所有发行版；Musk诉OpenAI庭审中Brockman承认持股或达300亿美元，Cerebras敲定35亿IPO。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-05/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-05">
+  <meta property="og:description" content="白宫罕见调头讨论对前沿AI模型实施&quot;发布前审查&quot;，Anthropic的Mythos成催化剂，AI监管迎来FDA式拐点；近全网级Linux内核漏洞CopyFail被CISA勒令两周内修补，影响2017年以来几乎所有发行版；Musk诉OpenAI庭审中Brockman承认持股或达300亿美元，Cerebras敲定35亿IPO。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-05/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-05T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-05">
+  <meta name="twitter:description" content="白宫罕见调头讨论对前沿AI模型实施&quot;发布前审查&quot;，Anthropic的Mythos成催化剂，AI监管迎来FDA式拐点；近全网级Linux内核漏洞CopyFail被CISA勒令两周内修补，影响2017年以来几乎所有发行版；Musk诉OpenAI庭审中Brockman承认持股或达300亿美元，Cerebras敲定35亿IPO。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-05",
+    "description": "白宫罕见调头讨论对前沿AI模型实施\"发布前审查\"，Anthropic的Mythos成催化剂，AI监管迎来FDA式拐点；近全网级Linux内核漏洞CopyFail被CISA勒令两周内修补，影响2017年以来几乎所有发行版；Musk诉OpenAI庭审中Brockman承认持股或达300亿美元，Cerebras敲定35亿IPO。",
+    "datePublished": "2026-05-05T08:00:00+08:00",
+    "dateModified": "2026-05-05T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-05/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-05/yomoo-2026-05-05.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-05</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-05/yomoo-2026-05-05.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-05/yomoo-2026-05-05.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026-05-04</h1>
+<h2>今日要览</h2>
+<p>特朗普政府罕见调头，正讨论对前沿AI模型实施&quot;发布前审查&quot;，Anthropic的Mythos被点名为催化剂——这是从&quot;放任产业&quot;到&quot;强制门槛&quot;的政策U型弯。与此同时，几乎全网级的Linux内核漏洞CopyFail被CISA勒令两周内修补；Musk诉OpenAI庭审中，Brockman被质问为何不把300亿美元股票捐给非营利组织；Cerebras敲定35亿美元IPO，而Apple的Mac Mini在内存危机中悄然涨价200美元。</p>
+<hr>
+<h2>主线一·AI监管U型弯：白宫要给前沿模型&quot;上FDA&quot;</h2>
+<p>这是今天最重磅的政策信号。据《纽约时报》披露，白宫上周已与Anthropic、Google、OpenAI高管开会，酝酿一份行政令——成立工作组，对前沿AI模型实施<strong>发布前审查</strong>。机制类似FDA药品审批：政府先在实验室里测试模型的生化武器、网络攻击、自主行为等危险能力，再裁定能否上市。</p>
+<p><strong>催化剂被官方点名是Anthropic的Mythos。</strong> 这款模型在过去几周已展现出零样本解数学、自主完成32步企业级网络攻击、48小时挖出GitHub高危漏洞等能力。监管者夜不能寐的，不是它能做什么，而是它<strong>已经在做</strong>。</p>
+<p>更值得玩味的是政策反差。特朗普去年回归后第一时间撤销了拜登政府&quot;AI开发者需自愿做安全评估&quot;的流程，并公开宣称&quot;AI是个美丽的宝宝，我们不能用愚蠢的规则阻止它&quot;。短短数月，白宫的盘算变成&quot;如果发生灾难性AI网络攻击，谁来背锅&quot;——既要避免政治反噬，又想让国防部和情报机构<strong>第一时间拿到模型</strong>。</p>
+<p>工作组初步设想可能借鉴英国模式：政府机构提前接触模型、做安全测试，但<strong>不必然阻止发布</strong>。这把SB-1047加州法案被否决后留下的真空，直接搬到联邦层面，也呼应欧盟AI法案的硬约束逻辑。</p>
+<p><strong>为什么重要：</strong> 这是2026年最大的AI产业不确定性。若落地，OpenAI、Google、Anthropic的发布节奏将被重塑——Mythos当初不公开发布的&quot;AI治理新阶段&quot;叙事，可能变成全行业的强制流程。开源模型面临身份危机：你怎么&quot;预审&quot;一个权重已上传HuggingFace的模型？中美竞速也将被注入新摩擦——监管不再是争论的话题，已成既定事实。</p>
+<p>来源：<a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/trump-administration-considers-mandatory-pre-release-vetting-of-ai-models">Tom&#39;s Hardware</a>、<a href="https://yro.slashdot.org/story/26/05/04/1954244/">Slashdot</a></p>
+<hr>
+<h2>主线二·CopyFail：Linux最大爆炸半径漏洞</h2>
+<p>安全公司Theori披露的<strong>CVE-2026-31431（CopyFail）</strong> 影响7.0及之前几乎所有Linux内核版本。研究者一句话总结：&quot;一个简短的Python脚本就能root掉2017年以来所有Linux发行版。&quot;</p>
+<p>漏洞机理是内核某组件在该复制数据时没复制，污染敏感数据，让普通用户搭便车获得root权限。RHEL 10.1、Ubuntu 24.04 LTS、Amazon Linux 2023、SUSE 16、Debian、Fedora、Kubernetes全中招。CISA已下令联邦民用机构5月15日前完成修补。</p>
+<p><strong>意义：</strong> 与4月底的cPanel漏洞、Bitwarden CLI投毒事件构成连环——AI挖洞时代，&quot;近全网级&quot;漏洞已不是黑天鹅而是月度常态。补丁海啸还在继续。</p>
+<p>来源：<a href="https://techcrunch.com/2026/05/04/u-s-government-warns-of-severe-copyfail-bug-affecting-major-versions-of-linux/">TechCrunch</a></p>
+<hr>
+<h2>主线三·Musk诉OpenAI：300亿股权与&quot;血汗泪水&quot;</h2>
+<p>Brockman周一出庭，承认自己在OpenAI的股权目前价值<strong>超200亿美元、可能高达300亿</strong>。Musk律师Molo紧追不放：&quot;你为何不把这290亿捐给OpenAI非营利组织？&quot;Brockman回答：他和团队&quot;流了血、汗、泪&quot;建设OpenAI。</p>
+<p>法庭还披露：OpenAI基金会持股超1500亿美元，员工总持股约25%，基金会27%。OpenAI总共只从捐赠者拿到不到1.5亿美元——暗示Musk当年的投入对成功并非决定性。Brockman早期还以Altman家族办公室1000万美元股权形式拿过报酬，并投资了与OpenAI签订巨额合作的Cerebras、CoreWeave、Helion Energy。</p>
+<p>Daring Fireball的John Gruber今日单独爆料：<strong>Y Combinator持有OpenAI约0.6%股权</strong>，按当前8520亿美元估值价值超50亿美元。Paul Graham此前为Altman作&quot;品格背书&quot;时，从未披露这层利益关系。</p>
+<p>来源：<a href="https://www.wired.com/story/greg-brockman-testifies-musk-v-altman-trial/">WIRED</a>、<a href="https://daringfireball.net/2026/05/y_combinators_stake_in_openai">Daring Fireball</a></p>
+<hr>
+<h2>主线四·Cerebras IPO定档265亿美元</h2>
+<p>Cerebras定价区间115-125美元/股，发行2800万股，最高募资35亿美元，估值最高266亿美元——比2月Series H的230亿估值再涨一档，<strong>今年最大科技IPO</strong>已无悬念。</p>
+<p>更耐人寻味的是OpenAI关系：去年12月OpenAI给Cerebras贷款10亿美元，附带33百万股的认股权证；双方已签百亿美元多年期合作。订单已超募——35亿美元额度收到100亿美元订单。Altman、Brockman、Sutskever、D&#39;Angelo均为天使股东。这是继X-energy成功上市后，AI算力类IPO窗口被验证的第二个信号，下一个看SpaceX和OpenAI自己。</p>
+<p>来源：<a href="https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/">TechCrunch</a></p>
+<hr>
+<h2>速览</h2>
+<ul>
+<li><strong>Mac Mini悄然涨价：</strong> 苹果停售599美元的256GB Mac Mini，入门价跳到799美元的512GB版。Cook刚向投资者承认内存涨价冲击业务——本地AI跑OpenClaw的玩家与AI数据中心争抢DRAM/HBM/NAND，零售端SSD和内存今年已涨3倍以上。Mac Mini不再是最便宜的Mac。(<a href="https://go.theregister.com/feed/www.theregister.com/2026/05/04/mac_mini_ai_memory/">The Register</a>)</li>
+<li><strong>Apple冲击最高法院：</strong> Apple就Epic案27%佣金问题向最高法院申请暂缓九巡裁决——理由是&quot;藐视法庭&quot;标签拖累后续抗辩，且禁令不当扩展至全美开发者。承诺审理期间继续执行零佣金。(<a href="https://9to5mac.com/2026/05/04/apple-files-for-supreme-court-stay-in-epic-case-over-off-app-store-commission-dispute/">9to5Mac</a>)</li>
+<li><strong>iPhone Ultra现身：</strong> Unbox Therapy放出折叠iPhone Ultra样机10分钟实拍：闭合护照比例、展开平板比例，闭合厚11mm、展开5.2mm。iPhone 18 Pro六大新特性曝光：A20 Pro 2nm芯片、可变光圈主摄、Dynamic Island缩小、C2自研基带。(<a href="https://9to5mac.com/2026/05/04/video-offers-clearest-look-yet-at-foldable-iphone-ultra-dummy-unit/">9to5Mac</a>)</li>
+<li><strong>iPhone 17登顶全球销冠：</strong> Counterpoint数据：Q1 2026 iPhone 17单机占全球6%份额，连Pro Max都被反超；Apple独占前三+第六，但iPhone Air继续缺席榜单。(<a href="https://9to5mac.com/2026/05/04/report-iphone-17-ranked-as-worlds-top-selling-smartphone-in-q1-2026/">9to5Mac</a>)</li>
+<li><strong>VS Code署名翻车：</strong> 微软给Git插件默认加上&quot;Co-authored-by: Copilot&quot;，连关闭Copilot的开发者都被强行署名。社区反弹后VS Code 1.119改回opt-in。Anthropic的Claude Code和OpenAI的Codex仍是默认署名。(<a href="https://go.theregister.com/feed/www.theregister.com/2026/05/04/microsoft_reverses_ai_credit_grab/">The Register</a>)</li>
+<li><strong>AI图像模型才是增长引擎：</strong> Appfigures报告——图像模型发布带来的下载量是传统聊天模型升级的6.5倍。Gemini Nano Banana单点触发2200万下载，但只赚18.1万美元；ChatGPT 4o图像功能则带来70亿美元级消费支出。视觉，是新的留客工具。(<a href="https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/">TechCrunch</a>)</li>
+<li><strong>Stripe一夜格式化2500万行代码：</strong> Stripe披露rubyfmt项目实战——用自研格式化工具一晚跑完2500万行Ruby代码库，与此前披露的5000万行monorepo选择性测试形成完整工程图谱。(<a href="https://stripe.dev/blog/formatting-an-entire-25-million-line-codebase-overnight-the-rubyfmt-story">Stripe Dev</a>)</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<p><strong>AI治理的&quot;不可逆&quot;叙事</strong>：LessWrong上Yudkowsky万字长文《Irretrievability》今日刷屏——核心论点是ASI是&quot;一次性发射&quot;问题，类比维京1号探测器、火星观察者、马其诺防线，警告&quot;我们只有一次机会&quot;。在白宫考虑预审、Mythos展示零日漏洞能力的同一周读这篇文章，意味格外不同。</p>
+<p><strong>iOS 26.5的RCS端到端加密</strong>：Apple与Android之间的RCS消息将默认开启E2EE加密。这是Apple自iOS 18支持RCS以来兑现的最后一块拼图，也意味着监控类司法请求的有效性将再次被压缩。</p>
+<p><strong>iPhone迷你触屏阅读器</strong>：Boox等小屏电子墨水设备开始被定位为&quot;反无限滚动&quot;工具——AI内容洪流推动了一个反向小生态。</p>
+<p><strong>新奥尔良&quot;终末诊断&quot;</strong>：Nature Sustainability论文用古气候比对宣告新奥尔良已过临界点，本世纪末将被墨西哥湾包围。学者直言&quot;这是个绝症，需要临终关怀式迁移&quot;——气候议题首次出现&quot;管理性撤退&quot;作为主流方案的科学背书。</p>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月4日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天最炸的一条消息，是特朗普政府正在酝酿一件几乎让人不敢相信的事——他们要给前沿AI模型上FDA。你没听错，就是像审批药品那样，发布前必须先送实验室测试，政府点头你才能上市。</p>
+<p>这事儿有多反差呢？你想，特朗普去年回归白宫，第一时间干的就是撤销拜登政府的AI安全评估流程，他还公开说&quot;AI是个美丽的宝宝，我们不能用愚蠢的规则阻碍它&quot;。结果短短几个月，白宫上周就把Anthropic、Google、OpenAI的高管叫到一块儿开会，讨论一份行政令，要成立工作组，对前沿模型做发布前审查。这是什么？这是从放任到强制，一个一百八十度的U型大转弯。</p>
+<p>催化剂是谁呢？《纽约时报》直接点名，是Anthropic的Mythos。这款模型最近几周展示出来的能力，已经让监管者夜不能寐。它能零样本解数学难题，能自主完成32步的企业级网络攻击，48小时就能挖出GitHub上的高危漏洞。注意，让政府睡不着的不是它能做什么，而是它已经在做。</p>
+<p>更深一层的算计是什么？白宫现在想的是，万一真出现一场灾难性的AI网络攻击，这锅谁来背？所以工作组的初步设想可能借鉴英国模式，政府提前接触模型，做安全测试，但不一定阻止你发布。这一招，直接把加州SB-1047法案被否决后留下的真空，搬到了联邦层面，逻辑上也跟欧盟AI法案对上了。</p>
+<p>为什么这件事重要？我觉得这就是2026年最大的AI产业不确定性。一旦落地，OpenAI、Google、Anthropic的发布节奏全要被重塑。当初Mythos不公开发布的那个所谓&quot;AI治理新阶段&quot;叙事，可能直接变成全行业的强制流程。开源模型怎么办？你怎么&quot;预审&quot;一个权重已经传到HuggingFace上的模型？这事儿无解。中美AI竞速也会被注入新的摩擦——监管已经不再是要不要的话题，已经是既定事实了。</p>
+<p>说回到具体的危险有多近，咱们再看今天另一颗炸弹——CopyFail。安全公司Theori披露了一个编号CVE-2026-31431的Linux内核漏洞，影响范围有多大呢？2017年以来几乎所有Linux发行版全中招。研究者一句话总结：&quot;一个简短的Python脚本就能root掉所有这些系统。&quot; RHEL、Ubuntu、Amazon Linux、SUSE、Debian、Fedora、Kubernetes，无一幸免。CISA已经下令联邦民用机构5月15号之前必须打完补丁。</p>
+<p>你看到没有，这其实跟刚才那条AI监管是一根线上的——AI挖洞时代，所谓&quot;近全网级&quot;的漏洞已经不是黑天鹅，而是月度常态了。Mythos展示的48小时挖洞能力，配上CopyFail这种真实事件，监管者紧张是真的有道理的。</p>
+<p>接下来咱们说回硅谷另一出大戏，Musk诉OpenAI庭审。OpenAI总裁Brockman周一出庭，承认自己在OpenAI的股权目前价值超过200亿美元，可能高达300亿。Musk的律师Molo立马追问：&quot;那你为什么不把这290亿都捐给OpenAI非营利组织？&quot;Brockman的回答是，他和团队&quot;流了血、汗、泪&quot;才建起OpenAI。</p>
+<p>这场庭审还披露了一组数据，太有意思了。OpenAI基金会持股超过1500亿美元，员工总持股大概25%，基金会27%。但OpenAI从捐赠者那总共只拿到不到1.5亿美元——你品，你细品，这是在暗示什么？暗示Musk当年的投入，对OpenAI的成功并不是决定性的。Brockman早期还以Altman家族办公室1000万美元股权的形式拿过报酬，他还投资了Cerebras、CoreWeave、Helion Energy，这些公司全跟OpenAI有巨额合作。</p>
+<p>更猛的料是Daring Fireball的John Gruber今天单独爆出来的——Y Combinator持有OpenAI大约0.6%的股权，按OpenAI现在8520亿美元的估值算，这一份就值超过50亿美元。Paul Graham过去给Altman做品格背书的时候，从来没披露过这层利益关系。</p>
+<p>聊完这场官司，咱们来看一个真金白银的AI算力故事——Cerebras IPO定档了。发行价区间115到125美元，发行2800万股，最高募资35亿美元，估值最高266亿美元。比今年2月Series H轮230亿的估值又往上跳了一档。这是2026年最大的科技IPO，基本没悬念了。</p>
+<p>最有意思的还是它跟OpenAI的关系。去年12月OpenAI给Cerebras贷款10亿美元，附带3300万股的认股权证；两边还签了一份百亿美元级的多年期合作。订单火爆到什么程度？35亿美元的额度，收到了100亿美元的认购订单。Altman、Brockman、Sutskever、D&#39;Angelo全是天使股东。这是继X-energy上市之后，AI算力类IPO窗口被验证的第二个信号。下一个看谁？看SpaceX和OpenAI自己。</p>
+<p>接下来几条速览，我快速给你过一下，但每条都有意思。</p>
+<p>苹果Mac Mini悄悄涨价了。599美元的256GB版本停售，入门价直接跳到799美元的512GB版。Cook刚向投资者承认内存涨价冲击业务——本地跑AI的玩家和AI数据中心在抢DRAM、HBM、NAND，零售端SSD和内存今年已经涨了3倍以上。Mac Mini，已经不再是最便宜的Mac了。</p>
+<p>苹果同时也在打另一场仗。Epic案27%佣金问题，苹果直接向最高法院申请暂缓九巡裁决，理由是&quot;藐视法庭&quot;这个标签会拖累后续抗辩。承诺审理期间继续执行零佣金。</p>
+<p>折叠iPhone Ultra样机的10分钟实拍出来了。闭合是护照比例，展开是平板比例，闭合厚11毫米，展开只有5.2毫米。iPhone 18 Pro的六大新特性也曝光了——A20 Pro 2纳米芯片、可变光圈主摄、Dynamic Island会缩小、C2自研基带。</p>
+<p>Counterpoint的数据，iPhone 17成了今年Q1全球销冠，单机占全球6%份额，连Pro Max都被它反超了。苹果一家独占前三再加第六。</p>
+<p>VS Code这边翻车了。微软给Git插件默认加上&quot;Co-authored-by: Copilot&quot;署名，连关掉Copilot的开发者都被强行署名。社区反弹之后，1.119版本改回opt-in。但你知道吗，Anthropic的Claude Code和OpenAI的Codex，仍然是默认署名状态。</p>
+<p>Appfigures发了一份报告，结论很有意思——AI图像模型带来的下载量，是传统聊天模型升级的6.5倍。Gemini Nano Banana单点触发2200万下载，但只赚了18.1万美元；ChatGPT 4o图像功能则带来70亿美元级的消费支出。所以你看，视觉，是新的留客工具。</p>
+<p>Stripe还分享了一个工程奇迹——用自研的rubyfmt工具，一晚上跑完了2500万行Ruby代码库的格式化，再加上之前披露的5000万行monorepo选择性测试，这家公司的工程能力图谱越来越完整了。</p>
+<p>最后是几个值得关注的伏笔。</p>
+<p>LessWrong上Yudkowsky万字长文《Irretrievability》今天刷屏，核心观点是——超级AI是一次性发射问题，类比维京1号探测器、火星观察者、马其诺防线，&quot;我们只有一次机会&quot;。在白宫考虑预审、Mythos展示零日漏洞能力的同一周读这篇文章，意味格外不同。</p>
+<p>iOS 26.5将默认开启RCS端到端加密。这是苹果自iOS 18支持RCS以来兑现的最后一块拼图，也意味着监控类司法请求的有效性将再次被压缩。</p>
+<p>最后一个让人心情复杂的——Nature Sustainability一篇论文用古气候比对宣告，新奥尔良已经过了临界点，本世纪末将被墨西哥湾包围。学者直言&quot;这是个绝症，需要临终关怀式迁移&quot;。这是气候议题第一次出现&quot;管理性撤退&quot;作为主流方案的科学背书。一座城市，正在被宣告临终。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
