@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-09</title>
+  <meta name="description" content="法国Genesis AI发布GENE-26.5机器人基础模型，演示单手打鸡蛋、用刀转移番茄等家务级动作，具身智能从&quot;会走路&quot;迈向&quot;会用手&quot;；苹果与英特尔六年后复合，由英特尔以18A-P制程为苹果代工入门级M系列芯片；中国&quot;中转站&quot;灰色市场以一折转售Claude API，背后是凭证窃取、模型替换与prompt数据收割的产业链。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-09/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-09">
+  <meta property="og:description" content="法国Genesis AI发布GENE-26.5机器人基础模型，演示单手打鸡蛋、用刀转移番茄等家务级动作，具身智能从&quot;会走路&quot;迈向&quot;会用手&quot;；苹果与英特尔六年后复合，由英特尔以18A-P制程为苹果代工入门级M系列芯片；中国&quot;中转站&quot;灰色市场以一折转售Claude API，背后是凭证窃取、模型替换与prompt数据收割的产业链。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-09/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-09T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-09">
+  <meta name="twitter:description" content="法国Genesis AI发布GENE-26.5机器人基础模型，演示单手打鸡蛋、用刀转移番茄等家务级动作，具身智能从&quot;会走路&quot;迈向&quot;会用手&quot;；苹果与英特尔六年后复合，由英特尔以18A-P制程为苹果代工入门级M系列芯片；中国&quot;中转站&quot;灰色市场以一折转售Claude API，背后是凭证窃取、模型替换与prompt数据收割的产业链。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-09",
+    "description": "法国Genesis AI发布GENE-26.5机器人基础模型，演示单手打鸡蛋、用刀转移番茄等家务级动作，具身智能从\"会走路\"迈向\"会用手\"；苹果与英特尔六年后复合，由英特尔以18A-P制程为苹果代工入门级M系列芯片；中国\"中转站\"灰色市场以一折转售Claude API，背后是凭证窃取、模型替换与prompt数据收割的产业链。",
+    "datePublished": "2026-05-09T08:00:00+08:00",
+    "dateModified": "2026-05-09T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-09/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-09/yomoo-2026-05-09.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-09</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-09/yomoo-2026-05-09.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-09/yomoo-2026-05-09.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026年5月9日</h1>
+<h2>📌 今日要闻</h2>
+<p>法国机器人公司 Genesis AI 发布 GENE-26.5 通用机器人基础模型,首次让机器人在真实厨房用一只手打鸡蛋、用刀转移切好的番茄,标志着具身智能从&quot;会走路&quot;向&quot;会用手&quot;的关键跃迁。苹果与英特尔在分手六年后重新握手,英特尔将以 18A-P 制程为苹果代工入门级 M 系列芯片,角色彻底反转。中国&quot;中转站&quot;灰色市场以一折价格转售 Claude API,通过窃取凭证、模型替换和收割用户 prompt 的方式构建蒸馏数据流水线,对应着白宫此前对中国&quot;工业级蒸馏&quot;的指控。</p>
+<hr>
+<h2>🎯 主线故事</h2>
+<h3>1. 机器人开始挑战西红柿炒鸡蛋:Genesis AI 让&quot;手&quot;真正像人</h3>
+<p>成立仅一年的法国公司 Genesis AI 发布首个机器人基础模型 GENE-26.5,演示视频中机器人单手打鸡蛋、双手切番茄、移液器实验、解魔方、单手指缝同时抓四个物体——所有动作均为 1 倍速全自主执行,没有加速。</p>
+<p><strong>为什么这件事让业界震动</strong>:过去几年人形机器人最擅长跳舞、翻跟头、搬箱子,但普通人的朴素期待是&quot;它什么时候能帮我做家务&quot;。家务的难点不在动作,而在物理世界的不确定性——鸡蛋会碎、番茄会滑、刀会改变食材形状。Genesis AI 的演示中,机器人在转移切好的番茄时,不是简单把刀当铲子,而是用刀背与砧板形成支撑,再通过双手协同完成转移——这个动作&quot;非常像人&quot;。</p>
+<p><strong>技术路线的关键判断</strong>:CEO 周衔(CMU 机器人博士、Genesis 仿真平台核心作者)透露,数据引擎依赖三类来源——人手手套数据、第一视角视频、第三人称视频,已积累超过 20 万小时跨模态数据。仿真不再承担生成数据的主角,而是负责闭环评估。这一思路意味着行业在数据来源问题上达成新共识:<strong>纯遥操作机器人采数据太贵太慢,人类自然劳动数据才是规模化关键</strong>。</p>
+<p><strong>冷静读数据</strong>:做饭 demo 中多数步骤成功率 90-95%,但单手打蛋和用刀转移番茄的成功率只有 50-60%,机器人速度约为人类的 60-70%。周衔判断,具身智能在实验室环境一到两年内有望进入&quot;GPT-3.0 阶段&quot;,但要走进千家万户、达到 GPT-4 级成熟度,可能仍需 5 年甚至更久——参考自动驾驶十多年仍在持续迭代的经验。</p>
+<p><strong>与既有线索的连接</strong>:这与此前 [4-08] 微软论证 AI 算力可训千亿参数模型、[4-10] Anthropic 推出 AI 代理平台一同,把&quot;具身智能 = 模型 + 数据 + 仿真闭环&quot;的范式推上行业共识。</p>
+<p>[来源:极客公园]</p>
+<h3>2. 苹果与英特尔六年后复合,但角色彻底反转</h3>
+<p>2020 年苹果在 WWDC 宣布抛弃英特尔、全面转向自研芯片,库克当年甚至私下对台积电张忠谋说英特尔&quot;就是不知道怎么做一家代工厂&quot;。六年后,《华尔街日报》报道两家已达成初步协议:<strong>英特尔将为苹果代工部分入门级 M 系列芯片</strong>,采用 18A-P 制程(对标台积电 2nm),最早 2027 年下半年出货。</p>
+<p><strong>为什么苹果回头</strong>:供应链单点故障已成现实风险。库克在 Q1 财报会亲口承认,iPhone 17 系列出货受 A19 芯片产能制约——当英伟达等 AI 客户疯抢台积电产能,苹果发现自己要排队。供应链多元化从选做题变成必答题。这与本季度报道的 [5-06] Mac Studio 内存腰斩至 96GB、[5-04] iPhone 17 登顶 Q1 销冠形成闭环——产能瓶颈正在重塑产品策略。</p>
+<p><strong>英特尔手里的牌</strong>:新 CEO 陈立武把代工业务当翻身仗,18A 工艺已在亚利桑那量产,Panther Lake 是首批客户。除苹果外,英伟达 50 亿美元投资入股、Tesla 旗下 Terafab、微软 AWS 都已签约,英特尔股价较一年前暴涨 433%。</p>
+<p><strong>关键考验在良率</strong>:分析师指出,真正的考试才刚开始——台积电统治代工市场的核心是其极高良率。如果英特尔代工的成本更高、良率更低,差价要么苹果吃掉、要么转嫁消费者推高售价。苹果先用入门级试水、把旗舰留给台积电,本质是建立&quot;第二供应链&quot;的对冲策略。</p>
+<p>[来源:极客公园]</p>
+<h3>3. 中国&quot;中转站&quot;灰色市场:一折 Claude API 背后是数据收割</h3>
+<p>牛津中国政策实验室研究员 Zilan Qian 调查显示,中国开发者社区俗称&quot;中转站&quot;的 API 代理服务,在 GitHub、淘宝、Telegram 上公开以一折价格转售 Claude 访问权限。其商业模式由三层构成:</p>
+<ul>
+<li><strong>凭证窃取</strong>:批量注册账号、薅免费 API 额度、用盗刷信用卡开 200 美元 Max 订阅再分摊给数十人;为绕过 Anthropic 的真人 ID + 自拍验证,招募东南亚低收入人群代过验证(参考 Worldcoin 在柬埔寨、肯尼亚以 30 美元收购虹膜的灰色模板)。</li>
+<li><strong>模型替换</strong>:CISPA 审计 17 家代理后发现,标榜&quot;Gemini-2.5&quot;的服务在医疗基准测试中只得 37 分,而官方 API 得 84 分——用户付 Opus 的钱,实际可能拿到 Sonnet、Haiku 甚至 Qwen 的输出。</li>
+<li><strong>数据收割</strong>:开发者直接告诉 Qian,&quot;加价转售只是获客手段,真正的生意是收割 prompt 和推理链&quot;,HuggingFace 上已经流传无来源标注的 Claude Opus 4.6 推理输出数据集。</li>
+</ul>
+<p><strong>为什么这是真正的安全事件</strong>:开发者把代码代理(coding agent)的请求路由经过中转站,等于把仓库上下文、API 结构、认证逻辑都送给了无任何数据义务的第三方——三星 2023 年员工把半导体工艺源码粘贴进 ChatGPT 的事故是同一类风险,但中转站连基础服务条款都没有。</p>
+<p><strong>与既有线索的串联</strong>:这一调查印证了 [5-02] 马斯克庭审承认 xAI 蒸馏 ChatGPT 后白宫所指控的&quot;工业级蒸馏&quot;,也呼应 [4-29] Wiz 用 Claude Code 48 小时挖出 GitHub 漏洞、[4-22] OpenAI 趁 Anthropic 涨价抢用户的产业格局——蒸馏(Distillation,用大模型输出训练小模型的技术)作为中美 AI 博弈的核心战术,正在以基础设施级别的方式被规模化部署。Anthropic 自 9 月封禁中国实体后每加一道控制就催生一个绕过市场。</p>
+<p>[来源:Tom&#39;s Hardware]</p>
+<hr>
+<h2>⚡ 速览</h2>
+<ul>
+<li><strong>Cloudflare 推 Dynamic Workflows</strong>:仅 300 行 TypeScript,让每个租户、每个 Agent、每个请求都能动态加载自己的工作流代码,延续 [4-20] CF AI Stack 的多租户技术栈愿景,Temporal 和 Inngest 暂无对应方案。[InfoQ]</li>
+<li><strong>Chrome 偷偷占 4GB</strong>:Gemini Nano 模型自 2024 年起被默认下载到桌面端 OptGuideOnDeviceModel 目录,关闭&quot;On-Device AI&quot;开关才能阻止重新下载——隐私换功能的代价被用户后知后觉。[The Verge]</li>
+<li><strong>Canvas 勒索后续</strong>:Instructure 因 ShinyHunters 勒索软件攻击导致 Canvas 进入维护模式,影响美国期末备考学生,延续 [5-08] 的事件线。[WIRED]</li>
+<li><strong>Meta 撤销 Instagram 加密</strong>:5 月 8 日起取消端到端加密选项,理由是&quot;opt-in 用户不够多&quot;,隐私专家担忧此举将削弱全球加密推动。[WIRED]</li>
+<li><strong>光纤偷听</strong>:欧洲地球科学联盟年会披露,用于地震监测的分布式声学传感(DAS)技术配合 Whisper 转录,可让光纤变成实时窃听器,5 米内裸露线圈效果最佳。[Slashdot]</li>
+<li><strong>Supermicro 走私链</strong>:Bloomberg 揭露泰国 Obon Corp 是把 Nvidia H200 服务器经&quot;假主权 AI&quot;项目转运到阿里巴巴的中间方,涉案金额 25 亿美元,操作员用吹风机转移序列号标签欺骗海关。[Tom&#39;s Hardware]</li>
+<li><strong>EU 把 VPN 称作&quot;漏洞&quot;</strong>:欧洲议会研究服务部建议 VPN 服务本身也应做年龄验证,但这意味着摧毁匿名性。Utah SB 73 已立法规定用户位置以物理位置为准、忽略 VPN 改写的 IP。[CyberInsider]</li>
+<li><strong>Yarbo 割草机变后门</strong>:5000 美元的园林机器人被发现可被远程接管摄像头并提取 Wi-Fi 密码、家庭位置,The Verge 记者被劫持的机器人差点撞倒。[WIRED]</li>
+<li><strong>百度文心 5.1 / 字节增 25% AI 投入 / 智源 FlagSafe / 字节注册&quot;火山词元&quot;商标</strong>:中国 AI 基础设施一日多线推进。[36氪]</li>
+<li><strong>Tux 30 岁</strong>:Linus Torvalds 1996 年 5 月 9 日在邮件列表勾勒&quot;略微超重的企鹅&quot;形象,如今 Firefox 也将 logo 简化为一个圆点,Tux 是否会被极简化成下一个时代命题。[Tom&#39;s Hardware]</li>
+<li><strong>AI 接管年轻人精神自留地</strong>:灵光 APP 上由普通人自创的&quot;闪应用&quot;已超 3000 万个——&quot;老板被我 fire 了&quot;、&quot;家务事判官&quot;、&quot;富婆妈妈模拟器&quot;等用 AI 30 秒制作的小程序,正在替代收费 70-300 元的&quot;治愈盲盒&quot;&quot;塔罗占卜&quot;等情绪服务。这是 Vibe Coding 在中文消费端的真实落地。[36氪]</li>
+</ul>
+<hr>
+<h2>👀 值得追踪</h2>
+<ul>
+<li><strong>苹果-英特尔代工良率窗口期</strong>:18A-P 真正进入量产是 2027 年,这中间英特尔能否把良率从&quot;勉强过关&quot;提升到&quot;可与台积电比肩&quot;,决定了苹果会扩大订单还是回调押注。</li>
+<li><strong>Genesis AI 与 Figure 的硬件路线之争</strong>:Figure CEO Brett Adcock 公开表示绳驱方案是&quot;错误工程选择&quot;,Genesis AI 与舞肌共建的 1:1 拟人手却恰恰用了类似路线。这场关于&quot;灵巧手到底要不要像人&quot;的分歧,会在 2026-2027 年用量产数据见真章。</li>
+<li><strong>中转站封堵 vs 蒸馏需求</strong>:Anthropic 每加一道身份验证就催生一个绕过黑市,根因是 China 实验室对前沿推理数据的需求结构性存在。监管手段如果不能改变需求侧,只能不断在猫鼠游戏中加码。</li>
+<li><strong>机器人基础模型的&quot;GPT 时刻&quot;</strong>:周衔预计 1-2 年内具身智能进入研究者层面的 GPT-3.0 阶段,届时业内将形成路线共识——但走向消费者还需 5 年以上,这条曲线值得每季度回看一次。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月9日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天有一件事真的让整个机器人行业都震了一下。一家成立才一年的法国公司，叫 Genesis AI，发布了他们的第一个机器人基础模型，名字叫 GENE-26.5。你猜他们演示什么？机器人在真实的厨房里，单手打鸡蛋，双手切番茄，还能用移液器做实验、解魔方，甚至一只手的指缝里同时夹住四个物体。最关键的是，这些动作全部是1倍速、全自主完成的，没有加速、没有遥控。</p>
+<p>你想想看，过去这几年，人形机器人最擅长干嘛？跳舞、翻跟头、搬箱子。但是普通人对机器人的朴素期待是什么？是它什么时候能帮我做家务啊。家务的难点其实不在动作本身，而在于物理世界里所有的不确定性。鸡蛋会碎、番茄会滑、刀切下去食材的形状马上就变了。Genesis AI 这个 demo 里有一个细节非常打动人，机器人在转移切好的番茄时，没有简单地把刀当铲子用，而是用刀背和砧板形成一个支撑面，再用双手协同把番茄移过去。这个动作，太像人了。</p>
+<p>这家公司的 CEO 叫周衔，是 CMU 的机器人博士，也是大名鼎鼎的 Genesis 仿真平台的核心作者。他透露的技术路线很有意思，他们的数据来源不再是过去那种又贵又慢的遥操作机器人采集，而是三类——人手手套数据、第一视角视频、第三人称视频，已经累积了超过 20 万小时的跨模态数据。仿真不再是用来生成数据的主角了，而是负责闭环评估。这背后其实是行业达成的一个新共识，纯靠机器人自己采数据太慢了，人类自然劳动的数据，才是规模化的关键。</p>
+<p>不过咱们也得冷静看数据。做饭这个 demo 里，多数动作成功率有 90% 到 95%，但是单手打蛋和用刀转移番茄，成功率只有 50% 到 60%，速度也只有人类的六七成。周衔自己的判断是，具身智能在实验室环境一两年内有望进入&quot;GPT-3.0&quot;阶段，但是要真正走进千家万户、达到 GPT-4 那种成熟度，可能还需要五年甚至更久。参考一下自动驾驶，搞了十多年现在还在迭代，机器人也急不来。</p>
+<p>聊完机器人，咱们说点更戏剧性的。苹果和英特尔，你知道吗，复合了。</p>
+<p>时间倒回 2020 年的 WWDC，苹果当年高调宣布抛弃英特尔，全面转向自研芯片。库克那时候私下跟台积电的张忠谋说过一句很狠的话，他说英特尔&quot;就是不知道怎么做一家代工厂&quot;。结果六年过去了，《华尔街日报》报道两家已经达成初步协议，英特尔将为苹果代工部分入门级的 M 系列芯片，用的是 18A-P 制程，对标台积电的 2nm，最早 2027 年下半年出货。</p>
+<p>你说苹果为什么回头？说白了就是供应链单点故障已经变成了真实风险。库克自己在 Q1 财报会上承认，iPhone 17 系列出货受 A19 芯片产能制约。当英伟达这些 AI 客户疯抢台积电产能的时候，苹果发现自己竟然要排队。供应链多元化，这事儿从选做题变成了必答题。</p>
+<p>英特尔这边手里也是一手好牌。新 CEO 陈立武把代工业务当成翻身仗在打，18A 工艺已经在亚利桑那量产了，Panther Lake 是首批客户。除了苹果，英伟达 50 亿美元投资入股，特斯拉旗下的 Terafab、微软、AWS 都签约了，英特尔的股价较一年前暴涨了 433%。</p>
+<p>但是吧，真正的考试才刚开始。台积电能统治代工市场，靠的是极高的良率。如果英特尔代工的成本更高、良率更低，那这个差价要么苹果自己吃掉，要么转嫁给消费者。所以你看，苹果先用入门级试水、把旗舰芯片留给台积电，本质上就是在建立一个&quot;第二供应链&quot;的对冲策略。这是聪明的玩法。</p>
+<p>接下来这件事，我必须跟你说，因为它涉及到一个真正意义上的安全黑洞。</p>
+<p>牛津中国政策实验室的研究员 Zilan Qian 做了一个调查，揭开了中国开发者社区里一个叫&quot;中转站&quot;的灰色市场。这些 API 代理服务，在 GitHub、淘宝、Telegram 上面公开以一折的价格转售 Claude 的访问权限。一折啊，你不觉得太便宜了吗？便宜背后必有故事。</p>
+<p>这个商业模式分三层。第一层叫凭证窃取，他们批量注册账号、薅免费 API 额度，甚至用盗刷的信用卡开 200 美元的 Max 订阅再分摊给几十个人。为了绕过 Anthropic 的真人身份验证，他们去东南亚招募低收入人群代过验证。这个模式让我想起 Worldcoin 之前在柬埔寨、肯尼亚以 30 美元收购虹膜的灰色操作，简直一脉相承。</p>
+<p>第二层叫模型替换。CISPA 审计了 17 家代理之后发现，标榜&quot;Gemini-2.5&quot;的服务，在医疗基准测试里只得了 37 分，而官方 API 是 84 分。也就是说你付的是 Opus 的钱，拿到的可能是 Sonnet、Haiku 甚至是 Qwen 的输出。</p>
+<p>但最狠的是第三层，叫数据收割。开发者直接告诉 Qian，&quot;加价转售只是获客手段，真正的生意是收割用户的 prompt 和推理链&quot;。HuggingFace 上现在已经流传着没有来源标注的 Claude Opus 4.6 推理输出数据集。</p>
+<p>你想想这意味着什么？一个开发者用 coding agent 写代码，请求经过中转站，等于把自己的代码仓库上下文、API 结构、认证逻辑，全都送给了一个没有任何数据义务的第三方。三星 2023 年员工把半导体工艺源码粘贴进 ChatGPT 的那个事故，是同一类风险。但是中转站连基础的服务条款都没有。</p>
+<p>这个调查其实印证了之前几条线索。马斯克庭审里承认 xAI 蒸馏 ChatGPT，白宫指控的&quot;工业级蒸馏&quot;，再到 Anthropic 9 月封禁中国实体之后每加一道控制就催生一个绕过市场。蒸馏，就是用大模型的输出去训练小模型的这个技术，已经变成了中美 AI 博弈的核心战术，正在以基础设施级别的方式被规模化部署。</p>
+<p>好了，咱们快速过一下今天其他几条值得注意的。</p>
+<p>Cloudflare 推出了 Dynamic Workflows，仅仅 300 行 TypeScript，就能让每个租户、每个 Agent、每个请求都动态加载自己的工作流代码。Temporal 和 Inngest 暂时还没有对应方案，CF 在多租户 AI 基础设施上又跑出了一段身位。</p>
+<p>Chrome 浏览器被发现偷偷占了 4GB 硬盘空间。Gemini Nano 模型从 2024 年开始就被默认下载到桌面端，必须手动关闭&quot;On-Device AI&quot;开关才能阻止它重新下载。隐私换功能这件事，用户都是后知后觉。</p>
+<p>教育圈也出事了。Instructure 因为 ShinyHunters 的勒索软件攻击，导致 Canvas 进入维护模式，正好赶上美国学生期末备考。</p>
+<p>Meta 这边干了一件让隐私专家很紧张的事，从 5 月 8 日起取消了 Instagram 的端到端加密选项，理由是&quot;opt-in 用户不够多&quot;。这个理由真的站不住脚，全球加密推动可能因此被削弱。</p>
+<p>还有一个让人脊背发凉的研究。欧洲地球科学联盟年会上披露，原本用于地震监测的分布式声学传感技术，配合 Whisper 转录，可以让光纤直接变成实时窃听器，5 米内裸露线圈效果最好。</p>
+<p>Bloomberg 揭露了一条 Supermicro 的走私链，泰国一家叫 Obon Corp 的公司是把 Nvidia H200 服务器，通过假的&quot;主权 AI&quot;项目转运给阿里巴巴的中间方。涉案金额 25 亿美元。最离谱的是，操作员用吹风机转移序列号标签来欺骗海关，太敢了。</p>
+<p>欧盟那边把 VPN 直接称作&quot;漏洞&quot;，欧洲议会建议 VPN 服务自己也要做年龄验证，但这等于摧毁了匿名性。Utah 已经立法规定用户位置以物理位置为准、忽略 VPN 改写的 IP。</p>
+<p>还有一个 5000 美元的园林机器人 Yarbo，被发现可以被远程接管摄像头、提取家庭 Wi-Fi 密码和位置。The Verge 记者被劫持的那台机器人差点撞倒人。</p>
+<p>中国 AI 基础设施今天也是一日多线推进。百度发了文心 5.1，字节宣布增加 25% 的 AI 投入，智源发布了 FlagSafe，字节还注册了&quot;火山词元&quot;商标。</p>
+<p>最后说一个有意思的——Tux 三十岁了。1996 年 5 月 9 日，Linus Torvalds 在邮件列表里勾勒出那只&quot;略微超重的企鹅&quot;形象。三十年过去，Firefox 都把 logo 简化成了一个圆点，Tux 会不会也被极简化，是下一个时代的命题。</p>
+<p>哦对，还有一条特别有意思的。灵光 APP 上由普通人自创的&quot;闪应用&quot;已经超过 3000 万个，什么&quot;老板被我 fire 了&quot;、&quot;家务事判官&quot;、&quot;富婆妈妈模拟器&quot;，这些用 AI 30 秒就能制作的小程序，正在替代过去那种收费几十到几百块的&quot;治愈盲盒&quot;、&quot;塔罗占卜&quot;。这就是 Vibe Coding 在中文消费端最真实的落地。</p>
+<p>所以你看，今天的几条主线其实都在指向同一件事——AI 正在从&quot;会算&quot;走向&quot;会做&quot;。机器人在学会用手，芯片代工格局在被算力需求重新洗牌，蒸馏黑市在全球范围内重塑数据流向。具身智能、供应链对冲、数据主权，这三件事会是未来两年最值得每季度回看一次的主轴。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
