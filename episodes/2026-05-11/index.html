@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-11</title>
+  <meta name="description" content="ChatGPT 5.5 Pro被菲尔兹奖得主实测一小时改进博士级数学难题，Gary Marcus则拆穿METR&quot;16小时任务&quot;图表的50%成功率水分；xAI将Colossus 1数据中心算力全卖给Anthropic，事实上退出前沿模型竞赛；佐治亚州AI数据中心15个月偷水2900万加仑曝光，全美已有50城出台禁建令。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-11/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-11">
+  <meta property="og:description" content="ChatGPT 5.5 Pro被菲尔兹奖得主实测一小时改进博士级数学难题，Gary Marcus则拆穿METR&quot;16小时任务&quot;图表的50%成功率水分；xAI将Colossus 1数据中心算力全卖给Anthropic，事实上退出前沿模型竞赛；佐治亚州AI数据中心15个月偷水2900万加仑曝光，全美已有50城出台禁建令。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-11/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-11T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-11">
+  <meta name="twitter:description" content="ChatGPT 5.5 Pro被菲尔兹奖得主实测一小时改进博士级数学难题，Gary Marcus则拆穿METR&quot;16小时任务&quot;图表的50%成功率水分；xAI将Colossus 1数据中心算力全卖给Anthropic，事实上退出前沿模型竞赛；佐治亚州AI数据中心15个月偷水2900万加仑曝光，全美已有50城出台禁建令。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-11",
+    "description": "ChatGPT 5.5 Pro被菲尔兹奖得主实测一小时改进博士级数学难题，Gary Marcus则拆穿METR\"16小时任务\"图表的50%成功率水分；xAI将Colossus 1数据中心算力全卖给Anthropic，事实上退出前沿模型竞赛；佐治亚州AI数据中心15个月偷水2900万加仑曝光，全美已有50城出台禁建令。",
+    "datePublished": "2026-05-11T08:00:00+08:00",
+    "dateModified": "2026-05-11T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-11/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-11/yomoo-2026-05-11.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-11</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-11/yomoo-2026-05-11.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-11/yomoo-2026-05-11.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>YOMOO 每日 AI 快送 · 2026-05-11</h1>
+<h2>今日要点</h2>
+<p>AI 能力的&quot;虚&quot;与&quot;实&quot;今天在两条主线上同时拉扯：一边 ChatGPT 5.5 Pro 在数学家手里一小时跑出博士级新结果，另一边 Gary Marcus 拆解 METR 图表&quot;50% 成功率&quot;的水分。资本面则更加现实——xAI 把 Colossus 1 数据中心所有算力打包卖给 Anthropic,事实上退出前沿模型竞赛;同一周,佐治亚州一座 AI 数据中心被发现 15 个月内悄悄偷水 2900 万加仑,基础设施失序的代价开始显形。Linux 世界则迎来标志性时刻：Ubuntu 和 Fedora 同日官宣拥抱本地 AI,引发开源阵营的去留之争。</p>
+<hr>
+<h2>主要议题</h2>
+<h3>一、AI 能力的&quot;上限&quot;之争:同一天两个相反信号</h3>
+<p>今天的 AI 进展叙事被两份截然相反的材料同时点燃。</p>
+<p><strong>正面信号:菲尔兹奖得主 Tim Gowers 公开实测 ChatGPT 5.5 Pro</strong>。他用一周时间让 ChatGPT 5.5 Pro 挑战美国数学家 Mel Nathanson 提出的一系列加法数论开放问题。模型先用 17 分 5 秒把 Nathanson 论文里的线性界改进到二次界(也就是从理论上把问题彻底封死),再用一连串思考一步步将另一道由 MIT 学生 Isaac Rajagopal 此前用指数界解决的问题,推进到了多项式界。事后 Rajagopal 亲自检查论文,确认&quot;思想层面也是正确的&quot;。Gowers 在博客中说:&quot;我的数学输入是零。&quot;——也就是说,他几乎只是在问、读、转交,几乎没有提供任何关键想法。这对此前&quot;LLM 只会拼凑已有知识&quot;的判断是一次结构性冲击,因为这次的工作明显超出了简单组合现有论证的范围。Gowers 给出的判断是:&quot;研究新组合参数、提出大量小问题&quot;这种过去被视为新人入门级研究的论文,门槛刚刚被抬高了。</p>
+<p><strong>反面信号:METR 的&quot;任务时长翻倍图&quot;被夸大恐慌</strong>。METR 最新版图表显示前沿模型能完成的&quot;软件开发任务长度&quot;已经达到 16 小时,Twitter 上一片&quot;AI 把图打破了&quot;的惊呼。AI 怀疑派代表人物 Gary Marcus 当日撰文降温,指出三个被忽略的关键事实:第一,这个 16 小时是 <strong>50% 成功率</strong> 下的数字,如果把门槛抬到 80% 甚至 95%,曲线立刻矮一大截——而真正的工程实践需要的是可靠率,不是抛硬币;第二,近期主要进步来自符号工具的接入(代码解释器、形式化验证、harness 框架,即给模型外挂一个&quot;作弊纸条&quot;),并非模型本身规模上的胜利,这反而印证了&quot;纯靠堆参数的 scaling 是有墙的&quot;;第三,这只关于软件任务,不能外推到通用智能,Mythos 在更广义的 ECI 基准上其实&quot;只比 GPT 5.4 略高一点&quot;。Marcus 顺手把&quot;Mythos 让 Anthropic 2030 年达到 2 万亿美元收入&quot;嘲讽为&quot;千磅婴儿谬误&quot;——婴儿四个月体重翻倍,你不能据此预测他高中毕业时变成一吨重。</p>
+<p><strong>为什么这两条同时重要</strong>:看似矛盾,实则各说一半。Gowers 的实验说明&quot;AI 在结构化、可验证的领域(数学、编程)正在快速吞噬研究助理的工作&quot;,Marcus 的拆解则提醒&quot;它在开放性、不可形式化的领域并没有同步突破,而商业故事正在透支这点确定性&quot;。回顾我们 5 月 8 日报道过的 GPT-5.5 Pro 翻倍定价,以及 4 月 11 日 Yupp 融资 2.2 亿元 22 个月后倒闭的预兆,这一轮 AI 估值热与实际能力扩张之间的差,正在拉到肉眼可见。</p>
+<p>来源:<a href="https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/">Gowers 博客</a> · <a href="https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress">Marcus on AI</a></p>
+<h3>二、xAI 卖光算力,事实上退出前沿模型竞赛</h3>
+<p>Anthropic 与 xAI 本周突袭宣布:Anthropic 买断 xAI 田纳西州 Colossus 1 数据中心的全部算力。这件事的真正信号不在交易本身,而在马斯克这边——这意味着 xAI 把所有&quot;卡&quot;换成了现金流,转身成为一家&quot;neocloud&quot;(向云客户租 GPU 而不是自己训模型的中立算力公司)。配合本周稍早传出的消息——xAI 联合创始人几乎全部离职、马斯克宣布要&quot;从零重做&quot;,并把品牌干脆并入&quot;SpaceXAI&quot;——这是 xAI 作为前沿模型实验室的事实落幕。</p>
+<p>TechCrunch 同时披露,xAI 内部员工此前就被发现&quot;在用别家模型而不是 Grok&quot;,并因此引发一次大清洗。结合我们 5 月 7 日报道过的 Anthropic 与 SpaceX 绑定 22 万 GPU,以及 4 月 21 日 Anthropic 误封 60 人公司暴露单一供应商风险,可以勾画出新的算力地图:<strong>Anthropic 成为最大算力买家,SpaceX-xAI 成为前向 IPO 故事中的&quot;现金流型基础设施&quot;</strong>,而前沿模型场上只剩 OpenAI、Anthropic、Google、Meta、DeepSeek 五家在认真训练。</p>
+<p>值得关注的次级影响是 IPO 叙事:把&quot;前沿 AI 实验室&quot;换成&quot;出租 GPU 的房东&quot;之后,商业故事更稳但天花板更低,对马上推 IPO 的 SpaceX 来说是一次&quot;赶在估值检验之前的安全降落&quot;。</p>
+<p>来源:<a href="https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/">TechCrunch</a></p>
+<h3>三、AI 数据中心偷水 2900 万加仑,15 个月才被发现</h3>
+<p>佐治亚州 Fayette 县居民因水压异常下降投诉,排查后才发现:Blackstone 旗下 QTS 公司在当地建设的 615 英亩、6.2 平方百万英尺 AI 数据中心园区&quot;Project Excalibur&quot;,通过两个<strong>县政府毫不知情的水管接驳</strong>,15 个月内累计取水约 2900 万加仑(约 11 万立方米)。</p>
+<p>更值得记录的是后续处置:县政府只追缴了 14.7 万美元&quot;补费&quot;,没有罚款。水务主管解释&quot;他们是我们最大的客户,得讲伙伴关系&quot;,巡查岗位&quot;一个人干两份活,留不住人&quot;。同期,州里因干旱已宣布紧急状态,州公共服务委员会被迫冻结电费基价至 2028 年,以防数据中心把电费转嫁居民。Fayetteville 市议会更直接——已通过 26-O-12 号令,<strong>全市所有分区禁建新数据中心</strong>。全美现有至少 50 个城市出台同类禁令,4 个城市永久禁建。</p>
+<p>关联回顾:5 月 8 日内存短缺蔓延至游戏机和互联网档案、5 月 6 日 Anthropic 2000 亿美元绑定谷歌 TPU、4 月 30 日巨头 AI 资本支出冲到 7250 亿美元——这些数字最终都要在地方公共资源上落地,而地方治理能力显然远远没跟上。</p>
+<p>来源:<a href="https://www.tomshardware.com/tech-industry/georgia-data-center-used-29-million-gallons-of-water">Tom&#39;s Hardware/Politico</a></p>
+<h3>四、Ubuntu 与 Fedora 同日宣布拥抱本地 AI</h3>
+<p>Canonical 工程副总裁 Jon Seager 与 Fedora 项目负责人 Jef Spaleta 在同一周分别官宣 AI 路线图:</p>
+<ul>
+<li><strong>Fedora</strong>:推出&quot;AI Developer Desktop Objective&quot;,定位是给开发者提供本地模型运行环境,<strong>默认不预装会回连远端 AI 服务的工具</strong>,也不在用户行为上做&quot;埋点训练&quot;。该项目已促使 SUSE 工程师 Fernando Mancera 辞职抗议。</li>
+<li><strong>Ubuntu</strong>:AI 功能将分两阶段加入,先以&quot;后台增强&quot;形式融入现有功能,再做&quot;AI 原生&quot;工作流;Seager 特意写了一句&quot;我们不考核工程师的 AI token 使用率、代码占比&quot;,被外界普遍解读为暗讽 Red Hat / Microsoft 把 AI 使用率纳入 OKR 的做法。</li>
+</ul>
+<p>两家发行版的共同点:都强调<strong>本地运行、隐私优先、开放模型</strong>,试图划出与&quot;商业云 AI&quot;不同的赛道。但开源社区对这种&quot;温和拥抱&quot;并不买账,Stop Slopware、No-AI Software Directory 等名单已经在准备把它们列入。这件事的真正分歧不是技术,而是社区身份——FOSS(自由开源软件)的纯粹派认为任何 LLM 介入都污染了血统。</p>
+<p>来源:<a href="https://www.theregister.com/oses/2026/05/10/both-fedora-and-ubuntu-will-get-ai-support-soon/">The Register</a></p>
+<hr>
+<h2>速递</h2>
+<ul>
+<li><strong>Shopify 公开协作模式被点赞</strong>:Tobi Lütke 描述内部 AI 编程代理 River 只能在公开 Slack channel 里工作,不接受私聊。他给这种模式命名为&quot;Lehrwerkstatt&quot;(德语:教学车间),100 多人在他的频道里围观、补充、纠错、顺便学习。(<a href="https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/">Simon Willison</a>)</li>
+<li><strong>Chrome 偷占 4GB 存储</strong>:Gemini Nano 的 weights.bin 文件在开启某些 AI 功能后会自动下载,用户需到设置 &gt; 系统手动关掉&quot;On-Device AI&quot;才能阻止重新下载。</li>
+<li><strong>纽约时报 AI 翻车</strong>:报道中加拿大保守党领袖 Poilievre 的&quot;原话&quot;实为 AI 生成的&quot;观点摘要&quot;,记者未核对,事后发编辑勘误。LLM 入侵新闻流程的副作用进入主流报纸。</li>
+<li><strong>CXL 内存盒子缓解 RAM 荒</strong>:Compute Express Link 3.0(允许多机共享同一份内存的协议)即将随 AMD / Intel 下一代服务器到来,Panmnesia、Liqid、UnifabriX 等已经推出&quot;内存 godbox&quot;。但 AI 推理 KV cache 才是最大需求方,救济作用有限。</li>
+<li><strong>macOS 27 修补 Liquid Glass</strong>:Bloomberg 称 Tahoe 的透明度与阴影实现&quot;未完工&quot;,27 会调整对比度。Gurman 转述苹果设计团队的说法:&quot;问题不在设计,在工程实现没烤熟。&quot;</li>
+<li><strong>Bambu Lab 起诉开源开发者</strong>:右修权代表 Louis Rossmann 视频里中指比向 Bambu,公开承诺为被律师函威胁的 OrcaSlicer fork 开发者垫付一万美元起诉费。</li>
+<li><strong>中国推出 Hanyuan-2 双核量子计算机</strong>:200 量子位,但<strong>未公布门保真度、相干时间、错误率任何关键指标</strong>,也未发同行评议论文,与 Atom Computing 1180 量子位、QuEra 已交付错误纠正机的对比相形见绌。</li>
+<li><strong>AMD K5 / Intel i486 退出 Linux</strong>:30 年老 CPU 因不支持 TSC(时间戳计数器)被踢出内核 7.2,意味着这类老设备只能停留在旧版内核。</li>
+<li><strong>Plex 涨价</strong>:远程访问自家媒体要交更多订阅费,Jellyfin(开源替代品)再次进入用户备选名单。</li>
+<li><strong>IT 失业率 4 月升至 3.8%</strong>,信息行业当月失岗 1.3 万。Meta 裁员 10%、Nike 裁 1400、Snap 裁 16% 都与 AI 重组有关,但有趣的是 Indeed 上软件开发岗位同比反增 15%——市场要的是有经验的人,应届生最难。</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<ul>
+<li><strong>LLM 摘要会跳过&quot;识别&quot;步骤</strong>:Towards Data Science 一篇长文用因果推断(causal inference,统计学中区分&quot;数据是否支持某个结论&quot;和&quot;结论数值是多少&quot;的方法)框架批评当前 AI 会议纪要:模型直接产出八个工整段落,却没问&quot;这段对话到底能不能支持这个结论&quot;。作者给出的工程模式是三阶段流水线+严格审计,审计阶段<strong>只能删除或弱化,不能改写得更顺</strong>——这与 4 月 29 日&quot;AI 碳水估算误差致命&quot;的研究互为印证,提示我们 AI 报告生成场景的方法论债。</li>
+<li><strong>欧洲游戏引擎 The Immense Engine</strong>:前 Epic 全球产品总监、Guerrilla Games 联合创始人 Arjan Brussee 着手做&quot;完全欧洲托管、欧洲合规&quot;的 Unreal/Unity 替代品。他还公开表态:&quot;会用 AI agent 做 10-15 个人的工作。&quot;是否走向 AI 代码债的下一个反面教材,值得跟踪。</li>
+<li><strong>Eric Ries 新书《Incorruptible》</strong>:精益创业之父转向公司治理,核心论点:80% 的 VC 创业公司创始人在 IPO 后 3 年内被踢走,Anthropic、Costco、Novo Nordisk 这种公司之所以能守住使命,关键在治理结构。在 AI 公司频繁经历政变(OpenAI、xAI)的当下,这本书的时机精准。</li>
+<li><strong>Substack 写作者出逃潮</strong>:旗舰刊《The Ankler》上月离开 Substack,转向 Ghost、Beehiiv。&quot;Substack 税&quot;(平台抽成 10%)正在被独立作者重新审视——这是订阅经济权力关系的下一阶段。</li>
+<li><strong>MIT Y 型拉链</strong>:1985 年专利,3D 打印让它变成现实——可以把软塌塌的&quot;触手&quot;瞬间锁成刚性梁,18000 次循环不坏。可拓展性强,可能用于可部署结构、机器人、医疗护具。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月11日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天这件事真的挺有意思的。同一天，你能看到两份关于AI能力完全相反的材料，一个把AI捧到天上，一个把AI按在地上摩擦。咱们先说捧到天上这个。菲尔兹奖得主，注意，是菲尔兹奖，数学界的诺贝尔奖，蒂姆·高尔斯，他花了一个礼拜，让 ChatGPT 5.5 Pro 去挑战美国数学家 Mel Nathanson 的一系列加法数论开放问题。结果你猜怎么着？模型先用17分5秒，把 Nathanson 论文里的线性界改进到了二次界——什么意思呢？相当于直接把这个问题从理论上彻底封死了。后面还有一道题，是 MIT 学生此前用指数界解决的，模型一步一步把它推进到了多项式界。事后这个 MIT 学生亲自检查，确认说，思想层面也是对的。</p>
+<p>最炸裂的是高尔斯自己说的那句话，他在博客里写，&quot;我的数学输入是零&quot;。你想想看，一个菲尔兹奖得主，全程只是问、读、转交，几乎没贡献任何关键想法，模型就把一篇能发表的数论论文做出来了。之前所有人都说 LLM 只会拼凑已有知识，这次它明显超出了简单组合的范围。高尔斯给出的判断也特别狠，他说，过去那种&quot;研究新组合参数、提出大量小问题&quot;的论文，是新人入门级研究的活，门槛刚刚被抬高了。</p>
+<p>但是，你别急着兴奋。同一天，AI 怀疑派的代表人物 Gary Marcus 出来给大家泼了一盆冷水。事情是这样的，METR 最新版图表显示，前沿模型能完成的&quot;软件开发任务长度&quot;已经达到了16个小时，整个推特一片惊呼，说 AI 把图打破了。Marcus 当天就撰文降温，他指出了三个被忽略的关键事实，我跟你说，每一条都挺扎心的。</p>
+<p>第一条，这个16小时是50%成功率下的数字。你品品这个意思。50%成功率，相当于抛硬币，那这个曲线如果你把门槛提到80%甚至95%，立刻矮一大截。可工程实践要的是什么？是可靠率，不是抛硬币。第二条，最近的进步主要来自符号工具的接入，比如代码解释器、形式化验证、外挂框架，相当于给模型加了一张作弊纸条，并不是模型本身规模上的胜利。这反而印证了纯靠堆参数的 scaling 是有墙的。第三条，这只关于软件任务，不能外推到通用智能。Marcus 顺手把那个&quot;让 Anthropic 2030 年达到 2 万亿美元收入&quot;的预测，嘲讽为千磅婴儿谬误——婴儿四个月体重翻倍，你不能据此预测他高中毕业的时候变成一吨重。</p>
+<p>所以你看，这两条同时重要。高尔斯的实验说明，AI 在结构化、可验证的领域，比如数学、编程，正在快速吞噬研究助理的工作；Marcus 的拆解则提醒我们，它在开放性、不可形式化的领域并没有同步突破，而商业故事正在透支这点确定性。</p>
+<p>说到商业故事，咱们今天第二件大事就更耐人寻味了。Anthropic 和 xAI 本周突袭宣布，Anthropic 买断了 xAI 田纳西州 Colossus 1 数据中心的全部算力。注意，是全部算力。你看这件事的真正信号不在交易本身，而在马斯克这边——这意味着 xAI 把所有的卡，全部换成了现金流，转身成为一家所谓 neocloud，就是向云客户租 GPU 而不是自己训模型的中立算力公司。</p>
+<p>配合本周稍早传出的消息，xAI 联合创始人几乎全部离职，马斯克宣布要从零重做，并且把品牌直接并入 SpaceXAI。这是 xAI 作为前沿模型实验室的事实落幕。TechCrunch 还披露了一个特别尴尬的细节，xAI 内部员工此前就被发现，在用别家模型而不是自家 Grok，结果引发了一次大清洗。</p>
+<p>所以新的算力地图就出来了：Anthropic 成为最大算力买家，SpaceX-xAI 成为前向 IPO 故事中的现金流型基础设施，而前沿模型场上只剩 OpenAI、Anthropic、Google、Meta、DeepSeek 这五家在认真训练。你把&quot;前沿 AI 实验室&quot;换成&quot;出租 GPU 的房东&quot;，商业故事更稳但天花板更低，对马上要推 IPO 的 SpaceX 来说，这是一次赶在估值检验之前的安全降落。</p>
+<p>聊完天上的钱，咱们说回地上的事。今天还有一个新闻我必须跟你讲，因为它把 AI 时代的代价具体到了什么程度，让人有点震惊。佐治亚州 Fayette 县，居民因为水压异常下降去投诉，排查之后才发现，Blackstone 旗下 QTS 公司在当地建设的一座 AI 数据中心园区，叫 Project Excalibur，615 英亩、620 万平方英尺，通过两个县政府毫不知情的水管接驳，15 个月内累计取水大概 2900 万加仑，换算下来差不多 11 万立方米。</p>
+<p>更狠的是后续处置。县政府只追缴了 14.7 万美元的补费，没罚款。水务主管解释说，他们是我们最大的客户，得讲伙伴关系。巡查岗位呢，一个人干两份活，留不住人。同期，州里因为干旱已经宣布紧急状态了，州公共服务委员会被迫冻结电费基价到 2028 年，就怕数据中心把电费转嫁给居民。Fayetteville 市议会更直接，已经通过命令，全市所有分区禁建新的数据中心。我跟你说，全美现在至少有 50 个城市出台了同类禁令，4 个城市永久禁建。</p>
+<p>你想啊，前段时间咱们报道过的内存短缺、Anthropic 2000 亿美元绑定谷歌 TPU、巨头 AI 资本支出冲到 7250 亿美元——这些数字最终都要在地方公共资源上落地，而地方治理能力显然远远没跟上。</p>
+<p>接下来这条，对开源圈的朋友来说会很有感觉。Ubuntu 和 Fedora，Linux 世界两个最知名的发行版，居然在同一周内分别官宣了 AI 路线图。Fedora 推出 AI 开发者桌面目标，定位是给开发者提供本地模型运行环境，默认不预装会回连远端 AI 服务的工具，也不在用户行为上做埋点训练。这事儿已经导致 SUSE 一位工程师辞职抗议了。Ubuntu 这边呢，AI 功能分两阶段加入，先以后台增强的形式融入现有功能，再做 AI 原生工作流。Canonical 的工程副总裁特意写了一句，&quot;我们不考核工程师的 AI token 使用率、代码占比&quot;，外界普遍解读为暗讽 Red Hat 和 Microsoft 把 AI 使用率纳入 OKR 的做法。</p>
+<p>两家发行版的共同点都是本地运行、隐私优先、开放模型，想划出和商业云 AI 不同的赛道。但你猜怎么着，开源社区并不买账，Stop Slopware、No-AI Software Directory 这些名单已经准备把它们列入了。这件事的真正分歧不是技术，是社区身份——FOSS 自由开源软件的纯粹派认为，任何 LLM 介入都污染了血统。</p>
+<p>说完几个大块的，咱们来几条速递。Shopify 的 CEO Tobi Lütke 描述了内部 AI 编程代理叫 River 的协作模式，它只能在公开的 Slack 频道里工作，不接受私聊。100 多人在他的频道里围观、补充、纠错、顺便学习，他给这种模式起了个德语名字叫 Lehrwerkstatt，意思是教学车间。</p>
+<p>另外，Chrome 浏览器偷偷占用了 4GB 存储，Gemini Nano 的权重文件在开启某些 AI 功能后会自动下载，用户得手动到设置里关掉本地 AI 才能阻止重新下载。还有更尴尬的，纽约时报最近一篇报道里，加拿大保守党领袖 Poilievre 的&quot;原话&quot;，实际是 AI 生成的观点摘要，记者没核对，事后发了编辑勘误。LLM 入侵新闻流程的副作用，这下进入主流报纸了。</p>
+<p>硬件层面，CXL 3.0 内存盒子马上要随 AMD 和 Intel 下一代服务器到来，能让多机共享同一份内存，缓解 RAM 荒。但 AI 推理的 KV cache 才是最大需求方，救济作用有限。macOS 27 准备修补 Liquid Glass 透明度的&quot;未完工&quot;问题，苹果设计团队的说法是，问题不在设计，在工程实现没烤熟。</p>
+<p>还有几条小消息，Bambu Lab 起诉开源开发者，右修权代表 Louis Rossmann 公开承诺为被律师函威胁的 OrcaSlicer fork 开发者垫付一万美元起诉费；中国推出 Hanyuan-2 双核量子计算机，200 量子位，但门保真度、相干时间、错误率所有关键指标都没公布，也没发同行评议论文；30 年老的 AMD K5 和 Intel i486 因为不支持时间戳计数器，被踢出 Linux 内核 7.2；Plex 涨价了，远程访问自家媒体得交更多订阅费，开源替代品 Jellyfin 又被翻出来了；IT 失业率 4 月升到 3.8%，信息行业当月失岗 1.3 万，Meta 裁员 10%、Nike 裁 1400、Snap 裁 16%，但 Indeed 上软件开发岗位同比反增 15%。市场要的是有经验的人，应届生最难。</p>
+<p>最后还有几件值得持续关注的事。Towards Data Science 一篇长文用因果推断的框架批评当前 AI 会议纪要，说模型直接产出八个工整段落，却没问这段对话到底能不能支持这个结论。这跟我们之前讲过的 AI 碳水估算误差致命的研究互为印证，提示我们 AI 报告生成场景的方法论债。前 Epic 全球产品总监、Guerrilla Games 联合创始人 Arjan Brussee 着手做完全欧洲托管、欧洲合规的 Unreal 替代品，公开表态说会用 AI agent 做 10 到 15 个人的工作，是不是会走向 AI 代码债的下一个反面教材，值得跟踪。精益创业之父 Eric Ries 出了新书 Incorruptible，核心论点是 80% 的 VC 创业公司创始人在 IPO 后 3 年内被踢走，在 AI 公司频繁经历政变的当下，这本书的时机精准。</p>
+<p>回过头看今天这两条主线，一边 ChatGPT 5.5 Pro 在数学家手里一小时跑出博士级新结果，另一边 Marcus 拆解 METR 图表的水分；一边 xAI 卖光算力退场，一边佐治亚州一座数据中心 15 个月偷水 2900 万加仑。我跟你说，AI 的&quot;虚&quot;和&quot;实&quot;，从来没有像今天这样被同时摆在桌面上。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
