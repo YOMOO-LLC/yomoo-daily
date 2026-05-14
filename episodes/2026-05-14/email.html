@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yomoo 每日AI快送 — 2026-05-14</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #fffbf5;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #fffbf5;">
+    <tr>
+      <td align="center" style="padding: 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #ffffff;">
+          <!-- Amber gradient bar -->
+          <tr>
+            <td style="height: 3px; background: linear-gradient(90deg, #C4561A, #E8722A, #D4A053); font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid #e8e2d9;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td style="width: 28px; height: 28px; background: linear-gradient(135deg, #E8722A, #D4A053); border-radius: 7px; text-align: center; vertical-align: middle; font-family: Georgia, serif; font-weight: 900; font-size: 15px; color: #ffffff;">Y</td>
+                  <td style="padding-left: 8px; font-family: Georgia, serif; font-size: 17px; font-weight: 800; color: #1a1410;">Yomoo</td>
+                </tr>
+              </table>
+              <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 900; color: #1a1410; margin: 16px 0 8px; line-height: 1.2;">每日AI快送</h1>
+              <p style="font-size: 13px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.08em; margin: 0;">2026-05-14</p>
+            </td>
+          </tr>
+          <tr>
+        <td style="padding: 16px 32px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background-color: #fff8ef; border: 1px solid rgba(232,114,42,0.25); border-radius: 8px; width: 100%;">
+            <tr>
+              <td style="padding: 14px 16px; text-align: center;">
+                <a href="https://daily.yomoo.net/episodes/2026-05-14/index.html" style="color: #E8722A; text-decoration: none; font-size: 14px; font-weight: 600;">&#9654; 在线收听播客</a>
+                <span style="color: #8a7e6e; margin: 0 8px;">|</span>
+                <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-14/yomoo-2026-05-14.mp3" style="color: #6b5e4f; text-decoration: none; font-size: 14px;">下载 MP3</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+          <!-- Report content -->
+          <tr>
+            <td style="padding: 24px 32px 40px;">
+              <h1 style="font-size: 24px; font-weight: 800; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">每日科技简报 · 2026年5月14日</h1>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">执行摘要</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">OpenAI联盟首次公开131,000张GPU训练网络的颠覆性设计——抛弃整套Layer 3路由控制平面;同日,Cisco与Meta在创纪录利润下宣布裁员近1.2万人,Meta员工还被强制安装&quot;喂AI&quot;的桌面监控软件MCI,内部士气跌至历史低点。安全侧,ChatGPT Mac桌面端因开源供应链攻击Mini Shai-Hulud被迫全面吊销证书。中国大模型牌局也迎来变量:DeepSeek首轮融资严重超募,传闻规模直逼500亿元人民币。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主线一:OpenAI揭秘13.1万GPU网络——三十年共识被一次性推翻</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">OpenAI联合AMD、Broadcom、Intel、Microsoft、NVIDIA于5月5日通过OCP开源了名为**MRC(Multipath Reliable Connection,多路径可靠连接)**的网络协议,论文同步发布。它在Stargate(德州Abilene,Oracle Cloud承建)和微软Fairwater超算中部署,是当前训练ChatGPT和Codex的实际底座。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">最炸裂的不是规模,而是设计哲学的彻底反叛——MRC把数据中心Layer 3控制平面完全废除:<strong style="color: #1a1410; font-weight: 600;">没有OSPF,没有BGP,没有IS-IS,交换机不维护任何动态转发状态</strong>。这是迄今公开文档中最激进的&quot;去动态路由&quot;AI训练织物。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">核心创意有三:</p>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">拆NIC造平面</strong>:把一张800Gb/s网卡拆成8条100Gb/s链路,每条接入独立交换平面。同一颗51.2Tb/s芯片在800G模式只能撑6.4万GPU、需三层组网;拆成100G后,512端口的两层Clos可直撑13.1万GPU。论文测算,这套方案比传统三层胖树<strong style="color: #1a1410; font-weight: 600;">少用1/3交换机、2/3光模块,最坏路径从7跳降到3跳</strong>。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">逐包喷洒(Packet Spraying)</strong>:每个队列对(QP)分配128–256个&quot;熵值&quot;,每发一个包就换一条路径,彻底消灭流碰撞。一颗光模块抖动闪四次链路,在传统RoCE里足以让训练任务崩溃;MRC下故障熵值被微秒级&quot;退役&quot;,剩余7个平面平摊流量,GPU不停步。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">故意有损</strong>:接受丢包,用NIC做精细化选择性重传,而不是靠交换机PFC PAUSE反压——后者一旦传播,可让10万张GPU全停一刻钟。</li>
+</ul>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要?</strong>:同步训练以最慢传输定步长,10万GPU规模下,&quot;尾延迟&quot;才是真正的成本中心(按云价每小时约30万美元)。MRC把多年来散见于学术论文里的多平面、源路由、喷洒、有损RDMA、ECN负载均衡等单点想法,<strong style="color: #1a1410; font-weight: 600;">首次在生产环境里全部叠加用上</strong>,并跑通了三家芯片厂的800G NIC。这是AI基础设施&quot;从堆机器到重做协议&quot;分水岭式的一篇论文,所有想做万卡级训练的公司都得重读一遍组网课。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主线二:利润创纪录,AI却在抽员工的命——Meta与Cisco同周裁员8000+4000</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">Meta定于5月20日裁约8000人(10%),叠加过去四年累计裁员2.5万。员工形容氛围&quot;历史性低迷&quot;:</p>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;">三月底起公司强推<strong style="color: #1a1410; font-weight: 600;">Model Capability Initiative(MCI)</strong> 软件到美国员工电脑,<strong style="color: #1a1410; font-weight: 600;">持续记录键盘、点击,用来训练能&quot;像人一样浏览网页、整理文件夹&quot;的AI Agent</strong>——员工无权关闭。出于欧盟与英国更严格的劳动与隐私法规,MCI仅部署在美国。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">4月起,Meta强制将1000多名顶级工程师转入&quot;Applied AI Engineering&quot;事业部,内部称之为&quot;选秀征兵&quot;,不去就走人。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">与此同时,扎克伯格把今年资本支出指引从原预算再加100亿美元,提到1250亿–1450亿美元区间,主要砸数据中心。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">英国员工已尝试加入UTAW(英国最大科技工会)筹组工会,认为&quot;领导层愈发残忍短视&quot;。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">抗议的核心矛盾在于,扎克伯格曾给AI研究员开<strong style="color: #1a1410; font-weight: 600;">1亿美元年薪</strong>,普通员工股票包却连续两年被砍。一位员工原话:&quot;现在每个人都在祈求被裁,只为拿16周遣散+18个月医保。&quot;</li>
+</ul>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">同日,<strong style="color: #1a1410; font-weight: 600;">Cisco宣布裁约4000人(5%),并称季度营收&quot;创历史纪录&quot;</strong>。CEO罗宾斯2025年薪酬5200万美元,被记者追问是否减薪时拒绝置评。Cloudflare、Block、Coinbase、Cerebras、Anthropic生态等近期也是同一剧本——<strong style="color: #1a1410; font-weight: 600;">利润上涨、AI Capex上涨、人头下降</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这与昨天我们提到的&quot;FDE人海战术&quot;出现了戏剧性反差:头部AI公司在抢人,平台型大厂在用AI替自己的人。Anthropic高管同日表态,公司<strong style="color: #1a1410; font-weight: 600;">90%代码已由AI完成</strong>——这不是宣传话术,而是Meta工程师即将面对的现实模板。Bun项目今日把超百万行代码的Rust重写直接合入主干,从Zig迁出几乎完全由Claude Code完成(团队称&quot;几个月没自己敲代码了&quot;),是这一现实的脚注。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主线三:Mac版ChatGPT被强制更新——TanStack供应链攻击连环爆雷</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">OpenAI披露,5月11日UTC,<strong style="color: #1a1410; font-weight: 600;">开源库TanStack遭&quot;Mini Shai-Hulud&quot;攻击</strong>(此前我们追踪过的Shai-Hulud npm蠕虫的小型变种)。两名OpenAI员工的开发设备被植入恶意代码,有限数量的内部代码仓库出现凭据外泄行为。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">关键点在于:<strong style="color: #1a1410; font-weight: 600;">被泄凭据中包含可签发OpenAI产品证书的能力</strong>。OpenAI将吊销旧证书,Mac版ChatGPT必须在6月12日前完成强制更新——届时旧版本将无法启动。iOS与Windows端不受影响,目前尚无证据显示用户数据外泄。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这一事件在我们持续追踪的&quot;npm供应链攻击潮&quot;(参见 [2026-04-22 MCP漏洞]、[2026-05-13 富士康泄露])线上又添一笔——攻击面已从源代码与CI/CD扩展到<strong style="color: #1a1410; font-weight: 600;">开发设备的本地凭据</strong>,直接威胁App签名链。同一时间窗,<strong style="color: #1a1410; font-weight: 600;">PraisonAI(开源AI Agent框架)CVE-2026-44338身份绕过漏洞</strong>披露后<strong style="color: #1a1410; font-weight: 600;">数小时内</strong>即遭实战利用,印证了AI Agent基础设施正成为攻击者的新热土。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主线四:DeepSeek融资破纪录——大模型牌桌将出现&quot;第三类玩家&quot;</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">业内消息,<strong style="color: #1a1410; font-weight: 600;">DeepSeek首轮融资严重超募</strong>,传规模或近500亿元人民币,将刷新中国大模型公司单轮融资纪录。这与昨天我们提到的[2026-05-08 DeepSeek拟募资500亿元]一脉相承,但今日的关注点已从估值转向<strong style="color: #1a1410; font-weight: 600;">牌局结构</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">行业共识在固化:Scaling Law尚未见顶,提升智能正越来越像一道<strong style="color: #1a1410; font-weight: 600;">资本与工程问题</strong>,而非纯科研赌博——足够数据+算力+执行力,几乎能换来可预期的智能提升。这意味着入场费正从10亿美元跳向&quot;百亿乃至千亿美元&quot;级别的持续投入。中国玩家分化为三类:</p>
+<ol style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">科技巨头</strong>(阿里、字节、腾讯)——靠主营业务的极端场景反哺训练,腾讯虽未现SOTA,但追赶速度不可忽视。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">模型创业公司</strong>(MiniMax、智谱、月之暗面、阶跃星辰)——技术敏锐但缺&quot;A面业务&quot;,Anthropic用Claude Code长出A面是参照系。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">第三类玩家</strong>(DeepSeek、米哈游)——拥有中等规模高利润业务+创始人个人all in。DeepSeek因深度绑定国产算力生态与开源路线,事实上承担了部分国家战略使命,这是比商业更稳的&quot;超级A面&quot;。米哈游创始人蔡浩宇旗下Anuttacon已招募基础大模型方向人才,创始人刘伟同样下场,意味着米哈游可能不只为游戏引擎练兵,而是面向更大赔率。</li>
+</ol>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">简而言之,模型不再只是巨头的游戏,牌桌还有空位,但坐上去的门票从此以&quot;百亿美元&quot;计。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">速览</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Waymo召回3791辆Robotaxi</strong>:5月20日因软件可能让车辆驶入高速路段积水,系4月20日圣安东尼奥事件触发,目前仍暂停该城市运营。考虑到Waymo9月将首登伦敦,信任修复时间窗紧迫。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">苹果20周年iPhone曝两阶段路线</strong>:2027年首发&quot;四边弯曲&quot;OLED采用镁银(MgAg)阴极,接受边缘亮度/失真折中;2028年切换至透明铟锌氧化物(IZO)阴极,边框可进一步收窄。三星显示与LG显示同步备料,LG为此投入约7.9亿美元。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">三大代工2nm下一步</strong>:TSMC路线图最稳健,N2P+A16齐发;Intel以18A切回自家CPU产能,激进押注14A+HighNA EUV;三星把重心放在良率,SF1.4计划2027量产追平。但市场份额之争,本质看良率与客户。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Gallup民调</strong>:71%美国人反对在自家社区建AI数据中心,<strong style="color: #1a1410; font-weight: 600;">比反对核电站(53%)还高</strong>。延续我们追踪的[2026-04-16 数据中心邻避]主线,行业&quot;画大饼&quot;叙事已正式破产。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">CodeSpeak</strong>:基于英文规范驱动开发的CLI工具上线alpha,可对13K行存量项目执行&quot;接管&quot;——自动拆模块、生成规范、再迭代实现。BYO Anthropic API Key。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Spotify接入苹果HLS视频播客</strong>:跨平台分发与变现打通,延续Spotify在播客领域&quot;通吃&quot;路线。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Gmail测试免费空间从15GB降至5GB</strong>:新账号需绑定手机号才能&quot;解锁&quot;完整15GB,或为A/B,但已引发&quot;云存储免费时代落幕&quot;议论。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AI幻觉风险</strong>:多份报告显示Gemini在对话中误吐出真实手机号码,涉及开发者与律师,根因可能是PII入训练数据;深度伪造色情产业开始系统性盗用真人女演员&quot;身体&quot;作为底版。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Trump-Xi北京峰会</strong>:Tim Cook、Jensen Huang、Elon Musk随团出席,被解读为筹码不足下的&quot;科技外交&quot;。同期美方放行Nvidia H200对阿里、腾讯、字节等10家中国企业销售,收取25%营收分成。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">韩国无水氢氟酸</strong>或6–7月对三星、SK海力士大幅提价,将进一步加剧已有的DRAM/NAND涨价螺旋(参见[2026-04-18 内存短缺])。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">MIT入学骤降</strong>:Kornbluth校长公开承认,新一年研究生入学下降近20%,8%捐赠税叠加联邦经费缩水20%,可能损失500名研究生——美国顶尖科研管线正在收紧。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">彩蛋</strong>:用户cprkrn把整台大学旧电脑文件喂给Claude,<strong style="color: #1a1410; font-weight: 600;">11年前被遗忘密码的BTC钱包被解锁</strong>——找到一个2019年备份文件并修复btcrecover密钥拼接bug,5枚BTC约值40万美元重获自由。</li>
+</ul>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">值得关注</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">MRC会不会成为AI网络新事实标准?</strong> 协议已通过OCP开源,但其&quot;去BGP/去OSPF&quot;激进取舍是否适用规模较小或多租户场景仍存疑。下半年看Meta、xAI、Anthropic是否跟进。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">企业级&quot;工作行为AI训练&quot;</strong> 会否从Meta扩散到其它公司?MCI的法律灰区一旦在加州或欧盟被诉讼击穿,可能改写整个RLHF数据获取链。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">DeepSeek新一轮融资落地</strong> 后,国产算力生态(华为昇腾、寒武纪、壁仞)采购节奏是否会出现明显抬头?这是验证&quot;第三类玩家&quot;模型的关键观察点。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Mini Shai-Hulud蠕虫扩散面</strong>:TanStack、PraisonAI接连中招,接下来一周仍需警惕其它高下载量npm/PyPI包二次爆雷,尤其是被广泛集成进AI Agent框架的依赖。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">苹果20周年iPhone</strong>:从今天起的传闻密度会迅速上升,2027年是否真能解决曲面区域亮度与发热,直接决定它是&quot;iPhone X级别拐点&quot;还是又一次&quot;取消Touch Bar&quot;。</li>
+</ul>
+
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 32px; text-align: center; border-top: 1px solid #e8e2d9; background-color: #fffbf5;">
+              <p style="font-size: 12px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.06em; margin: 0 0 4px;">Yomoo 每日AI快送</p>
+              <p style="font-size: 11px; color: #6b5e4f; letter-spacing: 0.08em; margin: 0 0 12px;">Powered by Yomoo LLC</p>
+              <p style="font-size: 11px; color: #6b5e4f; margin: 0;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b5e4f; text-decoration: underline;">退订邮件</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
