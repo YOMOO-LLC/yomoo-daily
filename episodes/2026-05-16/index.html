@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-16</title>
+  <meta name="description" content="苹果M5芯片硬件级内存防护MIE首次被Anthropic的Claude Mythos协助攻陷，AI辅助挖洞进入实战拐点；Bun项目六天内将6755个commit从Zig迁移到Rust且无人完整审阅，引爆软件工程伦理争议；欧洲耗资20亿欧元的主权云SecNumCloud在Intel ME和AMD PSP面前形同虚设，硬件后门问题首次被技术圈正面拆解。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-16/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-16">
+  <meta property="og:description" content="苹果M5芯片硬件级内存防护MIE首次被Anthropic的Claude Mythos协助攻陷，AI辅助挖洞进入实战拐点；Bun项目六天内将6755个commit从Zig迁移到Rust且无人完整审阅，引爆软件工程伦理争议；欧洲耗资20亿欧元的主权云SecNumCloud在Intel ME和AMD PSP面前形同虚设，硬件后门问题首次被技术圈正面拆解。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-16/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-16T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-16">
+  <meta name="twitter:description" content="苹果M5芯片硬件级内存防护MIE首次被Anthropic的Claude Mythos协助攻陷，AI辅助挖洞进入实战拐点；Bun项目六天内将6755个commit从Zig迁移到Rust且无人完整审阅，引爆软件工程伦理争议；欧洲耗资20亿欧元的主权云SecNumCloud在Intel ME和AMD PSP面前形同虚设，硬件后门问题首次被技术圈正面拆解。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-16",
+    "description": "苹果M5芯片硬件级内存防护MIE首次被Anthropic的Claude Mythos协助攻陷，AI辅助挖洞进入实战拐点；Bun项目六天内将6755个commit从Zig迁移到Rust且无人完整审阅，引爆软件工程伦理争议；欧洲耗资20亿欧元的主权云SecNumCloud在Intel ME和AMD PSP面前形同虚设，硬件后门问题首次被技术圈正面拆解。",
+    "datePublished": "2026-05-16T08:00:00+08:00",
+    "dateModified": "2026-05-16T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-16/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-16/yomoo-2026-05-16.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-16</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-16/yomoo-2026-05-16.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-16/yomoo-2026-05-16.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026年5月16日</h1>
+<h2>一、要闻速览 (Executive Summary)</h2>
+<p>今日核心:<strong>苹果M5&quot;硬件防护神话&quot;首次被AI辅助攻陷</strong>——Anthropic的Claude Mythos帮助研究者绕过苹果引以为傲的Memory Integrity Enforcement (MIE),普通用户一条命令即可拿到root权限。这是继上周Claude Mythos协助攻陷macOS内核之后的二次突破,标志着AI辅助挖洞已从&quot;实验阶段&quot;进入&quot;实战拐点&quot;。与此同时,Bun项目用六天时间将6755个commit从Zig&quot;AI迁移&quot;到Rust,无任何人类完整审阅,引爆软件工程伦理大讨论;欧洲数字主权框架SecNumCloud被曝在Intel ME和AMD PSP面前形同虚设,&quot;国家级后门&quot;问题首次被技术圈正面拆解。</p>
+<hr>
+<h2>二、深度头条:Apple M5被攻陷——硬件防护神话破灭</h2>
+<h3>Calif团队首发,Claude Mythos再立战功</h3>
+<p>来源:<a href="https://www.tomshardware.com/tech-industry/cyber-security/apple-m5-architecture-suffers-first-privilege-escalation-exploit-anthropics-claude-mythos-helps-researchers-bypass-memory-integrity-enforcement">Tom&#39;s Hardware</a></p>
+<p><strong>事件经过</strong>:安全研究团队Calif在macOS 26.4.1 + Apple M5芯片上,演示了一条本地提权漏洞:普通用户运行一条命令,直接获得root系统权限。漏洞由Anthropic的Claude Mythos Preview协助挖掘,作为&quot;AI发现漏洞之月&quot;(Month of AI-Discovered Bugs)系列博文的一部分公开披露。研究者已提前(亲自上门)向苹果通报,未走零日路线。</p>
+<p><strong>MIE是什么</strong>:Memory Integrity Enforcement(内存完整性强制)是苹果在M5和A19芯片上引入的硬件级安全特性,基于ARM MTE(内存标记扩展)技术。它给每16字节内存切片打上4位标签,绑定到使用该内存的指针上。任何&quot;标签对不上&quot;的读写操作都会被硬件层面拦截,在几乎零性能损耗(仅3%内存损耗)的前提下,封堵了缓冲区溢出、use-after-free等经典漏洞。被业界视为对抗这两类问题的&quot;终极方案&quot;。</p>
+<p><strong>为什么重要</strong>:MIE首次被绕过,意味着&quot;硬件不可破&quot;的心理防线开始松动。结合本周Linux的CopyFail、Dirty Frag,微软的YellowKey、GreenPlasma、RedSun连环失守,可以看出AI辅助挖洞正在抹平传统漏洞研究的能力门槛——从前需要顶级逆向团队耗时数月,如今LLM能压缩到数天。</p>
+<h3>与本周Linux内核新规呼应</h3>
+<p>来源:<a href="https://hardware.slashdot.org/story/26/05/16/0322208/">Slashdot</a></p>
+<p>Linux 7.1内核同日发布新文档,正式承认AI辅助漏洞报告的&quot;系统性同时出现&quot;现象——同一个漏洞会在不同研究者之间&quot;同日浮现&quot;。新规要求:AI辅助报告&quot;应被视为公开&quot;,报告者要尽量简洁、提供可验证的影响而非投机性后果,并附上完整测试过的reproducer。</p>
+<blockquote>
+<p>&quot;AI挖洞的边际成本一旦逼近零,补丁速度就必须追上模型推理速度。&quot;</p>
+</blockquote>
+<p><strong>前瞻</strong>:这是上周&quot;Mythos挖洞&quot;故事的延续。芯片厂商将被迫重新评估硬件防御的形式化验证,而Anthropic等模型方将直面&quot;双刃剑&quot;治理难题——AI既能保护(Mythos帮Firefox一月修423漏洞),也能攻击(M5被破)。我们之前报道过Anthropic对网安AI模型实施受信任访问门控,看来这套机制正在被现实加速倒逼。</p>
+<hr>
+<h2>三、深度头条:Bun &quot;六天Rust迁移&quot;引爆软件工程伦理争议</h2>
+<p>来源:<a href="https://en.liujiacai.net/2026/05/16/bun-rust-port/">en.liujiacai.net</a></p>
+<h3>6755个commit,六天合入,零人类完整审阅</h3>
+<p>JS运行时Bun的Rust重写PR(分支名<code>claude/phase-a-port</code>)5月8日开启,5月14日合入。6755个commit,没有任何一行由人类编写;reviewer列表里coderabbitai[bot]、claude[bot]都审了,唯一的人类reviewer alii状态显示&quot;Awaiting requested review&quot;——根本没看。</p>
+<p><strong>作者的核心质疑</strong>:&quot;代码由Claude写,Claude审,这个闭环逻辑上不是不可能,但意味着没有人完整读过这个代码库。&quot; 测试套件能通过的只是已知行为在已知路径上的正确性,无法验证:</p>
+<ul>
+<li>错误路径处理是否正确</li>
+<li>高压下的边界条件行为</li>
+<li>并发场景下的状态一致性</li>
+<li>极端条件下内存模型是否符合设计意图</li>
+</ul>
+<p>Jarred(Bun作者)自己也承认:跨JS边界重入时的内存问题,Rust编译器搞不定,还得靠人——但那些&quot;靠人&quot;的部分,根本没人审阅过。</p>
+<h3>一段值得记住的论断</h3>
+<blockquote>
+<p>&quot;AI通过局部语义等价翻译代码——确保每个函数在隔离状态下行为与原版相同,但它不理解函数之间的全局不变量——那些没写进测试、只活在原作者头脑里的设计约束。这些约束可能今天的测试不会触发,但六个月后可能在生产负载下以完全无法解释的方式崩溃。&quot;</p>
+</blockquote>
+<h3>商业逻辑也变了</h3>
+<p>作者犀利指出:早期Bun是Jarred拿自己赌,用Zig迭代快、接受技术债是合理的创业逻辑。<strong>现在Bun已被大公司收购,用户是真实生产系统,这场重写的风险承担者不再是Jarred,而是每一个在生产环境运行Bun的工程师</strong>。Canary阶段是防线,但不是人类审阅。</p>
+<p><strong>意义</strong>:这是LLM编程能力商业化落地的标志性事件,也是第一次有重量级开源项目把&quot;AI生成、无审阅&quot;的代码合入主干。<strong>&quot;无人理解的系统不代表没有bug,而是当bug出现时,没人知道为什么。&quot;</strong> 这个判断,会在未来某次生产事故的debug现场变得无比真实。</p>
+<hr>
+<h2>四、深度头条:欧洲数字主权——美芯片里的&quot;幽灵&quot;</h2>
+<p>来源:<a href="https://www.theregister.com/systems/2026/05/16/europe-built-sovereign-clouds-to-escape-us-control-then-forgot-about-the-processors/">The Register</a></p>
+<h3>Ring -3的&quot;机器中的机器&quot;</h3>
+<p>欧盟为了摆脱美国法律延伸,豪掷超过20亿欧元搞主权云;法国的SecNumCloud认证有近1200项技术要求,号称&quot;对域外法律免疫&quot;。但所有这些认证的服务器里,都坐着一个被忽略的&quot;幽灵&quot;:</p>
+<ul>
+<li><strong>Intel</strong> 的 Converged Security and Management Engine (CSME) </li>
+<li><strong>AMD</strong> 的 Platform Security Processor (PSP)</li>
+</ul>
+<p>两者都运行在<strong>Ring -3</strong>——比操作系统、比hypervisor都低的特权层级,主机OS看不到也记录不到。它有自己的内存、时钟、网络栈,甚至共享主机的MAC和IP地址——这意味着它发出的流量,在防火墙看来与主机自己的流量无法区分。</p>
+<h3>RISAA 2024:一道全新的&quot;后门&quot;</h3>
+<p>最关键的新法规是<strong>RISAA 2024</strong>(改革情报与保障美国法案),把&quot;电子通讯服务提供者&quot;的定义扩展到<strong>硬件制造商</strong>。Intel和AMD现在可以收到带保密令的秘密命令,被强制配合美国情报访问。</p>
+<blockquote>
+<p>&quot;你已经建立了一个政策机制,通过它任何这样的机器在任何地方都能交出它的任何信息。&quot;——前英国数字安全设计项目负责人John Goodacre教授</p>
+</blockquote>
+<p>ANSSI(法国国家信息系统安全局)局长Vincent Strubel自己也承认:SecNumCloud是&quot;网络安全工具,不是产业政策工具&quot;,它不能消除硬件层的技术依赖。</p>
+<h3>城堡墙 vs 设计缺陷</h3>
+<p>EURECOM的Francillon教授认为,操作控制(网络隔离、监控、威胁建模)就像&quot;城堡墙&quot;,能让ME后门&quot;实际上不可达,除非是非常高端的攻击&quot;。但Goodacre反驳:正因为ME共享主机的MAC和IP,<strong>&quot;外围防火墙无法区分ME来源和主机来源的流量&quot;</strong>——TLS加密的443端口流量,在防御层看就是普通HTTPS。</p>
+<p><strong>前瞻</strong>:RISC-V是开源处理器架构的长期备选,但作者直言&quot;还要几十年&quot;。这场关于&quot;数字主权能否建立在非主权芯片之上&quot;的辩论,Europe必须自己回答——而每一个CIO在选SecNumCloud认证厂商时,都该问一个问题:&quot;你们的威胁模型如何处理Intel ME和AMD PSP?&quot;</p>
+<hr>
+<h2>五、Quick Bites · 速览要闻</h2>
+<p><strong>Claude玩宝可梦终结篇</strong> · <a href="https://www.lesswrong.com/posts/sehJYg5Yny9fvpbpt/a-year-late-claude-finally-beats-pokemon">LessWrong</a>:Claude Opus 4.7终于通关Pokémon Red,比Gemini 2.5 Pro晚了整整一年。胜利的关键不是推理大跃迁,而是视觉能力的渐进改进——4.7终于能看清Victory Road的开关。<strong>洞察</strong>:LLM进化往往先表现为执行更快、推理更顺,真正的&quot;突破&quot;是积累后的临界跃迁。但Pokémon也暴露了LLM的根本短板:不擅长不确定性场景,也无人类级别的自我反思和时间感知。</p>
+<p><strong>福特跨界储能</strong> · <a href="https://www.wired.com/story/after-struggling-with-evs-us-automakers-pivot-to-energy/">WIRED</a>:福特官宣Ford Energy子公司,主攻电池储能系统(BESS),股价单日暴涨13%。这是面对EV转型受挫(去年减记195亿美元)、共和党立法砍掉EV销售补贴但保留储能项目税收抵免的现实选择。GM、Stellantis、特斯拉都已布局。<strong>核心驱动力</strong>:AI数据中心狂热——电池既能直接供电,也能做UPS备份,缓解电网压力。</p>
+<p><strong>Asus首推内存条</strong> · <a href="https://www.tomshardware.com/pc-components/ram/asus-enters-the-ram-market-during-the-largest-memory-shortage-in-history-brands-first-ddr5-kit-makes-the-rtx-5070-ti-look-like-a-bargain">Tom&#39;s Hardware</a>:ROG&quot;幻刃&quot;48GB DDR5-6000 RGB纪念套装定价<strong>880美元</strong>,比RTX 5070 Ti显卡(829美元)还贵6%。在&quot;史上最大内存短缺&quot;背景下,贵≠卖不出去。$18.33/GB放在历史里是离谱价,但今天就是常态。</p>
+<p><strong>光纤也短缺</strong> · <a href="https://www.tomshardware.com/tech-industry/ai-data-centers-are-consuming-fiber-optic-cable-faster-than-suppliers-can-make-it">Tom&#39;s Hardware</a>:AI数据中心需要的光纤是传统CPU服务器机架的<strong>36倍</strong>,导致中国光纤厂商订单排到2027年初。全球光纤价格从2021年低谷$3.70/纤千米涨到$6.30(涨幅约70%)。Nvidia上个月已向康宁投资3亿美元建三家新厂,但新产能要等到2027年才能上线。</p>
+<p><strong>14万人改用ChatGPT看病</strong> · <a href="https://www.theregister.com/ai-ml/2026/05/16/one-in-seven-brits-swapped-their-gp-for-chatgpt-study-finds/">The Register</a>:伦敦国王学院调查显示<strong>七分之一</strong>英国人用AI替代医生咨询,十分之一用AI替代心理咨询。但21%的受访者表示因为AI建议而<strong>放弃</strong>了寻求专业帮助。公众对AI在医疗中应用的态度几乎对半分(37%支持/38%反对),女性和18-24岁年轻人更怀疑。最讽刺的是:民众以为39%的全科医生在临床决策中用AI,实际只有8%。</p>
+<p><strong>OpenAI被供应链攻击波及</strong> · <a href="https://www.wired.com/story/security-news-this-week-cybercriminal-twins-caught-after-they-forgot-to-turn-off-microsoft-teams-recording/">WIRED</a>:OpenAI证实有两名员工受TanStack开源库供应链攻击影响,要求所有macOS用户在6月12日前更新OpenAI应用。这与上周我们报道的&quot;TanStack攻击波及OpenAI被迫轮换Mac签名证书&quot;是同一事件链的后续。</p>
+<p><strong>Naxclow智能门铃完整失守</strong> · <a href="https://www.abgeo.dev/blog/anyone-can-ring-your-doorbell/">abgeo.dev</a>:Temu卖12美元的智能门铃Smart Doorbell X3被独立研究者完整逆向,后端漏洞允许:(1)静默从用户账号窃取门铃;(2)伪装设备发起带攻击者自选视频的虚假来电;(3)通过UART调试口提取家庭WiFi密码。HTTP明文控制平面,P2P凭证永久固定,设备ID出厂烫死。Naxclow在文章发布第二天回应启动内部审查。</p>
+<p><strong>Google Cloud Fraud Defense</strong> · <a href="https://www.infoq.com/news/2026/05/cloud-fraud-defense-recaptcha/">InfoQ</a>:Google在Next &#39;26大会发布Cloud Fraud Defense,正式承接reCAPTCHA。新平台超越基础bot检测,扩展到登录、账号创建、支付全流程的欺诈防御。<strong>关键转变</strong>:从&quot;静态challenge区分人机&quot;转向&quot;AI驱动的静默背景验证&quot;。AI生成bot正在让传统CAPTCHA失效,这是更大的&quot;AI对抗AI&quot;叙事的一部分。免费层级保持(每月1万次评估)。</p>
+<p><strong>孪生兄弟&quot;团灭&quot;96个政府数据库</strong> · <a href="https://www.wired.com/story/security-news-this-week-cybercriminal-twins-caught-after-they-forgot-to-turn-off-microsoft-teams-recording/">WIRED</a>:被联邦承包商Opexus开除的34岁孪生兄弟Muneeb和Sohaib Akhter,删光雇主96个政府数据库进行报复——但忘了关掉解雇会议的Microsoft Teams录制。整场策划过程被Teams完整录下并转写成法庭证据。已认罪。教训值得收藏。</p>
+<p><strong>Δ-Mem高效在线记忆机制</strong> · <a href="https://arxiv.org/abs/2605.12357">arXiv</a>:新加坡科技设计大学等团队发布δ-mem,在冻结的全注意力骨干网络上加一个紧凑的关联记忆在线状态。<strong>仅用8×8的在线记忆状态</strong>,在MemoryAgentBench上达到骨干网络的1.31倍,LoCoMo上达到1.20倍。不需要全参数微调、不替换骨干、不扩展上下文,就能为LLM加上有效记忆——这是Agent系统长期累积历史信息的实用路径。</p>
+<p><strong>自动驾驶禁运争议</strong> · <a href="https://www.lesswrong.com/posts/gZHNLmHkQ7GjnWsYh/monthly-roundup-42-may-2026">Zvi月度汇总</a>:加州州长候选人Tom Steyer承诺当选后要求自动驾驶卡车必须有人类安全员,理由是保护卡车司机就业。华盛顿DC则以&quot;安全担忧&quot;为由禁止Waymo——但对马里兰州的人类司机没设限。<strong>这是AI落地最具象征意义的政治阻力之一</strong>。</p>
+<hr>
+<h2>六、值得关注 (Worth Watching)</h2>
+<p><strong>1. AI挖洞 vs 硬件防护的军备竞赛</strong><br>M5的MIE被破不是终点,而是起点。本周内Linux内核(CopyFail、Dirty Frag)、Microsoft(YellowKey、GreenPlasma、RedSun)、Apple M5接连失守,这背后是AI辅助挖洞能力的飞跃。下一步看:(a)芯片厂商是否会被迫引入形式化验证;(b)Anthropic、OpenAI等模型方如何治理&quot;Mythos级&quot;模型的双重用途;(c)NCSC此前警告的&quot;补丁海啸&quot;是否真的会到来。</p>
+<p><strong>2. &quot;AI生成代码&quot;在企业级开源的合法性</strong><br>Bun事件之后,会有更多项目效仿&quot;AI翻译重写&quot;路线。问题不在Rust或Zig,而在于:<strong>生产系统能否长期维护没有人类完整理解的代码</strong>?这个问题的答案,会塑造接下来五年开源软件的工程伦理。</p>
+<p><strong>3. 欧洲数字主权能否进化到硬件层</strong><br>SecNumCloud的Chapter 19只能解决法律和操作层的主权,无法触及Intel ME和AMD PSP。RISC-V是长期出路但还要数十年。短期内,欧洲CIO面对的是&quot;在不可信硬件上建立可信云&quot;的内在矛盾——这与上周我们报道的&quot;欧盟拟限制美国云处理政府敏感数据&quot;是同一根脉。</p>
+<p><strong>4. AI替代专业服务的隐性渗透</strong><br>英国七分之一国民用AI替代GP,21%因AI建议放弃就医——这种&quot;无声替代&quot;正在所有专业服务领域同步发生。规模化之后,责任、监管、风险归属都需要重写。这是DeepMind宣称&quot;AGI是人类最大问题终极解药&quot;的另一面。</p>
+<p><strong>5. ARM架构与AI数据中心耦合的硬件供应链</strong><br>光纤要等到2027,内存极度短缺,Asus都进场卖溢价内存条。AI基建的物理瓶颈,正在传导到整个消费电子和云服务的定价。这是Anthropic把Mac Studio入门款悄然涨价、与SpaceX绑定22万GPU的同一故事的延伸。</p>
+<hr>
+<p><em>报告由Simple Reader生成 · 涵盖30篇精选文章 · 共约3450字 · 适合15分钟播客</em></p>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月16日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天有一个事儿真的把整个安全圈给炸了。苹果M5芯片，就是那个被业界吹成&quot;硬件不可破&quot;的神话，第一次被攻陷了。而且你猜帮忙打破这个神话的是谁？是Anthropic的Claude Mythos。</p>
+<p>咱们先把这个事儿讲清楚。苹果在M5和A19芯片上引入了一个叫MIE的东西，全名叫内存完整性强制。简单来说，它给你电脑里每16字节的内存切片打一个标签，然后绑定到使用这块内存的指针上。任何标签对不上的读写操作，硬件层面直接拦截。性能损耗只有3%，但能把缓冲区溢出、use-after-free这些经典漏洞全部封死。业界都说这是终极方案，是硬件级别的金刚罩。</p>
+<p>结果呢？一个叫Calif的安全研究团队，在macOS 26.4.1加M5芯片的环境下，演示了一条命令直接拿root。普通用户，一行代码，系统权限到手。整个过程是Claude Mythos协助挖出来的，作为&quot;AI发现漏洞之月&quot;系列的一部分公开披露。</p>
+<p>你看到没有，这其实是一个标志性的拐点。从前要破这种级别的硬件防护，需要顶级逆向团队耗时数月。现在LLM能压缩到数天。本周内你看，Linux内核的CopyFail、Dirty Frag，微软的YellowKey、GreenPlasma、RedSun，苹果M5，全部连环失守。AI辅助挖洞正在把传统漏洞研究的能力门槛抹平。</p>
+<p>更有意思的是，同一天Linux 7.1内核发布了新文档，正式承认一个现象——同一个漏洞会在不同研究者之间同日浮现。这说明什么？AI挖洞的边际成本正在逼近零。补丁速度必须追上模型推理速度，否则就是灾难。</p>
+<p>这还没完，咱们说回另一件事，也是今天炸圈的，叫Bun的六天Rust迁移。</p>
+<p>Bun你知道吧，就是那个JS运行时。它的作者搞了一个PR，从Zig迁移到Rust，6755个commit，六天合入，没有任何一行代码是人写的。Claude写的，Claude审的，coderabbit审的。reviewer列表里唯一的人类，状态显示&quot;Awaiting requested review&quot;——根本没看。</p>
+<p>我跟你说，这事儿有意思就有意思在它的逻辑闭环上。代码由Claude生成，由Claude审查，理论上没问题，对吧？但你想想看，这意味着没有一个人完整读过这个代码库。测试套件能通过，只能证明已知行为在已知路径上是对的。但是错误路径处理、高压边界条件、并发状态一致性、内存模型的极端情况——这些测试根本覆盖不到。</p>
+<p>原作者liujiacai说了一段话，我觉得值得记住。他说AI是通过局部语义等价来翻译代码的，确保每个函数在隔离状态下行为跟原版一样，但它不理解函数之间的全局不变量——那些没写进测试、只活在原作者头脑里的设计约束。这些约束可能今天不会触发，但六个月之后，可能在生产负载下以完全无法解释的方式崩溃。</p>
+<p>而且你注意，商业逻辑也变了。早期Bun是作者Jarred拿自己赌，用Zig快速迭代，接受技术债，这是合理的创业逻辑。但现在Bun已经被大公司收购了，用户是真实的生产系统。这场重写的风险承担者不再是Jarred，而是每一个在生产环境跑Bun的工程师。</p>
+<p>有一句话我觉得特别狠——&quot;无人理解的系统不代表没有bug，而是当bug出现时，没有人知道为什么。&quot;这个判断，未来某次生产事故的debug现场，会变得无比真实。</p>
+<p>咱们再聊一个完全不同的角度。你以为欧洲的数字主权云能挡住美国？你想错了。</p>
+<p>欧盟豪掷超过20亿欧元搞主权云。法国的SecNumCloud认证，有近1200项技术要求，号称对域外法律免疫。但是所有这些认证的服务器里，都坐着一个被忽略的幽灵。</p>
+<p>什么幽灵呢？Intel的CSME，AMD的PSP。这两个东西运行在Ring -3，比操作系统、比hypervisor都低的特权层级。主机OS看不到、记录不到。它有自己的内存、时钟、网络栈，甚至共享主机的MAC和IP地址。它发出的流量，在防火墙看来跟主机自己的流量没法区分。</p>
+<p>更狠的是，美国今年通过了一个叫RISAA 2024的法律，把&quot;电子通讯服务提供者&quot;的定义扩展到硬件制造商。Intel和AMD现在可以收到带保密令的秘密命令，被强制配合美国情报访问。</p>
+<p>前英国数字安全设计项目负责人Goodacre教授一句话点穿——&quot;你已经建立了一个政策机制，通过它，任何这样的机器在任何地方，都能交出它的任何信息。&quot;</p>
+<p>这就好像你花了2000欧建一座固若金汤的城堡，结果发现城堡的每一块砖里都藏着一个对方的间谍。SecNumCloud只能解决法律和操作层面的主权，根本触不到硬件层。RISC-V是长期出路，但作者直言还要几十年。</p>
+<p>所以你看，欧洲每个CIO在选SecNumCloud认证厂商的时候，都该问一个问题——你们的威胁模型怎么处理Intel ME和AMD PSP？</p>
+<p>聊完这三个深度话题，咱们再快速过几个值得关注的速览。</p>
+<p>第一个，Claude终于通关宝可梦了。Claude Opus 4.7打通了Pokémon Red，比Gemini 2.5 Pro晚了整整一年。胜利的关键不是推理大跃迁，而是视觉能力的渐进改进——4.7终于能看清Victory Road的开关了。LLM的进化往往是这样，先表现为执行更快、推理更顺，真正的突破是积累后的临界跃迁。</p>
+<p>第二个，福特跨界搞储能。福特官宣Ford Energy子公司主攻电池储能，股价单日暴涨13%。背后的核心驱动力是AI数据中心狂热——电池既能直接供电，也能做UPS备份。GM、Stellantis、特斯拉都已经入场。</p>
+<p>第三个，硬件涨价涨疯了。Asus首次进军内存市场，48GB DDR5的纪念套装定价880美元，比RTX 5070 Ti显卡还贵6%。同时光纤也短缺，AI数据中心需要的光纤是传统CPU机架的36倍，中国厂商订单排到2027年初。Nvidia上个月已经向康宁投资3亿美元建新厂。</p>
+<p>第四个，这个数据有点惊人。伦敦国王学院调查显示，七分之一的英国人用AI替代医生咨询，十分之一用AI替代心理咨询。但21%的受访者表示，因为AI建议而放弃了寻求专业帮助。最讽刺的是，民众以为39%的全科医生在临床决策里用AI，实际只有8%。</p>
+<p>第五个，一个让人哭笑不得的故事。一对孪生兄弟被联邦承包商Opexus开除，报复性删光了雇主96个政府数据库。但他们忘了一件事——解雇会议的Microsoft Teams录制还开着。整场策划过程被完整录下、转写，成了法庭证据。已认罪。</p>
+<p>总之你看，今天这三个深度话题串起来其实是一条线——AI正在以前所未有的速度，重塑安全边界、工程伦理、地缘主权。M5的硬件防护被破，是从下往上的攻击；Bun的无审阅合入，是从上往下的妥协；欧洲主权云的幽灵，是从外往内的渗透。AI挖洞的边际成本逼近零，AI写代码的边际责任也在逼近零。当这两条曲线交汇的时候，我们建立在&quot;人类理解&quot;之上的整个软件文明，可能需要重新写一遍规则。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
