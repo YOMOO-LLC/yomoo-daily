@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yomoo 每日AI快送 — 2026-05-23</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #fffbf5;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #fffbf5;">
+    <tr>
+      <td align="center" style="padding: 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #ffffff;">
+          <!-- Amber gradient bar -->
+          <tr>
+            <td style="height: 3px; background: linear-gradient(90deg, #C4561A, #E8722A, #D4A053); font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid #e8e2d9;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td style="width: 28px; height: 28px; background: linear-gradient(135deg, #E8722A, #D4A053); border-radius: 7px; text-align: center; vertical-align: middle; font-family: Georgia, serif; font-weight: 900; font-size: 15px; color: #ffffff;">Y</td>
+                  <td style="padding-left: 8px; font-family: Georgia, serif; font-size: 17px; font-weight: 800; color: #1a1410;">Yomoo</td>
+                </tr>
+              </table>
+              <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 900; color: #1a1410; margin: 16px 0 8px; line-height: 1.2;">每日AI快送</h1>
+              <p style="font-size: 13px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.08em; margin: 0;">2026-05-23</p>
+            </td>
+          </tr>
+          <tr>
+        <td style="padding: 16px 32px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background-color: #fff8ef; border: 1px solid rgba(232,114,42,0.25); border-radius: 8px; width: 100%;">
+            <tr>
+              <td style="padding: 14px 16px; text-align: center;">
+                <a href="https://daily.yomoo.net/episodes/2026-05-23/index.html" style="color: #E8722A; text-decoration: none; font-size: 14px; font-weight: 600;">&#9654; 在线收听播客</a>
+                <span style="color: #8a7e6e; margin: 0 8px;">|</span>
+                <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-23/yomoo-2026-05-23.mp3" style="color: #6b5e4f; text-decoration: none; font-size: 14px;">下载 MP3</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+          <!-- Report content -->
+          <tr>
+            <td style="padding: 24px 32px 40px;">
+              <h1 style="font-size: 24px; font-weight: 800; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">每日科技简报 · 2026年5月23日</h1>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">执行摘要</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">今天最值得关注的是 Linux 内核九年潜伏漏洞 CVE-2026-46333 被 Qualys 披露,任意非特权用户都能拿到 root,而这只是 AI 挖洞产业化的开始;Linus Torvalds 已正式调整漏洞披露流程,默认&quot;AI 找到的漏洞就是公开的&quot;。与此同时,DeepSeek 把 V4 Pro 价格永久砍掉 75%,把全球大模型 API 价格战推向新底线;三星内存与非内存部门 607% vs 50% 的奖金鸿沟引发产线集体怠工,可能直接拖累 HBM4 给英伟达 Rubin 的供货。AI 算力账单则继续撕裂大厂,微软因 Claude Code 成本暴增内部强推 Copilot CLI,Agent 模式吃掉的 token 是普通查询的上千倍。</p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主要故事</h2>
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">一、Linux 内核九年漏洞 CVE-2026-46333:AI 挖洞时代的开幕式</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">Qualys 威胁研究部今天公开披露了 Linux 内核的逻辑漏洞 <strong style="color: #1a1410; font-weight: 600;">CVE-2026-46333</strong>,缺陷自 2016 年 11 月 v4.10-rc1 起就潜伏在主线代码里,影响<strong style="color: #1a1410; font-weight: 600;">几乎所有主流发行版的默认安装</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">技术细节:漏洞出现在一个特权进程&quot;丢弃凭据&quot;(dropping credentials)的极短时间窗口里。本应通过 <code style="font-family: 'SF Mono', 'Fira Code', Consolas, monospace; font-size: 0.85em; padding: 2px 6px; background-color: #f5efe6; border-radius: 3px; color: #C4561A;">dumpable</code> 标志关闭 ptrace 通道,但内核里有一段路径漏掉了这个保护。攻击者只要配合 <code style="font-family: 'SF Mono', 'Fira Code', Consolas, monospace; font-size: 0.85em; padding: 2px 6px; background-color: #f5efe6; border-radius: 3px; color: #C4561A;">pidfd_getfd()</code> 系统调用(2020 年随 v5.6-rc1 加入),就能从这个濒死的特权进程那里&quot;偷&quot;走已经打开的文件描述符,并在自己的 uid 下复用。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">后果是教科书级别的灾难——任何低权限 shell 都能:</p>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;">读取 <code style="font-family: 'SF Mono', 'Fira Code', Consolas, monospace; font-size: 0.85em; padding: 2px 6px; background-color: #f5efe6; border-radius: 3px; color: #C4561A;">/etc/shadow</code>(系统密码哈希)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">窃取 <code style="font-family: 'SF Mono', 'Fira Code', Consolas, monospace; font-size: 0.85em; padding: 2px 6px; background-color: #f5efe6; border-radius: 3px; color: #C4561A;">/etc/ssh</code> 下的 SSH 主机私钥</li>
+<li style="margin-bottom: 6px; line-height: 1.75;">通过劫持的 dbus 连接以 root 身份对 systemd 发号施令</li>
+</ul>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">也就是说,<strong style="color: #1a1410; font-weight: 600;">钓鱼拿到的开发者账号、受限 CI runner、低权限服务账号、多租户共享主机,任何一个落脚点都直接等于完整主机被拿下</strong>。&quot;非特权立足点&quot;与&quot;完全控制&quot;之间那条惯常的鸿沟,在这个 bug 面前直接坍塌。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">更值得品味的是披露节奏。Qualys 5 月 11 日上报,内核安全组三天内修补提交,5 月 14 日公开 commit。然后短短几天内,<strong style="color: #1a1410; font-weight: 600;">就有独立研究者从公开 commit 反推出可用 exploit 并公开</strong>。Qualys 不得不提前放出完整 advisory,因为&quot;公开图景已经不完整且不均匀&quot;。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这就引出今天的真正主题——<strong style="color: #1a1410; font-weight: 600;">AI 挖洞正在重写内核安全产业的节奏</strong>。同一天,The Register 把 Dirty Frag、Copy Fail、Fragnesia 这一组最近的 Linux 漏洞合在一起观察:</p>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Linus Torvalds</strong> 在明尼苏达 Open Source Summit 直接修改了 Linux 安全披露的潜规则。过去内核社区会&quot;悄悄通知发行版升级&quot;,几乎没人能复盘出究竟修了什么;现在他承认&quot;上周我们修了一个 bug,三小时内就有博客分析这个 fix 的安全含义&quot;。他的新原则是:&quot;<strong style="color: #1a1410; font-weight: 600;">AI 检测到的漏洞按定义就不是秘密,放在私有列表上就是浪费所有人时间</strong>&quot;,而且&quot;你用 AI 发现它,另外 100 个人也会用 AI 发现它&quot;。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">CloudLinux CEO Igor Seletskiy</strong> 评论说,过去一年通常只有一两个跨发行版的内核级提权漏洞,现在<strong style="color: #1a1410; font-weight: 600;">一周之内出现两个</strong>,企业可能要回归&quot;每周重启服务器&quot;的节奏。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Google 威胁情报组</strong>的数据更加触目惊心:漏洞平均利用时间(TTE)从 2018 年的 63 天,降到 2024 年的 <strong style="color: #1a1410; font-weight: 600;">-1 天</strong>,2025 年预计是 <strong style="color: #1a1410; font-weight: 600;">-7 天</strong>——负数意味着漏洞<strong style="color: #1a1410; font-weight: 600;">在补丁发布之前就已经被利用</strong>。</li>
+</ul>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">为什么意义重大?Torvalds 提醒:别幸灾乐祸觉得只有 Linux 倒霉,&quot;<strong style="color: #1a1410; font-weight: 600;">如果你觉得 AI 不能逆向闭源代码,那你要大吃一惊</strong>——而且闭源更糟,AI 帮你找漏洞却帮不了你修&quot;。RedHat CTO Chris Wright 借势喊话:是时候把 SELinux 从 permissive 模式正式切到 enforcing(强制)模式了。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>:这不是一个普通 LPE。这是 AI 漏洞挖掘从&quot;加速器&quot;变成&quot;颠覆者&quot;的转折——产业第一次需要假设&quot;任何代码 AI 都已经读过、任何 bug AI 都已经看过&quot;。Linux 安全治理的整套流程(私有披露、协调发布、负责任公布)在 AI 速度面前正在结构性失效,这与我们之前持续报道的 [Mythos 模型协助挖洞、Anthropic NCSC 警告&quot;AI 补丁海啸&quot;] 完全在同一条曲线上。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源:<a style="color: #E8722A; text-decoration: underline;" href="https://linux.slashdot.org/story/26/05/23/0727241">Slashdot · Qualys TRU 报告</a> | <a style="color: #E8722A; text-decoration: underline;" href="https://www.theregister.com/security/2026/05/23/dirty-frag-copy-fail-fragnesia-the-start-of-a-worrisome-linux-security-trend/5244742">The Register · Dirty Frag 等系列分析</a></p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">二、DeepSeek V4 Pro 永久降价 75%:大模型 API 价格战的&quot;地板模式&quot;</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">DeepSeek 今天把 V4 Pro 的官方定价<strong style="color: #1a1410; font-weight: 600;">永久</strong>调降到原价的四分之一——原本到 5 月 31 日截止的&quot;75% 促销&quot;直接转为长期价格。具体区间:每百万 tokens 由 $0.0145–$3.48 降到 <strong style="color: #1a1410; font-weight: 600;">$0.003625–$0.87</strong>(输入/输出按区间)。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这是 DeepSeek 4 月发布 V4 系列后(主打&quot;百万级 context 的高性价比时代&quot;)的第二次定价动作,把&quot;性价比&quot;的护城河挖到了行业历史最低点。对比同期:OpenAI GPT-5、Google Gemini 3.5 Flash 都将面对一个把价格曲线垂直拉下来的对手。Anthropic 之前曾指控 DeepSeek &quot;蒸馏攻击&quot;,这次价格再砍一刀,很可能会把矛盾再次激化。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>:此前我们追踪过的&quot;中国大模型估值齐飞&quot;(DeepSeek 拟募 500 亿)和&quot;算力分叉走向多极&quot;两个主线,在这里合流——融资充足 + 算力自主 + 价格亏本拉新,是中国厂商对抗 CUDA 系阵营的统一战法。对企业用户来说,意味着&quot;百万 token 工作流&quot;的成本不再是门槛;对 Anthropic、OpenAI 来说,<strong style="color: #1a1410; font-weight: 600;">Token 经济的天花板正在被对手从底部压下来</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget</a></p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">三、三星罢工&quot;内战&quot;升级:HBM4 供货悬在 607% vs 50% 的奖金差上</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">我们 5 月 18 日报道的三星罢工风险并未随工会临时协议平息,反而<strong style="color: #1a1410; font-weight: 600;">蔓延到了关键的封测部门</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">数字一目了然:内存(memory)部门员工奖金约 6 亿韩元(约 40 万美元);DX 部门(手机、电视、家电)只有 600 万韩元(约 4000 美元)——<strong style="color: #1a1410; font-weight: 600;">100 倍差距</strong>。结果是,代工(Foundry)和 TSP(Test &amp; Package)部门&quot;会议被集体取消&quot;,&quot;重大项目决策完全停摆&quot;。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这对供应链的现实冲击很具体:TSP 负责 HBM 后段封测,直接关系到三星给<strong style="color: #1a1410; font-weight: 600;">英伟达下一代 Rubin AI 加速器</strong>的 HBM4 出货。前线工程师怠工——加之 DX 工会已经向法院申请禁制令阻止以内存工会为主体的集体谈判——意味着三星可能在最关键的 AI 内存交付窗口出现裂痕。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">5 月 27 日工会投票表决前,如果非内存部门 4.3 万人投出否决票,这份&quot;利润分享&quot;协议可能整体崩盘。叠加我们 4 月报道的全球 DRAM 持续短缺(预计延续至 2027-2030)和今天 Micron 1α 弗吉尼亚投产(见下文),AI 内存版图正在被一场&quot;内部薪酬不公&quot;加剧扭曲。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/tech-industry/samsungs-bonus-dispute-spreads-to-chip-packaging-divisions-threatening-hbm-delivery-schedules">Tom&#39;s Hardware</a></p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">四、AI Token 危机继续发酵:微软内部停掉 Claude Code</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">The Verge 报道,微软正在推动员工从 Claude Code 切换到自家 Copilot CLI。表面理由是&quot;用自家工具&quot;,实际原因是 <strong style="color: #1a1410; font-weight: 600;">Claude Code 的成本随使用量飙升</strong>已经压不住。这与我们 5 月 18 日报道的&quot;Token 经济成 KPI&quot;事件直接相关。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">数据更直观:Agentic AI(智能体模式)消耗的 token 可能是普通 LLM 查询的 <strong style="color: #1a1410; font-weight: 600;">1000 倍</strong>——因为它要多步推理、调用工具、循环执行。OpenClaw 作者 Peter Steinberger 自爆<strong style="color: #1a1410; font-weight: 600;">单月 token 账单超过 130 万美元</strong>。Jensen Huang 此前喊话&quot;工程师每年至少要用掉年薪一半的 token&quot;,甚至呵斥不让员工用 AI 的经理&quot;你疯了吗&quot;。结果就是 Amazon、微软、Meta 等公司内部都出现了员工为完成&quot;AI 使用 KPI&quot;而<strong style="color: #1a1410; font-weight: 600;">主动刷 token</strong>(tokenmaxxing)的怪相。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">经典的杰文斯悖论(Jevons Paradox,即:技术越高效,使用反而越多,总消耗反而上升)在 AI 上再次上演。值得追问的是:<strong style="color: #1a1410; font-weight: 600;">当用 AI 比雇人更贵,但 KPI 又强迫用 AI,这场&quot;AI 替代人力&quot;的叙事还能撑多久?</strong></p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-cost-crisis-hits-tech-giants-as-employee-tokenmaxxing-backfires-agentic-ai-eats-up-to-1000x-more-tokens-than-standard-ai-sparks-corporate-pullback-at-microsoft-meta-and-amazon">Tom&#39;s Hardware</a></p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">五、PLA Daily 罕见长文:解放军内部如何认真讨论 AGI 战争</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">LessWrong 翻译了 2025 年 1 月《解放军报》第 7 版的整版长文《AGI 带来的战争思考》,作者是国防大学联合作战学院的荣明、胡晓峰(后者为陆军少将、首席科学家级人物,毛主席亲自签发军功嘉奖)。这是西方第一次完整看到 PLA 体系内部关于 AGI(通用人工智能,达到人类智能水平的 AI)战争意义的系统讨论。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">文章核心立场可以总结为四点:</p>
+<ol style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AGI 不只是&quot;赋能&quot;</strong>——颠覆性远超信息化与机械化,旧的网络战曾被夸大,但 AGI 不同。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AGI 不会让战争消失</strong>——反而会因&quot;AI 进攻优势&quot;和&quot;先发制人最优&quot;打破攻防平衡,触发新军备竞赛。文章引用了 Cornell(实为 arXiv 上的斯坦福/佐治亚理工/Hoover 联合研究)关于大模型在兵棋推演中&quot;突然发动核打击&quot;的结论。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AGI 不会是终极威慑</strong>——它快、果断,但缺乏共情,战略迂回空间被极致压缩;并引用 Hinton 的话&quot;从未见过低智能控制高智能的案例&quot;。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AGI 不会改变战争本质</strong>——但会改变战争形式;尤瓦尔·赫拉利的判断被引用:<strong style="color: #1a1410; font-weight: 600;">&quot;会讲故事的 AI 将改变人类历史走向&quot;</strong>,通过深伪、舆论操控,可能让战争意志被恶意操控者掌握,小国&quot;在开战之前就被结束&quot;。</li>
+</ol>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>:西方主流分析(剑桥 Ó hÉigeartaigh、RAND Kyle Chan)长期认为中国官方并不把 AGI 当战略目标,而是&quot;通用 AI 产业化&quot;。但这篇 PLA 长文显示,<strong style="color: #1a1410; font-weight: 600;">至少在 2025 年初,PLA 顶层学术机构已经把 AGI 当作具有变革性、潜在失控风险的战略技术来推理</strong>——包括失控、威慑崩溃、文明扰乱等议题。这与中国 AI 实验室(DeepSeek、智谱)的&quot;AGI 是终点&quot;宣言形成耦合,提醒西方:中美 AGI 竞赛的战略想定,可能比&quot;GPU 出口管制&quot;的辩论要深得多。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.lesswrong.com/posts/J3A6xauFQnvxPb9Y2/pla-daily-translation-reflections-on-warfare-brought-by-agi">LessWrong</a></p>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">简短动态</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">SpaceX Starship V3 首飞基本成功</strong>。33 台甲烷发动机,124 米高,首飞已经比 V1、V2 表现更稳——一小时后印度洋按目标溅落。这是 V3 路线的关键节点。(<a style="color: #E8722A; text-decoration: underline;" href="https://arstechnica.com/space/2026/05/spacexs-starship-v3-still-a-work-in-progress-mostly-successful-on-first-flight/">Ars Technica</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">Micron 弗吉尼亚 1α DRAM 投产</strong>。美国本土首次量产 1α 节点(DDR4 兼容,DUV 工艺,40% 密度提升),CHIPS 法案 2.75 亿美元资助到位,定位汽车、国防、医疗等长周期客户。S&amp;P 预测 2026 年汽车 DRAM 合约价或涨 70-100%,产能转向 DDR5/HBM 的副作用正在显现。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/tech-industry/micron-begins-producing-americas-most-advanced-dram-at-its-virginia-fab">Tom&#39;s Hardware</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">华为 122TB SSD 用 DoB 封装绕开制裁</strong>。无法获得 400+ 层 3D NAND,转而用 Die-on-Board 直接把 YMTC 232 层晶圆密集贴板,做到 OceanDisk 1800,后续将出 245TB 版本。继续延续我们之前报道的&quot;中美双栈&quot;主线。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/pc-components/ssds/huawei-introduces-122tb-ssd-without-using-sanctioned-3d-nand-chips-chinese-tech-firm-develops-proprietary-tech-to-cram-more-nand-dies-in-a-smaller-footprint">Tom&#39;s Hardware</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">二手 Optane DIMM 跑万亿参数模型</strong>。Reddit 用户 APFrisco 用六根二手 Intel Optane PMem(共 768GB)+ RTX 3060,在单 GPU 上跑通了 Kimi K2.5 万亿参数模型,~4 tokens/s。提醒大家:DRAM 与 SSD 之间的&quot;中间层&quot;市场(未来由 CXL 接棒)在 LLM 时代仍有刚需。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/enthusiast-runs-1-trillion-parameter-llm-from-768gb-of-intel-optane-dimm-memory-sticks-local-kimi-k2-5-install-achieved-roughly-4-tokens-per-second">Tom&#39;s Hardware</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">供应链攻击三连</strong>。npm 推出 2FA 门禁的发布和安装控制;Packagist 8 个 PHP 包被植入 GitHub 托管 Linux 恶意载荷;Laravel-Lang 包遭入侵投放跨平台凭据窃取器。这是 4 月以来 TanStack→OpenAI→Bitwarden 供应链链条的延续。(<a style="color: #E8722A; text-decoration: underline;" href="https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html">The Hacker News</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">Valorant 砖死 6000 美元作弊硬件</strong>。Riot Games 在 Vanguard 反作弊更新中强化 IOMMU 检查,封死 DMA 卡伪装成 SATA/NVMe 控制器的路径,作弊者价值 6000 美元的&quot;主板 + 第二台电脑 + KMBox&quot;硬件作弊套装变成&quot;砖头&quot;,官方更在社媒嘲讽&quot;恭喜你拥有了一块全新的 6000 刀镇纸&quot;。但内核级反作弊&quot;接近恶意软件&quot;的争议也再度被点燃。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/software/valorant-dev-bans-players-who-spent-usd6-000-on-cheats-then-trolls-them-on-social-media-studio-tweets-congrats-to-the-owners-of-a-brand-new-usd6k-paperweight">Tom&#39;s Hardware</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">FBI 要求&quot;近实时&quot;访问全美车牌识别</strong>。404 Media 披露 FBI 情报局正以数百万美元采购全美 ALPR(自动车牌识别)数据,要求&quot;近实时&quot;——讽刺的是,同周国会两党议员刚提案限制 ALPR。Google Chromium 还出现了 42 个月未修的 Browser Fetch API 漏洞,概念验证代码已被公开。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.wired.com/story/security-news-this-week-fbi-license-plate-reader-real-time-access/">WIRED</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">Hacknect 卖出&quot;WiFi 黑客 USB 线&quot;</strong>。Kickstarter 项目把 ESP32-S3 + microSD 藏进 USB 数据线,支持远程键盘注入、HID 模拟、自毁模式,众筹价约 82 美元——O.MG cable 的廉价开源版。&quot;看着像普通线缆&quot;的硬件级威胁继续平民化。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/maker-stem/microcontrollers-projects/wi-fi-controlled-hacking-usb-cable-stealthily-packs-in-an-esp32-s3-microsd-storage-and-more-cable-can-execute-remote-payload-execution-keystroke-injection-and-more-but-is-built-for-makers-developers-enthusiasts-and-cybersecurity-learners">Tom&#39;s Hardware</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">Oura 拒绝公布政府数据请求透明度报告</strong>。Oura 戒指存储心率、睡眠、月经周期、定位等敏感健康数据,且<strong style="color: #1a1410; font-weight: 600;">非端到端加密</strong>——员工、检察官、黑客理论上都能解开。八个月前承诺&quot;研究透明度报告&quot;,至今仍无下文。(<a style="color: #E8722A; text-decoration: underline;" href="https://this.weekinsecurity.com/oura-says-it-gets-government-demands-for-user-data-will-it-share-how-many/">this week in security</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">Take It Down 法案威力初现</strong>。FTC 向 12 家&quot;AI 脱衣&quot;网站发出违规警告;DoJ 逮捕两名上传&quot;数千张&quot;AI 深伪色情图(被观看数百万次)的男子。继英欧之后,美国终于动手。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.wired.com/story/security-news-this-week-fbi-license-plate-reader-real-time-access/">WIRED</a>)</p>
+</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">80386 微代码完整反汇编</strong>。reenigne 联合多人,把 80386 的 94720 位微代码 ROM 完整逆向,意外发现一个 40 年没人注意到的 IO 端口权限位图边界漏洞:4 字节 IO 访问只检查前 3 个地址,在受信任进程边界处可能读到本不该访问的硬件寄存器。一段计算机历史的小注脚。(<a style="color: #E8722A; text-decoration: underline;" href="https://www.reenigne.org/blog/80386-microcode-disassembled/">reenigne blog</a>)</p>
+</li>
+</ul>
+<hr style="border: none; height: 1px; background-color: #e8e2d9; margin: 24px 0;">
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">值得关注</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AI 漏洞披露的速度战</strong>——TTE 已经为负、Linus 调整披露策略,接下来几个月会不会迎来 Seletskiy 预言的&quot;每周重启服务器&quot;节奏?这是我们 4 月以来&quot;AI 挖洞→补丁海啸→NHS 关源&quot;一条主线的延伸,值得密切跟踪。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">三星 5 月 27 日工会投票</strong>——内存 vs 非内存的 100 倍奖金分裂,如果导致协议被否决,可能拖累全球 HBM4 给 Rubin 的供应窗口,直接传导到 2026 年下半年的 AI 算力交付。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">DeepSeek 价格战的二阶效应</strong>——如果 GPT-5 / Claude / Gemini 都被迫跟降,前沿厂商靠 token 价格补贴算力支出的模式还能撑多久?这与 Token 经济 KPI 现象同步演化,可能在 6-8 月引爆。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Out-of-Context Reasoning 研究的政策含义</strong>——LessWrong 系统整理的 OOCR(模型在不显式推理的情况下完成推理)研究阅读列表,正在为&quot;模型情境感知&quot;和&quot;对齐伪装&quot;等议题积累实证;结合 PLA AGI 讨论,中美双方对模型自主性的判断分歧正在拉大。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">AGI 战争话语的中外不对称</strong>——西方公开讨论 AGI 战略意义的话题以 Dario Amodei、Sam Altman 为主,中国类似讨论主要发生在军方学术机构内部。这种不对称本身就是一种战略信号,值得长期追踪。</li>
+</ul>
+
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 32px; text-align: center; border-top: 1px solid #e8e2d9; background-color: #fffbf5;">
+              <p style="font-size: 12px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.06em; margin: 0 0 4px;">Yomoo 每日AI快送</p>
+              <p style="font-size: 11px; color: #6b5e4f; letter-spacing: 0.08em; margin: 0 0 12px;">Powered by Yomoo LLC</p>
+              <p style="font-size: 11px; color: #6b5e4f; margin: 0;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b5e4f; text-decoration: underline;">退订邮件</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
