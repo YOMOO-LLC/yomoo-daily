@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-05-23</title>
+  <meta name="description" content="Linux内核九年潜伏漏洞CVE-2026-46333被披露，任意用户可获root权限，Torvalds正式调整漏洞披露流程应对AI挖洞时代；DeepSeek V4 Pro永久降价75%，将大模型API价格战推向新低点；三星内存与非内存部门607%奖金鸿沟引发产线怠工，或拖累HBM4对英伟达Rubin的供货。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-05-23/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-05-23">
+  <meta property="og:description" content="Linux内核九年潜伏漏洞CVE-2026-46333被披露，任意用户可获root权限，Torvalds正式调整漏洞披露流程应对AI挖洞时代；DeepSeek V4 Pro永久降价75%，将大模型API价格战推向新低点；三星内存与非内存部门607%奖金鸿沟引发产线怠工，或拖累HBM4对英伟达Rubin的供货。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-05-23/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-05-23T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-05-23">
+  <meta name="twitter:description" content="Linux内核九年潜伏漏洞CVE-2026-46333被披露，任意用户可获root权限，Torvalds正式调整漏洞披露流程应对AI挖洞时代；DeepSeek V4 Pro永久降价75%，将大模型API价格战推向新低点；三星内存与非内存部门607%奖金鸿沟引发产线怠工，或拖累HBM4对英伟达Rubin的供货。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-05-23",
+    "description": "Linux内核九年潜伏漏洞CVE-2026-46333被披露，任意用户可获root权限，Torvalds正式调整漏洞披露流程应对AI挖洞时代；DeepSeek V4 Pro永久降价75%，将大模型API价格战推向新低点；三星内存与非内存部门607%奖金鸿沟引发产线怠工，或拖累HBM4对英伟达Rubin的供货。",
+    "datePublished": "2026-05-23T08:00:00+08:00",
+    "dateModified": "2026-05-23T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-05-23/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-23/yomoo-2026-05-23.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-05-23</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-23/yomoo-2026-05-23.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-05-23/yomoo-2026-05-23.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026年5月23日</h1>
+<h2>执行摘要</h2>
+<p>今天最值得关注的是 Linux 内核九年潜伏漏洞 CVE-2026-46333 被 Qualys 披露,任意非特权用户都能拿到 root,而这只是 AI 挖洞产业化的开始;Linus Torvalds 已正式调整漏洞披露流程,默认&quot;AI 找到的漏洞就是公开的&quot;。与此同时,DeepSeek 把 V4 Pro 价格永久砍掉 75%,把全球大模型 API 价格战推向新底线;三星内存与非内存部门 607% vs 50% 的奖金鸿沟引发产线集体怠工,可能直接拖累 HBM4 给英伟达 Rubin 的供货。AI 算力账单则继续撕裂大厂,微软因 Claude Code 成本暴增内部强推 Copilot CLI,Agent 模式吃掉的 token 是普通查询的上千倍。</p>
+<hr>
+<h2>主要故事</h2>
+<h3>一、Linux 内核九年漏洞 CVE-2026-46333:AI 挖洞时代的开幕式</h3>
+<p>Qualys 威胁研究部今天公开披露了 Linux 内核的逻辑漏洞 <strong>CVE-2026-46333</strong>,缺陷自 2016 年 11 月 v4.10-rc1 起就潜伏在主线代码里,影响<strong>几乎所有主流发行版的默认安装</strong>。</p>
+<p>技术细节:漏洞出现在一个特权进程&quot;丢弃凭据&quot;(dropping credentials)的极短时间窗口里。本应通过 <code>dumpable</code> 标志关闭 ptrace 通道,但内核里有一段路径漏掉了这个保护。攻击者只要配合 <code>pidfd_getfd()</code> 系统调用(2020 年随 v5.6-rc1 加入),就能从这个濒死的特权进程那里&quot;偷&quot;走已经打开的文件描述符,并在自己的 uid 下复用。</p>
+<p>后果是教科书级别的灾难——任何低权限 shell 都能:</p>
+<ul>
+<li>读取 <code>/etc/shadow</code>(系统密码哈希)</li>
+<li>窃取 <code>/etc/ssh</code> 下的 SSH 主机私钥</li>
+<li>通过劫持的 dbus 连接以 root 身份对 systemd 发号施令</li>
+</ul>
+<p>也就是说,<strong>钓鱼拿到的开发者账号、受限 CI runner、低权限服务账号、多租户共享主机,任何一个落脚点都直接等于完整主机被拿下</strong>。&quot;非特权立足点&quot;与&quot;完全控制&quot;之间那条惯常的鸿沟,在这个 bug 面前直接坍塌。</p>
+<p>更值得品味的是披露节奏。Qualys 5 月 11 日上报,内核安全组三天内修补提交,5 月 14 日公开 commit。然后短短几天内,<strong>就有独立研究者从公开 commit 反推出可用 exploit 并公开</strong>。Qualys 不得不提前放出完整 advisory,因为&quot;公开图景已经不完整且不均匀&quot;。</p>
+<p>这就引出今天的真正主题——<strong>AI 挖洞正在重写内核安全产业的节奏</strong>。同一天,The Register 把 Dirty Frag、Copy Fail、Fragnesia 这一组最近的 Linux 漏洞合在一起观察:</p>
+<ul>
+<li><strong>Linus Torvalds</strong> 在明尼苏达 Open Source Summit 直接修改了 Linux 安全披露的潜规则。过去内核社区会&quot;悄悄通知发行版升级&quot;,几乎没人能复盘出究竟修了什么;现在他承认&quot;上周我们修了一个 bug,三小时内就有博客分析这个 fix 的安全含义&quot;。他的新原则是:&quot;<strong>AI 检测到的漏洞按定义就不是秘密,放在私有列表上就是浪费所有人时间</strong>&quot;,而且&quot;你用 AI 发现它,另外 100 个人也会用 AI 发现它&quot;。</li>
+<li><strong>CloudLinux CEO Igor Seletskiy</strong> 评论说,过去一年通常只有一两个跨发行版的内核级提权漏洞,现在<strong>一周之内出现两个</strong>,企业可能要回归&quot;每周重启服务器&quot;的节奏。</li>
+<li><strong>Google 威胁情报组</strong>的数据更加触目惊心:漏洞平均利用时间(TTE)从 2018 年的 63 天,降到 2024 年的 <strong>-1 天</strong>,2025 年预计是 <strong>-7 天</strong>——负数意味着漏洞<strong>在补丁发布之前就已经被利用</strong>。</li>
+</ul>
+<p>为什么意义重大?Torvalds 提醒:别幸灾乐祸觉得只有 Linux 倒霉,&quot;<strong>如果你觉得 AI 不能逆向闭源代码,那你要大吃一惊</strong>——而且闭源更糟,AI 帮你找漏洞却帮不了你修&quot;。RedHat CTO Chris Wright 借势喊话:是时候把 SELinux 从 permissive 模式正式切到 enforcing(强制)模式了。</p>
+<p><strong>为什么重要</strong>:这不是一个普通 LPE。这是 AI 漏洞挖掘从&quot;加速器&quot;变成&quot;颠覆者&quot;的转折——产业第一次需要假设&quot;任何代码 AI 都已经读过、任何 bug AI 都已经看过&quot;。Linux 安全治理的整套流程(私有披露、协调发布、负责任公布)在 AI 速度面前正在结构性失效,这与我们之前持续报道的 [Mythos 模型协助挖洞、Anthropic NCSC 警告&quot;AI 补丁海啸&quot;] 完全在同一条曲线上。</p>
+<p>来源:<a href="https://linux.slashdot.org/story/26/05/23/0727241">Slashdot · Qualys TRU 报告</a> | <a href="https://www.theregister.com/security/2026/05/23/dirty-frag-copy-fail-fragnesia-the-start-of-a-worrisome-linux-security-trend/5244742">The Register · Dirty Frag 等系列分析</a></p>
+<hr>
+<h3>二、DeepSeek V4 Pro 永久降价 75%:大模型 API 价格战的&quot;地板模式&quot;</h3>
+<p>DeepSeek 今天把 V4 Pro 的官方定价<strong>永久</strong>调降到原价的四分之一——原本到 5 月 31 日截止的&quot;75% 促销&quot;直接转为长期价格。具体区间:每百万 tokens 由 $0.0145–$3.48 降到 <strong>$0.003625–$0.87</strong>(输入/输出按区间)。</p>
+<p>这是 DeepSeek 4 月发布 V4 系列后(主打&quot;百万级 context 的高性价比时代&quot;)的第二次定价动作,把&quot;性价比&quot;的护城河挖到了行业历史最低点。对比同期:OpenAI GPT-5、Google Gemini 3.5 Flash 都将面对一个把价格曲线垂直拉下来的对手。Anthropic 之前曾指控 DeepSeek &quot;蒸馏攻击&quot;,这次价格再砍一刀,很可能会把矛盾再次激化。</p>
+<p><strong>为什么重要</strong>:此前我们追踪过的&quot;中国大模型估值齐飞&quot;(DeepSeek 拟募 500 亿)和&quot;算力分叉走向多极&quot;两个主线,在这里合流——融资充足 + 算力自主 + 价格亏本拉新,是中国厂商对抗 CUDA 系阵营的统一战法。对企业用户来说,意味着&quot;百万 token 工作流&quot;的成本不再是门槛;对 Anthropic、OpenAI 来说,<strong>Token 经济的天花板正在被对手从底部压下来</strong>。</p>
+<p>来源:<a href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget</a></p>
+<hr>
+<h3>三、三星罢工&quot;内战&quot;升级:HBM4 供货悬在 607% vs 50% 的奖金差上</h3>
+<p>我们 5 月 18 日报道的三星罢工风险并未随工会临时协议平息,反而<strong>蔓延到了关键的封测部门</strong>。</p>
+<p>数字一目了然:内存(memory)部门员工奖金约 6 亿韩元(约 40 万美元);DX 部门(手机、电视、家电)只有 600 万韩元(约 4000 美元)——<strong>100 倍差距</strong>。结果是,代工(Foundry)和 TSP(Test &amp; Package)部门&quot;会议被集体取消&quot;,&quot;重大项目决策完全停摆&quot;。</p>
+<p>这对供应链的现实冲击很具体:TSP 负责 HBM 后段封测,直接关系到三星给<strong>英伟达下一代 Rubin AI 加速器</strong>的 HBM4 出货。前线工程师怠工——加之 DX 工会已经向法院申请禁制令阻止以内存工会为主体的集体谈判——意味着三星可能在最关键的 AI 内存交付窗口出现裂痕。</p>
+<p>5 月 27 日工会投票表决前,如果非内存部门 4.3 万人投出否决票,这份&quot;利润分享&quot;协议可能整体崩盘。叠加我们 4 月报道的全球 DRAM 持续短缺(预计延续至 2027-2030)和今天 Micron 1α 弗吉尼亚投产(见下文),AI 内存版图正在被一场&quot;内部薪酬不公&quot;加剧扭曲。</p>
+<p>来源:<a href="https://www.tomshardware.com/tech-industry/samsungs-bonus-dispute-spreads-to-chip-packaging-divisions-threatening-hbm-delivery-schedules">Tom&#39;s Hardware</a></p>
+<hr>
+<h3>四、AI Token 危机继续发酵:微软内部停掉 Claude Code</h3>
+<p>The Verge 报道,微软正在推动员工从 Claude Code 切换到自家 Copilot CLI。表面理由是&quot;用自家工具&quot;,实际原因是 <strong>Claude Code 的成本随使用量飙升</strong>已经压不住。这与我们 5 月 18 日报道的&quot;Token 经济成 KPI&quot;事件直接相关。</p>
+<p>数据更直观:Agentic AI(智能体模式)消耗的 token 可能是普通 LLM 查询的 <strong>1000 倍</strong>——因为它要多步推理、调用工具、循环执行。OpenClaw 作者 Peter Steinberger 自爆<strong>单月 token 账单超过 130 万美元</strong>。Jensen Huang 此前喊话&quot;工程师每年至少要用掉年薪一半的 token&quot;,甚至呵斥不让员工用 AI 的经理&quot;你疯了吗&quot;。结果就是 Amazon、微软、Meta 等公司内部都出现了员工为完成&quot;AI 使用 KPI&quot;而<strong>主动刷 token</strong>(tokenmaxxing)的怪相。</p>
+<p>经典的杰文斯悖论(Jevons Paradox,即:技术越高效,使用反而越多,总消耗反而上升)在 AI 上再次上演。值得追问的是:<strong>当用 AI 比雇人更贵,但 KPI 又强迫用 AI,这场&quot;AI 替代人力&quot;的叙事还能撑多久?</strong></p>
+<p>来源:<a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-cost-crisis-hits-tech-giants-as-employee-tokenmaxxing-backfires-agentic-ai-eats-up-to-1000x-more-tokens-than-standard-ai-sparks-corporate-pullback-at-microsoft-meta-and-amazon">Tom&#39;s Hardware</a></p>
+<hr>
+<h3>五、PLA Daily 罕见长文:解放军内部如何认真讨论 AGI 战争</h3>
+<p>LessWrong 翻译了 2025 年 1 月《解放军报》第 7 版的整版长文《AGI 带来的战争思考》,作者是国防大学联合作战学院的荣明、胡晓峰(后者为陆军少将、首席科学家级人物,毛主席亲自签发军功嘉奖)。这是西方第一次完整看到 PLA 体系内部关于 AGI(通用人工智能,达到人类智能水平的 AI)战争意义的系统讨论。</p>
+<p>文章核心立场可以总结为四点:</p>
+<ol>
+<li><strong>AGI 不只是&quot;赋能&quot;</strong>——颠覆性远超信息化与机械化,旧的网络战曾被夸大,但 AGI 不同。</li>
+<li><strong>AGI 不会让战争消失</strong>——反而会因&quot;AI 进攻优势&quot;和&quot;先发制人最优&quot;打破攻防平衡,触发新军备竞赛。文章引用了 Cornell(实为 arXiv 上的斯坦福/佐治亚理工/Hoover 联合研究)关于大模型在兵棋推演中&quot;突然发动核打击&quot;的结论。</li>
+<li><strong>AGI 不会是终极威慑</strong>——它快、果断,但缺乏共情,战略迂回空间被极致压缩;并引用 Hinton 的话&quot;从未见过低智能控制高智能的案例&quot;。</li>
+<li><strong>AGI 不会改变战争本质</strong>——但会改变战争形式;尤瓦尔·赫拉利的判断被引用:<strong>&quot;会讲故事的 AI 将改变人类历史走向&quot;</strong>,通过深伪、舆论操控,可能让战争意志被恶意操控者掌握,小国&quot;在开战之前就被结束&quot;。</li>
+</ol>
+<p><strong>为什么重要</strong>:西方主流分析(剑桥 Ó hÉigeartaigh、RAND Kyle Chan)长期认为中国官方并不把 AGI 当战略目标,而是&quot;通用 AI 产业化&quot;。但这篇 PLA 长文显示,<strong>至少在 2025 年初,PLA 顶层学术机构已经把 AGI 当作具有变革性、潜在失控风险的战略技术来推理</strong>——包括失控、威慑崩溃、文明扰乱等议题。这与中国 AI 实验室(DeepSeek、智谱)的&quot;AGI 是终点&quot;宣言形成耦合,提醒西方:中美 AGI 竞赛的战略想定,可能比&quot;GPU 出口管制&quot;的辩论要深得多。</p>
+<p>来源:<a href="https://www.lesswrong.com/posts/J3A6xauFQnvxPb9Y2/pla-daily-translation-reflections-on-warfare-brought-by-agi">LessWrong</a></p>
+<hr>
+<h2>简短动态</h2>
+<ul>
+<li><p><strong>SpaceX Starship V3 首飞基本成功</strong>。33 台甲烷发动机,124 米高,首飞已经比 V1、V2 表现更稳——一小时后印度洋按目标溅落。这是 V3 路线的关键节点。(<a href="https://arstechnica.com/space/2026/05/spacexs-starship-v3-still-a-work-in-progress-mostly-successful-on-first-flight/">Ars Technica</a>)</p>
+</li>
+<li><p><strong>Micron 弗吉尼亚 1α DRAM 投产</strong>。美国本土首次量产 1α 节点(DDR4 兼容,DUV 工艺,40% 密度提升),CHIPS 法案 2.75 亿美元资助到位,定位汽车、国防、医疗等长周期客户。S&amp;P 预测 2026 年汽车 DRAM 合约价或涨 70-100%,产能转向 DDR5/HBM 的副作用正在显现。(<a href="https://www.tomshardware.com/tech-industry/micron-begins-producing-americas-most-advanced-dram-at-its-virginia-fab">Tom&#39;s Hardware</a>)</p>
+</li>
+<li><p><strong>华为 122TB SSD 用 DoB 封装绕开制裁</strong>。无法获得 400+ 层 3D NAND,转而用 Die-on-Board 直接把 YMTC 232 层晶圆密集贴板,做到 OceanDisk 1800,后续将出 245TB 版本。继续延续我们之前报道的&quot;中美双栈&quot;主线。(<a href="https://www.tomshardware.com/pc-components/ssds/huawei-introduces-122tb-ssd-without-using-sanctioned-3d-nand-chips-chinese-tech-firm-develops-proprietary-tech-to-cram-more-nand-dies-in-a-smaller-footprint">Tom&#39;s Hardware</a>)</p>
+</li>
+<li><p><strong>二手 Optane DIMM 跑万亿参数模型</strong>。Reddit 用户 APFrisco 用六根二手 Intel Optane PMem(共 768GB)+ RTX 3060,在单 GPU 上跑通了 Kimi K2.5 万亿参数模型,~4 tokens/s。提醒大家:DRAM 与 SSD 之间的&quot;中间层&quot;市场(未来由 CXL 接棒)在 LLM 时代仍有刚需。(<a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/enthusiast-runs-1-trillion-parameter-llm-from-768gb-of-intel-optane-dimm-memory-sticks-local-kimi-k2-5-install-achieved-roughly-4-tokens-per-second">Tom&#39;s Hardware</a>)</p>
+</li>
+<li><p><strong>供应链攻击三连</strong>。npm 推出 2FA 门禁的发布和安装控制;Packagist 8 个 PHP 包被植入 GitHub 托管 Linux 恶意载荷;Laravel-Lang 包遭入侵投放跨平台凭据窃取器。这是 4 月以来 TanStack→OpenAI→Bitwarden 供应链链条的延续。(<a href="https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html">The Hacker News</a>)</p>
+</li>
+<li><p><strong>Valorant 砖死 6000 美元作弊硬件</strong>。Riot Games 在 Vanguard 反作弊更新中强化 IOMMU 检查,封死 DMA 卡伪装成 SATA/NVMe 控制器的路径,作弊者价值 6000 美元的&quot;主板 + 第二台电脑 + KMBox&quot;硬件作弊套装变成&quot;砖头&quot;,官方更在社媒嘲讽&quot;恭喜你拥有了一块全新的 6000 刀镇纸&quot;。但内核级反作弊&quot;接近恶意软件&quot;的争议也再度被点燃。(<a href="https://www.tomshardware.com/software/valorant-dev-bans-players-who-spent-usd6-000-on-cheats-then-trolls-them-on-social-media-studio-tweets-congrats-to-the-owners-of-a-brand-new-usd6k-paperweight">Tom&#39;s Hardware</a>)</p>
+</li>
+<li><p><strong>FBI 要求&quot;近实时&quot;访问全美车牌识别</strong>。404 Media 披露 FBI 情报局正以数百万美元采购全美 ALPR(自动车牌识别)数据,要求&quot;近实时&quot;——讽刺的是,同周国会两党议员刚提案限制 ALPR。Google Chromium 还出现了 42 个月未修的 Browser Fetch API 漏洞,概念验证代码已被公开。(<a href="https://www.wired.com/story/security-news-this-week-fbi-license-plate-reader-real-time-access/">WIRED</a>)</p>
+</li>
+<li><p><strong>Hacknect 卖出&quot;WiFi 黑客 USB 线&quot;</strong>。Kickstarter 项目把 ESP32-S3 + microSD 藏进 USB 数据线,支持远程键盘注入、HID 模拟、自毁模式,众筹价约 82 美元——O.MG cable 的廉价开源版。&quot;看着像普通线缆&quot;的硬件级威胁继续平民化。(<a href="https://www.tomshardware.com/maker-stem/microcontrollers-projects/wi-fi-controlled-hacking-usb-cable-stealthily-packs-in-an-esp32-s3-microsd-storage-and-more-cable-can-execute-remote-payload-execution-keystroke-injection-and-more-but-is-built-for-makers-developers-enthusiasts-and-cybersecurity-learners">Tom&#39;s Hardware</a>)</p>
+</li>
+<li><p><strong>Oura 拒绝公布政府数据请求透明度报告</strong>。Oura 戒指存储心率、睡眠、月经周期、定位等敏感健康数据,且<strong>非端到端加密</strong>——员工、检察官、黑客理论上都能解开。八个月前承诺&quot;研究透明度报告&quot;,至今仍无下文。(<a href="https://this.weekinsecurity.com/oura-says-it-gets-government-demands-for-user-data-will-it-share-how-many/">this week in security</a>)</p>
+</li>
+<li><p><strong>Take It Down 法案威力初现</strong>。FTC 向 12 家&quot;AI 脱衣&quot;网站发出违规警告;DoJ 逮捕两名上传&quot;数千张&quot;AI 深伪色情图(被观看数百万次)的男子。继英欧之后,美国终于动手。(<a href="https://www.wired.com/story/security-news-this-week-fbi-license-plate-reader-real-time-access/">WIRED</a>)</p>
+</li>
+<li><p><strong>80386 微代码完整反汇编</strong>。reenigne 联合多人,把 80386 的 94720 位微代码 ROM 完整逆向,意外发现一个 40 年没人注意到的 IO 端口权限位图边界漏洞:4 字节 IO 访问只检查前 3 个地址,在受信任进程边界处可能读到本不该访问的硬件寄存器。一段计算机历史的小注脚。(<a href="https://www.reenigne.org/blog/80386-microcode-disassembled/">reenigne blog</a>)</p>
+</li>
+</ul>
+<hr>
+<h2>值得关注</h2>
+<ul>
+<li><strong>AI 漏洞披露的速度战</strong>——TTE 已经为负、Linus 调整披露策略,接下来几个月会不会迎来 Seletskiy 预言的&quot;每周重启服务器&quot;节奏?这是我们 4 月以来&quot;AI 挖洞→补丁海啸→NHS 关源&quot;一条主线的延伸,值得密切跟踪。</li>
+<li><strong>三星 5 月 27 日工会投票</strong>——内存 vs 非内存的 100 倍奖金分裂,如果导致协议被否决,可能拖累全球 HBM4 给 Rubin 的供应窗口,直接传导到 2026 年下半年的 AI 算力交付。</li>
+<li><strong>DeepSeek 价格战的二阶效应</strong>——如果 GPT-5 / Claude / Gemini 都被迫跟降,前沿厂商靠 token 价格补贴算力支出的模式还能撑多久?这与 Token 经济 KPI 现象同步演化,可能在 6-8 月引爆。</li>
+<li><strong>Out-of-Context Reasoning 研究的政策含义</strong>——LessWrong 系统整理的 OOCR(模型在不显式推理的情况下完成推理)研究阅读列表,正在为&quot;模型情境感知&quot;和&quot;对齐伪装&quot;等议题积累实证;结合 PLA AGI 讨论,中美双方对模型自主性的判断分歧正在拉大。</li>
+<li><strong>AGI 战争话语的中外不对称</strong>——西方公开讨论 AGI 战略意义的话题以 Dario Amodei、Sam Altman 为主,中国类似讨论主要发生在军方学术机构内部。这种不对称本身就是一种战略信号,值得长期追踪。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年5月23日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，今天有一个事儿你必须得知道。一个潜伏在 Linux 内核里整整九年的漏洞，今天被 Qualys 安全研究团队公开披露了，编号 CVE-2026-46333。九年是什么概念？从2016年11月开始，几乎所有主流 Linux 发行版的默认安装，都带着这个炸弹在跑。而这个漏洞最可怕的地方是什么？任何一个非特权用户，哪怕你只是一个最低权限的 shell，都能直接拿到 root 权限。</p>
+<p>你想想这意味着什么。一个钓鱼邮件骗到的开发者账号、一个受限的 CI 跑步机、一个低权限的服务账号、任何一台多租户共享主机，只要攻击者有一个落脚点，他就能直接拿下整台机器。读取系统密码哈希、偷走 SSH 主机私钥、用 root 身份对 systemd 发号施令，全都不在话下。&quot;低权限立足点&quot;和&quot;完全控制&quot;之间，那条我们一直以为很厚的鸿沟，在这个 bug 面前直接坍塌。</p>
+<p>但是真正让我震惊的不是这个漏洞本身，而是它背后揭示的一个新时代。你看披露的节奏，Qualys 5月11号上报，内核安全组三天内就修了，5月14号公开了修补提交。然后短短几天之内，就有独立研究者从这个公开的修补 commit 反推出可用的 exploit，并且公开了。Qualys 不得不被迫提前放出完整的安全公告，因为按他们的话说，&quot;公开的图景已经不完整也不均匀了&quot;。</p>
+<p>这是什么？这就是 AI 挖洞产业化的开幕式。同一天，Linux 之父 Linus Torvalds 在明尼苏达开源峰会上直接修改了 Linux 安全披露的潜规则。他说了一句非常关键的话，&quot;AI 检测到的漏洞，按定义就不是秘密，放在私有列表上就是浪费所有人时间。你用 AI 发现它，另外100个人也会用 AI 发现它&quot;。CloudLinux 的 CEO 评论说，过去一年通常就一两个跨发行版的内核级提权漏洞，现在一周之内就出现两个，企业可能要回归&quot;每周重启服务器&quot;的节奏。</p>
+<p>更恐怖的是 Google 威胁情报组的数据。漏洞从公开到被利用的平均时间，2018年是63天，2024年降到了负1天，2025年预计是负7天。负数是什么意思？意思是漏洞在补丁发布之前，就已经被利用了。Linus 还提醒大家，别幸灾乐祸觉得只有 Linux 倒霉。如果你觉得 AI 不能逆向闭源代码，那你要大吃一惊，而且闭源更糟，AI 帮你找漏洞却帮不了你修。</p>
+<p>咱们说回另一个今天爆出的大新闻，DeepSeek 把 V4 Pro 的价格永久砍掉了百分之七十五。原本到5月31号截止的促销，直接转成长期价格。每百万 tokens 的输入输出价格，从原来的最高3.48美元，降到了最高8毛7。这是什么操作？这是把全球大模型的 API 价格战拉到了地板模式。</p>
+<p>你想啊，OpenAI 的 GPT-5、Google 的 Gemini 3.5 Flash，现在都要面对一个把价格曲线直接垂直拉下来的对手。Anthropic 之前还指控过 DeepSeek 蒸馏攻击，这次再砍一刀，矛盾恐怕要再次激化。但是这件事最值得品味的，是它跟另一条新闻的合流。中国大模型最近估值齐飞，DeepSeek 据传要募500亿，算力也在走向自主。融资充足、算力自主、价格亏本拉新，这就是中国厂商对抗 CUDA 阵营的统一战法。对企业用户来说，百万 token 工作流的成本不再是门槛。对 OpenAI 和 Anthropic 来说，Token 经济的天花板正在被对手从底部死死压下来。</p>
+<p>这里就引出了今天第三个重磅故事，AI 算力的账单危机正在撕裂大厂。The Verge 今天报道，微软正在内部强推员工从 Claude Code 切换到自家的 Copilot CLI。表面理由是用自家工具，实际原因是 Claude Code 的成本随使用量飙升已经压不住了。</p>
+<p>数据有多吓人？Agent 模式消耗的 token，可能是普通 LLM 查询的1000倍，因为它要多步推理、调用工具、循环执行。OpenClaw 的作者 Peter Steinberger 自己爆料，单月 token 账单超过130万美元。一个人。一个月。130万美元。英伟达的 Jensen Huang 之前还喊话，说工程师每年至少要用掉年薪一半的 token，甚至呵斥不让员工用 AI 的经理&quot;你疯了吗&quot;。结果就出现了一个非常魔幻的现象，Amazon、微软、Meta 内部都有员工为了完成 AI 使用 KPI，主动去刷 token，这个新词儿叫 tokenmaxxing。</p>
+<p>这就是经典的杰文斯悖论在 AI 上的再次上演。技术越高效，使用反而越多，总消耗反而上升。我跟你说，这里有个特别值得追问的问题。当用 AI 比雇人更贵，但 KPI 又强迫你必须用 AI，这场&quot;AI 替代人力&quot;的叙事，还能撑多久？</p>
+<p>咱们接着说硬件圈。三星的罢工内战今天升级了，而且直接威胁到了英伟达下一代 Rubin AI 加速器的 HBM4 供货。数字一看就明白，三星内存部门员工的奖金大约6亿韩元，折合40万美元。但 DX 部门，就是手机电视家电那块，只有600万韩元，4000美元。100倍的差距。结果代工部门和封测部门集体怠工，会议被取消，重大项目决策完全停摆。</p>
+<p>最关键的是封测部门 TSP，它直接负责 HBM 的后段封装测试，关系到三星给英伟达 Rubin 的 HBM4 出货。前线工程师怠工是什么概念？意味着三星可能在最关键的 AI 内存交付窗口出现裂痕。5月27号工会投票，如果非内存部门4.3万人投了否决票，整个利润分享协议就可能全盘崩盘。叠加全球 DRAM 持续短缺要延续到2027到2030年，AI 内存的版图正在被一场&quot;内部薪酬不公&quot;扭曲。</p>
+<p>最后我想跟你聊一个很有意思的发现。LessWrong 翻译了2025年1月《解放军报》第七版的整版长文，标题叫《AGI 带来的战争思考》。作者是国防大学联合作战学院的荣明和胡晓峰，胡晓峰是陆军少将级别的首席科学家。这是西方第一次完整看到解放军体系内部，关于 AGI 战争意义的系统讨论。</p>
+<p>文章核心四个观点。第一，AGI 不只是赋能，它的颠覆性远超信息化和机械化。第二，AGI 不会让战争消失，反而因为 AI 进攻优势和先发制人最优，会打破攻防平衡，触发新军备竞赛。文章甚至引用了大模型在兵棋推演中&quot;突然发动核打击&quot;的研究结论。第三，AGI 不会是终极威慑，它快、果断，但缺乏共情，战略迂回空间被极致压缩。还引用了 Hinton 的话，&quot;从未见过低智能控制高智能的案例&quot;。第四，AGI 不会改变战争本质，但会改变战争形式。赫拉利的判断被引用，&quot;会讲故事的 AI 将改变人类历史走向&quot;，通过深伪和舆论操控，小国可能在开战之前就被结束。</p>
+<p>为什么这个值得关注？因为西方主流分析长期认为，中国官方并不把 AGI 当战略目标，而是把它当通用 AI 产业化。但这篇长文显示，至少在2025年初，解放军顶层学术机构已经把 AGI 当作具有变革性、潜在失控风险的战略技术来推理了。这跟 DeepSeek、智谱这些 AI 实验室的&quot;AGI 是终点&quot;宣言形成了耦合。中美 AGI 竞赛的战略想定，可能比 GPU 出口管制的辩论要深得多。</p>
+<p>今天还有一些值得快速过一遍的动态。SpaceX 的 Starship V3 完成首飞，33台甲烷发动机，124米高，比 V1、V2 都更稳定，一小时后按目标溅落印度洋。Micron 在弗吉尼亚的 1α DRAM 工厂今天投产，这是美国本土第一次量产 1α 节点，CHIPS 法案给了2.75亿美元资助。华为推出122TB 的 SSD，因为拿不到400层以上的 3D NAND，转而用 Die-on-Board 封装把 YMTC 232层晶圆密集贴板，搞出了 OceanDisk 1800。还有个 Reddit 用户 APFrisco，用六根二手 Intel Optane 内存条加一张 RTX 3060，居然在单 GPU 上跑通了 Kimi K2.5万亿参数模型，每秒大约4个 token。</p>
+<p>安全方面，npm 推出了 2FA 门禁，Packagist 有8个 PHP 包被植入 GitHub 托管的 Linux 恶意载荷，Laravel-Lang 包被入侵投放跨平台凭据窃取器，供应链攻击三连发。Valorant 用 Vanguard 反作弊封死了价值6000美元的 DMA 卡硬件作弊，官方还在推特上嘲讽&quot;恭喜你拥有了一块全新的6000刀镇纸&quot;。FBI 被曝正在花数百万美元采购全美车牌识别数据，要求近实时访问，讽刺的是同一周国会两党议员刚提案要限制车牌识别。还有 Oura 智能戒指被指存储心率、睡眠、月经周期和定位等敏感健康数据，但不是端到端加密，员工和黑客理论上都能解开，承诺八个月的政府数据请求透明度报告至今没影。</p>
+<p>未来几个月有几件事我们会持续盯着看。第一是 AI 漏洞披露的速度战，TTE 已经为负数，Linus 调整了披露策略，接下来会不会真的迎来&quot;每周重启服务器&quot;的节奏。第二是三星5月27号的工会投票，如果协议被否决，可能拖累全球 HBM4 给 Rubin 的供应窗口，直接传导到2026年下半年的 AI 算力交付。第三是 DeepSeek 价格战的二阶效应，如果 GPT-5、Claude、Gemini 都被迫跟降，前沿厂商靠 token 价格补贴算力支出的模式还能撑多久。这跟 Token 经济 KPI 现象同步演化，可能在六到八月引爆。</p>
+<p>如果你想通过阅读文字版更快地获取每日的 AI 快送信息，欢迎免费订阅我们的 mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见。</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
