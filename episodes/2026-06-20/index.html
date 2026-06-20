@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-06-20</title>
+  <meta name="description" content="Anthropic的Mythos与Fable 5模型遭白宫出口管制下架满一周，公司紧急封号同时挖角诺奖得主John Jumper补血；SpaceX以1.77万亿美元上市后马斯克成首位万亿富翁，但美国人发现退休金已被AI泡沫绑架；苹果M6芯片秋季登场，旧A12/A13设备却撞上无法修复的BootROM漏洞usbliter8。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-06-20/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-06-20">
+  <meta property="og:description" content="Anthropic的Mythos与Fable 5模型遭白宫出口管制下架满一周，公司紧急封号同时挖角诺奖得主John Jumper补血；SpaceX以1.77万亿美元上市后马斯克成首位万亿富翁，但美国人发现退休金已被AI泡沫绑架；苹果M6芯片秋季登场，旧A12/A13设备却撞上无法修复的BootROM漏洞usbliter8。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-06-20/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-06-20T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-06-20">
+  <meta name="twitter:description" content="Anthropic的Mythos与Fable 5模型遭白宫出口管制下架满一周，公司紧急封号同时挖角诺奖得主John Jumper补血；SpaceX以1.77万亿美元上市后马斯克成首位万亿富翁，但美国人发现退休金已被AI泡沫绑架；苹果M6芯片秋季登场，旧A12/A13设备却撞上无法修复的BootROM漏洞usbliter8。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-06-20",
+    "description": "Anthropic的Mythos与Fable 5模型遭白宫出口管制下架满一周，公司紧急封号同时挖角诺奖得主John Jumper补血；SpaceX以1.77万亿美元上市后马斯克成首位万亿富翁，但美国人发现退休金已被AI泡沫绑架；苹果M6芯片秋季登场，旧A12/A13设备却撞上无法修复的BootROM漏洞usbliter8。",
+    "datePublished": "2026-06-20T08:00:00+08:00",
+    "dateModified": "2026-06-20T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-06-20/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-20/yomoo-2026-06-20.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-06-20</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-20/yomoo-2026-06-20.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-20/yomoo-2026-06-20.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日简报 · 2026-06-19</h1>
+<h2>今日要览</h2>
+<p>Anthropic 的 Mythos 与 Fable 5 模型在白宫出口管制令下全面下架已满一周，Anthropic 一面紧急封号一面挖角诺奖得主补血。SpaceX 上市后马斯克晋升首位万亿富翁，但更多美国人发现自己的退休金已被 AI 泡沫绑架。苹果 M6 芯片秋季发布在即，可旧 A12/A13 设备却撞上无法修复的 BootROM 漏洞。</p>
+<hr>
+<h2>主要故事</h2>
+<h3>一、Mythos 封锁战满一周：管制走到现实尽头</h3>
+<p>距白宫上周五要求 Anthropic 限制 Fable 5 与 Mythos（一个被定位为&quot;网安末日机器&quot;的前沿模型）出口已经过去一周，两款模型对所有用户全面下线。前情提要（参见 2026-05-15 <em>Mythos挖洞</em>、2026-05-01 <em>AI网安门控</em>）：Mythos 自 4 月发布起就只面向约 150 家审核过的机构开放，理由是它能链式发现并利用零日漏洞。</p>
+<p>引爆这次禁令的是两件事——Anthropic 把 Mythos 接入一家被怀疑与中国有关联的韩国电信（外界普遍认为是 SK Telecom，对方否认），同时亚马逊 CEO Andy Jassy 据称亲自向政府反映 Amazon 内部研究员&quot;绕过了 Fable 5 的安全护栏&quot;。Anthropic 否认这是&quot;jailbreak&quot;，称只是一个已修补的局部问题，但商务部还是发文，公司在被通知后约 90 分钟内强行掐线。</p>
+<p>TechCrunch 把这次比作 1990 年代 PGP 加密的&quot;Crypto Wars&quot;重演——当年美国政府以军火出口名义起诉 PGP 作者 Phil Zimmermann，最终败诉，端到端加密反而走入 Signal、WhatsApp 数十亿用户手中。Wassenaar 协议（一项管制双用途软件出口的国际条约）后来想把间谍软件也圈进去，但以色列、意大利等国规则宽松，FinFisher、Intellexa 等厂商纷纷迁址、转产、出海，效果有限。文章给出的判断很直接：在软件领域，禁令很少真正困住能力扩散。</p>
+<p>更耐人寻味的是，Aikido Security 几乎同时推出 Code Audit：一款承认&quot;Mythos 类能力会通过越狱或开源外泄&quot;，因此抢先用 agentic 模型为防守方做静态代码审计的产品——它把自己定位在 SAST（静态分析）与人工渗透测试之间，单次审计中位数发现 25 个漏洞，成本只有人工渗透的 1/10。攻防双方都在加速 AI 化，可见出口管制堵不住的口子。</p>
+<p>与封锁同步，Anthropic 宣布诺贝尔化学奖得主、AlphaFold 主创 John Jumper 加盟，被视为公司在管制与 Mythos 阴影下的形象与人才反击。</p>
+<p><strong>为什么重要</strong>：这是 AI 模型层第一次正式落入国家安全出口管制框架，结局会决定其他实验室未来要不要在每次发布前先获政府许可——直接影响产品迭代速度与全球商业版图。</p>
+<h3>二、SpaceX 万亿 IPO 之后：退休金被绑架的不安</h3>
+<p>延续 2026-05-17、2026-05-27 的 SpaceX IPO 主线——上周 SpaceX 以 1.77 万亿美元估值挂牌，马斯克成为人类历史首位万亿富翁。但《卫报》收到的 150 多封读者反馈呈现出截然不同的故事：普通美国人正在意识到，自己的 401(k)（美国主流退休账户）几乎被动绑定在追踪标普 500 的指数基金里，而马斯克此前推动规则修改，让 SpaceX 股票比惯例更早进入指数基金。</p>
+<p>62 岁加州工程师 Tim 的概括很有代表性：&quot;我们都被迫进了一座巨大的赌场——不投资就追不上别人，但实际上没有真正的分散选择。&quot; 33 岁密歇根工程师 Stephen 直言 SpaceX 估值&quot;与公司真实价值毫无关联&quot;，57 岁建筑师 Munsie 已开始把资金从指数基金分散出去。还有人选择完全不入市，58 岁的 Mia 称这是&quot;富人的金钱游戏&quot;。</p>
+<p><strong>为什么重要</strong>：这把 AI 与 SpaceX 估值泡沫问题，从&quot;科技股波动&quot;扩展到了&quot;美国社会保障层级的系统性风险&quot;——一旦泡沫破裂，承压的将是数千万普通家庭的养老金。结合本周 Ed Zitron 披露的 OpenAI 2025 财报（花 340 亿美元换 130.7 亿美元收入，净亏 210 亿），AI 公司的烧钱速度与公众金融绑定之间的张力正在变得不可忽视。</p>
+<h3>三、苹果一周：M6 秋季登场，旧机却撞上无法补丁的根漏洞</h3>
+<p>9to5Mac 援引 Mark Gurman 等渠道，确认苹果 M6 芯片将在今秋登场，首发产品是带触屏、OLED、Dynamic Island 的全新 MacBook Ultra（接替原计划的高端 MacBook Pro），M6 Pro/Max 同步亮相，iMac、Mac mini、Mac Studio 也将一并升级。</p>
+<p>同一周，Paradigm Shift 团队公开了名为 <strong>usbliter8</strong> 的 BootROM 漏洞，影响 A12、A13、S4、S5 芯片设备（覆盖 iPhone XR/XS、初代 Apple Watch S4/S5，可能扩展至 2018/2020 iPad Pro）。攻击需要物理接入 USB 并进入 DFU 模式，可在 iOS 加载前执行代码、绕过签名校验、启动魔改系统。Secure Enclave（专门保管密码与加密数据的安全协处理器）未被攻破，但研究者警告&quot;漏洞拓宽了攻击 SEP 的入口&quot;。由于在 SecureROM 层，且已与苹果协调披露，<strong>该漏洞不可修复</strong>，唯一缓解办法是换设备——又一次延续了 2026-05-16 <em>M5被破</em> 的硬件防线松动趋势。</p>
+<hr>
+<h2>速览</h2>
+<ul>
+<li><strong>挪威 6–13 岁全面禁用生成式 AI</strong>：8 月新学年起执行，14–16 岁须教师监督，理由是阅读、写作、数学基础不能跳步；延续 2024 年校园禁手机思路（来源：Reuters/Engadget）。</li>
+<li><strong>亚马逊弃拍 Sam Altman 传记片</strong>：Luca Guadagnino 执导、Garfield 主演的 <em>Artificial</em> 近完工被砍，外界普遍认为与 Amazon-OpenAI 数十亿美元合作冲突有关，Bezos 与 Altman 私交甚笃（来源：Slashdot）。</li>
+<li><strong>Hyundai 全资拿下 Boston Dynamics</strong>：以 3.25 亿美元收购软银剩余 9.65% 股权；Atlas 人形机器人 2028 年进入佐治亚州电动车工厂量产线（来源：Slashdot）。</li>
+<li><strong>Fox 250 亿美元收购 Roku</strong>：押注广告流媒体 + 联网电视入口，对抗 Netflix/Amazon。Daring Fireball 的 John Gruber 不看好——Roku 市占多来自&quot;不在乎的用户&quot;，护城河弱。</li>
+<li><strong>NASA 选 Eric Schmidt 旗下 Relativity Space 执行 2028 火星任务</strong>：火星大气观测载荷 Aeolus，与 SpaceX 形成对照赛局（来源：The Verge）。</li>
+<li><strong>日本 GO 出行 IPO 募 5.53 亿美元</strong>：日本 2026 最大 IPO，资金将投向 Robotaxi 与并购，背景是日本出租司机数量过去几年缩水 20%；与 Waymo、日本交通合作（来源：TechCrunch）。</li>
+<li><strong>法国 Kyber 融资 500 万美元</strong>：VLC 创始人 Jean-Baptiste Kempf 创办，做面向机器人/无人机的低延迟远程控制 SDK，对标 Citrix 的 IT 远程访问市场（来源：TechCrunch）。</li>
+<li><strong>AMD 7 月恢复 Ryzen 9000 的 TSME 内存加密</strong>：此前 AGESA 1.2.7.0 悄悄阉割该功能引发反弹；TSME 防御&quot;冷启动攻击&quot;，原本与 PRO 系列差异化策略（来源：Tom&#39;s Hardware）。</li>
+<li><strong>Nothing 取消今年 CMF 新机</strong>：RAM 价格翻倍让中端机做不出&quot;实质升级&quot;——延续 2026-05-16 <em>内存短缺</em> 主线，对消费电子的传导正在显化。</li>
+<li><strong>Trump T1 手机 PR 团队跑路</strong>：iFixit 拆解证实只是镀金改装版两年前的 HTC U24 Pro，&quot;美国制造&quot;宣传破产，Poplar Group 已停止代理（来源：The Verge/Daring Fireball）。</li>
+<li><strong>欧盟拟把 AWS/Azure 列为 DSA &quot;看门人&quot;</strong>：年底前定案；意味强制互操作与数据可移植，企业切换云厂商更容易（来源：Heise/Slashdot）。</li>
+<li><strong>Python 3.14 默认安装 JIT 编译器</strong>：基于 copy-and-patch 技术的 Tier 2 即时编译（运行时把热点字节码翻译成本地机器码），实验性、需 <code>PYTHON_JIT=1</code> 开启，是 GIL 移除之外的第二大性能改造（来源：TDS）。</li>
+<li><strong>SMPTE 标准库免费开放</strong>：电影电视工程师协会的全部技术规范向全球开放——对开源音视频项目是利好（来源：Lobsters）。</li>
+</ul>
+<hr>
+<h2>值得持续关注</h2>
+<ul>
+<li><strong>Mythos 解禁与否</strong>：Anthropic 与白宫的拉锯已进入第二周。若解除，等于默认 AI 出口管制此路不通；若延续，OpenAI、Google、xAI 都将面临发布前政府审批的新常态。</li>
+<li><strong>AI 估值与退休金的捆绑风险</strong>：OpenAI 财报曝光的烧钱速度，叠加 SpaceX 入指数基金，形成&quot;AI 泡沫国民化&quot;——任何一次估值修正都会经由 401(k) 直接传到大众生活。结合 2026-04-30 <em>AI资本分化</em> 主线，下一轮财报季是观察窗。</li>
+<li><strong>AI 主导的安全攻防</strong>：Aikido Code Audit 把 agentic 模型搬到企业静态审计，攻防双方对称进化；如果 Mythos 类能力按 TechCrunch 预言&quot;通过开源或越狱&quot;普及，企业静态防线的 AI 化将比预期更快。</li>
+<li><strong>苹果硬件信任根的松动</strong>：从 M5 MIE 被破到 A12/A13 BootROM 漏洞，过去一年苹果硬件级安全防线连续失守。M6 秋季首发能否带回 Apple Silicon 的安全叙事，是值得跟踪的关键节点。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年6月19日的 YOMOO 每日AI快送。</p>
+<p>我跟你说，过去一周AI圈最炸的事，就是Anthropic的两款最强模型，Mythos和Fable 5，被白宫一纸出口管制令直接下架。到今天，整整封了一周。你想想，一家估值千亿的AI公司，在收到商务部通知之后，大概九十分钟内就把自己的旗舰模型从全球用户面前摘下来了，这在AI历史上是第一次。</p>
+<p>那为什么禁？Mythos这个模型，从四月发布开始，就只对大约一百五十家审核过的机构开放，因为它能链式地发现并利用零日漏洞，说白了，就是一台网络安全的末日机器。这次引爆禁令的有两件事，第一，Anthropic把Mythos接入了一家被怀疑跟中国有关联的韩国电信，外界普遍猜是SK电讯，对方否认。第二，亚马逊CEO安迪·贾西据说亲自找政府反映，说亚马逊内部研究员绕过了Fable 5的安全护栏。Anthropic咬死说这不是越狱，只是一个已经修补的局部问题，但商务部不管，文一发，模型就下线。</p>
+<p>TechCrunch直接把这次比作九十年代的&quot;加密战争&quot;重演。你看，当年美国政府以军火出口的名义起诉PGP加密算法的作者齐默尔曼，结果呢？最后政府输了，端到端加密反而跑进了Signal、WhatsApp，进入了几十亿人的口袋。后来的《瓦森纳协议》想把间谍软件也圈进出口管制，结果以色列、意大利这些国家规则宽松，FinFisher、Intellexa这些厂商纷纷搬家、改名、出海，禁令几乎拦不住。所以说在软件这个领域，封锁这条路，历史上就没真正走通过。</p>
+<p>更有意思的是，几乎在同一时间，一家叫Aikido Security的公司推出了一款叫Code Audit的产品。他们直接承认，Mythos这类能力迟早会通过越狱或者开源外泄出去，所以他们先下手为强，用agentic模型给防守方做静态代码审计。一次审计中位数能发现二十五个漏洞，成本只有人工渗透测试的十分之一。你看，攻方在加速，守方也在加速，整个网络安全行业正在被AI重塑。出口管制堵不住的洞，市场已经在自己找路。</p>
+<p>跟封锁同步，Anthropic还宣布了一件大事：诺贝尔化学奖得主、AlphaFold的主创John Jumper正式加盟。这被外界普遍解读为，Anthropic在管制和Mythos阴影下，一次形象与人才的反击战。</p>
+<p>这件事为什么重要？这是AI模型层第一次正式落入国家安全出口管制的框架里。结局会决定其他实验室未来要不要在每次发布前，先去政府那里走一遍审批。直接影响的，是产品迭代速度，是全球商业版图。</p>
+<p>我们再来看另一个让普通人心里发凉的故事。上周SpaceX以一万七千七百亿美元的估值正式上市，马斯克成为了人类历史上第一位万亿富翁。但是你看，《卫报》收到的一百五十多封读者来信，讲的却是完全不一样的故事。</p>
+<p>加州一位六十二岁的工程师Tim这么说，&quot;我们都被迫进了一座巨大的赌场——不投资就追不上别人，但实际上没有真正的分散选择。&quot;这话扎心了。为什么？因为绝大多数美国人的401(k)养老金账户，几乎被动绑定在追踪标普500的指数基金里。而马斯克之前推动规则修改，让SpaceX股票比惯例更早进入了这些指数基金。换句话说，你愿不愿意都好，你的退休金已经跟SpaceX绑在一起了。</p>
+<p>更狠的是这周，知名科技记者Ed Zitron披露了OpenAI 2025年的财报——花了三百四十亿美元，换来一百三十亿美元收入，净亏二百一十亿。你想想这个烧钱速度，再叠加SpaceX进入指数基金。AI泡沫已经不再只是科技股的波动问题，它正在国民化，绑定到几千万普通家庭的养老金上。一旦泡沫破裂，谁来接盘？答案就是普通人。</p>
+<p>接下来咱们说说苹果这一周。9to5Mac援引彭博社记者Mark Gurman的消息确认，苹果M6芯片将在今年秋季登场，首发产品是一台全新的MacBook Ultra，带触屏、OLED屏幕、还有灵动岛。M6 Pro和Max同步亮相，iMac、Mac mini、Mac Studio都会一起升级。</p>
+<p>但就在同一周，一个叫Paradigm Shift的安全团队公开了一个名为usbliter8的BootROM漏洞。这个漏洞影响A12、A13、S4、S5芯片的所有设备，覆盖iPhone XR、XS、初代Apple Watch S4和S5，可能还会扩展到2018和2020年的iPad Pro。攻击需要物理接入USB，进入DFU模式，可以在iOS加载之前就执行代码、绕过签名校验、启动魔改系统。最关键的是这个漏洞在SecureROM层，<strong>不可修复</strong>。苹果唯一能给的缓解办法就是——换设备。结合之前M5 MIE安全引擎被破，过去一年苹果硬件级的安全防线，可以说是连续失守。</p>
+<p>好了，咱们用速览的方式过一下今天剩下的重要消息。</p>
+<p>挪威决定从今年八月新学年开始，全面禁止六到十三岁的孩子在学校使用生成式AI，十四到十六岁须教师监督。理由很直接：阅读、写作、数学的基础不能跳步。这是2024年校园禁手机思路的延续。</p>
+<p>亚马逊砍掉了已经接近完工的Sam Altman传记片《Artificial》，Luca Guadagnino执导，Garfield主演。外界普遍认为这跟Amazon-OpenAI的数十亿美元合作冲突有关，毕竟贝索斯跟Altman私交甚笃。</p>
+<p>现代汽车以三亿两千五百万美元，全资收购了波士顿动力公司剩下的百分之九点六五股权，Atlas人形机器人将在2028年进入佐治亚州电动车工厂量产线。</p>
+<p>福克斯以二百五十亿美元收购Roku，押注广告流媒体加联网电视入口，对抗Netflix和Amazon。不过Daring Fireball的John Gruber不看好，他说Roku的市占多来自不在乎的用户，护城河弱。</p>
+<p>NASA选了Eric Schmidt旗下的Relativity Space执行2028年的火星任务，载荷叫Aeolus，跟SpaceX形成了一种对照赛局。</p>
+<p>日本叫车平台GO上市，募了五亿五千三百万美元，是日本2026年最大的IPO。资金将投向Robotaxi和并购。背景是日本出租车司机数量过去几年缩水了百分之二十。</p>
+<p>法国一家叫Kyber的公司融资五百万美元，由VLC播放器的创始人Jean-Baptiste Kempf创办，做面向机器人和无人机的低延迟远程控制SDK。</p>
+<p>AMD宣布七月恢复Ryzen 9000系列的TSME内存加密，此前在AGESA更新里悄悄阉割了这个功能引发了用户反弹。</p>
+<p>Nothing宣布取消今年的CMF新机，因为RAM价格翻倍，中端机做不出实质升级。延续我们之前讲的内存短缺主线，已经开始向消费电子真实传导了。</p>
+<p>特朗普T1手机的公关团队跑路了。iFixit拆解证实，这就是镀金改装版的两年前HTC U24 Pro，&quot;美国制造&quot;的宣传彻底破产。</p>
+<p>欧盟拟把AWS和Azure列为《数字服务法》下的&quot;看门人&quot;，年底前定案，这意味着强制互操作和数据可移植，企业切换云厂商会更容易。</p>
+<p>Python 3.14默认安装JIT编译器，基于copy-and-patch技术，运行时把热点字节码翻译成本地机器码，这是除了GIL移除之外，Python的第二大性能改造。</p>
+<p>最后，电影电视工程师协会SMPTE的全部技术规范，正式向全球开放免费访问，这对开源音视频项目是个大利好。</p>
+<p>那今天有几条线，咱们值得持续盯着。Mythos会不会解禁？Anthropic跟白宫的拉锯已经进入第二周。如果解除，相当于承认AI出口管制此路不通。如果延续，OpenAI、Google、xAI都将面临发布前要走政府审批的新常态。AI估值与退休金的捆绑风险，OpenAI的烧钱速度叠加SpaceX入指数基金，AI泡沫的国民化已经形成，下一轮财报季就是观察窗。还有就是苹果硬件信任根的松动，从M5被破到A12、A13的BootROM漏洞，M6秋季首发能不能把Apple Silicon的安全叙事拉回来，是关键节点。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
