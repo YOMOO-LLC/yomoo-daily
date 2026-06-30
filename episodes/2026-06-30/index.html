@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1a1410" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fffbf5" media="(prefers-color-scheme: light)">
+  <title>YOMOO 每日AI快送 — 2026-06-30</title>
+  <meta name="description" content="塔塔电子遭黑客攻击导致 iPhone 18 Pro 跌落测试视频、Cherry Red 配色与 A20 Pro 封装方案大规模外流，苹果罕见全网封禁泄露内容；英国 CMA 提议强制开放 App Store 第三方支付与 NFC 芯片，预先封堵苹果&quot;恶意合规&quot;路径；AirDrop 曝出三个近场漏洞，无需配对即可瘫痪苹果生态服务。">
+  <link rel="canonical" href="https://daily.yomoo.net/episodes/2026-06-30/index.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="YOMOO 每日AI快送 — 2026-06-30">
+  <meta property="og:description" content="塔塔电子遭黑客攻击导致 iPhone 18 Pro 跌落测试视频、Cherry Red 配色与 A20 Pro 封装方案大规模外流，苹果罕见全网封禁泄露内容；英国 CMA 提议强制开放 App Store 第三方支付与 NFC 芯片，预先封堵苹果&quot;恶意合规&quot;路径；AirDrop 曝出三个近场漏洞，无需配对即可瘫痪苹果生态服务。">
+  <meta property="og:url" content="https://daily.yomoo.net/episodes/2026-06-30/index.html">
+  <meta property="og:site_name" content="YOMOO 每日AI快送">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-06-30T08:00:00+08:00">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="科技新闻">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOMOO 每日AI快送 — 2026-06-30">
+  <meta name="twitter:description" content="塔塔电子遭黑客攻击导致 iPhone 18 Pro 跌落测试视频、Cherry Red 配色与 A20 Pro 封装方案大规模外流，苹果罕见全网封禁泄露内容；英国 CMA 提议强制开放 App Store 第三方支付与 NFC 芯片，预先封堵苹果&quot;恶意合规&quot;路径；AirDrop 曝出三个近场漏洞，无需配对即可瘫痪苹果生态服务。">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "YOMOO 每日AI快送 — 2026-06-30",
+    "description": "塔塔电子遭黑客攻击导致 iPhone 18 Pro 跌落测试视频、Cherry Red 配色与 A20 Pro 封装方案大规模外流，苹果罕见全网封禁泄露内容；英国 CMA 提议强制开放 App Store 第三方支付与 NFC 芯片，预先封堵苹果\"恶意合规\"路径；AirDrop 曝出三个近场漏洞，无需配对即可瘫痪苹果生态服务。",
+    "datePublished": "2026-06-30T08:00:00+08:00",
+    "dateModified": "2026-06-30T08:00:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "YOMOO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "YOMOO",
+      "url": "https://daily.yomoo.net"
+    },
+    "mainEntityOfPage": "https://daily.yomoo.net/episodes/2026-06-30/index.html",
+    "audio": {
+      "@type": "AudioObject",
+      "contentUrl": "https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-30/yomoo-2026-06-30.mp3",
+      "encodingFormat": "audio/mpeg"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --y-amber: #E8722A;
+      --y-amber-soft: #F4945E;
+      --y-amber-deep: #C4561A;
+      --y-amber-glow: rgba(232,114,42,0.12);
+      --y-amber-border: rgba(232,114,42,0.25);
+      --y-gold: #D4A053;
+      --bg: #fffbf5;
+      --bg-card: #ffffff;
+      --bg-elevated: #fff8ef;
+      --bg-subtle: #f5efe6;
+      --text-primary: #1a1410;
+      --text-body: #3d3529;
+      --text-secondary: #8a7e6e;
+      --text-muted: #b5a898;
+      --border: rgba(26,20,16,0.08);
+      --border-strong: rgba(26,20,16,0.14);
+      --shadow-sm: 0 1px 3px rgba(26,20,16,0.04);
+      --shadow-md: 0 4px 16px rgba(26,20,16,0.06);
+      --shadow-lg: 0 8px 32px rgba(26,20,16,0.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --serif: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --y-amber: #F4945E;
+        --y-amber-soft: #F9B88A;
+        --y-amber-deep: #E8722A;
+        --y-amber-glow: rgba(244,148,94,0.1);
+        --y-amber-border: rgba(244,148,94,0.2);
+        --y-gold: #E8BD7A;
+        --bg: #1a1410;
+        --bg-card: #231e18;
+        --bg-elevated: #2a241d;
+        --bg-subtle: #1f1a14;
+        --text-primary: #f5efe6;
+        --text-body: #d4cbbf;
+        --text-secondary: #8a7e6e;
+        --text-muted: #5c5347;
+        --border: rgba(245,239,230,0.06);
+        --border-strong: rgba(245,239,230,0.12);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.8;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: relative;
+      padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.25rem 1.5rem;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--y-amber-deep), var(--y-amber), var(--y-gold));
+    }
+
+    .header-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .header-logo {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--y-amber), var(--y-gold));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(232,114,42,0.3);
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .header-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== TABS ===== */
+    .tabs-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tabs-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1.25rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.85rem 0;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn svg { opacity: 0.5; transition: opacity 0.3s ease; }
+    .tab-btn.active svg { opacity: 1; }
+
+    .tab-btn.active {
+      color: var(--y-amber);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--y-amber);
+      border-radius: 1px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tab-btn.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* ===== MAIN ===== */
+    .content-area {
+      flex: 1;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== AUDIO PLAYER ===== */
+    .audio-player {
+      max-width: 720px;
+      width: 100%;
+      margin: 1.25rem auto;
+      padding: 1rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--y-amber-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.04);
+      box-sizing: border-box;
+    }
+
+    .audio-player-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+    }
+
+    .audio-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--y-amber);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .audio-download:hover {
+      background: var(--y-amber-glow);
+    }
+
+    /* ===== REPORT CONTENT ===== */
+    .report-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .report-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin: 2rem 0 1rem;
+    }
+
+    .report-content h1:first-child {
+      margin-top: 0;
+    }
+
+    .report-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .report-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .report-content p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-body);
+    }
+
+    .report-content ul, .report-content ol {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .report-content li {
+      margin-bottom: 0.4rem;
+      line-height: 1.75;
+    }
+
+    .report-content li::marker {
+      color: var(--y-amber);
+    }
+
+    .report-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .report-content a {
+      color: var(--y-amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--y-amber-border);
+      transition: border-color 0.2s ease;
+    }
+
+    .report-content a:hover {
+      border-color: var(--y-amber);
+    }
+
+    .report-content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-left: 3px solid var(--y-amber);
+      background: var(--y-amber-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-style: italic;
+    }
+
+    .report-content blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-content hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 2rem 0;
+    }
+
+    .report-content code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      padding: 0.15em 0.45em;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      color: var(--y-amber-deep);
+    }
+
+    .report-content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .report-content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-body);
+    }
+
+    .report-content img {
+      max-width: 100%;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ===== PODCAST TAB ===== */
+    .podcast-content {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .podcast-content p {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+      color: var(--text-body);
+      text-indent: 2em;
+    }
+
+    .podcast-content p:first-child::first-letter {
+      font-family: var(--serif);
+      font-size: 3.2em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--y-amber);
+    }
+
+    .podcast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--y-amber-glow);
+      border: 1px solid var(--y-amber-border);
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--y-amber);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .podcast-badge svg { flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-brand a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-powered {
+      margin-top: 0.35rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .site-header { padding-top: 3rem; padding-bottom: 2rem; }
+      .content-area { padding: 0 2rem; }
+      .tabs-inner { padding: 0 2rem; }
+      .tab-btn { font-size: 0.88rem; padding: 1rem 0; }
+      .report-content { padding: 2rem 0 4rem; }
+      .podcast-content { padding: 2rem 0 4rem; }
+    }
+
+    @media (max-width: 374px) {
+      html { font-size: 14px; }
+    }
+
+    /* ===== SCROLL BAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="8864a5e3-4f85-4cb6-9565-d7a9538027df"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">Y</div>
+      <span class="header-name">YOMOO</span>
+    </div>
+    <h1 class="header-title">每日AI快送</h1>
+    <div class="header-date">2026-06-30</div>
+  </header>
+
+  
+  <nav class="tabs-container">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="report" onclick="switchTab('report')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        每日简报
+      </button>
+      <button class="tab-btn" data-tab="podcast" onclick="switchTab('podcast')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        播客文案
+      </button>
+    </div>
+  </nav>
+
+  <div class="audio-player">
+        <div class="audio-player-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>收听音频版</span>
+        </div>
+        <audio controls preload="metadata">
+          <source src="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-30/yomoo-2026-06-30.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-06-30/yomoo-2026-06-30.mp3" class="audio-download" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载 MP3
+        </a>
+      </div>
+
+  <main class="content-area">
+    <div id="panel-report" class="tab-panel active">
+      <div class="report-content">
+        <h1>每日科技简报 · 2026-06-30</h1>
+<h2>执行摘要</h2>
+<p>今日三大焦点：塔塔电子(Apple 印度组装伙伴)遭 World Leaks 攻击，<strong>iPhone 18 Pro 跌落测试视频、Cherry Red 配色、A20 Pro 封装方案</strong>大规模外流，苹果罕见出手压制传播链；<strong>AirDrop 被曝三个可远程瘫痪服务的漏洞</strong>，Android Quick Share 存同类问题；<strong>英国 CMA 正式封堵苹果&quot;恶意合规&quot;路径</strong>，要求 App Store 第三方支付费率必须低于现有佣金。配套故事：Meta 用自研 CXL 芯片让退役 DDR4 内存&quot;再就业&quot;，Sony 又一次删除用户已购数字内容，欧洲数字身份钱包反讽地强化了 Google 垄断。</p>
+<hr>
+<h2>Main Stories</h2>
+<h3>1. iPhone 18 Pro 史上最大供应链泄露，苹果罕见全网封禁</h3>
+<p>World Leaks 组织从印度 Tata Electronics(苹果重要组装厂)窃取<strong>逾 20 万份文件、630GB 数据</strong>，含 Apple 水印的内部蓝图与跌落测试视频。新流出图像基本敲定了 iPhone 18 Pro 三大物理特征：</p>
+<ul>
+<li><strong>Cherry Red(樱桃红)</strong> 与黑色为最终配色，金属背板采用更统一的反光质感。</li>
+<li><strong>Dynamic Island 显著缩小</strong>——通过将红外泛光器(Face ID 用于人脸识别的红外发射元件)挪到屏幕下方实现。</li>
+<li><strong>WMCM 封装(Wafer-level Multi-Chip Module，晶圆级多芯片堆叠)</strong> 把 DRAM 内存挪到 A20 Pro SoC 紧邻位置，配合更大的均热板，专攻散热。</li>
+</ul>
+<p>苹果反应在公关史上罕见激烈。X 平台上 @EvLeaks 账号被封停，相关视频以&quot;违反平台规则&quot;为由删除；9to5Mac 已撤下报道。Ice Universe 在微博表示：&quot;苹果已封锁 Twitter 上的泄露数据。&quot; 前 EvLeaks 运营者 Evan Blass 撇清关系时点评：&quot;看起来苹果做到了三星从未做到的事。&quot;</p>
+<p><strong>为何重要</strong>：呼应我们 5 月 4 日报道的「折叠 iPhone Ultra 样机及 iPhone 18 Pro 特性曝光」主线，但量级远超此前。Tata 承接更多 iPhone 组装份额后，其安全管控显然没跟上中国老牌代工厂的水平，可能影响苹果未来对印度供应链的份额分配。</p>
+<p>来源：<a href="https://www.macrumors.com/2026/06/30/apple-crackdown-iphone-18-pro-leak-video-gone/">MacRumors</a> | <a href="https://www.androidauthority.com/iphone-18-pro-color-dynamic-island-leak-3682857/">Android Authority</a></p>
+<h3>2. 英国 CMA 封堵&quot;恶意合规&quot;路径，三大法域围剿 App Store</h3>
+<p>英国竞争与市场管理局(CMA)提议强制 Apple 允许开发者将用户引导至 App Store 之外的第三方支付方案。本次提案的关键在于<strong>特意防范苹果在欧美使用过的&quot;恶意合规&quot;手段</strong>：</p>
+<p>回顾博弈史——在欧盟，Apple 用&quot;令人厌烦和恐吓&quot;的弹窗劝退第三方 App Store 用户；在美国 Epic 诉讼中，Apple 坚持即使站外购买也照抽佣金，<strong>变相抵消开发者所有节省</strong>。</p>
+<p>CMA 此次明确：Apple 和 Google 的 steering(分流)费率必须<strong>公平合理、低于现有应用商店佣金</strong>，且节省须传导给消费者或用于创新投入。CMA 数字市场执行董事 Will Hayter 表态：&quot;任何费用都必须通过严格的、基于证据的框架来证明合理性，既考虑成本也考虑价值。&quot;</p>
+<p>CMA 同步提议强制 Apple 开放 NFC(近场通信)芯片给第三方钱包应用，让英国金融科技公司能搭建 Apple Pay 替代品。Apple 照例反对：&quot;当用户被引导离开苹果可信支付基础设施，他们就失去了赖以依赖的保护。&quot;</p>
+<p><strong>为何重要</strong>：欧盟 DMA、美国 Epic 案、英国 CMA 三线同时收紧，且英国主动学习了苹果的反制套路，预先封死后路。Apple 的&quot;挤牙膏式合规&quot;策略空间正在快速消失。</p>
+<p>来源：<a href="https://9to5mac.com/2026/06/30/apple-may-have-to-allow-3rd-party-app-payments-and-apple-pay-rivals-in-uk/">9to5Mac</a> | <a href="https://www.macrumors.com/2026/06/30/uk-apple-loosen-app-store-payment-rules/">MacRumors</a></p>
+<h3>3. AirDrop 三漏洞：近场即可瘫痪苹果生态</h3>
+<p>安全研究员 Arash Ebrahim 团队披露三个 AirDrop 漏洞，同时影响 iPhone 与 Mac。攻击门槛极低：一台带 Wi-Fi 的笔记本电脑，10–30 米内，<strong>无需配对、无需共享网络</strong>，就能让目标设备的 AirDrop、AirPlay、Handoff、Universal Clipboard(通用剪贴板)、Continuity Camera(随航相机)<strong>全部崩溃</strong>。</p>
+<p>最简单的漏洞利用 Swift 的 <code>fatalError</code> 调用：发送一个未识别路径的请求，整个守护进程立即中止。每隔几秒循环一次，就能持续瘫痪服务。好消息——攻击者无法窃取数据；坏消息——设置&quot;所有人可接收&quot;的 Apple 设备全部中招。</p>
+<p>Ebrahim 点出根因，且明确这不是苹果独有的工程缺陷：&quot;邻近协议(Proximity Protocol)需要特权守护进程在用户授权前处理攻击者控制的复杂输入，这造就了庞大的预认证攻击面。&quot; Android 的 Quick Share 存在相同类型漏洞，他认为&quot;这反映了邻近协议的共性工程挑战&quot;。</p>
+<p>苹果已修复其中一个并分配 CVE 编号，另两个仍在协调披露。</p>
+<p>来源：<a href="https://9to5mac.com/2026/06/30/three-airdrop-vulnerabilities-discovered-with-apple-working-on-a-full-fix/">9to5Mac</a></p>
+<h3>4. Meta Vistara 芯片：让退役 DDR4 内存&quot;再就业&quot;</h3>
+<p>延续 5 月 8 日「内存短缺蔓延至游戏机与互联网档案」主线。Meta 自研 <strong>Vistara ASIC</strong>，把退役服务器上的 DDR4 内存装回最新只支持 DDR5 的服务器。</p>
+<p>技术细节：Vistara 是首代定制 <strong>CXL 2.0(Compute Express Link，新一代内存扩展互联协议)</strong> Type-3 扩展器，PCIe 5.0 x16 接口，每颗支持两路 DDR4 通道、最大 256GB。MemServer 平台为每颗 AMD Turin 158 核 CPU 配两颗 Vistara，组合出 <strong>768GB DDR5-6400 本地内存 + 256GB DDR4-2400 CXL 扩展共计 1TB</strong>。Linux 软件栈把 CXL 内存暴露为独立 NUMA 节点，<strong>冷数据自动迁移到慢的 DDR4 层(76GB/s)</strong>，热数据留在快的 DDR5 层(614GB/s)。Vistara 内置 3 颗 RISC-V 核心管理安全启动与固件，空闲往返延迟压到约 50ns。</p>
+<p>韩国 Panmnesia 同期推出通用 CXL 交换芯片，支持单系统 64 个计算节点共享内存池。<strong>Vistara 自用、Panmnesia 通用</strong>两条路径同时打开，CXL 正从概念转为超大规模数据中心降本的关键工具。</p>
+<p>来源：<a href="https://www.tomshardware.com/pc-components/dram/meta-fights-soaring-hardware-costs-by-reusing-old-ddr4-server-memory-in-new-ddr5-only-servers-custom-cxl-2-0-chip-marries-legacy-ddr4-2400-with-cutting-edge-ddr5-6400">Tom&#39;s Hardware</a></p>
+<h3>5. 台湾扩大 Nvidia 走私案，Supermicro 被搜查但难定走私罪</h3>
+<p>延续 5 月 27 日「台湾首次逮捕英伟达芯片走私者」主线。基隆地检署搜查 Supermicro 台湾办公室、经销商 Albatron Technology、数据中心运营商 Chief Telecom 及 6 名个人住所。Supermicro 美股跌 8%，Albatron 台股跌 10%。</p>
+<p>讽刺的是，<strong>台湾法律目前不把未经授权出口 AI 芯片到中国列为犯罪</strong>，检方只能以&quot;伪造运输文件&quot;等罪名起诉。上月查获约 50 台流向中港澳的 Supermicro 服务器，最终也只以文件造假罪起诉。同期美国正起诉 Supermicro 联合创始人 Wally Liaw，涉案约 25 亿美元英伟达服务器，11 月 2 日开庭，最高可判 20 年。</p>
+<p><strong>&quot;全球大部分先进 AI 芯片在台积电制造，但台湾本身阻止芯片流出的法律工具最弱。&quot;</strong> 台北正在与美国贸易谈判中讨论新立法，将 AI 芯片走私本身入罪。</p>
+<p>来源：<a href="https://www.tomshardware.com/tech-industry/taiwan-raids-super-micro-and-two-supply-chain-partners-in-widening-nvidia-smuggling-probe">Tom&#39;s Hardware</a></p>
+<h3>6. 欧洲数字身份钱包：意外强化 Google 垄断</h3>
+<p>荷兰、意大利等国实施的<strong>欧盟数字身份钱包(EUDI Wallet)</strong> 在底层用了 <strong>Google Play Integrity API</strong>——一个验证设备是否运行 Google 认证 Android 的远程验证服务(Remote Attestation)。</p>
+<p>这意味着：用 de-Googled 操作系统(如 GrapheneOS、e/OS，去除了 Google 服务的开源 Android 分支)的用户<strong>无法访问政府数字身份服务</strong>。欧盟一边用 DMA 对抗 Google 垄断，一边在公共基础设施里强制 Google 的生态控制。</p>
+<p>瑞士的做法更清醒：基于数据保护与选择自由考量，改用 Android 的 Hardware Attestation(纯硬件验证，不绑 Google 生态)。欧盟参考框架虽未强制要求 Play Integrity，却推荐了它，造成成员国实现不一致。</p>
+<p><strong>为何重要</strong>：呼应 5 月 10 日「欧盟拟限制美国云处理政府敏感数据」。欧洲数字主权说易行难，<strong>底层依赖的&quot;沉默成本&quot;远比表面看上去深</strong>。</p>
+<p>来源：<a href="https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple/">Waag</a></p>
+<h3>7. Sony 再次删除已购数字内容</h3>
+<p>Sony 通知英国 PlayStation 用户，9 月 1 日起从用户库中<strong>删除 StudioCanal 的 551 部影片</strong>，包括《终结者 2》《潘神的迷宫》《帕丁顿》系列，原因是&quot;内容授权协议&quot;。这是 Sony 继 2022 年从德奥用户库删除 314 部 StudioCanal 影片、删除 Funimation 数字库之后又一次&quot;数字所有权&quot;打脸事件。</p>
+<p>重要提醒：<strong>所谓数字购买实质是有限期授权</strong>。Sony 已在 2021 年停止销售电影租赁与购买，本次再次引发关于&quot;是否应该退款&quot;、&quot;数字商店应否禁止使用&#39;购买&#39;一词&quot;的讨论。</p>
+<p>来源：<a href="https://arstechnica.com/gadgets/2026/06/sony-erases-digital-content-from-libraries-were-reminded-we-dont-own-what-we-buy/">Ars Technica</a></p>
+<hr>
+<h2>Quick Bites</h2>
+<ul>
+<li><strong>三星 Galaxy S27 放弃 BOE 屏</strong>：基础版&quot;首用中国 BOE 屏&quot;传闻被推翻，继续用三星自家屏。基础版的成本想象空间被压缩。 <a href="https://www.androidauthority.com/samsung-galaxy-s27-no-cheaper-screen-boe-3682860/">来源</a></li>
+<li><strong>Google 警告 DMA 新提案</strong>：欧盟拟要求 Google 向竞争对手共享匿名搜索查询、点击数据和排名信息，Google 反驳称会带来欺诈与隐私风险。 <a href="https://www.androidauthority.com/google-warns-cybercrime-incidents-amid-dma-proposals-3682866/">来源</a></li>
+<li><strong>国家新闻出版署</strong>：6 月份 163 款国产网络游戏获批，节奏稳定。</li>
+<li><strong>Philo AI</strong> 完成近千万美金首轮融资。</li>
+<li><strong>数据港</strong>：授权管理层在 13 亿元额度内采购服务器及配套设备(中国 IDC 加速扩张信号)。</li>
+<li><strong>同有科技</strong>：拟定增 10 亿元，投向面向 AI 全场景的企业级存储系统与 SSD 研发中心。</li>
+<li><strong>深科技</strong>：HBM(High Bandwidth Memory，高带宽内存，AI 芯片配套关键组件)仍处研发阶段，短期内无收入和利润。</li>
+<li><strong>金宏气体</strong>：高纯二氧化碳通过 SK 海力士第三轮测试，进入正式供应阶段(继续受益于内存涨价)。</li>
+<li><strong>小鹏机器人负责人米良川离职</strong>：人形机器人业务管理层动荡。</li>
+<li><strong>红魔游戏平板 5 Pro</strong>：全球首款主动水冷+RGB 可视化散热平板，9.06 英寸 2K OLED 185Hz 屏，骁龙 8 Gen5 至尊版 + 红芯 R4 双芯，8300mAh + 80W 双 Type-C。</li>
+<li><strong>AI 写遗嘱测试翻车</strong>：英国 SE Solicitors 测试发现 AI 生成的遗嘱遗漏遗产税规划、人寿保险、信托、数字资产、慈善捐赠等专业律师会主动追问的关键信息。律师 McInerney 一句话点穴：<strong>&quot;AI 看不见空白，因为它不知道你没告诉它什么。&quot;</strong> <a href="https://www.theregister.com/ai-and-ml/2026/06/30/where-theres-a-will-ai-still-has-work-to-do/5264033">来源</a></li>
+<li><strong>SimpleHelp 远程支持工具漏洞 CVE-2026-48558</strong> 被利用部署 TaskWeaver 与 Djinn Stealer 恶意载荷。</li>
+<li><strong>HamsterOS</strong>：11 月发布，32 位 GUI 操作系统装进 1.44MB 软盘，主打 386/486 复古机 + DOS 软件兼容，内置 VM86 DOS box 与 FreeDOS 回退、SCSI 诊断、FAT 12/16/32。</li>
+<li><strong>oomwoo 开源扫地机器人</strong>：Apache 2.0 许可，Raspberry Pi 5 + 2D LiDAR(激光雷达)，完全离线运行，可自己 3D 打印底盘。回应近年扫地机器人云端劫持事件(Ecovacs 被远程开麦、Romo 机器人住宅地图泄露等)。 <a href="https://www.tomshardware.com/3d-printing/maker-kicks-off-oomwoo-an-open-source-robot-vacuum-you-can-3d-print-and-build-yourself">来源</a></li>
+<li><strong>SQL:202y 新特性进展</strong>：斯德哥尔摩会议接受 QUALIFY(窗口函数后过滤)、INSERT BY NAME(按列名匹配插入)、SELECT * EXCLUDE(选择时排除列)、JOIN TO ONE(运行时检查一对一连接);Key Joins(语法级外键校验)继续讨论。PostgreSQL 20 有望承接大多数新特性。 <a href="http://peter.eisentraut.org/blog/2026/06/30/waiting-for-sql-202y-stockholm-meeting-report">来源</a></li>
+<li><strong>苏黎世 AI 研发集中地</strong>：Apple、Anthropic、Google、Meta、Microsoft、NVIDIA、OpenAI 在 40 万人口的苏黎世扎堆设 R&amp;D。瑞士每 10 万人有 110.5 名 AI 研究员和发明家，全球第一(美国 64.8)。前 Google 瑞士员工创办了约 210 家公司。</li>
+<li><strong>数据中心物资盗窃</strong>：芝加哥附近警方追回价值 130 万美元的数据中心铜缆与设备，分别从阿拉巴马和佛州长途盗运。AI 基建供应链的物理安全成新风险点。</li>
+</ul>
+<hr>
+<h2>Worth Watching</h2>
+<ul>
+<li><strong>iPhone 18 Pro 发布前的&quot;压制竞速&quot;</strong>：Tata 泄露仍在扩散，苹果如何在不证实的前提下抑制传播链，以及 Tata 整改方向，将影响苹果对印度供应链未来的份额分配。</li>
+<li><strong>CXL 生态商用化</strong>：Meta Vistara 与 Panmnesia 代表&quot;自研专用 vs 通用控制器&quot;两条路径。叠加内存危机主线，<strong>二手 DDR4 二次循环利用</strong>可能成为 2027 年缓解内存涨价的关键变量。</li>
+<li><strong>数字主权与平台依赖的悖论</strong>：欧盟一边推 DMA、一边在 EUDI 钱包里用 Google Play Integrity，这种内部撕裂在 2027 年钱包全面推行后会集中爆发。</li>
+<li><strong>HBM 国产替代节奏</strong>：深科技 HBM&quot;短期无收入&quot;与金宏气体高纯 CO2 进入海力士供应链形成对照，<strong>国内厂商在配套材料(气体、光刻胶)上的突破速度可能快于 HBM 本身</strong>。</li>
+<li><strong>英国 CMA 进入公开评议期</strong>：开发者社区与 Apple 的下一轮博弈点在于 CMA 如何具体定义&quot;公平合理费率&quot;,以及是否引入审计机制——这将决定 App Store 经济模型未来 3 年的走向。</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <div id="panel-podcast" class="tab-panel">
+      <div class="podcast-content">
+        <div class="podcast-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          PODCAST SCRIPT
+        </div>
+        <p>大家好，欢迎来到2026年6月30日的 YOMOO 每日AI快送。</p>
+<p>今天先说一件挺有意思的事。你想啊，苹果这家公司，向来以保密著称，新机发布前那点风声都得拿放大镜找。可就在最近，iPhone 18 Pro 史上最大规模的供应链泄露发生了，而且不是来自中国老牌代工厂，是从印度的塔塔电子流出来的。一个叫 World Leaks 的黑客组织，从塔塔偷走了超过二十万份文件、六百三十GB的数据，里头甚至有带苹果水印的跌落测试视频和内部蓝图。</p>
+<p>我跟你说，这次泄露的量级，基本上把 iPhone 18 Pro 长什么样给说明白了。先说颜色，最终确定的主打配色是樱桃红和黑色，金属背板用了更统一的反光质感。然后是 Dynamic Island，也就是那个灵动岛，这次显著缩小了，怎么做到的？苹果把 Face ID 里那个红外泛光器挪到了屏幕下方。还有最关键的散热升级，A20 Pro 芯片用了一种叫晶圆级多芯片堆叠的封装方案，把 DRAM 内存直接挪到芯片紧邻位置，再配上更大的均热板，专门攻散热问题。</p>
+<p>但真正有意思的不是泄露本身，是苹果的反应。这次苹果罕见地全网封禁，X 平台上知名爆料账号 EvLeaks 被直接封停，相关视频以违反平台规则为由删除，9to5Mac 这种老牌科技媒体也撤下了报道。中国博主 Ice Universe 在微博上说，苹果已经封锁了 Twitter 上的泄露数据。前 EvLeaks 的运营者 Evan Blass 撇清关系的时候还点评了一句：看起来苹果做到了三星从未做到的事。你看，这背后其实是塔塔承接更多 iPhone 组装份额之后，安全管控明显跟不上中国代工厂的水平，这事儿可能直接影响苹果未来对印度供应链的份额分配。</p>
+<p>接下来这件事，我觉得对全球开发者都是个大新闻。英国的竞争与市场管理局，CMA，正式出手封堵苹果的恶意合规路径，要求 App Store 必须允许开发者把用户引导到第三方支付方案，而且费率必须低于现有佣金。</p>
+<p>这事儿你得回顾一下博弈史才能体会到关键。在欧盟，苹果用什么招？用令人厌烦和恐吓的弹窗劝退第三方应用商店的用户。在美国 Epic 诉讼里，苹果坚持即使你在站外购买，照样抽佣金，等于变相抵消了开发者所有节省。所以英国这次特别狠的地方在于，CMA 预先把苹果的反制套路都封死了。Will Hayter 这位 CMA 数字市场执行董事原话怎么说的？任何费用都必须通过严格的、基于证据的框架来证明合理性，既考虑成本也考虑价值。</p>
+<p>更狠的是，CMA 还要求苹果开放 NFC 芯片给第三方钱包应用，让英国的金融科技公司能搭建 Apple Pay 的替代品。苹果照例反对，说什么用户被引导离开苹果可信支付基础设施，就失去了保护。但你看，欧盟 DMA、美国 Epic 案、英国 CMA 三线同时收紧，而且英国主动学习了苹果的反制套路，苹果那种挤牙膏式合规的策略空间，正在快速消失。</p>
+<p>说完商业战，咱们说说一个技术安全的事儿。安全研究员 Arash Ebrahim 团队披露了 AirDrop 三个漏洞，攻击门槛低得吓人。一台带 Wi-Fi 的笔记本，距离目标十到三十米，不需要配对，不需要共享网络，就能让对方的 AirDrop、AirPlay、Handoff、通用剪贴板、随航相机全部崩溃。</p>
+<p>最简单的那个漏洞是怎么利用的？它发送一个未识别路径的请求，整个守护进程立即中止。每隔几秒循环一次，就能持续瘫痪服务。好消息是攻击者偷不到数据，坏消息是只要你 AirDrop 设置成所有人可接收，就全部中招。Ebrahim 点出了根因，他说邻近协议需要特权守护进程在用户授权前处理攻击者控制的复杂输入，这造就了庞大的预认证攻击面。而且他特别强调，这不是苹果独有的工程缺陷，Android 的 Quick Share 存在相同类型的漏洞。苹果目前修复了一个，另外两个还在协调披露。</p>
+<p>接下来咱们聊聊硬件圈一个挺有意思的故事。内存危机你应该听过不少了，但 Meta 想了个特别巧妙的办法，让退役的 DDR4 内存重新就业。它自研了一颗叫 Vistara 的 ASIC 芯片，把退役服务器上的老 DDR4 内存装回最新只支持 DDR5 的服务器里。</p>
+<p>这里头的技术细节相当精彩。Vistara 是首代定制的 CXL 2.0 Type-3 扩展器，CXL 你可以理解成新一代内存扩展互联协议。它走 PCIe 5.0 x16 接口，每颗支持两路 DDR4 通道、最大 256GB。Meta 的 MemServer 平台给每颗 AMD 158 核 CPU 配两颗 Vistara，组合出来就是 768GB 的 DDR5 快内存，加上 256GB 的 DDR4 扩展，总共 1TB。然后 Linux 软件栈把 CXL 内存暴露成独立 NUMA 节点，冷数据自动迁移到慢的 DDR4 层，热数据留在快的 DDR5 层。空闲延迟压到 50 纳秒左右。</p>
+<p>同期韩国的 Panmnesia 推出了通用 CXL 交换芯片，支持单系统 64 个计算节点共享内存池。所以你看，Meta 走自研专用、Panmnesia 走通用控制器，两条路径同时打开，CXL 正在从概念变成超大规模数据中心降本的关键工具。在内存涨价的大背景下，二手 DDR4 二次循环利用，可能成为明年缓解内存危机的一个重要变量。</p>
+<p>接下来这件事，凸显了一个挺尴尬的现实。台湾基隆地检署扩大了英伟达芯片走私案的调查，搜查了 Supermicro 台湾办公室、经销商 Albatron Technology、数据中心运营商 Chief Telecom 还有六名个人住所。Supermicro 美股跌了 8%，Albatron 台股跌了 10%。</p>
+<p>但你猜怎么着？讽刺的是，台湾法律目前不把未经授权出口 AI 芯片到中国列为犯罪，检方只能用伪造运输文件这种罪名起诉。上个月查获大约 50 台流向中港澳的 Supermicro 服务器，最终也是只以文件造假罪起诉。同期美国正在起诉 Supermicro 联合创始人 Wally Liaw，涉案约 25 亿美元英伟达服务器，11 月 2 日开庭，最高可判 20 年。全球大部分先进 AI 芯片在台积电制造，但台湾本身阻止芯片流出的法律工具最弱。台北现在正在跟美国的贸易谈判里讨论新立法，把 AI 芯片走私本身入罪。</p>
+<p>再说一件特别讽刺的事儿。荷兰、意大利这些国家正在实施欧盟数字身份钱包，听起来挺自主的对吧？但你猜底层用了什么？用了 Google 的 Play Integrity API，一个验证设备是否运行 Google 认证 Android 的远程验证服务。</p>
+<p>这意味着什么？如果你用 de-Googled 的操作系统，比如 GrapheneOS 这种去除了 Google 服务的开源 Android 分支，你就无法访问政府数字身份服务。欧盟一边用 DMA 对抗 Google 垄断，一边在公共基础设施里强制 Google 的生态控制。瑞士的做法相对清醒，基于数据保护和选择自由考量，改用了纯硬件验证，不绑 Google 生态。所以你看，欧洲数字主权这事儿说易行难，底层依赖的沉默成本远比表面看上去深得多。</p>
+<p>最后说一件给所有数字消费者敲警钟的事。Sony 通知英国 PlayStation 用户，9 月 1 日起从用户库中删除 StudioCanal 的 551 部影片，包括《终结者 2》《潘神的迷宫》《帕丁顿》系列，原因是内容授权协议。这已经是 Sony 第二次干这种事了，2022 年它从德奥用户库里删了 314 部 StudioCanal 影片，还删过 Funimation 数字库。</p>
+<p>我跟你说，这事儿提醒咱们一个特别重要的真相：所谓数字购买实质上是有限期授权。Sony 已经在 2021 年停止销售电影租赁与购买，本次又一次引发了讨论，到底应不应该退款？数字商店应不应该禁止使用购买这个词？你以为你买的是商品，其实你买的只是租约。</p>
+<p>好，咱们说几条快讯。三星 Galaxy S27 基础版那个首用中国 BOE 屏的传闻被推翻，继续用三星自家屏。Google 警告欧盟 DMA 新提案会带来欺诈与隐私风险，欧盟拟要求 Google 向竞争对手共享匿名搜索数据。6 月份 163 款国产网络游戏获批，节奏稳定。Philo AI 完成近千万美金首轮融资。数据港授权管理层在 13 亿元额度内采购服务器，中国 IDC 加速扩张信号明显。同有科技拟定增 10 亿元，投向面向 AI 全场景的企业级存储系统与 SSD 研发中心。深科技的 HBM 仍处研发阶段，短期内无收入和利润。金宏气体高纯二氧化碳通过 SK 海力士第三轮测试，进入正式供应阶段。小鹏机器人负责人米良川离职，人形机器人业务管理层动荡。</p>
+<p>还有几个挺有意思的。英国 SE Solicitors 做了一个 AI 写遗嘱的测试，结果翻车了。AI 生成的遗嘱遗漏了遗产税规划、人寿保险、信托、数字资产、慈善捐赠这些专业律师会主动追问的关键信息。律师 McInerney 一句话点穴：AI 看不见空白，因为它不知道你没告诉它什么。这话我觉得说得太精辟了，这就是 AI 在专业服务领域的根本局限。</p>
+<p>还有个挺浪漫的项目，叫 oomwoo 开源扫地机器人，Apache 2.0 许可，用树莓派 5 加 2D 激光雷达，完全离线运行，底盘你可以自己 3D 打印。这背后其实是回应近年扫地机器人云端劫持的那些事件，像 Ecovacs 被远程开麦、Romo 机器人住宅地图泄露。还有 HamsterOS，11 月发布，32 位 GUI 操作系统装进 1.44MB 软盘，主打 386/486 复古机加 DOS 软件兼容。芝加哥附近警方追回价值 130 万美元的数据中心铜缆和设备，分别从阿拉巴马和佛州长途盗运过去的，AI 基建供应链的物理安全正在成为新的风险点。</p>
+<p>那今天值得持续关注的是哪几件事呢？第一，iPhone 18 Pro 发布前的压制竞速，塔塔的泄露还在扩散，苹果如何在不证实的前提下抑制传播链，以及塔塔的整改方向，会直接影响印度供应链的未来份额。第二，CXL 生态的商用化，Meta 自研和 Panmnesia 通用控制器两条路径同时打开，二手 DDR4 的二次循环利用可能是 2027 年缓解内存涨价的关键变量。第三，数字主权和平台依赖的悖论，欧盟一边推 DMA、一边在 EUDI 钱包里用 Google Play Integrity，这种内部撕裂等钱包全面推行后会集中爆发。第四，HBM 国产替代节奏，深科技的 HBM 短期无收入，跟金宏气体高纯二氧化碳进入海力士供应链形成对照，国内厂商在配套材料上的突破速度，可能反而比 HBM 本身更快。</p>
+<p>如果你想通过阅读文字版更快地获取每日的AI快送信息，欢迎免费订阅我们的mail list，地址在视频描述里。如果您觉得我们的节目对您有帮助，请帮忙分享、转发给您的朋友。好了，今天就到这里，我们明天见！</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      YOMOO 每日AI快送 &copy; 2026 &middot; <a href="../index.html">所有期刊</a>
+    </div>
+    <div class="footer-powered">Powered by YOMOO LLC</div>
+  </footer>
+
+  
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (typeof umami !== 'undefined') umami.track('tab-switch', { tab: tab });
+    }
+  </script>
+
+  <script>
+  (function() {
+    var u = typeof umami !== 'undefined' ? umami : null;
+    function t(name, data) { if (u) u.track(name, data || {}); }
+
+    // --- Audio tracking ---
+    var audio = document.querySelector('.audio-player audio');
+    if (audio) {
+      var milestones = [25, 50, 75, 100];
+      var reached = {};
+      audio.addEventListener('play', function() { t('audio-play'); });
+      audio.addEventListener('pause', function() {
+        if (!audio.ended) t('audio-pause', { time: Math.round(audio.currentTime) });
+      });
+      audio.addEventListener('ended', function() { t('audio-complete'); });
+      audio.addEventListener('timeupdate', function() {
+        if (!audio.duration) return;
+        var pct = Math.round(audio.currentTime / audio.duration * 100);
+        for (var i = 0; i < milestones.length; i++) {
+          if (pct >= milestones[i] && !reached[milestones[i]]) {
+            reached[milestones[i]] = true;
+            t('audio-progress', { milestone: milestones[i] });
+          }
+        }
+      });
+    }
+
+    // --- MP3 download tracking ---
+    var dl = document.querySelector('.audio-download');
+    if (dl) dl.addEventListener('click', function() { t('mp3-download'); });
+
+    // --- Outbound link tracking ---
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('http') && !href.includes('daily.yomoo.net')) {
+        t('outbound-link', { url: href });
+      }
+    });
+
+    // --- "所有期刊" link tracking ---
+    var allEpisodes = document.querySelector('.site-footer a[href*="index.html"]');
+    if (allEpisodes) allEpisodes.addEventListener('click', function() { t('nav-all-episodes'); });
+
+    // --- Scroll depth tracking ---
+    var scrollMarks = {};
+    var thresholds = [25, 50, 75, 100];
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round(window.scrollY / h * 100);
+      for (var i = 0; i < thresholds.length; i++) {
+        if (pct >= thresholds[i] && !scrollMarks[thresholds[i]]) {
+          scrollMarks[thresholds[i]] = true;
+          t('scroll-depth', { depth: thresholds[i] });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
