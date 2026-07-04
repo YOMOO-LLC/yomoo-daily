@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yomoo 每日AI快送 — 2026-07-04</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #fffbf5;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #fffbf5;">
+    <tr>
+      <td align="center" style="padding: 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #ffffff;">
+          <!-- Amber gradient bar -->
+          <tr>
+            <td style="height: 3px; background: linear-gradient(90deg, #C4561A, #E8722A, #D4A053); font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid #e8e2d9;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td style="width: 28px; height: 28px; background: linear-gradient(135deg, #E8722A, #D4A053); border-radius: 7px; text-align: center; vertical-align: middle; font-family: Georgia, serif; font-weight: 900; font-size: 15px; color: #ffffff;">Y</td>
+                  <td style="padding-left: 8px; font-family: Georgia, serif; font-size: 17px; font-weight: 800; color: #1a1410;">Yomoo</td>
+                </tr>
+              </table>
+              <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 900; color: #1a1410; margin: 16px 0 8px; line-height: 1.2;">每日AI快送</h1>
+              <p style="font-size: 13px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.08em; margin: 0;">2026-07-04</p>
+            </td>
+          </tr>
+          <tr>
+        <td style="padding: 16px 32px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background-color: #fff8ef; border: 1px solid rgba(232,114,42,0.25); border-radius: 8px; width: 100%;">
+            <tr>
+              <td style="padding: 14px 16px; text-align: center;">
+                <a href="https://daily.yomoo.net/episodes/2026-07-04/index.html" style="color: #E8722A; text-decoration: none; font-size: 14px; font-weight: 600;">&#9654; 在线收听播客</a>
+                <span style="color: #8a7e6e; margin: 0 8px;">|</span>
+                <a href="https://github.com/YOMOO-LLC/yomoo-daily/releases/download/v2026-07-04/yomoo-2026-07-04.mp3" style="color: #6b5e4f; text-decoration: none; font-size: 14px;">下载 MP3</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+          <!-- Report content -->
+          <tr>
+            <td style="padding: 24px 32px 40px;">
+              <h1 style="font-size: 24px; font-weight: 800; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">每日科技简报 · 2026年7月4日</h1>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">执行摘要</h2>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">今天最重磅的消息来自安全研究领域:被欧洲主权云寄予厚望的&quot;机密计算&quot;技术,其核心信任机制被形式化验证证明存在架构级缺陷,且可能无法修复。同时,持续数月的内存涨价潮首次出现降温信号——不是供应改善,而是消费者买不动了。Sony 停产实体光盘的余波仍在发酵,游戏保存机构直言&quot;盗版是唯一可行的保存手段&quot;。</p>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">主要报道</h2>
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">机密计算的信任地基被证明有裂缝,而且可能补不上</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">我们此前多次报道欧盟技术主权与主权云议题,今天这条消息直接动摇了它的技术底座。德累斯顿工业大学研究员 Muhammad Usama Sardar 团队用形式化验证工具 ProVerif(一种穷举检查协议所有攻击场景的数学工具,比人工审计更彻底)分析了&quot;机密计算&quot;的核心机制——远程证明(remote attestation,即服务器向客户端用密码学证明&quot;我运行在真实、未被篡改的可信执行环境 TEE 中&quot;)。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">结论令人不安:现行的 attested TLS 协议存在&quot;中继攻击&quot;缺陷——客户端验证的是软件完整性而非机器身份,连接可以被悄悄重定向到世界任何角落一台运行相同软件的受控机器上,客户端毫无察觉。团队测试了七种加密绑定方案,<strong style="color: #1a1410; font-weight: 600;">没有一种能防住中继攻击</strong>;而最关键的第三级绑定(把证明绑定到实际加密业务数据的密钥上)&quot;在现有架构内可能根本无法实现&quot;。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">这不是纸上谈兵:Meta 为 WhatsApp 打造的 Private Processing 等三个生产系统都中招,漏洞编号 CVE-2026-33697,评分 7.5(高危)。更讽刺的是,Meta 此前请知名安全公司 Trail of Bits 做过审计,却没发现问题——因为人工审计是&quot;抽样&quot;,形式化验证才是&quot;穷举&quot;。德国联邦信息安全办公室(BSI)也给出冷水结论:&quot;机密计算本身无法满足数字主权要求。&quot;而由受影响厂商组成的行业工作组,拖了十天、三次催促都没给研究者建立漏洞公示仓库。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>:此前我们报道过欧盟主权云的&quot;芯片底层后门隐忧&quot;,这次的问题更上一层——连&quot;证明你的数据跑在哪台机器上&quot;这件事本身都做不到,Intel 和 Google 销售话术里的&quot;可验证的主权保护&quot;就成了空中楼阁。(来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.theregister.com/security/2026/07/04/confidential-computings-core-trust-mechanism-is-broken-the-fix-may-not-exist/5266056">The Register</a>)</p>
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">内存危机出现拐点:不是供应好转,是消费者掏不出钱了</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">我们持续追踪的内存危机迎来最新转折。TrendForce 报告显示,2026 年 Q3 传统 DRAM(内存)合约价预计环比涨 13-18%,NAND 闪存涨 10-15%——仍在涨,但相比 Q2 约 60% 的疯涨已明显降速。关键在于降温原因:<strong style="color: #1a1410; font-weight: 600;">供应没有改善,而是消费电子厂商和消费者触及了承受能力的天花板</strong>。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">市场正裂成两个世界:企业端 AI 推理服务器需求旺盛到 2027 年,厂商继续把产能倾斜给高利润的服务器产品;消费端 PC、手机厂商只能涨价转嫁成本,同时收缩生产计划。呼应这一点,36氪消息称三星已口头通知客户 Q3 DRAM 拟提价 20%,三星晶圆代工 4nm 产能近乎售罄开始挑单接活。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;"><strong style="color: #1a1410; font-weight: 600;">为什么重要</strong>:此前我们报道过苹果全线涨价、Xbox 砍配置涨价,这次数据确认了传导链条的终点——当涨价撞上消费者的钱包极限,买单意愿就成了新的天花板。PC 装机党想等降价,还得再熬一阵。(来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026">Tom&#39;s Hardware</a>)</p>
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">Sony 全数字化余波:品牌集体玩梗,保存机构说出大实话</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">昨天我们报道了 Sony 宣布 2028 年起停产 PlayStation 实体光盘,今天余波扩大成两条线。一边是品牌狂欢式嘲讽:达美乐宣布&quot;停产实体披萨,请下载数字披萨自行想象&quot;;肯德基西班牙宣布炸鸡即日起只卖&quot;PNG 格式&quot;,还警告网友&quot;不要盗版我们的鸡&quot;。玩笑背后是真问题:剥夺消费者的选择权,并消灭二手市场。</p>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">另一边更严肃:游戏历史基金会(Video Game History Foundation)创始人 Frank Cifaldi 公开表态,<strong style="color: #1a1410; font-weight: 600;">盗版仍是游戏保存的唯一可行手段</strong>——因为游戏行业游说组织 ESA 多年来系统性封堵博物馆和档案馆的合法保存渠道,甚至以&quot;社区服务器违法&quot;的错误说法帮助否决了加州的游戏保存法案。结合我们此前报道的 Sony 删除用户已购 551 部影片,&quot;数字所有权&quot;的空心化正在成为跨行业议题。(来源:<a style="color: #E8722A; text-decoration: underline;" href="https://games.slashdot.org/story/26/07/03/1652234/video-game-history-foundation-says-piracy-remains-the-only-viable-preservation-method">Slashdot</a>)</p>
+<h3 style="font-size: 17px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px;">苹果押注 M7 芯片 All in 端侧 AI,MacBook 产品线大洗牌</h3>
+<p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.85; color: #3d3529;">爱范儿梳理的路线图显示:年底苹果将推出首款 OLED 触控屏&quot;MacBook Ultra&quot;;M6 成为特殊一代——首批台积电 2nm 芯片却没有 Pro/Max 版本,苹果快速过渡到围绕端侧 AI(在设备本地运行 AI 而非依赖云端)设计的 M7 系列,内存带宽提至约 240GB/s。跳代原因之一是台积电 2nm 产能被 AI 公司抢购,苹果这样的老客户优先级反而下降。结合我们此前报道的苹果找英特尔代工,供应链焦虑肉眼可见。(来源:<a style="color: #E8722A; text-decoration: underline;" href="https://www.ifanr.com/1670819">爱范儿</a>)</p>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">快讯速览</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">苹果&quot;隐藏邮件地址&quot;功能失效</strong>:404 Media 披露该隐私功能漏洞持续至少一年,测试中 100% 的隐藏地址可被还原出真实邮箱,苹果称&quot;已修复&quot;后仍可利用。(WIRED)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">朝鲜黑客 PolinRider 行动</strong>:在开源软件仓库发布 108 个恶意包和扩展,供应链攻击持续升级。(The Hacker News)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">Midjourney 反将好莱坞一军</strong>:要求起诉它的迪士尼、华纳等交出自家 AI 训练数据和模型权重——&quot;如果原告自己也在用版权作品训练 AI,那就是我方合理使用抗辩的核心证据&quot;。(Engadget)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">3D 打印钍反应堆</strong>:初创公司 Ampera 发布号称全球首个&quot;次临界、固态、工厂预制&quot;的钍核反应堆模块,目标 30MWe,瞄准 AI 数据中心供电——延续我们报道过的 AI 电力荒主线。(Tom&#39;s Hardware)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">国产智能体集体下线</strong>:千问与豆包的&quot;智能体&quot;功能均定于 7 月 15 日下线,国内大厂 Agent 产品形态或酝酿调整。(36氪)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">傲鲨外骨骼进军户外</strong>:消费级外骨骼从工厂康复走向徒步场景,已布局 20 个文旅合作网点,创始人直言行业不会有&quot;iPhone 4 时刻&quot;。(36氪)</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">会议室 CO2 拖垮决策力</strong>:研究显示密闭会议室 CO2 超 1000 ppm 时,战略决策能力显著下降——开窗可能比换人管用。(Hacker News)</li>
+</ul>
+<h2 style="font-size: 20px; font-weight: 700; color: #1a1410; line-height: 1.35; margin-top: 24px; margin-bottom: 12px; border-bottom: 1px solid #e8e2d9; padding-bottom: 8px;">值得关注</h2>
+<ul style="margin: 12px 0 16px 20px; padding: 0; font-size: 15px; color: #3d3529;">
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">形式化验证的地位跃升</strong>:IETF 新工作组已把它写入章程作为强制要求,人工安全审计&quot;抽样式&quot;的局限被公开戳破,安全行业方法论或迎来洗牌。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">数字所有权立法窗口</strong>:品牌玩梗声量与保存机构的控诉正在合流,关注是否催生实质性立法动作。</li>
+<li style="margin-bottom: 6px; line-height: 1.75;"><strong style="color: #1a1410; font-weight: 600;">7 月 15 日</strong>:千问、豆包智能体同日下线,留意国内 Agent 赛道的下一步动向。</li>
+</ul>
+
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 32px; text-align: center; border-top: 1px solid #e8e2d9; background-color: #fffbf5;">
+              <p style="font-size: 12px; font-weight: 500; color: #6b5e4f; letter-spacing: 0.06em; margin: 0 0 4px;">Yomoo 每日AI快送</p>
+              <p style="font-size: 11px; color: #6b5e4f; letter-spacing: 0.08em; margin: 0 0 12px;">Powered by Yomoo LLC</p>
+              <p style="font-size: 11px; color: #6b5e4f; margin: 0;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b5e4f; text-decoration: underline;">退订邮件</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
